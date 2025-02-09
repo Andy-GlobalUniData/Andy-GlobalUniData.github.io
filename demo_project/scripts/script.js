@@ -8,41 +8,41 @@ document.addEventListener("DOMContentLoaded", function () {
             data.forEach(item => {
                 tbody.innerHTML += 
                 `<tr>
-                    <td>${item.School_name}</td>
-                    <td>${item.Department_name}</td>
-                    <td>${item.Website_Link}</td>
-                    <td>${item.Degree}</td>
-                    <td>${item.Academic_field}</td>
-                    <td>${item.Field_degree}</td>
-                    <td>${item.Time_system}</td>
-                    <td>${item.Duration_Study}</td>
-                    <td>${item.Internship}</td>
-                    <td>${item.Work_visa}</td>
-                    <td>${item.Overview}</td>
-                    <td>${item.Tuition_min}</td>
-                    <td>${item.Tuition_max}</td>
-                    <td>${item.Application_fees}</td>
-                    <td>${item.Tuition_overview}</td>
-                    <td>${item.Preferred_Language}</td>
-                    <td>${item.IELTS_score}</td>
-                    <td>${item.IELTS_listen}</td>
-                    <td>${item.IELTS_speak}</td>
-                    <td>${item.IELTS_read}</td>
-                    <td>${item.IELTS_write}</td>
-                    <td>${item.IELTS_overview}</td>
-                    <td>${item.TOEFL_score}</td>
-                    <td>${item.TOEFL_listen}</td>
-                    <td>${item.TOEFL_speak}</td>
-                    <td>${item.TOEFL_read}</td>
-                    <td>${item.TOEFL_write}</td>
-                    <td>${item.TOEFL_overview}</td>
-                    <td>${item.Entry_Requirements}</td>
-                    <td>${item.Background_Required}</td>
-                    <td>${item.Conditional_Admission}</td>
-                    <td>${item.School_Grades}</td>
-                    <td>${item.Taiwan_Grades}</td>
-                    <td>${item.Semester_Start}</td>
-                    <td>${item.Deadline}</td>
+                    <td>${item.School_name || 'N/A' }</td>
+                    <td>${item.Department_name || 'N/A' }</td>
+                    <td>${item.Website_Link || 'N/A' }</td>
+                    <td>${item.Degree || 'N/A' }</td>
+                    <td>${item.Academic_field || 'N/A' }</td>
+                    <td>${item.Field_degree || 'N/A' }</td>
+                    <td>${item.Time_system || 'N/A' }</td>
+                    <td>${item.Duration_Study || 'N/A' }</td>
+                    <td>${item.Internship || 'N/A' }</td>
+                    <td>${item.Work_visa || 'N/A' }</td>
+                    <td>${item.Overview || 'N/A' }</td>
+                    <td>${item.Tuition_min || 'N/A' }</td>
+                    <td>${item.Tuition_max || 'N/A' }</td>
+                    <td>${item.Application_fees || 'N/A' }</td>
+                    <td>${item.Tuition_overview || 'N/A' }</td>
+                    <td>${item.Preferred_Language || 'N/A' }</td>
+                    <td>${item.IELTS_score || 'N/A' }</td>
+                    <td>${item.IELTS_listen || 'N/A' }</td>
+                    <td>${item.IELTS_speak || 'N/A' }</td>
+                    <td>${item.IELTS_read || 'N/A' }</td>
+                    <td>${item.IELTS_write || 'N/A' }</td>
+                    <td>${item.IELTS_overview || 'N/A' }</td>
+                    <td>${item.TOEFL_score || 'N/A' }</td>
+                    <td>${item.TOEFL_listen || 'N/A' }</td>
+                    <td>${item.TOEFL_speak || 'N/A' }</td>
+                    <td>${item.TOEFL_read || 'N/A' }</td>
+                    <td>${item.TOEFL_write || 'N/A' }</td>
+                    <td>${item.TOEFL_overview || 'N/A' }</td>
+                    <td>${item.Entry_Requirements || 'N/A' }</td>
+                    <td>${item.Background_Required || 'N/A' }</td>
+                    <td>${item.Conditional_Admission || 'N/A' }</td>
+                    <td>${item.School_Grades || 'N/A' }</td>
+                    <td>${item.Taiwan_Grades || 'N/A' }</td>
+                    <td>${item.Semester_Start || 'N/A' }</td>
+                    <td>${item.Deadline || 'N/A' }</td>
                 </tr>`;
             });
 

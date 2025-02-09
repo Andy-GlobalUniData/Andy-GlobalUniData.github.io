@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Table</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+</head>
+<body>
+    <h2>JSON Data Table</h2>
+    <table id="json-table" class="display">
+        <thead>
+            <tr><th>Name</th><th>Version</th><th>Description</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        const jsonData = [
+            { "name": "Example1", "version": "1.0", "description": "Sample JSON 1" },
+            { "name": "Example2", "version": "2.0", "description": "Sample JSON 2" }
+        ];
+
+        $(document).ready(function() {
+            jsonData.forEach(item => {
+                $('#json-table tbody').append(
+                    `<tr><td>${item.name}</td><td>${item.version}</td><td>${item.description}</td></tr>`
+                );
+            });
+            $('#json-table').DataTable();
+        });
+    </script>
+</body>
+</html>

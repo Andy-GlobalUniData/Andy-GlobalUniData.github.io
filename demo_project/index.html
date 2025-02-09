@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON DataTable</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- 引入 jQuery UI 的 CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <!-- 引入 DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+</head>
+<body>
+  <table id="json-table" class="display">
+    <thead>
+      <tr>
+        <th>School Name <br><input type="text" id="search-school-name"></th>
+        <th>Department Name <br><input type="text" id="search-department-name"></th>
+        <th>Website Link <br><input type="text" id="search-website-link"></th>
+        <th>Degree <br><input type="text" id="search-degree"></th>
+      </tr>
+      <tr>
+        <th>Academic Field <br><input type="text" id="search-academic-field"></th>
+        <th>Field Degree <br><input type="text" id="search-field-degree"></th>
+        <th>Time System <br><input type="text" id="search-time-system"></th>
+        <th>Duration of Study <br><input type="text" id="search-duration-study"></th>
+      </tr>
+      <tr>
+        <th>Internship <br><input type="text" id="search-internship"></th>
+        <th>Work Visa <br><input type="text" id="search-work-visa"></th>
+        <th>Overview <br><input type="text" id="search-overview"></th>
+        <th>Tuition Min <br><input type="text" id="search-tuition-min"></th>
+      </tr>
+      <tr>
+        <th>Tuition Max <br><input type="text" id="search-tuition-max"></th>
+        <th>Application Fees <br><input type="text" id="search-application-fees"></th>
+        <th>Tuition Overview <br><input type="text" id="search-tuition-overview"></th>
+        <th>Preferred Language <br><input type="text" id="search-preferred-language"></th>
+      </tr>
+      <tr>
+        <th>IELTS Score <br><input type="text" id="search-ielts-score"></th>
+        <th>IELTS Listening <br><input type="text" id="search-ielts-listen"></th>
+        <th>IELTS Speaking <br><input type="text" id="search-ielts-speak"></th>
+        <th>IELTS Reading <br><input type="text" id="search-ielts-read"></th>
+      </tr>
+      <tr>
+        <th>IELTS Writing <br><input type="text" id="search-ielts-write"></th>
+        <th>IELTS Overview <br><input type="text" id="search-ielts-overview"></th>
+        <th>TOEFL Score <br><input type="text" id="search-toefl-score"></th>
+        <th>TOEFL Listening <br><input type="text" id="search-toefl-listen"></th>
+      </tr>
+      <tr>
+        <th>TOEFL Speaking <br><input type="text" id="search-toefl-speak"></th>
+        <th>TOEFL Reading <br><input type="text" id="search-toefl-read"></th>
+        <th>TOEFL Writing <br><input type="text" id="search-toefl-write"></th>
+        <th>TOEFL Overview <br><input type="text" id="search-toefl-overview"></th>
+      </tr>
+      <tr>
+        <th>Entry Requirements <br><input type="text" id="search-entry-requirements"></th>
+        <th>Background Required <br><input type="text" id="search-background-required"></th>
+        <th>Conditional Admission <br><input type="text" id="search-conditional-admission"></th>
+        <th>School Grades <br><input type="text" id="search-school-grades"></th>
+      </tr>
+      <tr>
+        <th>Taiwan Grades <br><input type="text" id="search-taiwan-grades"></th>
+        <th>Semester Start <br><input type="text" id="search-semester-start"></th>
+        <th>Deadline <br><input type="text" id="search-deadline"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- JSON 資料將在這裡插入 -->
+    </tbody>
+  </table>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- 引入 jQuery UI 的 JavaScript -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <!-- 引入 DataTables 的 JavaScript -->
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <script src="scripts/script.js"></script> <!-- 引用外部的 JavaScript 文件 -->
+</body>
+</html>

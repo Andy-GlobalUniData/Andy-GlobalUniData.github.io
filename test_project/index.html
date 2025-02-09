@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSON Table</title>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON DataTable</title>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
 </head>
 <body>
-    <h2>JSON Data Table</h2>
-    <table id="json-table" class="display">
-        <thead>
-            <tr>        <th>Department Name</th><th>URL</th><th>Academic_field</th><th>Description</th>            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+  <table id="json-table" class="display">
+    <thead>
+      <tr>
+        <th>Department Name</th>
+        <th>URL</th>
+        <th>Academic_field</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- JSON 資料將在這裡插入 -->
+    </tbody>
+  </table>
 
-    <script src="scripts/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch("https://andy-globalunidata.github.io/test_project/data/data.json")
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(item => {
+                    document.querySelector("#json-table tbody").innerHTML += 
+                        `<tr><td>${item.name}</td><td>${item.version}</td><td>${item.description}</td></tr>`;
+                });
+                // 啟用 DataTable 功能
+                $("#json-table").DataTable();
+            })
+            .catch(error => console.error("Error loading JSON:", error));
+    });
+  </script>
 </body>
 </html>

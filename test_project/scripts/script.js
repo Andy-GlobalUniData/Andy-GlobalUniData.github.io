@@ -19,8 +19,26 @@ document.addEventListener("DOMContentLoaded", function () {
                     </tr>`;
             });
 
-            // 啟用 DataTable 插件
-            $("#json-table").DataTable();
+             // 啟用 DataTable 插件
+             var table = $("#json-table").DataTable();
+
+             // 為每個搜尋框添加事件監聽器，並根據對應欄位進行搜尋
+             $('#search-department').on('keyup', function() {
+                 table.column(0).search(this.value).draw(); // 根據部門名稱搜尋
+             });
+             
+             $('#search-url').on('keyup', function() {
+                 table.column(1).search(this.value).draw(); // 根據 URL 搜尋
+             });
+             
+             $('#search-academic-field').on('keyup', function() {
+                 table.column(2).search(this.value).draw(); // 根據學科領域搜尋
+             });
+             
+             $('#search-description').on('keyup', function() {
+                 table.column(3).search(this.value).draw(); // 根據描述搜尋
+             });
+             
 
             // 設定列寬與行高調整
             $("#json-table th").resizable({

@@ -17,20 +17,6 @@
         <tbody></tbody>
     </table>
 
-    <script>
-        const jsonData = [
-            { "name": "Example1", "version": "1.0", "description": "Sample JSON 1" },
-            { "name": "Example2", "version": "2.0", "description": "Sample JSON 2" }
-        ];
-
-        $(document).ready(function() {
-            jsonData.forEach(item => {
-                $('#json-table tbody').append(
-                    `<tr><td>${item.name}</td><td>${item.version}</td><td>${item.description}</td></tr>`
-                );
-            });
-            $('#json-table').DataTable();
-        });
-    </script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>

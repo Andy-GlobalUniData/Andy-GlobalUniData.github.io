@@ -101,13 +101,16 @@ a:hover {
   cursor: pointer;  /* 在單元格內顯示可調整光標 */
 }
 
-/* 讓 URL 欄位的文字超出時顯示省略號 */
+/* 讓 URL 欄位超出時顯示省略號，並且根據視窗大小縮放 */
+#json-table {
+  table-layout: auto; /* 允許表格根據內容調整寬度 */
+  width: 100%;  /* 使表格寬度填滿父容器 */
+}
+
 #json-table td:nth-child(2) {
-  white-space: nowrap;      /* 防止文字換行 */
-  overflow: hidden;         /* 隱藏超出範圍的文字 */
-  text-overflow: ellipsis;  /* 當文字超出時顯示省略號 */
-  max-width: 100%;          /* 設定最大寬度為 100%，隨著表格寬度拉伸 */
-  width: 1%;                /* 設定最小寬度為 1%，讓列可以縮放 */
-  display: block;           /* 使文字顯示為區塊元素 */
-  box-sizing: border-box;   /* 確保 padding 不影響寬度 */
+  white-space: nowrap; /* 使文字不換行 */
+  overflow: hidden;    /* 隱藏超出範圍的文字 */
+  text-overflow: ellipsis; /* 顯示省略號 "..." */
+  min-width: 120px;    /* 設定最小寬度 */
+  max-width: 40%;      /* 設定最大寬度為表格的 40% */
 }

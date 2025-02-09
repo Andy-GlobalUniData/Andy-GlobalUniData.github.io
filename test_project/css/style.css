@@ -73,3 +73,15 @@ a:hover {
     overflow-x: auto;
   }
 }
+
+/* 讓表格的每一列都能夠調整大小 */
+#json-table th {
+  position: relative;
+  cursor: ew-resize; /* 改變鼠標光標樣式 */
+}
+
+/* 控制調整時的最小寬度和最大寬度 */
+#json-table td {
+  min-width: 50px;
+  max-width: 300px;
+}

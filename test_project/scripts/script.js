@@ -18,11 +18,20 @@ document.addEventListener("DOMContentLoaded", function () {
             // 啟用 DataTable 插件
             $("#json-table").DataTable();
 
-            // 使用 jQuery UI Resizable 來使表格可調整
-            $("#json-table td").resizable({
-                handles: "e, s, se", // e：東（列）、s：南（行）、se：南東角
-                minWidth: 50, // 設定最小寬度
-                minHeight: 30 // 設定最小高度
+            // 讓表格標題（列）可調整寬度
+            $("#json-table th").resizable({
+                handles: "e",  // 只有向右拖動
+                minWidth: 50,   // 設定最小寬度
+                maxWidth: 300,  // 設定最大寬度
+                alsoResize: "#json-table td",  // 同時調整該列的寬度
+                resize: function(event, ui) {
+                    const index = $(this).index();  // 獲取被調整的列索引
+                    $("#json-table td").each(function() {
+                        if ($(this).index() === index) {
+                            $(this).width(ui.size.width);  // 調整該列的每一個單元格
+                        }
+                    });
+                }
             });
         })
         .catch(error => {

@@ -80,8 +80,23 @@ a:hover {
   cursor: ew-resize; /* 改變鼠標光標樣式 */
 }
 
-/* 控制調整時的最小寬度和最大寬度 */
+/* 設定列寬最小值和最大值 */
 #json-table td {
   min-width: 50px;
   max-width: 300px;
+}
+
+/* 設定行高 */
+#json-table td {
+  height: 40px;  /* 設定單元格的高度 */
+}
+
+/* 讓行可以被拖動來調整高度 */
+#json-table tr {
+  cursor: ns-resize;  /* 改變鼠標光標樣式 */
+}
+
+/* 當表格列被拖動時顯示適合的光標樣式 */
+#json-table td {
+  cursor: pointer;  /* 在單元格內顯示可調整光標 */
 }

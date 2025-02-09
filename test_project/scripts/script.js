@@ -33,6 +33,24 @@ document.addEventListener("DOMContentLoaded", function () {
                     });
                 }
             });
+
+            // 設定行高，您可以根據需求調整這些數值
+            $("#json-table td").each(function() {
+                $(this).css("height", "40px"); // 設定所有單元格的高度
+            });
+
+            // 您也可以讓行高可以調整 (例如透過拖動行的高度)
+            $("#json-table tr").resizable({
+                handles: "s",  // 讓行高度可以調整
+                minHeight: 40, // 設定最小高度
+                maxHeight: 100, // 設定最大高度
+                alsoResize: "#json-table td",  // 同時調整該行的單元格高度
+                resize: function(event, ui) {
+                    $(this).find("td").each(function() {
+                        $(this).height(ui.size.height);  // 調整單元格的高度
+                    });
+                }
+            });
         })
         .catch(error => {
             console.error("Error loading JSON:", error);

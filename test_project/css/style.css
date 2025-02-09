@@ -84,6 +84,7 @@ a:hover {
 #json-table td {
   min-width: 50px;
   max-width: 300px;
+  width: auto; /* 讓欄位自動調整 */
 }
 
 /* 設定行高 */
@@ -101,7 +102,7 @@ a:hover {
   cursor: pointer;  /* 在單元格內顯示可調整光標 */
 }
 
-
+/* 設定連結顯示樣式 */
 #json-table td a.url-link {
   display: inline-block;
   max-width: 300px; /* 設定最大寬度，您可以根據需要調整 */
@@ -111,4 +112,23 @@ a:hover {
   word-wrap: break-word;
   color: #1a73e8; /* 設定超連結顏色 */
   text-decoration: none; /* 去掉底線 */
+}
+
+/* 提高可讀性，調整表格樣式 */
+#json-table td,
+#json-table th {
+  word-wrap: break-word; /* 使單元格文字換行 */
+}
+
+/* 提高表格的彈性，使其在小螢幕上不會被擠壓 */
+#json-table {
+  width: 100%;
+  table-layout: auto;
+}
+
+/* 避免表格的列被過度限制，適應內容 */
+#json-table td {
+  width: auto;
+  min-width: 50px;
+  max-width: none;
 }

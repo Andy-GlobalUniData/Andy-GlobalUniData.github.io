@@ -1,29 +1,28 @@
-document.getElementById("upload").addEventListener("change", function (event) {
-    const file = event.target.files[0];
-    if (!file) return;
+async function loadCSV() {
+    try {
+        // 讀取 data.csv 檔案
+        const response = await fetch("departments_results.csv");
+        const text = await response.text();
 
-    const reader = new FileReader();
-    reader.onload = function (e) {
-        const data = new Uint8Array(e.target.result);
-        const workbook = XLSX.read(data, { type: "array" });
+        // 解析 CSV：按換行符號分割行，再按逗號分割欄位
+        const rows = text.split("\n").map(row => row.split(","));
 
-        // 假設讀取第一個工作表
-        const sheetName = workbook.SheetNames[0];
-        const sheet = workbook.Sheets[sheetName];
-        const json = XLSX.utils.sheet_to_json(sheet, { header: 1 });
-
-        // 顯示到 HTML 表格
-        const table = document.getElementById("excelTable");
+        // 顯示在 HTML 表格
+        const table = document.getElementById("csvTable");
         table.innerHTML = "";
-        json.forEach((row) => {
+        rows.forEach(row => {
             const tr = document.createElement("tr");
-            row.forEach((cell) => {
+            row.forEach(cell => {
                 const td = document.createElement("td");
                 td.textContent = cell;
                 tr.appendChild(td);
             });
             table.appendChild(tr);
         });
-    };
-    reader.readAsArrayBuffer(file);
-});
+    } catch (error) {
+        console.error("Error loading CSV:", error);
+    }
+}
+
+// 頁面載入時執行
+window.onload = loadCSV;

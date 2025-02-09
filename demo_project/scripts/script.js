@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 `<tr>
                     <td>${item.School_name || 'N/A' }</td>
                     <td>${item.Department_name || 'N/A' }</td>
-                    <td>${item.Website_Link || 'N/A' }</td>
+                    <td><a href="${item.Website_Link}" target="_blank">${item.Website_Link}</a></td>
                     <td>${item.Degree || 'N/A' }</td>
                     <td>${item.Academic_field || 'N/A' }</td>
                     <td>${item.Field_degree || 'N/A' }</td>

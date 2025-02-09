@@ -2,12 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("https://andy-globalunidata.github.io/test_project/data/data.json")
         .then(response => response.json())
         .then(data => {
-            // 先清空 tbody，防止重複插入
             const tbody = document.querySelector("#json-table tbody");
             tbody.innerHTML = ""; 
 
             data.forEach(item => {
-                // 將每筆資料加入表格中
                 tbody.innerHTML += 
                     `<tr>
                         <td>${item["Department Name"]}</td>
@@ -17,16 +15,18 @@ document.addEventListener("DOMContentLoaded", function () {
                     </tr>`;
             });
 
-            // 啟用 DataTable 和 ColResize 插件
-            $("#json-table").DataTable({
-                "autoWidth": true,   // 自動調整列寬
-                "responsive": true,  // 啟用響應式設計
-                "colReorder": false,  // 啟用列調整功能
-                "ordering": true     // 啟用排序功能
+            // 啟用 DataTable 插件
+            $("#json-table").DataTable();
+
+            // 使用 jQuery UI Resizable 來使表格可調整
+            $("#json-table td").resizable({
+                handles: "e, s, se", // e：東（列）、s：南（行）、se：南東角
+                minWidth: 50, // 設定最小寬度
+                minHeight: 30 // 設定最小高度
             });
         })
         .catch(error => {
             console.error("Error loading JSON:", error);
-            alert("Error loading JSON: " + error.message);  // 顯示錯誤訊息
+            alert("Error loading JSON: " + error.message);
         });
 });

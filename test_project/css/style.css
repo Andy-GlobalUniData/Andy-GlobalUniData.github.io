@@ -73,9 +73,3 @@ a:hover {
     overflow-x: auto;
   }
 }
-
-/* 調整 URL 欄位的字體大小和行高 */
-#json-table td:nth-child(2) {
-  font-size: 6px; /* 字體大小 */
-  line-height: 1.2; /* 行高，確保與其他行一致 */
-}

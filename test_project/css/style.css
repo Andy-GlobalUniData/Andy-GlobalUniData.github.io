@@ -100,17 +100,3 @@ a:hover {
 #json-table td {
   cursor: pointer;  /* 在單元格內顯示可調整光標 */
 }
-
-/* 讓 URL 欄位超出時顯示省略號，並且根據視窗大小縮放 */
-#json-table {
-  table-layout: auto; /* 允許表格根據內容調整寬度 */
-  width: 100%;  /* 使表格寬度填滿父容器 */
-}
-
-#json-table td:nth-child(2) {
-  white-space: nowrap; /* 使文字不換行 */
-  overflow: hidden;    /* 隱藏超出範圍的文字 */
-  text-overflow: ellipsis; /* 顯示省略號 "..." */
-  min-width: 1px;    /* 設定最小寬度 */
-  max-width: 40%;      /* 設定最大寬度為表格的 40% */
-}

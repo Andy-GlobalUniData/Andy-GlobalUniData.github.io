@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("data/data.json")
+    fetch("/test_project/data/data.json")
         .then(response => response.json())
         .then(data => {
             data.forEach(item => {

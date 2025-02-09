@@ -7,9 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
             tbody.innerHTML = ""; 
 
             data.forEach(item => {
-                // 將每筆資料加入表格中
                 tbody.innerHTML += 
-                    `<tr>
+                    `<tr class="resizable">
                         <td>${item["Department Name"]}</td>
                         <td><a href="${item.URL}" target="_blank">${item.URL}</a></td>
                         <td>${item.Academic_field}</td>
@@ -19,8 +18,62 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // 啟用 DataTable 並設定響應式功能
             $("#json-table").DataTable({
-                "autoWidth": true,   // 自動調整列寬
-                "responsive": true   // 啟用響應式設計
+                "autoWidth": true,  // 自動調整列寬
+                "responsive": true  // 啟用響應式設計
+            });
+
+            // 列寬拖動調整
+            const headers = document.querySelectorAll("#json-table th");
+            headers.forEach(header => {
+                header.classList.add("resizable");
+                let startX, startWidth;
+
+                header.addEventListener('mousedown', (e) => {
+                    startX = e.clientX;
+                    startWidth = header.offsetWidth;
+                    document.addEventListener('mousemove', onMouseMove);
+                    document.addEventListener('mouseup', onMouseUp);
+                });
+
+                function onMouseMove(e) {
+                    const newWidth = startWidth + (e.clientX - startX);
+                    header.style.width = `${newWidth}px`;
+                    // 重新調整表格列寬
+                    const columnIndex = Array.from(header.parentNode.children).indexOf(header);
+                    const rows = document.querySelectorAll("#json-table tbody tr");
+                    rows.forEach(row => {
+                        row.cells[columnIndex].style.width = `${newWidth}px`;
+                    });
+                }
+
+                function onMouseUp() {
+                    document.removeEventListener('mousemove', onMouseMove);
+                    document.removeEventListener('mouseup', onMouseUp);
+                }
+            });
+
+            // 行高拖動調整
+            const rows = document.querySelectorAll("#json-table tr");
+            rows.forEach(row => {
+                row.classList.add("resizable");
+                let startY, startHeight;
+
+                row.addEventListener('mousedown', (e) => {
+                    startY = e.clientY;
+                    startHeight = row.offsetHeight;
+                    document.addEventListener('mousemove', onRowMouseMove);
+                    document.addEventListener('mouseup', onRowMouseUp);
+                });
+
+                function onRowMouseMove(e) {
+                    const newHeight = startHeight + (e.clientY - startY);
+                    row.style.height = `${newHeight}px`;
+                }
+
+                function onRowMouseUp() {
+                    document.removeEventListener('mousemove', onRowMouseMove);
+                    document.removeEventListener('mouseup', onRowMouseUp);
+                }
             });
         })
         .catch(error => {

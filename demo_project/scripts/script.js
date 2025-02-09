@@ -54,21 +54,146 @@ document.addEventListener("DOMContentLoaded", function () {
              var table = $("#json-table").DataTable();
 
              // 為每個搜尋框添加事件監聽器，並根據對應欄位進行搜尋
-             $('#search-department').on('keyup', function() {
-                 table.column(0).search(this.value).draw(); // 根據部門名稱搜尋
-             });
-             
-             $('#search-url').on('keyup', function() {
-                 table.column(1).search(this.value).draw(); // 根據 URL 搜尋
-             });
-             
-             $('#search-academic-field').on('keyup', function() {
-                 table.column(2).search(this.value).draw(); // 根據學科領域搜尋
-             });
-             
-             $('#search-description').on('keyup', function() {
-                 table.column(3).search(this.value).draw(); // 根據描述搜尋
-             });
+             $('#search-school-name').on('keyup', function() {
+                table.column(0).search(this.value).draw(); // 根據 School_name 搜尋
+            });
+            
+            $('#search-department-name').on('keyup', function() {
+                table.column(1).search(this.value).draw(); // 根據 Department_name 搜尋
+            });
+            
+            $('#search-website-link').on('keyup', function() {
+                table.column(2).search(this.value).draw(); // 根據 Website_Link 搜尋
+            });
+            
+            $('#search-degree').on('keyup', function() {
+                table.column(3).search(this.value).draw(); // 根據 Degree 搜尋
+            });
+            
+            $('#search-academic-field').on('keyup', function() {
+                table.column(4).search(this.value).draw(); // 根據 Academic_field 搜尋
+            });
+            
+            $('#search-field-degree').on('keyup', function() {
+                table.column(5).search(this.value).draw(); // 根據 Field_degree 搜尋
+            });
+            
+            $('#search-time-system').on('keyup', function() {
+                table.column(6).search(this.value).draw(); // 根據 Time_system 搜尋
+            });
+            
+            $('#search-duration-study').on('keyup', function() {
+                table.column(7).search(this.value).draw(); // 根據 Duration_Study 搜尋
+            });
+            
+            $('#search-internship').on('keyup', function() {
+                table.column(8).search(this.value).draw(); // 根據 Internship 搜尋
+            });
+            
+            $('#search-work-visa').on('keyup', function() {
+                table.column(9).search(this.value).draw(); // 根據 Work_visa 搜尋
+            });
+            
+            $('#search-overview').on('keyup', function() {
+                table.column(10).search(this.value).draw(); // 根據 Overview 搜尋
+            });
+            
+            $('#search-tuition-min').on('keyup', function() {
+                table.column(11).search(this.value).draw(); // 根據 Tuition_min 搜尋
+            });
+            
+            $('#search-tuition-max').on('keyup', function() {
+                table.column(12).search(this.value).draw(); // 根據 Tuition_max 搜尋
+            });
+            
+            $('#search-application-fees').on('keyup', function() {
+                table.column(13).search(this.value).draw(); // 根據 Application_fees 搜尋
+            });
+            
+            $('#search-tuition-overview').on('keyup', function() {
+                table.column(14).search(this.value).draw(); // 根據 Tuition_overview 搜尋
+            });
+            
+            $('#search-preferred-language').on('keyup', function() {
+                table.column(15).search(this.value).draw(); // 根據 Preferred_Language 搜尋
+            });
+            
+            $('#search-ielts-score').on('keyup', function() {
+                table.column(16).search(this.value).draw(); // 根據 IELTS_score 搜尋
+            });
+            
+            $('#search-ielts-listen').on('keyup', function() {
+                table.column(17).search(this.value).draw(); // 根據 IELTS_listen 搜尋
+            });
+            
+            $('#search-ielts-speak').on('keyup', function() {
+                table.column(18).search(this.value).draw(); // 根據 IELTS_speak 搜尋
+            });
+            
+            $('#search-ielts-read').on('keyup', function() {
+                table.column(19).search(this.value).draw(); // 根據 IELTS_read 搜尋
+            });
+            
+            $('#search-ielts-write').on('keyup', function() {
+                table.column(20).search(this.value).draw(); // 根據 IELTS_write 搜尋
+            });
+            
+            $('#search-ielts-overview').on('keyup', function() {
+                table.column(21).search(this.value).draw(); // 根據 IELTS_overview 搜尋
+            });
+            
+            $('#search-toefl-score').on('keyup', function() {
+                table.column(22).search(this.value).draw(); // 根據 TOEFL_score 搜尋
+            });
+            
+            $('#search-toefl-listen').on('keyup', function() {
+                table.column(23).search(this.value).draw(); // 根據 TOEFL_listen 搜尋
+            });
+            
+            $('#search-toefl-speak').on('keyup', function() {
+                table.column(24).search(this.value).draw(); // 根據 TOEFL_speak 搜尋
+            });
+            
+            $('#search-toefl-read').on('keyup', function() {
+                table.column(25).search(this.value).draw(); // 根據 TOEFL_read 搜尋
+            });
+            
+            $('#search-toefl-write').on('keyup', function() {
+                table.column(26).search(this.value).draw(); // 根據 TOEFL_write 搜尋
+            });
+            
+            $('#search-toefl-overview').on('keyup', function() {
+                table.column(27).search(this.value).draw(); // 根據 TOEFL_overview 搜尋
+            });
+            
+            $('#search-entry-requirements').on('keyup', function() {
+                table.column(28).search(this.value).draw(); // 根據 Entry_Requirements 搜尋
+            });
+            
+            $('#search-background-required').on('keyup', function() {
+                table.column(29).search(this.value).draw(); // 根據 Background_Required 搜尋
+            });
+            
+            $('#search-conditional-admission').on('keyup', function() {
+                table.column(30).search(this.value).draw(); // 根據 Conditional_Admission 搜尋
+            });
+            
+            $('#search-school-grades').on('keyup', function() {
+                table.column(31).search(this.value).draw(); // 根據 School_Grades 搜尋
+            });
+            
+            $('#search-taiwan-grades').on('keyup', function() {
+                table.column(32).search(this.value).draw(); // 根據 Taiwan_Grades 搜尋
+            });
+            
+            $('#search-semester-start').on('keyup', function() {
+                table.column(33).search(this.value).draw(); // 根據 Semester_Start 搜尋
+            });
+            
+            $('#search-deadline').on('keyup', function() {
+                table.column(34).search(this.value).draw(); // 根據 Deadline 搜尋
+            });
+            
              
 
             // 設定列寬與行高調整

@@ -13,7 +13,7 @@
         <th>Department Name</th>
         <th>URL</th>
         <th>Academic_field</th>
-        <th>Description</th>
+        <th>Academic_field</th>
       </tr>
     </thead>
     <tbody>
@@ -30,7 +30,7 @@
             .then(data => {
                 data.forEach(item => {
                     document.querySelector("#json-table tbody").innerHTML += 
-                        `<tr><td>${item.name}</td><td>${item.version}</td><td>${item.description}</td></tr>`;
+                        `<tr><td>${item.URL}</td><td>${item.Academic_field}</td><td>${item.Description}</td></tr>`;
                 });
                 // 啟用 DataTable 功能
                 $("#json-table").DataTable();

@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             $("#json-table").DataTable({
                 "autoWidth": true,   // 自動調整列寬
                 "responsive": true,  // 啟用響應式設計
-                "colReorder": true,  // 啟用列調整功能
+                "colReorder": false,  // 啟用列調整功能
                 "ordering": true     // 啟用排序功能
             });
         })

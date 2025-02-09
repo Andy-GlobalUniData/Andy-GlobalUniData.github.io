@@ -111,6 +111,6 @@ a:hover {
   white-space: nowrap; /* 使文字不換行 */
   overflow: hidden;    /* 隱藏超出範圍的文字 */
   text-overflow: ellipsis; /* 顯示省略號 "..." */
-  min-width: 120px;    /* 設定最小寬度 */
+  min-width: 1px;    /* 設定最小寬度 */
   max-width: 40%;      /* 設定最大寬度為表格的 40% */
 }

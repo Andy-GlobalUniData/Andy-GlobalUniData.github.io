@@ -100,3 +100,11 @@ a:hover {
 #json-table td {
   cursor: pointer;  /* 在單元格內顯示可調整光標 */
 }
+
+/* 讓 URL 欄位的文字超出時顯示省略號 */
+#json-table td:nth-child(2) {
+  white-space: nowrap; /* 防止文字換行 */
+  overflow: hidden; /* 隱藏超出範圍的文字 */
+  text-overflow: ellipsis; /* 當文字超出時顯示省略號 */
+  max-width: 200px; /* 設定最大寬度，可以根據需求調整 */
+}

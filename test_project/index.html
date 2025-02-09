@@ -13,7 +13,7 @@
         <th>Department Name</th>
         <th>URL</th>
         <th>Academic_field</th>
-        <th>Academic_field</th>
+        <th>Description</th>
       </tr>
     </thead>
     <tbody>
@@ -23,20 +23,6 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        fetch("https://andy-globalunidata.github.io/test_project/data/data.json")
-            .then(response => response.json())
-            .then(data => {
-                data.forEach(item => {
-                    document.querySelector("#json-table tbody").innerHTML += 
-                        `<tr><td>${item.URL}</td><td>${item.Academic_field}</td><td>${item.Description}</td></tr>`;
-                });
-                // 啟用 DataTable 功能
-                $("#json-table").DataTable();
-            })
-            .catch(error => console.error("Error loading JSON:", error));
-    });
-  </script>
+  <script src="script.js"></script> <!-- 引用外部的 JavaScript 文件 -->
 </body>
 </html>

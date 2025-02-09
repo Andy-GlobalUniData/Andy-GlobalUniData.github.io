@@ -100,3 +100,15 @@ a:hover {
 #json-table td {
   cursor: pointer;  /* 在單元格內顯示可調整光標 */
 }
+
+
+#json-table td a.url-link {
+  display: inline-block;
+  max-width: 300px; /* 設定最大寬度，您可以根據需要調整 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  color: #1a73e8; /* 設定超連結顏色 */
+  text-decoration: none; /* 去掉底線 */
+}

@@ -8,9 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
             data.forEach(item => {
                 let urlText = item.URL;
                 // 如果 URL 超過 50 個字，就截斷並加上省略號
-                if (urlText.length > 50) {
-                    urlText = urlText.substring(0, 50) + "...";
-                }
+                let displayText = urlText.length > 50 ? urlText.substring(0, 50) + "..." : urlText;
 
                 tbody.innerHTML += 
                     `<tr>

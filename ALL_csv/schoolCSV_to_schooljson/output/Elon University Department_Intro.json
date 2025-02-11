@@ -1,0 +1,800 @@
+[
+    {
+        "School Name": "Elon University",
+        "Department Name": "Accelerated 3+1 Business Dual Degree",
+        "URL": "https://www.elon.edu/u/academics/business/love-school-of-business/accelerated-dual-degree/",
+        "Degree": "Dual-Degree Program, Graduate Program, Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Accelerated Pathways to PA & DPT1",
+        "URL": "https://www.elon.edu/u/academics/health-sciences/accelerated-pathways/",
+        "Degree": "Pre-Professional Program"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Accounting",
+        "URL": "https://www.elon.edu/u/academics/business/accounting/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Accounting (MSA)2",
+        "URL": "https://www.elon.edu/msa",
+        "Degree": "Graduate Program"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Acting3",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/performing-arts/majors-minors/acting-homepage/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Adventure Based Learning",
+        "URL": "https://www.elon.edu/u/academics/education/majors-minors/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "African & African-American Studies",
+        "URL": "https://www.elon.edu/aaase",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "American Studies",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/american-studies/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Anthropology",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/sociology-anthropology/about-our-department/about-anthropology/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Applied Mathematics",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/mathematics-statistics/mathematics/why-applied-mathematics/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Art History",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/history-geography/art-history/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Art4",
+        "URL": "https://www.elon.edu/art",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Arts Administration",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/performing-arts/majors-minors/arts-administration-facts/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Asian Studies",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/asian-studies/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Astronomy",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/physics/astronomy-program/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Astrophysics",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/physics/majors-minors/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Biochemistry",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/chemistry/majors-minors/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Biology",
+        "URL": "https://www.elon.edu/biology",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Business (MBA)2",
+        "URL": "https://www.elon.edu/mba",
+        "Degree": "Graduate Program"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Business Administration",
+        "URL": "https://www.elon.edu/u/academics/business/management/business-analytics/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Business Analytics",
+        "URL": "https://www.elon.edu/msba",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Business Analytics (MSBA)2",
+        "URL": "https://www.elon.edu/chemistry",
+        "Degree": "Graduate Program"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Chemistry",
+        "URL": "https://www.elon.edu/u/academics/communications/academics/cinema-television-arts/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Cinema & Television Arts",
+        "URL": "https://www.elon.edu/classicalstudies",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Classical Studies",
+        "URL": "https://www.elon.edu/u/academics/education/majors-minors/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Coaching",
+        "URL": "https://www.elon.edu/u/academics/communications/academics/communication-design/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Communication Design",
+        "URL": "https://www.elon.edu/u/academics/communications/academics/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Communications",
+        "URL": "https://www.elon.edu/compsci",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Computer Science",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/criminal-justice/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Creative Writing",
+        "URL": "https://www.elon.edu/u/academics/business/management/majors-minors/cybersecurity-management-minor/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Criminal Justice",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/performing-arts/majors-minors/dance-performance-choreography-homepage/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Cybersecurity Management",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/performing-arts/majors-minors/dance-science-homepage/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Dance",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/mathematics-statistics/majors-minors/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Dance Performance & Choreography3",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/computer-science/why-computing-sciences/data-science/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Dance Science",
+        "URL": "https://www.elon.edu/dpt",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Data Analytics",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/performing-arts/majors-minors/drama-theatre-studies-homepage/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Data Science",
+        "URL": "https://www.elon.edu/u/academics/education/majors-minors/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Digital Art",
+        "URL": "https://www.elon.edu/u/academics/business/economics/majors-minors/economic-consulting/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Doctor of Physical Therapy2",
+        "URL": "https://www.elon.edu/economics",
+        "Degree": "Graduate Program"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Drama & Theatre Studies",
+        "URL": "https://www.elon.edu/med",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Early Childhood",
+        "URL": "https://www.elon.edu/u/academics/education/majors-minors/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Economic Consulting",
+        "URL": "https://www.elon.edu/u/academics/education/majors-minors/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Economics",
+        "URL": "https://www.elon.edu/u/spdc/service-year/elon-alamance-health-partners/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Education (M.Ed.)2",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/engineering/majors/engineering-bachelor-science/",
+        "Degree": "Graduate Program"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Elementary Education",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/engineering/majors/engineering-design-minor/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Elementary Education & Special Education",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/engineering/majors/dual-degree-program/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Elon Alamance Health Partners1",
+        "URL": "https://www.elon.edu/english",
+        "Degree": "Pre-Professional Program"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Engineering",
+        "URL": "https://www.elon.edu/u/academics/business/entrepreneurship/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Engineering Design",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/environmental-studies/majors-minors/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Engineering Dual Degree",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/environmental-studies/majors-minors/",
+        "Degree": "Dual-Degree Program, Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "English",
+        "URL": "https://www.elon.edu/u/academics/education/majors-minors/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Entrepreneurship & Innovation",
+        "URL": "https://www.elon.edu/environmental-studies",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Environmental & Ecological Science",
+        "URL": "https://www.elon.edu/exercise-science",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Environmental & Sustainability Studies",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/expressive-arts/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Environmental Education",
+        "URL": "https://www.elon.edu/finance",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Environmental Studies",
+        "URL": "https://www.elon.edu/u/academics/business/finance/majors-minors/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Exercise Science",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/food-studies/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Expressive Arts",
+        "URL": "https://www.elon.edu/french",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Finance",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/game-design/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Financial Technology",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/history-geography/about-our-department/why-geography/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Food Studies",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/history-geography/about-our-department/why-geography/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "French",
+        "URL": "https://www.elon.edu/german",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Game Design",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/global-film-and-cultures/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Geographic Information Systems",
+        "URL": "https://www.elon.edu/u/academics/education/majors-minors/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Geography",
+        "URL": "https://www.elon.edu/u/academics/communications/academics/health-communications-minor/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "German Studies",
+        "URL": "https://www.elon.edu/healthprofessions",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Global Film & Cultures",
+        "URL": "https://www.elon.edu/mhe",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Health & Wellness Coaching",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/history-geography/about-our-department/why-history/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Health Communications",
+        "URL": "https://www.elon.edu/u/academics/business/management/human-resource-management/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Health Professions1",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/human-services/",
+        "Degree": "Pre-Professional Program"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Higher Education (MHE)2",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/independent-major/",
+        "Degree": "Graduate Program"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "History",
+        "URL": "https://www.elon.edu/imedia",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Human Resource Management",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/international-global-studies/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Human Service Studies",
+        "URL": "https://www.elon.edu/u/academics/business/international-business/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Independent Major",
+        "URL": "https://www.elon.edu/u/academics/business/degree-programs/dual-degree/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Interactive Media2",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/religious-studies/majors-minors/interreligious-studies-minor/",
+        "Degree": "Graduate Program"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "International & Global Studies",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/islamic-studies/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "International Business",
+        "URL": "https://www.elon.edu/italian",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "International Business Dual Degree",
+        "URL": "https://www.elon.edu/jazz",
+        "Degree": "Dual-Degree Program, Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Interreligious Studies",
+        "URL": "https://www.elon.edu/jewishstudies",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Islamic Studies",
+        "URL": "https://www.elon.edu/u/academics/communications/academics/journalism/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Italian Studies",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/latin-american-studies/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Jazz Studies",
+        "URL": "https://www.elon.edu/law",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Jewish Studies",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/leadership/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Journalism",
+        "URL": "https://www.elon.edu/pre-law",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Latin American Studies",
+        "URL": "https://www.elon.edu/marketing",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Law2",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/mathematics-statistics/mathematics/",
+        "Degree": "Graduate Program"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Leadership Studies",
+        "URL": "https://www.elon.edu/u/academics/communications/academics/media-analytics/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Legal Professions1",
+        "URL": "https://www.elon.edu/middle_east/",
+        "Degree": "Pre-Professional Program"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Literature",
+        "URL": "https://www.elon.edu/u/academics/education/majors-minors/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Marketing",
+        "URL": "https://www.elon.edu/u/academics/education/majors-minors/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Mathematics",
+        "URL": "https://www.elon.edu/rotc",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Media Analytics",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/english/majors-minors/multimedia-authoring-minor/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Middle East Studies",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/history-geography/about-our-department/museum-studies-public-history/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Middle Grades Education",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/music/majors-minors/music-education/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Middle Grades Education & Special Education",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/music/majors-minors/music-in-liberal-arts/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Military Science/ROTC5",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/music/majors-minors/music-performance/",
+        "Degree": "Other/Special Program"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Multimedia Authoring",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/music/majors-minors/music-production/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Museum Studies & Public History",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/performing-arts/majors-minors/music-theatre-homepage/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Music",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/neuroscience/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Music Education3",
+        "URL": "https://www.elon.edu/nursing",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Music in Liberal Arts",
+        "URL": "https://www.elon.edu/u/academics/education/outdoor-leadership-and-education/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Music Performance3",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/peace-conflict-studies/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Music Production & Recording Arts3",
+        "URL": "https://www.elon.edu/peacecorps",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Music Theatre3",
+        "URL": "https://www.elon.edu/philosophy",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Neuroscience",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/ppe/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Nursing",
+        "URL": "https://www.elon.edu/pa",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Outdoor Leadership & Education",
+        "URL": "https://www.elon.edu/physics",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Peace & Conflict Studies",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/music/majors-minors/piano-pedagogy-minor/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Peace Corps Prep5",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/political-science/political-science-program/",
+        "Degree": "Other/Special Program"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Philosophy",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/poverty-studies/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Philosophy, Politics & Economics",
+        "URL": "https://www.elon.edu/u/academics/business/marketing/professional-sales/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Photography",
+        "URL": "https://www.elon.edu/pwr",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Physician Assistant Studies2",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/professional-writing-studies/",
+        "Degree": "Graduate Program"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Physics",
+        "URL": "https://www.elon.edu/u/academics/business/management/project-management/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Piano Pedagogy",
+        "URL": "https://www.elon.edu/psychology",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Political Science",
+        "URL": "https://www.elon.edu/public-health",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Poverty & Social Justice",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/political-science/policy-studies-program/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Professional Sales",
+        "URL": "https://www.elon.edu/religiousstudies",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Professional Writing & Rhetoric",
+        "URL": "https://www.elon.edu/u/academics/education/majors-minors/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Professional Writing Studies",
+        "URL": "https://www.elon.edu/u/academics/education/majors-minors/",
+        "Degree": "Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Project Management",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/sociology-anthropology/about-our-department/about-sociology/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Psychology",
+        "URL": "https://www.elon.edu/spanish",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Public Health Studies",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/spanish-studies/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Public Policy",
+        "URL": "https://www.elon.edu/u/academics/communications/sport-management/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Religious Studies",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/mathematics-statistics/statistics/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Science Education",
+        "URL": "https://www.elon.edu/u/academics/communications/academics/strategic-communications/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Secondary Education",
+        "URL": "https://www.elon.edu/u/academics/business/marketing/supply-chain-management/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Sociology",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/sustainable-enterprises/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Spanish",
+        "URL": "https://www.elon.edu/u/academics/education/majors-minors/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Spanish with Teacher Licensure",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/english/majors-minors/teaching-english-to-speakers-of-other-languages-minor/",
+        "Degree": "Undergraduate Major"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Sport Management",
+        "URL": "https://www.elon.edu/u/academics/arts-and-sciences/performing-arts/majors-minors/theatrical-design-technology-homepage/",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    },
+    {
+        "School Name": "Elon University",
+        "Department Name": "Statistics",
+        "URL": "https://www.elon.edu/womengender",
+        "Degree": "Undergraduate Major, Undergraduate Minor"
+    }
+]

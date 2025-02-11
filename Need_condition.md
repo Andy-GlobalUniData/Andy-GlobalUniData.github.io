@@ -1,3 +1,4 @@
+# 最終版
 School_name
 Department_name
 Website_Link
@@ -33,3 +34,10 @@ School_Grades
 Taiwan_Grades
 Semester_Start
 Deadline
+
+# 實際達成的版本
+School
+Department
+Link
+Description
+Degree

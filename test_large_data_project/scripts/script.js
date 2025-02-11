@@ -22,8 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         <td>${item["School Name"]}</td>
                         <td>${item["Department Name"]}</td>
                         <td><a href="${item.URL}" target="_blank">${urlText}</a></td>
-                        <td>${item.Degree}</td>
-                        <td>${item.Description}</td>
                     `;
 
                     tableElement.appendChild(row);

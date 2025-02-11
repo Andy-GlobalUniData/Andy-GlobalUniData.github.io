@@ -59,12 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
         $('#search-Link').on('keyup', function() {
             table.column(2).search(this.value).draw();
         });
-        $('#search-description').on('keyup', function() {
-            table.column(3).search(this.value).draw();
-        });
-        $('#search-degree').on('keyup', function() {
-            table.column(4).search(this.value).draw();
-        });
     }
 
     loadJsonInChunks("https://andy-globalunidata.github.io/test_large_data_project/data/data.json");

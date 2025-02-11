@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("https://andy-globalunidata.github.io/demo_small_project/data/merged_output.json")
+    fetch("https://andy-globalunidata.github.io/demo_small_project/data/data.json")
         .then(response => response.json())
         .then(data => {
             const tbody = document.querySelector("#json-table tbody");

@@ -1,51 +1,52 @@
 document.addEventListener("DOMContentLoaded", function () {
     const tableElement = document.querySelector("#json-table tbody");
     let dataTable;
-    
-    async function loadJsonInChunks(url, chunkSize = 20) {
+    let totalData = [];
+    let index = 0;
+    const chunkSize = 20; // 每次載入 20 筆
+
+    async function fetchJsonData(url) {
         try {
             const response = await fetch(url);
-            const data = await response.json();
-
+            totalData = await response.json();
             tableElement.innerHTML = ""; // 清空舊資料
-            let index = 0;
-
-            function loadChunk() {
-                const chunk = data.slice(index, index + chunkSize);
-                index += chunkSize;
-
-                chunk.forEach(item => {
-                    let row = document.createElement("tr");
-
-                    let urlText = item.URL.length > 50 ? item.URL.substring(0, 50) + "..." : item.URL;
-                    row.innerHTML = `
-                        <td>${item["School Name"]}</td>
-                        <td>${item["Department Name"]}</td>
-                        <td><a href="${item.URL}" target="_blank">${urlText}</a></td>
-                    `;
-
-                    tableElement.appendChild(row);
-                });
-
-                if (!dataTable) {
-                    // **初始化 DataTable**
-                    dataTable = $("#json-table").DataTable();
-                    setupSearchFilters(dataTable);
-                } else {
-                    // **更新 DataTable**
-                    dataTable.rows.add($(tableElement).find("tr")).draw();
-                }
-
-                if (index < data.length) {
-                    setTimeout(loadChunk, 200); // 延遲載入，讓 UI 有時間更新
-                }
-            }
-
-            loadChunk(); // 開始載入第一批資料
-
+            loadNextChunk(); // 先載入第一批資料
         } catch (error) {
             console.error("Error loading JSON:", error);
             alert("Error loading JSON: " + error.message);
+        }
+    }
+
+    function loadNextChunk() {
+        if (index >= totalData.length) return;
+
+        const chunk = totalData.slice(index, index + chunkSize);
+        index += chunkSize;
+
+        chunk.forEach(item => {
+            let row = document.createElement("tr");
+
+            let urlText = item.URL.length > 50 ? item.URL.substring(0, 50) + "..." : item.URL;
+            row.innerHTML = `
+                <td>${item["School Name"]}</td>
+                <td>${item["Department Name"]}</td>
+                <td><a href="${item.URL}" target="_blank">${urlText}</a></td>
+            `;
+
+            tableElement.appendChild(row);
+        });
+
+        if (!dataTable) {
+            // **初始化 DataTable**
+            dataTable = $("#json-table").DataTable();
+            setupSearchFilters(dataTable);
+        } else {
+            // **新增新資料**
+            dataTable.rows.add($(tableElement).find("tr")).draw();
+        }
+
+        if (index < totalData.length) {
+            setTimeout(loadNextChunk, 200); // 延遲載入，避免 UI 卡頓
         }
     }
 
@@ -61,5 +62,5 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    loadJsonInChunks("https://andy-globalunidata.github.io/test_large_data_project/data/data.json");
+    fetchJsonData("https://andy-globalunidata.github.io/test_large_data_project/data/data.json");
 });

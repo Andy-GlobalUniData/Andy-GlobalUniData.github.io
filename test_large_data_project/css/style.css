@@ -1,0 +1,134 @@
+/* 全局設定 */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 20px;
+}
+
+h2 {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* 表格樣式 */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+td {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) td {
+  background-color: #f2f2f2;
+}
+
+tr:hover td {
+  background-color: #f1f1f1;
+}
+
+/* DataTables 調整 */
+.dataTables_wrapper {
+  padding: 20px;
+}
+
+.dataTables_length,
+.dataTables_filter {
+  font-size: 14px;
+}
+
+.dataTables_info {
+  font-size: 14px;
+}
+
+/* 設定連結樣式 */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 設定響應式，讓表格可以滾動 */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+/* 讓表格的每一列都能夠調整大小 */
+#json-table th {
+  position: relative;
+  cursor: ew-resize; /* 改變鼠標光標樣式 */
+}
+
+/* 設定列寬最小值和最大值 */
+#json-table td {
+  min-width: 50px;
+  max-width: 300px;
+  width: auto; /* 讓欄位自動調整 */
+}
+
+/* 設定行高 */
+#json-table td {
+  height: 40px;  /* 設定單元格的高度 */
+}
+
+/* 讓行可以被拖動來調整高度 */
+#json-table tr {
+  cursor: ns-resize;  /* 改變鼠標光標樣式 */
+}
+
+/* 當表格列被拖動時顯示適合的光標樣式 */
+#json-table td {
+  cursor: pointer;  /* 在單元格內顯示可調整光標 */
+}
+
+/* 設定連結顯示樣式 */
+#json-table td a.url-link {
+  display: inline-block;
+  max-width: 300px; /* 設定最大寬度，您可以根據需要調整 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  color: #1a73e8; /* 設定超連結顏色 */
+  text-decoration: none; /* 去掉底線 */
+}
+
+/* 提高可讀性，調整表格樣式 */
+#json-table td,
+#json-table th {
+  word-wrap: break-word; /* 使單元格文字換行 */
+}
+
+/* 提高表格的彈性，使其在小螢幕上不會被擠壓 */
+#json-table {
+  width: 100%;
+  table-layout: auto;
+}
+
+/* 避免表格的列被過度限制，適應內容 */
+#json-table td {
+  width: auto;
+  min-width: 50px;
+  max-width: none;
+}

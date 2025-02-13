@@ -8,27 +8,22 @@
 ## 📌 專案連結
 [主專案](https://andy-globalunidata.github.io/main_project)
 
+[測試版本](https://andy-globalunidata.github.io/large_data_project/)
+
 ## 測試版本
 本專案經歷多個版本的開發與改進，以下是各個測試版本的連結與簡要說明：
 
-### 🔹 v0.1
 **初代版本** - 使用 HTML、CSS、JavaScript 開發，能夠基本顯示資料。
 [🔗 v0.1 連結](https://andy-globalunidata.github.io/old_project/v0.1)
 
-### 🔹 v0.2
 **嘗試載入大量資料，但 DataTables 運行緩慢，出現卡頓問題。**
 [🔗 v0.2 連結](https://andy-globalunidata.github.io/old_project/v0.2)
 
-### 🔹 v0.5
 **成功載入部分學校資料，但仍待進一步優化。**
 [🔗 v0.5 連結](https://andy-globalunidata.github.io/old_project/v0.5)
 
-### 🔹 v1.0
 **新增分批載入資料功能，但尚未自動化，並且仍有部分 Bug 需要修復。**
 [🔗 v1.0 連結](https://andy-globalunidata.github.io/old_project/v1.0)
-
-### 🔹 v1.1
-https://andy-globalunidata.github.io/large_data_project/
 
 ## 未來改進方向
 - **自動化資料載入**
@@ -50,3 +45,5 @@ https://andy-globalunidata.github.io/large_data_project/
 - UCLA
 - Universiteit Leiden
 - Universiteit van Amsterdam
+- University of Exeter
+- University of Leeds

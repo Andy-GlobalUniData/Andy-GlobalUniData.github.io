@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let dataTable;
     let totalData = [];
     let index = 0;
-    const chunkSize = 20; // 每次載入 20 筆
+    const chunkSize = 100; // 每次載入 100 筆
 
     async function fetchJsonData(url) {
         try {
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (index < totalData.length) {
-            setTimeout(loadNextChunk, 200); // 延遲載入，避免 UI 卡頓
+            setTimeout(loadNextChunk, 50); // 延遲載入，避免 UI 卡頓
         }
     }
 

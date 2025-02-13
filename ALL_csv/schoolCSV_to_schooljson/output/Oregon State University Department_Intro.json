@@ -1,0 +1,554 @@
+[
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Accountancy",
+        "URL": "https://catalog.oregonstate.edu/college-departments/business/accountancy-bs-hbs/",
+        "Degree": "Business, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Agricultural and Food Business Management",
+        "URL": "https://agsci.oregonstate.edu/degree-fact-sheet/agricultural-food-business-management",
+        "Degree": "Agricultural Sciences, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Agricultural Sciences",
+        "URL": "https://catalog.oregonstate.edu/college-departments/agricultural-sciences/agricultural-education-general-agriculture/agricultural-sciences-bs-hbs/#sampleplantext",
+        "Degree": "Agricultural Sciences, Ecampus, LaGrande, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "American Studies",
+        "URL": "https://osucascades.edu/american-studies/degree-requirements",
+        "Degree": "Liberal Arts, Bend"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Animal Sciences",
+        "URL": "https://catalog.oregonstate.edu/college-departments/agricultural-sciences/animal-rangeland-sciences/animal-sciences-bs-hbs/#sampleplantext",
+        "Degree": "Agricultural Sciences, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Anthropology",
+        "URL": "https://liberalarts.oregonstate.edu/anthropology/academic-programs/undergraduate-anthropology",
+        "Degree": "Liberal Arts, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Applied Humanities",
+        "URL": "https://ecampus.oregonstate.edu/online-degrees/undergraduate/applied-humanities/curriculum.htm",
+        "Degree": "Liberal Arts, Online"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Architectural Engineering",
+        "URL": "https://catalog.oregonstate.edu/college-departments/engineering/school-civil-construction-engineering/architectural-engineering-bs-hbs/#retext",
+        "Degree": "Engineering, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Art",
+        "URL": "https://liberalarts.oregonstate.edu/svpda/art/academic-programs",
+        "Degree": "Liberal Arts, Corvallis, Bend"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Arts Media and Technology",
+        "URL": "https://osucascades.edu/amt/degree-requirements",
+        "Degree": "Liberal Arts, Bend"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Biochemistry and Biophysics",
+        "URL": "https://catalog.oregonstate.edu/college-departments/science/school-life-sciences/biochemistry-biophysics/biochemistry-biophysics-bs-hbs/#sampleplantext",
+        "Degree": "Science, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Biochemistry and Molecular Biology",
+        "URL": "https://catalog.oregonstate.edu/college-departments/science/school-life-sciences/biochemistry-biophysics/biochemistry-molecular-biology-bs-hbs/",
+        "Degree": "Science, Corvallis, Bend"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Bioengineering",
+        "URL": "https://catalog.oregonstate.edu/college-departments/engineering/school-chemical-biological-environmental-engineering/bioengineering-ba-bs-hba-hbs/",
+        "Degree": "Engineering, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "BioHealth Sciences",
+        "URL": "https://catalog.oregonstate.edu/college-departments/science/school-life-sciences/microbiology/biohealth-sciences-bs-hbs/#sampleplantext",
+        "Degree": "Science, Corvallis, Ecampus"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Biological Data Sciences",
+        "URL": "https://catalog.oregonstate.edu/college-departments/agricultural-sciences/botany-plant-pathology/biological-data-sciences-bs-hbs/#sampleplantext",
+        "Degree": "Agricultural Sciences, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Biology",
+        "URL": "https://catalog.oregonstate.edu/college-departments/science/school-life-sciences/integrative-biology/biology-bs-hbs/#sampleplantext",
+        "Degree": "Science, Corvallis, Bend"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Bioresource Research",
+        "URL": "https://catalog.oregonstate.edu/college-departments/agricultural-sciences/bioresource-research-bs-hbs/#sampleplantext",
+        "Degree": "Agricultural Sciences, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Botany",
+        "URL": "https://catalog.oregonstate.edu/college-departments/agricultural-sciences/botany-plant-pathology/botany-bs-hbs/",
+        "Degree": "Agricultural Sciences, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Business Administration",
+        "URL": "https://catalog.oregonstate.edu/college-departments/business/business-administration-ba-bs-hba-hbs/#sampleplantext",
+        "Degree": "Business, Ecampus, Bend, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Business Analytics",
+        "URL": "https://catalog.oregonstate.edu/college-departments/business/business-analytics-bs-hbs/#sampleplantext",
+        "Degree": "Business, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Business Information Systems",
+        "URL": "https://catalog.oregonstate.edu/college-departments/business/business-information-systems-ba-bs-hba-hbs/#sampleplantext",
+        "Degree": "Business, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Chemical Engineering",
+        "URL": "https://catalog.oregonstate.edu/college-departments/engineering/school-chemical-biological-environmental-engineering/chemical-engineering-ba-bs-hba-hbs/",
+        "Degree": "Engineering, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Chemistry",
+        "URL": "https://catalog.oregonstate.edu/college-departments/science/chemistry/chemistry-ba-bs-hba-hbs/#sampleplantext",
+        "Degree": "Science, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Civil Engineering",
+        "URL": "https://oregonstate.app.box.com/s/vdbeimugd0gcc8tcg3fnka74v3fzpwuv",
+        "Degree": "Engineering, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Climate Science",
+        "URL": "https://catalog.oregonstate.edu/college-departments/engineering/school-electrical-engineering-computer-science/computer-science-ba-bs-hba-hbs/",
+        "Degree": "Earth, Ocean, and Atmospheric Sciences, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Computer Science",
+        "URL": "https://catalog.oregonstate.edu/college-departments/engineering/school-civil-construction-engineering/construction-engineering-management-ba-bs-hba-hbs/",
+        "Degree": "Engineering, Ecampus, Corvallis, Bend"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Construction Engineering Management",
+        "URL": "https://ecampus.oregonstate.edu/online-degrees/undergraduate/contemporary-music-industry/curriculum.htm",
+        "Degree": "Engineering, Corvallis, Ecampus"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Contemporary Music Industry",
+        "URL": "https://catalog.oregonstate.edu/college-departments/liberal-arts/school-writing-literature-film/creative-writing-ba-hba/#sampleplantext",
+        "Degree": "Liberal Arts, Online"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Creative Writing",
+        "URL": "https://catalog.oregonstate.edu/college-departments/agricultural-sciences/crop-soil-science/crop-soil-science-bs-hbs/#sampleplantext",
+        "Degree": "Liberal Arts, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Crop and Soil Science",
+        "URL": "https://catalog.oregonstate.edu/college-departments/business/design-innovation-management-bs-hbs/#sampleplantext",
+        "Degree": "Agricultural Sciences, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Design and Innovation Management",
+        "URL": "https://liberalarts.oregonstate.edu/soc/nmc/academic-programs",
+        "Degree": "Business, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Digital Communication Arts",
+        "URL": "https://bee.oregonstate.edu/sites/agscid7/files/ecoe_bubble_chart_2017-2018.pdf",
+        "Degree": "Liberal Arts, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Earth Sciences",
+        "URL": "https://catalog.oregonstate.edu/college-departments/liberal-arts/school-public-policy/economics-ba-bs-hba-hbs/#sampleplantext",
+        "Degree": "Earth, Ocean, and Atmospheric Sciences, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Ecological Engineering",
+        "URL": "https://education.oregonstate.edu/bs-teaching-coursework",
+        "Degree": "Engineering, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Economics",
+        "URL": "https://catalog.oregonstate.edu/college-departments/engineering/school-electrical-engineering-computer-science/electrical-computer-engineering-bs-hbs/#sampleplantext",
+        "Degree": "Liberal Arts, Ecampus, Bend, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Education, Elementary (Pre-Teaching)",
+        "URL": "https://osucascades.edu/energy-systems-engineering/degree-requirements#degreemap",
+        "Degree": "Education, Corvallis, Ecampus, Bend"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Education, Middle/High School (Pre-Education)",
+        "URL": "https://catalog.oregonstate.edu/college-departments/engineering/other-degrees-programs/engineering-science-bs-hbs/#sampleplantext",
+        "Degree": "Education, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Electrical and Computer Engineering",
+        "URL": "https://catalog.oregonstate.edu/college-departments/liberal-arts/school-writing-literature-film/english-ba-hba/#sampleplantext",
+        "Degree": "Engineering, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Energy Systems Engineering",
+        "URL": "https://catalog.oregonstate.edu/college-departments/agricultural-sciences/applied-economics/environmental-economics-policy-bs-hbs/#sampleplantext",
+        "Degree": "Engineering, Bend"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Engineering Science",
+        "URL": "https://catalog.oregonstate.edu/college-departments/engineering/school-chemical-biological-environmental-engineering/environmental-engineering-ba-bs-hba-hbs/",
+        "Degree": "Engineering, Bend"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "English",
+        "URL": "https://catalog.oregonstate.edu/college-departments/earth-ocean-atmospheric-sciences/environmental-sciences-bs-hbs/",
+        "Degree": "Liberal Arts, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Environmental Economics and Policy",
+        "URL": "https://catalog.oregonstate.edu/college-departments/liberal-arts/school-language-culture-society/ethnic-studies-ba-bs-hba-hbs/#sampleplantext",
+        "Degree": "Agricultural Sciences, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Environmental Engineering",
+        "URL": "https://catalog.oregonstate.edu/college-departments/business/finance-ba-bs-hba-hbs/#sampleplantext",
+        "Degree": "Engineering, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Environmental Sciences",
+        "URL": "https://catalog.oregonstate.edu/college-departments/agricultural-sciences/fisheries-wildlife-conservation-sciences/fisheries-wildlife-conservation-sciences-bs-hbs/#sampleplantext",
+        "Degree": "Earth, Ocean, and Atmospheric Sciences, Ecampus, Corvallis, Bend"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Ethnic Studies",
+        "URL": "https://agsci.oregonstate.edu/degree-fact-sheet/food-science-sustainable-technologies",
+        "Degree": "Liberal Arts, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Finance",
+        "URL": "https://catalog.oregonstate.edu/college-departments/liberal-arts/school-language-culture-society/french-ba-hba/#sampleplantext",
+        "Degree": "Business, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Fisheries Wildlife and Conservation Sciences",
+        "URL": "https://ceoas.oregonstate.edu/four-year-sample-plans",
+        "Degree": "Agricultural Sciences, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Food Science and Sustainability Technologies",
+        "URL": "https://oregonstate.app.box.com/s/x002vg6bwnef4z9ukhbrqycc23vb0lbs",
+        "Degree": "Agricultural Sciences, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "French",
+        "URL": "https://catalog.oregonstate.edu/college-departments/liberal-arts/school-language-culture-society/german-ba-bs-hba-hbs/#sampleplantext",
+        "Degree": "Liberal Arts, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Geography and Geospatial Science",
+        "URL": "https://catalog.oregonstate.edu/college-departments/liberal-arts/school-visual-performing-design-arts/graphic-design-bfa-hbfa/#sampleplantext",
+        "Degree": "Earth, Ocean, and Atmospheric Sciences, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Geology",
+        "URL": "https://catalog.oregonstate.edu/college-departments/agricultural-sciences/horticulture/horticulture-bs-hbs/#sampleplantext",
+        "Degree": "Earth, Ocean, and Atmospheric Sciences, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "German",
+        "URL": "https://osucascades.edu/hospitality-management/four-year-sample-plan",
+        "Degree": "Liberal Arts, Corvallis, Ecampus"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Graphic Design",
+        "URL": "https://health.oregonstate.edu/advising/resources/degree-maps",
+        "Degree": "Liberal Arts, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "History",
+        "URL": "https://catalog.oregonstate.edu/college-departments/engineering/school-mechanical-industrial-manufacturing-engineering/industrial-engineering-bs-hbs/#sampleplantext",
+        "Degree": "Liberal Arts, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Horticulture",
+        "URL": "https://business.oregonstate.edu/programs/undergraduate/innovation-management/required-courses",
+        "Degree": "Agricultural Sciences, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Hospitality Management",
+        "URL": "https://health.oregonstate.edu/advising/resources/degree-maps",
+        "Degree": "Business, Ecampus, Bend"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Human Development and Family Sciences",
+        "URL": "https://liberalarts.oregonstate.edu/advising/liberal-studies/liberal-studies-major",
+        "Degree": "Health, Ecampus, Corvallis, Bend"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Industrial Engineering",
+        "URL": "https://business.oregonstate.edu/programs/undergraduate/organizational-leadership/four-year-plan",
+        "Degree": "Engineering, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Innovation Management",
+        "URL": "https://catalog.oregonstate.edu/college-departments/engineering/school-mechanical-industrial-manufacturing-engineering/manufacturing-engineering-bs-hbs/#sampleplantext",
+        "Degree": "Business, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "International Studies",
+        "URL": "https://catalog.oregonstate.edu/college-departments/science/school-life-sciences/integrative-biology/biology-bs-hbs/marine-biology-ecology-option/",
+        "Degree": "Liberal Arts, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Kinesiology",
+        "URL": "https://catalog.oregonstate.edu/college-departments/liberal-arts/other-degrees-programs/marine-studies-ba-bs-hba-hbs/",
+        "Degree": "Health, Ecampus, Bend, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Liberal Studies",
+        "URL": "https://catalog.oregonstate.edu/college-departments/business/marketing-ba-bs-hba-hbs/#sampleplantext",
+        "Degree": "Liberal Arts, Ecampus, Bend, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Management",
+        "URL": "https://catalog.oregonstate.edu/college-departments/science/mathematics/mathematics-bs-hbs/#sampleplantext",
+        "Degree": "Business, Corvallis, Ecampus"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Manufacturing Engineering",
+        "URL": "https://catalog.oregonstate.edu/college-departments/engineering/school-mechanical-industrial-manufacturing-engineering/mechanical-engineering-bs-hbs/",
+        "Degree": "Engineering, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Marine Biology",
+        "URL": "https://catalog.oregonstate.edu/college-departments/science/school-life-sciences/microbiology/microbiology-bs-hbs/#sampleplantext",
+        "Degree": "Science, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Marine Studies",
+        "URL": "https://catalog.oregonstate.edu/college-departments/liberal-arts/school-visual-performing-design-arts/music-ba-bs-hba-hbs/",
+        "Degree": "Liberal Arts, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Marketing",
+        "URL": "https://catalog.oregonstate.edu/college-departments/liberal-arts/school-visual-performing-design-arts/music-studies-bm-hbm/",
+        "Degree": "Business, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Mathematics",
+        "URL": "https://www.forestry.oregonstate.edu/studentservices/majors-advising-guides",
+        "Degree": "Science, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Mechanical Engineering",
+        "URL": "https://catalog.oregonstate.edu/college-departments/engineering/school-nuclear-science-engineering/nuclear-engineering-bs-hbs/#sampleplantext",
+        "Degree": "Engineering, Corvallis, Ecampus, Bend"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Microbiology",
+        "URL": "https://health.oregonstate.edu/advising/resources/degree-maps",
+        "Degree": "Science, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Music",
+        "URL": "https://oregonstate.app.box.com/s/yuqhg2h2pxx91qt2noegoznv42s91tt0",
+        "Degree": "Liberal Arts, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Music Studies",
+        "URL": "https://catalog.oregonstate.edu/college-departments/engineering/other-degrees-programs/outdoor-products-bs-hbs/",
+        "Degree": "Liberal Arts, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Natural Resources",
+        "URL": "https://catalog.oregonstate.edu/college-departments/science/physics/physics-ba-bs-hba-hbs/#sampleplantext",
+        "Degree": "Forestry, Corvallis, Bend, Ecampus"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Nuclear Engineering",
+        "URL": "https://catalog.oregonstate.edu/college-departments/business/apparel-design-bs-hbs/#sampleplantext",
+        "Degree": "Engineering, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Nutrition",
+        "URL": "https://catalog.oregonstate.edu/college-departments/forestry/forest-engineering-resources-management/forest-engineering-bs-hbs/",
+        "Degree": "Health, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Oceanography",
+        "URL": "https://catalog.oregonstate.edu/college-departments/forestry/forest-engineering-resources-management/forest-engineering-civil-engineering-bs-hbs/",
+        "Degree": "Earth, Ocean, and Atmospheric Sciences, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Outdoor Products",
+        "URL": "https://www.forestry.oregonstate.edu/studentservices/majors-advising-guides",
+        "Degree": "Engineering, Bend"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Philosophy",
+        "URL": "https://catalog.oregonstate.edu/college-departments/business/interior-design-bs-hbs/#sampleplantext",
+        "Degree": "Liberal Arts, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Physics",
+        "URL": "https://business.oregonstate.edu/programs/undergraduate/product-and-merchandising-management/four-year-plan",
+        "Degree": "Science, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Political Science",
+        "URL": "https://liberalarts.oregonstate.edu/sites/liberalarts.oregonstate.edu/files/psychology_bs.pdf",
+        "Degree": "Liberal Arts, Ecampus, Bend, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Pre-Apparel Design",
+        "URL": "https://health.oregonstate.edu/advising/resources/degree-maps",
+        "Degree": "Business, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Pre-Forest Engineering",
+        "URL": "https://catalog.oregonstate.edu/college-departments/liberal-arts/school-public-policy/public-policy-bs-hbs/#sampleplantext",
+        "Degree": "Forestry, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Pre-Forest-Civil Engineering",
+        "URL": "https://catalog.oregonstate.edu/college-departments/engineering/school-nuclear-science-engineering/radiation-health-physics-bs-hbs/#sampleplantext",
+        "Degree": "Forestry, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Pre-Forestry",
+        "URL": "https://catalog.oregonstate.edu/college-departments/agricultural-sciences/animal-rangeland-sciences/rangeland-sciences-bs-hbs/#sampleplantext",
+        "Degree": "Forestry, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Pre-Interior Design",
+        "URL": "https://catalog.oregonstate.edu/college-departments/liberal-arts/other-degrees-programs/social-science-ba-bs-hba-hbs/#sampleplantext",
+        "Degree": "Business, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Pre-Med",
+        "URL": "https://liberalarts.oregonstate.edu/soc/speech/academic-programs",
+        "Degree": "College of Science, College of Health, College of Liberal Arts, Bend, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Product and Merchandising Management",
+        "URL": "https://catalog.oregonstate.edu/college-departments/business/supply-chain-logistics-management-bs-hbs/",
+        "Degree": "Business, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Psychology",
+        "URL": "https://liberalarts.oregonstate.edu/theatre/academic-programs/theatre-arts-undergraduate",
+        "Degree": "Liberal Arts, Corvallis, Ecampus, Bend"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Public Health",
+        "URL": "https://catalog.oregonstate.edu/college-departments/forestry/forest-ecosystems-society/tourism-recreation-adventure-leadership-bs-hbs/#sampleplantext",
+        "Degree": "Health, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Public Policy",
+        "URL": "https://catalog.oregonstate.edu/college-departments/liberal-arts/school-language-culture-society/women-gender-sexuality-studies-ba-bs-hba-hbs/#sampleplantext",
+        "Degree": "Liberal Arts, Ecampus, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Radiation Health Physics",
+        "URL": "https://www.forestry.oregonstate.edu/studentservices/majors-advising-guides",
+        "Degree": "Engineering, Corvallis"
+    },
+    {
+        "School Name": "Oregon State University",
+        "Department Name": "Rangeland Sciences",
+        "URL": "https://catalog.oregonstate.edu/college-departments/science/school-life-sciences/integrative-biology/zoology-bs-hbs/",
+        "Degree": "Agricultural Sciences, Ecampus, LaGrande, Corvallis"
+    }
+]

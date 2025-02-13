@@ -3,13 +3,26 @@ document.addEventListener("DOMContentLoaded", function () {
     let dataTable;
     let totalData = [];
     let index = 0;
-    const chunkSize = 100; // 每次載入 100 筆
+    const chunkSize = 20; // 每次載入 20 筆
 
     async function fetchJsonData(url) {
         try {
             const response = await fetch(url);
             totalData = await response.json();
             tableElement.innerHTML = ""; // 清空舊資料
+
+            // **初始化 DataTable（設定為 client-side 處理）**
+            dataTable = $("#json-table").DataTable({
+                columns: [
+                    { title: "School Name" },
+                    { title: "Department Name" },
+                    { title: "URL" }
+                ],
+                pageLength: 10,  // 預設每頁顯示 10 筆
+                destroy: true, // 確保可以重新載入 DataTable
+            });
+
+            setupSearchFilters(dataTable);
             loadNextChunk(); // 先載入第一批資料
         } catch (error) {
             console.error("Error loading JSON:", error);
@@ -23,30 +36,19 @@ document.addEventListener("DOMContentLoaded", function () {
         const chunk = totalData.slice(index, index + chunkSize);
         index += chunkSize;
 
-        chunk.forEach(item => {
-            let row = document.createElement("tr");
-
+        const formattedData = chunk.map(item => {
             let urlText = item.URL.length > 50 ? item.URL.substring(0, 50) + "..." : item.URL;
-            row.innerHTML = `
-                <td>${item["School Name"]}</td>
-                <td>${item["Department Name"]}</td>
-                <td><a href="${item.URL}" target="_blank">${urlText}</a></td>
-            `;
-
-            tableElement.appendChild(row);
+            return [
+                item["School Name"],
+                item["Department Name"],
+                `<a href="${item.URL}" target="_blank">${urlText}</a>`
+            ];
         });
 
-        if (!dataTable) {
-            // **初始化 DataTable**
-            dataTable = $("#json-table").DataTable();
-            setupSearchFilters(dataTable);
-        } else {
-            // **新增新資料**
-            dataTable.rows.add($(tableElement).find("tr")).draw();
-        }
+        dataTable.rows.add(formattedData).draw(false); // **不重置分頁**
 
         if (index < totalData.length) {
-            setTimeout(loadNextChunk, 50); // 延遲載入，避免 UI 卡頓
+            setTimeout(loadNextChunk, 200); // **延遲載入，避免 UI 卡頓**
         }
     }
 

@@ -62,5 +62,5 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    fetchJsonData("https://andy-globalunidata.github.io/test_large_data_project/data/data.json");
+    fetchJsonData("https://andy-globalunidata.github.io/old_project/v1.0/data/data.json");
 });

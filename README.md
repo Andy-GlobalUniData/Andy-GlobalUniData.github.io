@@ -17,15 +17,18 @@
 
 ### 🔹 v0.2
 **嘗試載入大量資料，但 DataTables 運行緩慢，出現卡頓問題。**
-[🔗 v0.2 連結](https://andy-globalunidata.github.io/demo_project/)
+[🔗 v0.2 連結](https://andy-globalunidata.github.io/old_project/v0.2)
 
 ### 🔹 v0.5
 **成功載入部分學校資料，但仍待進一步優化。**
-[🔗 v0.5 連結](https://andy-globalunidata.github.io/demo_small_project/)
+[🔗 v0.5 連結](https://andy-globalunidata.github.io/old_project/v0.5)
 
 ### 🔹 v1.0
 **新增分批載入資料功能，但尚未自動化，並且仍有部分 Bug 需要修復。**
-[🔗 v1.0 連結](https://andy-globalunidata.github.io/test_large_data_project)
+[🔗 v1.0 連結](https://andy-globalunidata.github.io/old_project/v1.0)
+
+### 🔹 v1.1
+https://andy-globalunidata.github.io/large_data_project/
 
 ## 未來改進方向
 - **自動化資料載入**
@@ -44,3 +47,6 @@
 - Oregon State University
 - Queen's University Belfast
 - San Jose State University
+- UCLA
+- Universiteit Leiden
+- Universiteit van Amsterdam

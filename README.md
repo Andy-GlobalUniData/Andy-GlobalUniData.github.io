@@ -2,6 +2,8 @@
 
 本專案旨在收集與展示各大學校相關數據，並提供便捷的搜尋功能，特別針對外國大學的資訊。
 
+> 本專案是為公司開發的查找工具，透過爬蟲技術抓取外國大學的資料。目前仍在開發階段，因此暫時對外開放，未來將提供 Demo 版本供公司以外的使用者參考。
+
 
 ## 📌 專案連結
 [主專案](https://andy-globalunidata.github.io/main_project)
@@ -11,7 +13,7 @@
 
 ### 🔹 v0.1
 **初代版本** - 使用 HTML、CSS、JavaScript 開發，能夠基本顯示資料。
-[🔗 v0.1 連結](https://andy-globalunidata.github.io/test_project/)
+[🔗 v0.1 連結](https://andy-globalunidata.github.io/old_project/v0.1)
 
 ### 🔹 v0.2
 **嘗試載入大量資料，但 DataTables 運行緩慢，出現卡頓問題。**
@@ -33,12 +35,12 @@
 - **註冊帳號與密碼**
 
 ## 目前有載入的學校
-Bath Spa University
-Erasmus Universitiet Rotterdam
-Geroge Mason University
-Newcastle University
-Northeastern University
-Nottingham Trent University
-Oregon State University
-Queen's University Belfast
-San Jose State University
+- Bath Spa University
+- Erasmus Universitiet Rotterdam
+- Geroge Mason University
+- Newcastle University
+- Northeastern University
+- Nottingham Trent University
+- Oregon State University
+- Queen's University Belfast
+- San Jose State University

@@ -4,7 +4,7 @@ import os
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
-School_name = "Bath Spa University"
+School_name = ""
 
 # csv_path =  current_dir + "\\" + 'temp_data.csv'
 # json_path =  current_dir + "\\" + 'temp_data.json'

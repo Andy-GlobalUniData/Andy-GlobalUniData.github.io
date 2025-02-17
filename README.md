@@ -47,3 +47,7 @@
 - Universiteit van Amsterdam
 - University of Exeter
 - University of Leeds
+- University of Leicester
+- University of Southampton
+- University of Warwick
+- University of Washington

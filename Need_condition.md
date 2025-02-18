@@ -39,5 +39,3 @@ Deadline
 School
 Department
 Link
-Description
-Degree

@@ -5,30 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andy Global Uni Data</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- 引入 jQuery UI 的 CSS -->
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <!-- 引入 DataTables CSS -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
 </head>
 <body>
+  <h1>University Data</h1>
+
+  <!-- 勾選欄位 -->
+  <div>
+    <h3>Select Columns to Display</h3>
+    <label><input type="checkbox" id="column-school" checked> School Name</label>
+    <label><input type="checkbox" id="column-department" checked> Department Name</label>
+    <label><input type="checkbox" id="column-link" checked> Link</label>
+  </div>
+
+  <!-- 搜尋框 -->
+  <div>
+    <label for="search-school">Search by School Name:</label>
+    <input type="text" id="search-school">
+    <label for="search-department">Search by Department Name:</label>
+    <input type="text" id="search-department">
+    <label for="search-Link">Search by Link:</label>
+    <input type="text" id="search-Link">
+  </div>
+
   <table id="json-table" class="display">
     <thead>
       <tr>
-        <th>School Name <br><input type="text" id="search-school"></th>
-        <th>Department Name <br><input type="text" id="search-department"></th>
-        <th>Link <br><input type="text" id="search-Link"></th>
+        <th>School Name</th>
+        <th>Department Name</th>
+        <th>Link</th>
       </tr>
     </thead>
-    <tbody>
-      <!-- JSON 資料將在這裡插入 -->
-    </tbody>
+    <tbody></tbody>
   </table>
 
+  <!-- 下載按鈕 -->
+  <button id="download-json">Download as JSON</button>
+  <button id="download-excel">Download as Excel</button>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- 引入 jQuery UI 的 JavaScript -->
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-  <!-- 引入 DataTables 的 JavaScript -->
   <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-  <script src="scripts/script.js"></script> <!-- 引用外部的 JavaScript 文件 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.2/xlsx.full.min.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 </html>

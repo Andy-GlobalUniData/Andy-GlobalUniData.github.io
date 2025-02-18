@@ -3,29 +3,28 @@ document.addEventListener("DOMContentLoaded", function () {
     let totalData = [];
     let index = 0;
     const chunkSize = 100; // 每次載入 100 筆
+    let columns = [
+        { title: "School Name", data: "School Name", visible: true },
+        { title: "Department Name", data: "Department Name", visible: true },
+        { title: "Link", data: "URL", visible: true }
+    ];
 
     async function fetchJsonData(url) {
         try {
             const response = await fetch(url);
             totalData = await response.json();
             
-            // **初始化 DataTable**
+            // 初始化 DataTable
             dataTable = $("#json-table").DataTable({
-                data: [],  // 先不放資料，等 loadNextChunk 逐步加入
-                columns: [
-                    { title: "School Name" },
-                    { title: "Department Name" },
-                    { title: "URL", render: function (data) {
-                        return `<a href="${data}" target="_blank">${data.length > 50 ? data.substring(0, 50) + "..." : data}</a>`;
-                    }},
-                ],
-                pageLength: 10,  // 預設每頁顯示 10 筆
-                searching: true,  // **確保搜尋功能開啟**
-                destroy: false,  // **避免重新初始化破壞搜尋**
+                data: [],
+                columns: columns,
+                pageLength: 10,
+                searching: true,
+                destroy: false,
             });
 
             setupSearchFilters(dataTable);
-            loadNextChunk(); // 先載入第一批資料
+            loadNextChunk();
         } catch (error) {
             console.error("Error loading JSON:", error);
             alert("Error loading JSON: " + error.message);
@@ -44,10 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
             item.URL
         ]);
 
-        dataTable.rows.add(formattedData).draw(false); // **不重置搜尋狀態**
+        dataTable.rows.add(formattedData).draw(false);
 
         if (index < totalData.length) {
-            setTimeout(loadNextChunk, 50); // **延遲載入，避免 UI 卡頓**
+            setTimeout(loadNextChunk, 50);
         }
     }
 
@@ -62,6 +61,40 @@ document.addEventListener("DOMContentLoaded", function () {
             table.column(2).search(this.value).draw();
         });
     }
+
+    // 處理欄位顯示
+    function handleColumnVisibility() {
+        columns[0].visible = $('#column-school').prop('checked');
+        columns[1].visible = $('#column-department').prop('checked');
+        columns[2].visible = $('#column-link').prop('checked');
+        
+        dataTable.columns.adjust().draw();
+    }
+
+    // 下載 JSON
+    function downloadJson() {
+        const blob = new Blob([JSON.stringify(totalData)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'data.json';
+        a.click();
+    }
+
+    // 下載 Excel
+    function downloadExcel() {
+        const ws = XLSX.utils.json_to_sheet(totalData);
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, 'Data');
+        XLSX.writeFile(wb, 'data.xlsx');
+    }
+
+    // 設置勾選事件
+    $('#column-school, #column-department, #column-link').on('change', handleColumnVisibility);
+
+    // 下載按鈕事件
+    $('#download-json').on('click', downloadJson);
+    $('#download-excel').on('click', downloadExcel);
 
     fetchJsonData("data/data.json");
 });

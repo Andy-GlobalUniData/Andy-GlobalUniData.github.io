@@ -25,12 +25,15 @@ N
 **新增分批載入資料功能，但尚未自動化，並且仍有部分 Bug 需要修復。**
 [🔗 v1.0 連結](https://andy-globalunidata.github.io/old_project/v1.0)
 
+**能大量與快速的載入資料功能**
+[🔗 v1.1 連結](https://andy-globalunidata.github.io/old_project/v1.1)
+
 ## 未來改進方向
 - **自動化資料載入**
-- **優化大數據處理效能**
 - **提升 UI/UX 以改善使用者體驗**
 - **修正現有 Bug，確保系統穩定性**
 - **註冊帳號與密碼**
+- **勾選科系並且下載**
 
 ## 目前有載入的學校
 - Aston University

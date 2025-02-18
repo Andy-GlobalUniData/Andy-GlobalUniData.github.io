@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const tableElement = document.querySelector("#json-table tbody");
     let dataTable;
     let totalData = [];
     let index = 0;
@@ -9,7 +8,23 @@ document.addEventListener("DOMContentLoaded", function () {
         try {
             const response = await fetch(url);
             totalData = await response.json();
-            tableElement.innerHTML = ""; // 清空舊資料
+            
+            // **初始化 DataTable**
+            dataTable = $("#json-table").DataTable({
+                data: [],  // 先不放資料，等 loadNextChunk 逐步加入
+                columns: [
+                    { title: "School Name" },
+                    { title: "Department Name" },
+                    { title: "URL", render: function (data) {
+                        return `<a href="${data}" target="_blank">${data.length > 50 ? data.substring(0, 50) + "..." : data}</a>`;
+                    }},
+                ],
+                pageLength: 10,  // 預設每頁顯示 10 筆
+                searching: true,  // **確保搜尋功能開啟**
+                destroy: false,  // **避免重新初始化破壞搜尋**
+            });
+
+            setupSearchFilters(dataTable);
             loadNextChunk(); // 先載入第一批資料
         } catch (error) {
             console.error("Error loading JSON:", error);
@@ -23,30 +38,16 @@ document.addEventListener("DOMContentLoaded", function () {
         const chunk = totalData.slice(index, index + chunkSize);
         index += chunkSize;
 
-        chunk.forEach(item => {
-            let row = document.createElement("tr");
+        const formattedData = chunk.map(item => [
+            item["School Name"],
+            item["Department Name"],
+            item.URL
+        ]);
 
-            let urlText = item.URL.length > 50 ? item.URL.substring(0, 50) + "..." : item.URL;
-            row.innerHTML = `
-                <td>${item["School Name"]}</td>
-                <td>${item["Department Name"]}</td>
-                <td><a href="${item.URL}" target="_blank">${urlText}</a></td>
-            `;
-
-            tableElement.appendChild(row);
-        });
-
-        if (!dataTable) {
-            // **初始化 DataTable**
-            dataTable = $("#json-table").DataTable();
-            setupSearchFilters(dataTable);
-        } else {
-            // **新增新資料**
-            dataTable.rows.add($(tableElement).find("tr")).draw();
-        }
+        dataTable.rows.add(formattedData).draw(false); // **不重置搜尋狀態**
 
         if (index < totalData.length) {
-            setTimeout(loadNextChunk, 50); // 延遲載入，避免 UI 卡頓
+            setTimeout(loadNextChunk, 50); // **延遲載入，避免 UI 卡頓**
         }
     }
 
@@ -62,5 +63,5 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    fetchJsonData("https://andy-globalunidata.github.io/main_project/data/data.json");
+    fetchJsonData("data/data.json");
 });

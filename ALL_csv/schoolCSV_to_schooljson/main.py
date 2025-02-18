@@ -6,8 +6,11 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 
 School_name = ""
 
-# csv_path =  current_dir + "\\" + 'temp_data.csv'
-# json_path =  current_dir + "\\" + 'temp_data.json'
+School_name_list = []
+
+# 設定檔案目錄
+directory = current_dir + "\input"  # 替換成你的目錄路徑
+output_txt = current_dir + "\ok_school.txt"  # 輸出 TXT 檔案的名稱
 
 
 def csv_to_json(csv_file, json_file):
@@ -36,12 +39,22 @@ def read_txt_file(file_path):
         return []
 
 def main():
-    file_path = current_dir + "\ok_school.txt"  # 替換成你的檔案名稱
-    lines = read_txt_file(file_path)
-    for School_name in lines:
-        print(School_name)
+    # 開啟 TXT 檔案以寫入模式
+    with open(output_txt, 'w', encoding='utf-8') as txt_file:
+        # 讀取資料夾中的所有檔案
+        for filename in os.listdir(directory):
+            # 檢查是否為 CSV 檔案
+            if filename.endswith(".csv"):
+                School_name = filename.replace(" Department_Intro.csv", "")
+                School_name_list.append(School_name)
 
-        csv_path =  current_dir + "\\" + School_name + ' Department_Intro.csv'
+                txt_file.write(School_name + '\n')
+
+    print(f"所有 CSV 檔案名稱已輸出至 {output_txt}")
+
+    for School_name in School_name_list:
+        print(School_name)
+        csv_path =  current_dir + "\\input\\" + School_name + ' Department_Intro.csv'
         json_path =  current_dir + "\\output\\" + School_name + ' Department_Intro.json'
 
         csv_to_json(csv_path, json_path)

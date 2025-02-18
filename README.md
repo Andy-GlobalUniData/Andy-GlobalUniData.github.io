@@ -4,7 +4,7 @@
 
 > 本專案是為公司開發的查找工具，透過爬蟲技術抓取外國大學的資料。目前仍在開發階段，因此暫時對外開放，未來將提供 Demo 版本供公司以外的使用者參考。
 
-
+N
 ## 📌 專案連結
 [主專案](https://andy-globalunidata.github.io/main_project)
 
@@ -33,6 +33,7 @@
 - **註冊帳號與密碼**
 
 ## 目前有載入的學校
+- Aston University
 - Bath Spa University
 - Erasmus Universitiet Rotterdam
 - Geroge Mason University
@@ -45,6 +46,7 @@
 - UCLA
 - Universiteit Leiden
 - Universiteit van Amsterdam
+- University of Essex
 - University of Exeter
 - University of Leeds
 - University of Leicester

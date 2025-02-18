@@ -8,7 +8,7 @@ N
 ## 📌 專案連結
 [主專案](https://andy-globalunidata.github.io/main_project)
 
-[測試版本](https://andy-globalunidata.github.io/large_data_project/)
+[測試版本](https://andy-globalunidata.github.io/test_project)
 
 ## 測試版本
 本專案經歷多個版本的開發與改進，以下是各個測試版本的連結與簡要說明：

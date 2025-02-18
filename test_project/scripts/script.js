@@ -33,18 +33,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function loadNextChunk() {
         if (index >= totalData.length) return;
-
+    
         const chunk = totalData.slice(index, index + chunkSize);
         index += chunkSize;
-
-        const formattedData = chunk.map(item => [
-            item["School Name"],
-            item["Department Name"],
-            item.URL
-        ]);
-
+    
+        const formattedData = chunk.map(item => {
+            // 如果缺少必須資料就跳過這個項目
+            if (!item["School Name"] || !item["Department Name"] || !item.URL) {
+                return null; // 返回 null，稍後可以過濾掉
+            }
+            
+            return [
+                item["School Name"],
+                item["Department Name"],
+                item.URL
+            ];
+        }).filter(item => item !== null); // 過濾掉 null 項目
+    
         dataTable.rows.add(formattedData).draw(false);
-
+    
         if (index < totalData.length) {
             setTimeout(loadNextChunk, 50);
         }

@@ -53,5 +53,6 @@
 - University of Leeds
 - University of Leicester
 - University of Southampton
+- University of Stirling
 - University of Warwick
 - University of Washington

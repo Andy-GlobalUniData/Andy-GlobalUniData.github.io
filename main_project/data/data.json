@@ -33867,12 +33867,12 @@
     {
         "School Name": "University of Southampton",
         "Department Name": "Allergy",
-        "URL": "https://www.southampton.ac.uk//courses/allergy-pgdip"
+        "URL": "https://www.southampton.ac.uk//courses/allergy-pgcert"
     },
     {
         "School Name": "University of Southampton",
         "Department Name": "Allergy",
-        "URL": "https://www.southampton.ac.uk//courses/allergy-pgcert"
+        "URL": "https://www.southampton.ac.uk//courses/allergy-pgdip"
     },
     {
         "School Name": "University of Southampton",
@@ -34031,13 +34031,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MSci Biology",
-        "URL": "https://www.southampton.ac.uk//courses/biology-degree-msci"
+        "Department Name": "BSc Biology",
+        "URL": "https://www.southampton.ac.uk//courses/biology-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BSc Biology",
-        "URL": "https://www.southampton.ac.uk//courses/biology-degree-bsc"
+        "Department Name": "MSci Biology",
+        "URL": "https://www.southampton.ac.uk//courses/biology-degree-msci"
     },
     {
         "School Name": "University of Southampton",
@@ -34051,13 +34051,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MEng Biomedical Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/biomedical-engineering-degree-meng"
+        "Department Name": "BEng Biomedical Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/biomedical-engineering-degree-beng"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BEng Biomedical Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/biomedical-engineering-degree-beng"
+        "Department Name": "MEng Biomedical Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/biomedical-engineering-degree-meng"
     },
     {
         "School Name": "University of Southampton",
@@ -34071,13 +34071,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MSci Biomedical Sciences",
-        "URL": "https://www.southampton.ac.uk//courses/biomedical-sciences-degree-msci"
+        "Department Name": "BSc Biomedical Sciences",
+        "URL": "https://www.southampton.ac.uk//courses/biomedical-sciences-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BSc Biomedical Sciences",
-        "URL": "https://www.southampton.ac.uk//courses/biomedical-sciences-degree-bsc"
+        "Department Name": "MSci Biomedical Sciences",
+        "URL": "https://www.southampton.ac.uk//courses/biomedical-sciences-degree-msci"
     },
     {
         "School Name": "University of Southampton",
@@ -34191,13 +34191,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MChem Chemistry",
-        "URL": "https://www.southampton.ac.uk//courses/chemistry-degree-mchem"
+        "Department Name": "BSc Chemistry",
+        "URL": "https://www.southampton.ac.uk//courses/chemistry-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BSc Chemistry",
-        "URL": "https://www.southampton.ac.uk//courses/chemistry-degree-bsc"
+        "Department Name": "MChem Chemistry",
+        "URL": "https://www.southampton.ac.uk//courses/chemistry-degree-mchem"
     },
     {
         "School Name": "University of Southampton",
@@ -34251,13 +34251,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BEng Civil Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/civil-engineering-degree-beng"
+        "Department Name": "MEng Civil Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/civil-engineering-degree-meng"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MEng Civil Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/civil-engineering-degree-meng"
+        "Department Name": "BEng Civil Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/civil-engineering-degree-beng"
     },
     {
         "School Name": "University of Southampton",
@@ -34451,6 +34451,11 @@
     },
     {
         "School Name": "University of Southampton",
+        "Department Name": "MSc E-textiles and Wearable Technologies",
+        "URL": "https://www.southampton.ac.uk//courses/e-textiles-wearable-technologies-masters-msc"
+    },
+    {
+        "School Name": "University of Southampton",
         "Department Name": "ELT/TESOL Studies",
         "URL": "https://www.southampton.ac.uk//courses/elttesol-studies-masters-ma"
     },
@@ -34536,13 +34541,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MEng Electrical Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/electrical-engineering-degree-meng"
+        "Department Name": "BEng Electrical Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/electrical-engineering-degree-beng"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BEng Electrical Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/electrical-engineering-degree-beng"
+        "Department Name": "MEng Electrical Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/electrical-engineering-degree-meng"
     },
     {
         "School Name": "University of Southampton",
@@ -34566,13 +34571,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MEng Electronic Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/electronic-engineering-degree-meng"
+        "Department Name": "BEng Electronic Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/electronic-engineering-degree-beng"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BEng Electronic Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/electronic-engineering-degree-beng"
+        "Department Name": "MEng Electronic Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/electronic-engineering-degree-meng"
     },
     {
         "School Name": "University of Southampton",
@@ -34871,13 +34876,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BA Geography",
-        "URL": "https://www.southampton.ac.uk//courses/geography-degree-ba"
+        "Department Name": "BSc Geography",
+        "URL": "https://www.southampton.ac.uk//courses/geography-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BSc Geography",
-        "URL": "https://www.southampton.ac.uk//courses/geography-degree-bsc"
+        "Department Name": "BA Geography",
+        "URL": "https://www.southampton.ac.uk//courses/geography-degree-ba"
     },
     {
         "School Name": "University of Southampton",
@@ -34886,13 +34891,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MSci Geology",
-        "URL": "https://www.southampton.ac.uk//courses/geology-degree-msci"
+        "Department Name": "BSc Geology",
+        "URL": "https://www.southampton.ac.uk//courses/geology-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BSc Geology",
-        "URL": "https://www.southampton.ac.uk//courses/geology-degree-bsc"
+        "Department Name": "MSci Geology",
+        "URL": "https://www.southampton.ac.uk//courses/geology-degree-msci"
     },
     {
         "School Name": "University of Southampton",
@@ -34912,17 +34917,17 @@
     {
         "School Name": "University of Southampton",
         "Department Name": "Gerontology (Distance Learning)",
-        "URL": "https://www.southampton.ac.uk//courses/gerontology-distance-learning-masters-msc"
-    },
-    {
-        "School Name": "University of Southampton",
-        "Department Name": "Gerontology (Distance Learning)",
         "URL": "https://www.southampton.ac.uk//courses/gerontology-distance-learning-pgdip"
     },
     {
         "School Name": "University of Southampton",
         "Department Name": "Gerontology (Distance Learning)",
         "URL": "https://www.southampton.ac.uk//courses/gerontology-distance-learning-pgcert"
+    },
+    {
+        "School Name": "University of Southampton",
+        "Department Name": "Gerontology (Distance Learning)",
+        "URL": "https://www.southampton.ac.uk//courses/gerontology-distance-learning-masters-msc"
     },
     {
         "School Name": "University of Southampton",
@@ -34937,17 +34942,17 @@
     {
         "School Name": "University of Southampton",
         "Department Name": "Global Ageing and Policy (Distance Learning)",
+        "URL": "https://www.southampton.ac.uk//courses/global-ageing-and-policy-distance-learning-pgdip"
+    },
+    {
+        "School Name": "University of Southampton",
+        "Department Name": "Global Ageing and Policy (Distance Learning)",
         "URL": "https://www.southampton.ac.uk//courses/global-ageing-policy-distance-learning-masters-msc"
     },
     {
         "School Name": "University of Southampton",
         "Department Name": "Global Ageing and Policy (Distance Learning)",
         "URL": "https://www.southampton.ac.uk//courses/global-ageing-and-policy-distance-learning-pgcert"
-    },
-    {
-        "School Name": "University of Southampton",
-        "Department Name": "Global Ageing and Policy (Distance Learning)",
-        "URL": "https://www.southampton.ac.uk//courses/global-ageing-and-policy-distance-learning-pgdip"
     },
     {
         "School Name": "University of Southampton",
@@ -35007,12 +35012,12 @@
     {
         "School Name": "University of Southampton",
         "Department Name": "History",
-        "URL": "https://www.southampton.ac.uk//courses/history-masters-ma"
+        "URL": "https://www.southampton.ac.uk//courses/history-pgce"
     },
     {
         "School Name": "University of Southampton",
         "Department Name": "History",
-        "URL": "https://www.southampton.ac.uk//courses/history-pgce"
+        "URL": "https://www.southampton.ac.uk//courses/history-masters-ma"
     },
     {
         "School Name": "University of Southampton",
@@ -35177,7 +35182,7 @@
     {
         "School Name": "University of Southampton",
         "Department Name": "MBA Master of Business Administration",
-        "URL": "https://www.southampton.ac.uk//courses/mba-master-of-business-administration-masters-mba"
+        "URL": "https://www.southampton.ac.uk//courses/master-of-business-administration-masters-mba"
     },
     {
         "School Name": "University of Southampton",
@@ -35201,13 +35206,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MSci Marine Biology with Oceanography",
-        "URL": "https://www.southampton.ac.uk//courses/marine-biology-with-oceanography-degree-msci"
+        "Department Name": "BSc Marine Biology with Oceanography",
+        "URL": "https://www.southampton.ac.uk//courses/marine-biology-with-oceanography-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BSc Marine Biology with Oceanography",
-        "URL": "https://www.southampton.ac.uk//courses/marine-biology-with-oceanography-degree-bsc"
+        "Department Name": "MSci Marine Biology with Oceanography",
+        "URL": "https://www.southampton.ac.uk//courses/marine-biology-with-oceanography-degree-msci"
     },
     {
         "School Name": "University of Southampton",
@@ -35221,13 +35226,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MEng Maritime Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/maritime-engineering-degree-meng"
+        "Department Name": "BEng Maritime Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/maritime-engineering-degree-beng"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BEng Maritime Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/maritime-engineering-degree-beng"
+        "Department Name": "MEng Maritime Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/maritime-engineering-degree-meng"
     },
     {
         "School Name": "University of Southampton",
@@ -35296,13 +35301,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BSc Mathematics",
-        "URL": "https://www.southampton.ac.uk//courses/mathematics-degree-bsc"
+        "Department Name": "MMath Mathematics",
+        "URL": "https://www.southampton.ac.uk//courses/mathematics-degree-mmath"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MMath Mathematics",
-        "URL": "https://www.southampton.ac.uk//courses/mathematics-degree-mmath"
+        "Department Name": "BSc Mathematics",
+        "URL": "https://www.southampton.ac.uk//courses/mathematics-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
@@ -35411,23 +35416,23 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MEng Medical Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/medical-engineering-degree-meng"
-    },
-    {
-        "School Name": "University of Southampton",
         "Department Name": "BEng Medical Engineering",
         "URL": "https://www.southampton.ac.uk//courses/medical-engineering-degree-beng"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MEng Medical Engineering with Industrial Placement Year",
-        "URL": "https://www.southampton.ac.uk//courses/medical-engineering-with-industrial-placement-year-degree-meng"
+        "Department Name": "MEng Medical Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/medical-engineering-degree-meng"
     },
     {
         "School Name": "University of Southampton",
         "Department Name": "BEng Medical Engineering with Industrial Placement Year",
         "URL": "https://www.southampton.ac.uk//courses/medical-engineering-with-industrial-placement-year-degree-beng"
+    },
+    {
+        "School Name": "University of Southampton",
+        "Department Name": "MEng Medical Engineering with Industrial Placement Year",
+        "URL": "https://www.southampton.ac.uk//courses/medical-engineering-with-industrial-placement-year-degree-meng"
     },
     {
         "School Name": "University of Southampton",
@@ -35541,13 +35546,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BA Modern Languages and Linguistics (2 languages: French, German or Spanish)",
-        "URL": "https://www.southampton.ac.uk//courses/two-modern-languages-linguistics-french-german-spanish-degree-ba"
+        "Department Name": "MLang Modern Languages and Linguistics (2 languages: French, German or Spanish)",
+        "URL": "https://www.southampton.ac.uk//courses/two-modern-languages-linguistics-french-german-spanish-degree-mlang"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MLang Modern Languages and Linguistics (2 languages: French, German or Spanish)",
-        "URL": "https://www.southampton.ac.uk//courses/two-modern-languages-linguistics-french-german-spanish-degree-mlang"
+        "Department Name": "BA Modern Languages and Linguistics (2 languages: French, German or Spanish)",
+        "URL": "https://www.southampton.ac.uk//courses/two-modern-languages-linguistics-french-german-spanish-degree-ba"
     },
     {
         "School Name": "University of Southampton",
@@ -35662,12 +35667,12 @@
     {
         "School Name": "University of Southampton",
         "Department Name": "Nursing: Child",
-        "URL": "https://www.southampton.ac.uk//courses/nursing-child-pgdip"
+        "URL": "https://www.southampton.ac.uk//courses/nursing-child-masters-msc"
     },
     {
         "School Name": "University of Southampton",
         "Department Name": "Nursing: Child",
-        "URL": "https://www.southampton.ac.uk//courses/nursing-child-masters-msc"
+        "URL": "https://www.southampton.ac.uk//courses/nursing-child-pgdip"
     },
     {
         "School Name": "University of Southampton",
@@ -35691,13 +35696,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MSci Oceanography",
-        "URL": "https://www.southampton.ac.uk//courses/oceanography-degree-msci"
+        "Department Name": "BSc Oceanography",
+        "URL": "https://www.southampton.ac.uk//courses/oceanography-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BSc Oceanography",
-        "URL": "https://www.southampton.ac.uk//courses/oceanography-degree-bsc"
+        "Department Name": "MSci Oceanography",
+        "URL": "https://www.southampton.ac.uk//courses/oceanography-degree-msci"
     },
     {
         "School Name": "University of Southampton",
@@ -35971,13 +35976,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MEng Software Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/software-engineering-degree-meng"
+        "Department Name": "BEng Software Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/software-engineering-degree-beng"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BEng Software Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/software-engineering-degree-beng"
+        "Department Name": "MEng Software Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/software-engineering-degree-meng"
     },
     {
         "School Name": "University of Southampton",
@@ -36076,13 +36081,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MSci Zoology",
-        "URL": "https://www.southampton.ac.uk//courses/zoology-degree-msci"
+        "Department Name": "BSc Zoology",
+        "URL": "https://www.southampton.ac.uk//courses/zoology-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BSc Zoology",
-        "URL": "https://www.southampton.ac.uk//courses/zoology-degree-bsc"
+        "Department Name": "MSci Zoology",
+        "URL": "https://www.southampton.ac.uk//courses/zoology-degree-msci"
     },
     {
         "School Name": "University of Southampton",
@@ -36232,12 +36237,12 @@
     {
         "School Name": "University of Southampton",
         "Department Name": "Allergy",
-        "URL": "https://www.southampton.ac.uk//courses/allergy-pgdip"
+        "URL": "https://www.southampton.ac.uk//courses/allergy-pgcert"
     },
     {
         "School Name": "University of Southampton",
         "Department Name": "Allergy",
-        "URL": "https://www.southampton.ac.uk//courses/allergy-pgcert"
+        "URL": "https://www.southampton.ac.uk//courses/allergy-pgdip"
     },
     {
         "School Name": "University of Southampton",
@@ -36396,13 +36401,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MSci Biology",
-        "URL": "https://www.southampton.ac.uk//courses/biology-degree-msci"
+        "Department Name": "BSc Biology",
+        "URL": "https://www.southampton.ac.uk//courses/biology-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BSc Biology",
-        "URL": "https://www.southampton.ac.uk//courses/biology-degree-bsc"
+        "Department Name": "MSci Biology",
+        "URL": "https://www.southampton.ac.uk//courses/biology-degree-msci"
     },
     {
         "School Name": "University of Southampton",
@@ -36416,13 +36421,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MEng Biomedical Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/biomedical-engineering-degree-meng"
+        "Department Name": "BEng Biomedical Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/biomedical-engineering-degree-beng"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BEng Biomedical Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/biomedical-engineering-degree-beng"
+        "Department Name": "MEng Biomedical Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/biomedical-engineering-degree-meng"
     },
     {
         "School Name": "University of Southampton",
@@ -36436,13 +36441,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MSci Biomedical Sciences",
-        "URL": "https://www.southampton.ac.uk//courses/biomedical-sciences-degree-msci"
+        "Department Name": "BSc Biomedical Sciences",
+        "URL": "https://www.southampton.ac.uk//courses/biomedical-sciences-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BSc Biomedical Sciences",
-        "URL": "https://www.southampton.ac.uk//courses/biomedical-sciences-degree-bsc"
+        "Department Name": "MSci Biomedical Sciences",
+        "URL": "https://www.southampton.ac.uk//courses/biomedical-sciences-degree-msci"
     },
     {
         "School Name": "University of Southampton",
@@ -36556,13 +36561,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MChem Chemistry",
-        "URL": "https://www.southampton.ac.uk//courses/chemistry-degree-mchem"
+        "Department Name": "BSc Chemistry",
+        "URL": "https://www.southampton.ac.uk//courses/chemistry-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BSc Chemistry",
-        "URL": "https://www.southampton.ac.uk//courses/chemistry-degree-bsc"
+        "Department Name": "MChem Chemistry",
+        "URL": "https://www.southampton.ac.uk//courses/chemistry-degree-mchem"
     },
     {
         "School Name": "University of Southampton",
@@ -36616,13 +36621,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BEng Civil Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/civil-engineering-degree-beng"
+        "Department Name": "MEng Civil Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/civil-engineering-degree-meng"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MEng Civil Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/civil-engineering-degree-meng"
+        "Department Name": "BEng Civil Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/civil-engineering-degree-beng"
     },
     {
         "School Name": "University of Southampton",
@@ -36816,6 +36821,11 @@
     },
     {
         "School Name": "University of Southampton",
+        "Department Name": "MSc E-textiles and Wearable Technologies",
+        "URL": "https://www.southampton.ac.uk//courses/e-textiles-wearable-technologies-masters-msc"
+    },
+    {
+        "School Name": "University of Southampton",
         "Department Name": "ELT/TESOL Studies",
         "URL": "https://www.southampton.ac.uk//courses/elttesol-studies-masters-ma"
     },
@@ -36901,13 +36911,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MEng Electrical Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/electrical-engineering-degree-meng"
+        "Department Name": "BEng Electrical Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/electrical-engineering-degree-beng"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BEng Electrical Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/electrical-engineering-degree-beng"
+        "Department Name": "MEng Electrical Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/electrical-engineering-degree-meng"
     },
     {
         "School Name": "University of Southampton",
@@ -36931,13 +36941,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MEng Electronic Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/electronic-engineering-degree-meng"
+        "Department Name": "BEng Electronic Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/electronic-engineering-degree-beng"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BEng Electronic Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/electronic-engineering-degree-beng"
+        "Department Name": "MEng Electronic Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/electronic-engineering-degree-meng"
     },
     {
         "School Name": "University of Southampton",
@@ -37236,13 +37246,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BA Geography",
-        "URL": "https://www.southampton.ac.uk//courses/geography-degree-ba"
+        "Department Name": "BSc Geography",
+        "URL": "https://www.southampton.ac.uk//courses/geography-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BSc Geography",
-        "URL": "https://www.southampton.ac.uk//courses/geography-degree-bsc"
+        "Department Name": "BA Geography",
+        "URL": "https://www.southampton.ac.uk//courses/geography-degree-ba"
     },
     {
         "School Name": "University of Southampton",
@@ -37251,13 +37261,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MSci Geology",
-        "URL": "https://www.southampton.ac.uk//courses/geology-degree-msci"
+        "Department Name": "BSc Geology",
+        "URL": "https://www.southampton.ac.uk//courses/geology-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BSc Geology",
-        "URL": "https://www.southampton.ac.uk//courses/geology-degree-bsc"
+        "Department Name": "MSci Geology",
+        "URL": "https://www.southampton.ac.uk//courses/geology-degree-msci"
     },
     {
         "School Name": "University of Southampton",
@@ -37277,17 +37287,17 @@
     {
         "School Name": "University of Southampton",
         "Department Name": "Gerontology (Distance Learning)",
-        "URL": "https://www.southampton.ac.uk//courses/gerontology-distance-learning-masters-msc"
-    },
-    {
-        "School Name": "University of Southampton",
-        "Department Name": "Gerontology (Distance Learning)",
         "URL": "https://www.southampton.ac.uk//courses/gerontology-distance-learning-pgdip"
     },
     {
         "School Name": "University of Southampton",
         "Department Name": "Gerontology (Distance Learning)",
         "URL": "https://www.southampton.ac.uk//courses/gerontology-distance-learning-pgcert"
+    },
+    {
+        "School Name": "University of Southampton",
+        "Department Name": "Gerontology (Distance Learning)",
+        "URL": "https://www.southampton.ac.uk//courses/gerontology-distance-learning-masters-msc"
     },
     {
         "School Name": "University of Southampton",
@@ -37302,17 +37312,17 @@
     {
         "School Name": "University of Southampton",
         "Department Name": "Global Ageing and Policy (Distance Learning)",
+        "URL": "https://www.southampton.ac.uk//courses/global-ageing-and-policy-distance-learning-pgdip"
+    },
+    {
+        "School Name": "University of Southampton",
+        "Department Name": "Global Ageing and Policy (Distance Learning)",
         "URL": "https://www.southampton.ac.uk//courses/global-ageing-policy-distance-learning-masters-msc"
     },
     {
         "School Name": "University of Southampton",
         "Department Name": "Global Ageing and Policy (Distance Learning)",
         "URL": "https://www.southampton.ac.uk//courses/global-ageing-and-policy-distance-learning-pgcert"
-    },
-    {
-        "School Name": "University of Southampton",
-        "Department Name": "Global Ageing and Policy (Distance Learning)",
-        "URL": "https://www.southampton.ac.uk//courses/global-ageing-and-policy-distance-learning-pgdip"
     },
     {
         "School Name": "University of Southampton",
@@ -37372,12 +37382,12 @@
     {
         "School Name": "University of Southampton",
         "Department Name": "History",
-        "URL": "https://www.southampton.ac.uk//courses/history-masters-ma"
+        "URL": "https://www.southampton.ac.uk//courses/history-pgce"
     },
     {
         "School Name": "University of Southampton",
         "Department Name": "History",
-        "URL": "https://www.southampton.ac.uk//courses/history-pgce"
+        "URL": "https://www.southampton.ac.uk//courses/history-masters-ma"
     },
     {
         "School Name": "University of Southampton",
@@ -37542,7 +37552,7 @@
     {
         "School Name": "University of Southampton",
         "Department Name": "MBA Master of Business Administration",
-        "URL": "https://www.southampton.ac.uk//courses/mba-master-of-business-administration-masters-mba"
+        "URL": "https://www.southampton.ac.uk//courses/master-of-business-administration-masters-mba"
     },
     {
         "School Name": "University of Southampton",
@@ -37566,13 +37576,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MSci Marine Biology with Oceanography",
-        "URL": "https://www.southampton.ac.uk//courses/marine-biology-with-oceanography-degree-msci"
+        "Department Name": "BSc Marine Biology with Oceanography",
+        "URL": "https://www.southampton.ac.uk//courses/marine-biology-with-oceanography-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BSc Marine Biology with Oceanography",
-        "URL": "https://www.southampton.ac.uk//courses/marine-biology-with-oceanography-degree-bsc"
+        "Department Name": "MSci Marine Biology with Oceanography",
+        "URL": "https://www.southampton.ac.uk//courses/marine-biology-with-oceanography-degree-msci"
     },
     {
         "School Name": "University of Southampton",
@@ -37586,13 +37596,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MEng Maritime Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/maritime-engineering-degree-meng"
+        "Department Name": "BEng Maritime Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/maritime-engineering-degree-beng"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BEng Maritime Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/maritime-engineering-degree-beng"
+        "Department Name": "MEng Maritime Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/maritime-engineering-degree-meng"
     },
     {
         "School Name": "University of Southampton",
@@ -37661,13 +37671,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BSc Mathematics",
-        "URL": "https://www.southampton.ac.uk//courses/mathematics-degree-bsc"
+        "Department Name": "MMath Mathematics",
+        "URL": "https://www.southampton.ac.uk//courses/mathematics-degree-mmath"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MMath Mathematics",
-        "URL": "https://www.southampton.ac.uk//courses/mathematics-degree-mmath"
+        "Department Name": "BSc Mathematics",
+        "URL": "https://www.southampton.ac.uk//courses/mathematics-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
@@ -37776,23 +37786,23 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MEng Medical Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/medical-engineering-degree-meng"
-    },
-    {
-        "School Name": "University of Southampton",
         "Department Name": "BEng Medical Engineering",
         "URL": "https://www.southampton.ac.uk//courses/medical-engineering-degree-beng"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MEng Medical Engineering with Industrial Placement Year",
-        "URL": "https://www.southampton.ac.uk//courses/medical-engineering-with-industrial-placement-year-degree-meng"
+        "Department Name": "MEng Medical Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/medical-engineering-degree-meng"
     },
     {
         "School Name": "University of Southampton",
         "Department Name": "BEng Medical Engineering with Industrial Placement Year",
         "URL": "https://www.southampton.ac.uk//courses/medical-engineering-with-industrial-placement-year-degree-beng"
+    },
+    {
+        "School Name": "University of Southampton",
+        "Department Name": "MEng Medical Engineering with Industrial Placement Year",
+        "URL": "https://www.southampton.ac.uk//courses/medical-engineering-with-industrial-placement-year-degree-meng"
     },
     {
         "School Name": "University of Southampton",
@@ -37906,13 +37916,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BA Modern Languages and Linguistics (2 languages: French, German or Spanish)",
-        "URL": "https://www.southampton.ac.uk//courses/two-modern-languages-linguistics-french-german-spanish-degree-ba"
+        "Department Name": "MLang Modern Languages and Linguistics (2 languages: French, German or Spanish)",
+        "URL": "https://www.southampton.ac.uk//courses/two-modern-languages-linguistics-french-german-spanish-degree-mlang"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MLang Modern Languages and Linguistics (2 languages: French, German or Spanish)",
-        "URL": "https://www.southampton.ac.uk//courses/two-modern-languages-linguistics-french-german-spanish-degree-mlang"
+        "Department Name": "BA Modern Languages and Linguistics (2 languages: French, German or Spanish)",
+        "URL": "https://www.southampton.ac.uk//courses/two-modern-languages-linguistics-french-german-spanish-degree-ba"
     },
     {
         "School Name": "University of Southampton",
@@ -38027,12 +38037,12 @@
     {
         "School Name": "University of Southampton",
         "Department Name": "Nursing: Child",
-        "URL": "https://www.southampton.ac.uk//courses/nursing-child-pgdip"
+        "URL": "https://www.southampton.ac.uk//courses/nursing-child-masters-msc"
     },
     {
         "School Name": "University of Southampton",
         "Department Name": "Nursing: Child",
-        "URL": "https://www.southampton.ac.uk//courses/nursing-child-masters-msc"
+        "URL": "https://www.southampton.ac.uk//courses/nursing-child-pgdip"
     },
     {
         "School Name": "University of Southampton",
@@ -38056,13 +38066,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MSci Oceanography",
-        "URL": "https://www.southampton.ac.uk//courses/oceanography-degree-msci"
+        "Department Name": "BSc Oceanography",
+        "URL": "https://www.southampton.ac.uk//courses/oceanography-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BSc Oceanography",
-        "URL": "https://www.southampton.ac.uk//courses/oceanography-degree-bsc"
+        "Department Name": "MSci Oceanography",
+        "URL": "https://www.southampton.ac.uk//courses/oceanography-degree-msci"
     },
     {
         "School Name": "University of Southampton",
@@ -38336,13 +38346,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MEng Software Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/software-engineering-degree-meng"
+        "Department Name": "BEng Software Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/software-engineering-degree-beng"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BEng Software Engineering",
-        "URL": "https://www.southampton.ac.uk//courses/software-engineering-degree-beng"
+        "Department Name": "MEng Software Engineering",
+        "URL": "https://www.southampton.ac.uk//courses/software-engineering-degree-meng"
     },
     {
         "School Name": "University of Southampton",
@@ -38441,13 +38451,13 @@
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "MSci Zoology",
-        "URL": "https://www.southampton.ac.uk//courses/zoology-degree-msci"
+        "Department Name": "BSc Zoology",
+        "URL": "https://www.southampton.ac.uk//courses/zoology-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
-        "Department Name": "BSc Zoology",
-        "URL": "https://www.southampton.ac.uk//courses/zoology-degree-bsc"
+        "Department Name": "MSci Zoology",
+        "URL": "https://www.southampton.ac.uk//courses/zoology-degree-msci"
     },
     {
         "School Name": "University of Stirling",

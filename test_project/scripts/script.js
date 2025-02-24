@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let dataTable;
     let totalData = [];
     let index = 0;
-    const chunkSize = 100;
+    const chunkSize = 200;
 
     async function fetchJsonData(url) {
         try {
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         dataTable.rows.add(formattedData).draw(false);
 
         if (index < totalData.length) {
-            setTimeout(loadNextChunk, 50);
+            setTimeout(loadNextChunk, 10);
         }
     }
 

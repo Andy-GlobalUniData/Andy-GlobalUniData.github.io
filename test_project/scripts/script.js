@@ -14,16 +14,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 columns: [
                     { 
                         title: "<input type='checkbox' id='select-all'>", 
+                        data: "checkbox", 
                         render: function () {
                             return '<input type="checkbox" class="row-checkbox">';
                         },
                         orderable: false
                     },
-                    { title: "School Name" },
-                    { title: "Department Name" },
-                    { title: "URL", render: function (data) {
-                        return `<a href="${data}" target="_blank">${data.length > 50 ? data.substring(0, 50) + "..." : data}</a>`;
-                    }},
+                    { title: "School Name", data: "school" },
+                    { title: "Department Name", data: "department" },
+                    { 
+                        title: "URL", 
+                        data: "url",
+                        render: function (data) {
+                            return `<a href="${data}" target="_blank">${data.length > 50 ? data.substring(0, 50) + "..." : data}</a>`;
+                        }
+                    },
                 ],
                 pageLength: 10,
                 searching: true,
@@ -44,13 +49,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const chunk = totalData.slice(index, index + chunkSize);
         index += chunkSize;
 
-        const formattedData = chunk.map(item => [
-            '',
-            item["School Name"],
-            item["Department Name"],
-            item.URL
-        ]);
-
+        const formattedData = chunk.map(item => ({
+            checkbox: '',
+            school: item["School Name"],
+            department: item["Department Name"],
+            url: item.URL
+        }));
+        
         dataTable.rows.add(formattedData).draw(false);
 
         if (index < totalData.length) {

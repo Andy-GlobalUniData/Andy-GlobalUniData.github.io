@@ -12,23 +12,26 @@ document.addEventListener("DOMContentLoaded", function () {
       dataTable = $("#json-table").DataTable({
         data: [],
         columns: [
-            { 
-                title: "<input type='checkbox' id='select-all'>", 
-                render: function () {
-                    return '<input type="checkbox" class="row-checkbox">';
-                },
-                orderable: false
+          {
+            title: "<input type='checkbox' id='select-all'>",
+            orderable: false,
+            render: function () {
+              return '<input type="checkbox" class="row-checkbox">';
             },
-            { title: "School Name" },
-            { title: "Department Name" },
-            { 
-                title: "URL",
-                defaultContent: "N/A",  // 如果 URL 欄位缺失，顯示 "N/A"
-                render: function (data) {
-                    if (!data) return "N/A";
-                    return `<a href="${data}" target="_blank">${data.length > 50 ? data.substring(0, 50) + "..." : data}</a>`;
-                }
-            }
+          },
+          { title: "School Name", data: 1 }, // 確保 data 對應到陣列的索引
+          { title: "Department Name", data: 2 },
+          {
+            title: "URL",
+            data: 3,
+            defaultContent: "N/A",
+            render: function (data) {
+              if (!data) return "N/A";
+              return `<a href="${data}" target="_blank">${
+                data.length > 50 ? data.substring(0, 50) + "..." : data
+              }</a>`;
+            },
+          },
         ],
         pageLength: 10,
         searching: true,
@@ -49,12 +52,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const chunk = totalData.slice(index, index + chunkSize);
     index += chunkSize;
 
-    const formattedData = chunk.map((item) => ({
-      checkbox: "",
-      school: item["School Name"],
-      department: item["Department Name"],
-      url: item.URL,
-    }));
+    // 這裡要確保每一列資料是陣列格式
+    const formattedData = chunk.map((item) => [
+      "", // Checkbox
+      item["School Name"] || "N/A",
+      item["Department Name"] || "N/A",
+      item.URL || "N/A",
+    ]);
 
     dataTable.rows.add(formattedData).draw(false);
 
@@ -75,20 +79,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Select all checkboxes functionality
-  $("#select-all").on("click", function () {
-    const isChecked = this.checked;
-    $(".row-checkbox").prop("checked", isChecked);
+  // 選取所有 checkbox
+  $(document).on("click", "#select-all", function () {
+    $(".row-checkbox").prop("checked", this.checked);
   });
 
-  // Export JSON
+  // 匯出 JSON
   $("#export-json").on("click", function () {
     const selectedData = getSelectedData();
     const jsonData = JSON.stringify(selectedData, null, 2);
     downloadFile("data.json", jsonData);
   });
 
-  // Export to Excel
+  // 匯出 Excel
   $("#export-excel").on("click", function () {
     const selectedData = getSelectedData();
     const excelData = selectedData.map((item) => [
@@ -99,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
     exportToExcel(excelData);
   });
 
-  // Function to get selected data
   function getSelectedData() {
     const selectedData = [];
     dataTable.rows().every(function () {
@@ -117,7 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
     return selectedData;
   }
 
-  // Function to download JSON data as a file
   function downloadFile(filename, data) {
     const blob = new Blob([data], { type: "application/json" });
     const link = document.createElement("a");
@@ -126,7 +127,6 @@ document.addEventListener("DOMContentLoaded", function () {
     link.click();
   }
 
-  // Function to export data to Excel
   function exportToExcel(data) {
     const wb = XLSX.utils.book_new();
     const ws = XLSX.utils.aoa_to_sheet([

@@ -75,6 +75,10 @@ document.addEventListener("DOMContentLoaded", function () {
     $("#search-department").on("keyup", function () {
       table.column(2).search(this.value).draw();
     });
+  
+    $("#search-url").on("keyup", function () {
+      table.column(3).search(this.value).draw();
+    });
   }
 
   // 選取所有 checkbox

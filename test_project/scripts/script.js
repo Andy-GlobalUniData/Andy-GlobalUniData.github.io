@@ -68,14 +68,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function setupSearchFilters(table) {
+    $("#json-table thead").append(
+      $("<tr>").append(
+        $("<th>").html(""), // Checkbox column 不需要搜尋
+        $("<th>").html('<input type="text" id="search-school" placeholder="Search School">'),
+        $("<th>").html('<input type="text" id="search-department" placeholder="Search Department">'),
+      )
+    );
+  
     $("#search-school").on("keyup", function () {
       table.column(1).search(this.value).draw();
     });
+  
     $("#search-department").on("keyup", function () {
       table.column(2).search(this.value).draw();
-    });
-    $("#search-Link").on("keyup", function () {
-      table.column(3).search(this.value).draw();
     });
   }
 

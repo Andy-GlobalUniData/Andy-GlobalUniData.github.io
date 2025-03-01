@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let totalData = [];
   let index = 0;
   const chunkSize = 200;
+  
+  // 定義要選取的 countries
+  const selectedCountries = ["USA", "Canada", "Germany"]; // 這裡是你要選取的 country 列表
 
   async function fetchJsonData(url) {
     try {
@@ -20,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
           },
           { title: "Country", data: 1 },
-          { title: "School Name", data: 2 }, // 確保 data 對應到陣列的索引
+          { title: "School Name", data: 2 }, 
           { title: "Department Name", data: 3 },
           {
             title: "URL",
@@ -28,8 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             defaultContent: "N/A",
             render: function (data) {
               if (!data) return "N/A";
-              return `<a href="${data}" target="_blank">${data.length > 50 ? data.substring(0, 50) + "..." : data
-                }</a>`;
+              return `<a href="${data}" target="_blank">${data.length > 50 ? data.substring(0, 50) + "..." : data}</a>`;
             },
           },
         ],
@@ -52,14 +54,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const chunk = totalData.slice(index, index + chunkSize);
     index += chunkSize;
 
-    // 這裡要確保每一列資料是陣列格式
-    const formattedData = chunk.map((item) => [
-      "", // Checkbox
-      item["Country"] || "N/A",
-      item["School Name"] || "N/A",
-      item["Department Name"] || "N/A",
-      item.URL || "N/A",
-    ]);
+    const formattedData = chunk.map((item) => {
+      const isSelected = selectedCountries.includes(item["Country"]);
+      return [
+        isSelected ? '<input type="checkbox" class="row-checkbox" checked>' : '<input type="checkbox" class="row-checkbox">', // 自動選取
+        item["Country"] || "N/A",
+        item["School Name"] || "N/A",
+        item["Department Name"] || "N/A",
+        item.URL || "N/A",
+      ];
+    });
 
     dataTable.rows.add(formattedData).draw(false);
 
@@ -137,10 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function exportToExcel(data) {
     const wb = XLSX.utils.book_new();
-    const ws = XLSX.utils.aoa_to_sheet([
-      ["Country", "School Name", "Department Name", "URL"],
-      ...data,
-    ]);
+    const ws = XLSX.utils.aoa_to_sheet([["Country", "School Name", "Department Name", "URL"], ...data]);
     XLSX.utils.book_append_sheet(wb, ws, "Data");
     XLSX.writeFile(wb, "data.xlsx");
   }

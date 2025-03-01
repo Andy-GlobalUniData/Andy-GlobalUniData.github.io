@@ -8,13 +8,22 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
 </head>
 
-<div>
-  <label>Search Country: <input type="text" id="search-country"></label>
-  <label>Search School: <input type="text" id="search-school"></label>
-  <label>Search Department: <input type="text" id="search-department"></label>
-</div>
+<body>
+  <div>
+    <label for="country-select">Select Country: </label>
+    <select id="country-select" multiple="multiple" style="width: 200px;">
+      <!-- Options will be dynamically inserted here -->
+    </select>
+  </div>
+
+  <div>
+    <label>Search School: <input type="text" id="search-school"></label>
+    <label>Search Department: <input type="text" id="search-department"></label>
+  </div>
+</body>
 
 
 <body>
@@ -39,6 +48,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
   <script src="scripts/script.js"></script>
 </body>
 

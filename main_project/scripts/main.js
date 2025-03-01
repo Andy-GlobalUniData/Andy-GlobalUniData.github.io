@@ -4,6 +4,32 @@ document.addEventListener("DOMContentLoaded", function () {
   let index = 0;
   const chunkSize = 200;
 
+  // 初始 selectedCountries 為空陣列
+  let selectedCountries = [];
+
+  // 更新 selectedCountries 為勾選的國家
+  function updateSelectedCountries() {
+    selectedCountries = [];
+    $(".country-checkbox:checked").each(function () {
+      selectedCountries.push($(this).val());
+    });
+    // 當選擇變更後重新載入資料
+    dataTable.clear();
+    index = 0; // 重置索引
+    loadNextChunk(); // 重新加載資料
+  }
+
+  // 頁面加載後，將所有國家的勾選框設為選中狀態
+  $(document).ready(function () {
+    $(".country-checkbox").prop("checked", true); // 使所有選擇框預設為選中狀態
+    updateSelectedCountries(); // 呼叫更新函數以加載資料
+  });
+
+  // 監聽勾選框的變更事件
+  $(document).on("change", ".country-checkbox", function () {
+    updateSelectedCountries();
+  });
+
   async function fetchJsonData(url) {
     try {
       const response = await fetch(url);
@@ -19,17 +45,16 @@ document.addEventListener("DOMContentLoaded", function () {
               return '<input type="checkbox" class="row-checkbox">';
             },
           },
-          { title: "School Name", data: 1 }, // 確保 data 對應到陣列的索引
-          { title: "Department Name", data: 2 },
+          { title: "Country", data: 1 },
+          { title: "School Name", data: 2 }, 
+          { title: "Department Name", data: 3 },
           {
             title: "URL",
-            data: 3,
+            data: 4,
             defaultContent: "N/A",
             render: function (data) {
               if (!data) return "N/A";
-              return `<a href="${data}" target="_blank">${
-                data.length > 50 ? data.substring(0, 50) + "..." : data
-              }</a>`;
+              return `<a href="${data}" target="_blank">${data.length > 50 ? data.substring(0, 50) + "..." : data}</a>`;
             },
           },
         ],
@@ -52,15 +77,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const chunk = totalData.slice(index, index + chunkSize);
     index += chunkSize;
 
-    // 這裡要確保每一列資料是陣列格式
-    const formattedData = chunk.map((item) => [
-      "", // Checkbox
-      item["School Name"] || "N/A",
-      item["Department Name"] || "N/A",
-      item.URL || "N/A",
-    ]);
+    const formattedData = chunk.map((item) => {
+      const isSelected = selectedCountries.includes(item["Country"]);
+      return [
+        isSelected ? '<input type="checkbox" class="row-checkbox" checked>' : '<input type="checkbox" class="row-checkbox">', // 自動選取
+        item["Country"] || "N/A",
+        item["School Name"] || "N/A",
+        item["Department Name"] || "N/A",
+        item.URL || "N/A",
+      ];
+    });
 
-    dataTable.rows.add(formattedData).draw(false);
+    // 只新增選中的國家的資料
+    const filteredData = formattedData.filter(row => selectedCountries.includes(row[1]));
+    dataTable.rows.add(filteredData).draw(false);
 
     if (index < totalData.length) {
       setTimeout(loadNextChunk, 10);
@@ -68,16 +98,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function setupSearchFilters(table) {
-    $("#search-school").on("keyup", function () {
+    $("#search-country").on("keyup", function () {
       table.column(1).search(this.value).draw();
     });
-  
-    $("#search-department").on("keyup", function () {
+    $("#search-school").on("keyup", function () {
       table.column(2).search(this.value).draw();
     });
-  
-    $("#search-url").on("keyup", function () {
+
+    $("#search-department").on("keyup", function () {
       table.column(3).search(this.value).draw();
+    });
+
+    $("#search-url").on("keyup", function () {
+      table.column(4).search(this.value).draw();
     });
   }
 
@@ -97,6 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
   $("#export-excel").on("click", function () {
     const selectedData = getSelectedData();
     const excelData = selectedData.map((item) => [
+      item["Country"],
       item["School Name"],
       item["Department Name"],
       item.URL,
@@ -112,9 +146,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (checkbox && checkbox.checked) {
         const data = this.data();
         selectedData.push({
-          "School Name": data[1],
-          "Department Name": data[2],
-          URL: data[3],
+          "Country": data[1],
+          "School Name": data[2],
+          "Department Name": data[3],
+          URL: data[4],
         });
       }
     });
@@ -131,10 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function exportToExcel(data) {
     const wb = XLSX.utils.book_new();
-    const ws = XLSX.utils.aoa_to_sheet([
-      ["School Name", "Department Name", "URL"],
-      ...data,
-    ]);
+    const ws = XLSX.utils.aoa_to_sheet([["Country", "School Name", "Department Name", "URL"], ...data]);
     XLSX.utils.book_append_sheet(wb, ws, "Data");
     XLSX.writeFile(wb, "data.xlsx");
   }

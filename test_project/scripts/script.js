@@ -28,9 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
             defaultContent: "N/A",
             render: function (data) {
               if (!data) return "N/A";
-              return `<a href="${data}" target="_blank">${
-                data.length > 50 ? data.substring(0, 50) + "..." : data
-              }</a>`;
+              return `<a href="${data}" target="_blank">${data.length > 50 ? data.substring(0, 50) + "..." : data
+                }</a>`;
             },
           },
         ],
@@ -76,11 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
     $("#search-school").on("keyup", function () {
       table.column(2).search(this.value).draw();
     });
-  
+
     $("#search-department").on("keyup", function () {
       table.column(3).search(this.value).draw();
     });
-  
+
     $("#search-url").on("keyup", function () {
       table.column(4).search(this.value).draw();
     });
@@ -139,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function exportToExcel(data) {
     const wb = XLSX.utils.book_new();
     const ws = XLSX.utils.aoa_to_sheet([
-      ["Country","School Name", "Department Name", "URL"],
+      ["Country", "School Name", "Department Name", "URL"],
       ...data,
     ]);
     XLSX.utils.book_append_sheet(wb, ws, "Data");

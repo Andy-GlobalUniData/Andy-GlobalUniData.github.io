@@ -19,11 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
               return '<input type="checkbox" class="row-checkbox">';
             },
           },
-          { title: "School Name", data: 1 }, // 確保 data 對應到陣列的索引
-          { title: "Department Name", data: 2 },
+          { title: "Country", data: 1 },
+          { title: "School Name", data: 2 }, // 確保 data 對應到陣列的索引
+          { title: "Department Name", data: 3 },
           {
             title: "URL",
-            data: 3,
+            data: 4,
             defaultContent: "N/A",
             render: function (data) {
               if (!data) return "N/A";
@@ -55,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 這裡要確保每一列資料是陣列格式
     const formattedData = chunk.map((item) => [
       "", // Checkbox
+      item["Country"] || "N/A",
       item["School Name"] || "N/A",
       item["Department Name"] || "N/A",
       item.URL || "N/A",
@@ -68,16 +70,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function setupSearchFilters(table) {
-    $("#search-school").on("keyup", function () {
+    $("#search-country").on("keyup", function () {
       table.column(1).search(this.value).draw();
     });
-  
-    $("#search-department").on("keyup", function () {
+    $("#search-school").on("keyup", function () {
       table.column(2).search(this.value).draw();
     });
   
-    $("#search-url").on("keyup", function () {
+    $("#search-department").on("keyup", function () {
       table.column(3).search(this.value).draw();
+    });
+  
+    $("#search-url").on("keyup", function () {
+      table.column(4).search(this.value).draw();
     });
   }
 
@@ -97,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
   $("#export-excel").on("click", function () {
     const selectedData = getSelectedData();
     const excelData = selectedData.map((item) => [
+      item["Country"],
       item["School Name"],
       item["Department Name"],
       item.URL,
@@ -112,9 +118,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (checkbox && checkbox.checked) {
         const data = this.data();
         selectedData.push({
-          "School Name": data[1],
-          "Department Name": data[2],
-          URL: data[3],
+          "Country": data[1],
+          "School Name": data[2],
+          "Department Name": data[3],
+          URL: data[4],
         });
       }
     });
@@ -132,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function exportToExcel(data) {
     const wb = XLSX.utils.book_new();
     const ws = XLSX.utils.aoa_to_sheet([
-      ["School Name", "Department Name", "URL"],
+      ["Country","School Name", "Department Name", "URL"],
       ...data,
     ]);
     XLSX.utils.book_append_sheet(wb, ws, "Data");

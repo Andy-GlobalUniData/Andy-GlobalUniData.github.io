@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let totalData = [];
   let index = 0;
   const chunkSize = 200;
-  
+
   // 初始 selectedCountries 為空陣列
   let selectedCountries = [];
 
@@ -13,18 +13,22 @@ document.addEventListener("DOMContentLoaded", function () {
     $(".country-checkbox:checked").each(function () {
       selectedCountries.push($(this).val());
     });
-    // 清空資料表並重新加載資料
+    // 當選擇變更後重新載入資料
     dataTable.clear();
     index = 0; // 重置索引
     loadNextChunk(); // 重新加載資料
-  }  
+  }
+
+  // 頁面加載後，將所有國家的勾選框設為選中狀態
+  $(document).ready(function () {
+    $(".country-checkbox").prop("checked", true); // 使所有選擇框預設為選中狀態
+    updateSelectedCountries(); // 呼叫更新函數以加載資料
+  });
 
   // 監聽勾選框的變更事件
   $(document).on("change", ".country-checkbox", function () {
     updateSelectedCountries();
-    console.log("Selected countries: ", selectedCountries); // 確認是否正確更新選擇的國家
   });
-  
 
   async function fetchJsonData(url) {
     try {
@@ -69,10 +73,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function loadNextChunk() {
     if (index >= totalData.length) return;
-  
+
     const chunk = totalData.slice(index, index + chunkSize);
     index += chunkSize;
-  
+
     const formattedData = chunk.map((item) => {
       const isSelected = selectedCountries.includes(item["Country"]);
       return [
@@ -83,11 +87,11 @@ document.addEventListener("DOMContentLoaded", function () {
         item.URL || "N/A",
       ];
     });
-  
+
     // 只新增選中的國家的資料
     const filteredData = formattedData.filter(row => selectedCountries.includes(row[1]));
     dataTable.rows.add(filteredData).draw(false);
-  
+
     if (index < totalData.length) {
       setTimeout(loadNextChunk, 10);
     }

@@ -4,8 +4,25 @@ document.addEventListener("DOMContentLoaded", function () {
   let index = 0;
   const chunkSize = 200;
   
-  // 定義要選取的 countries
-  const selectedCountries = ["United Kingdom", "United States", "Netherlands", "Finland", "Canada"]; // 這裡是你要選取的 country 列表
+  // 初始 selectedCountries 為空陣列
+  let selectedCountries = [];
+
+  // 更新 selectedCountries 為勾選的國家
+  function updateSelectedCountries() {
+    selectedCountries = [];
+    $(".country-checkbox:checked").each(function () {
+      selectedCountries.push($(this).val());
+    });
+    // 當選擇變更後重新載入資料
+    dataTable.clear();
+    index = 0;
+    loadNextChunk();
+  }
+
+  // 監聽勾選框的變更事件
+  $(document).on("change", ".country-checkbox", function () {
+    updateSelectedCountries();
+  });
 
   async function fetchJsonData(url) {
     try {

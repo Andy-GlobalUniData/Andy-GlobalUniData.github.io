@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const chunkSize = 200;
   
   // 定義要選取的 countries
-  const selectedCountries = ["USA", "Canada", "Germany"]; // 這裡是你要選取的 country 列表
+  const selectedCountries = ["United Kingdom", "United States", "Netherlands", "Finland", "Canada"]; // 這裡是你要選取的 country 列表
 
   async function fetchJsonData(url) {
     try {

@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     // 當選擇變更後重新載入資料
     dataTable.clear();
-    index = 0;
-    loadNextChunk();
+    index = 0; // 重置索引
+    loadNextChunk(); // 重新加載資料
   }
 
   // 監聽勾選框的變更事件
@@ -82,7 +82,8 @@ document.addEventListener("DOMContentLoaded", function () {
       ];
     });
 
-    dataTable.rows.add(formattedData).draw(false);
+    // 只新增選中的國家的資料
+    dataTable.rows.add(formattedData.filter(row => selectedCountries.includes(row[1]))).draw(false);
 
     if (index < totalData.length) {
       setTimeout(loadNextChunk, 10);

@@ -41,7 +41,7 @@
 - Aston University
 - Bath Spa University
 - Erasmus Universitiet Rotterdam
-- Geroge Mason University
+- George Mason University
 - Newcastle University
 - Northeastern University
 - Nottingham Trent University

@@ -69,7 +69,8 @@ document.addEventListener("DOMContentLoaded", function () {
             },
           },
         ],
-        pageLength: 10,
+        pageLength: 100,  // 預設顯示 100 筆
+        lengthMenu: [ [10, 100, 500, 1000], [10, 100, 500, 1000] ], // 設定下拉選單選項
         searching: true,
         destroy: false,
       });

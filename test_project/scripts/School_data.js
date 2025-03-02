@@ -1,13 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     let universityData = []; // 這裡將初始值設為空陣列
-    let isSchoolUpdated = false; // 用來檢查學校選項是否已經更新過
 
     const countrySelectDiv = document.getElementById("country-select");
     const schoolSelectDiv = document.getElementById("school-select");
 
     // 顯示載入中的提示
-    countrySelectDiv.innerHTML = "載入中...";
-    schoolSelectDiv.innerHTML = "載入中...";
+    countrySelectDiv.innerHTML = "loading...";
+    schoolSelectDiv.innerHTML = "loading...";
 
     // 1. 讀取 JSON 檔案並賦值給 universityData
     fetch("data/School_data.json")
@@ -24,13 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 <label><input type="checkbox" class="country-checkbox" value="${country}" checked> ${country}</label><br>
             `).join("");
 
-            // 4. 當國家選擇改變時，更新大學選項（僅第一次會更新）
+            // 4. 當國家選擇改變時，更新大學選項
             countrySelectDiv.addEventListener("change", function () {
                 const selectedCountries = [...document.querySelectorAll(".country-checkbox:checked")]
                     .map(checkbox => checkbox.value);
-
-                // 如果學校選項已經更新過，就不再處理
-                if (isSchoolUpdated) return;
 
                 // 根據選中的國家篩選對應的大學
                 const selectedSchools = universityData.filter(item => selectedCountries.includes(item.Country));
@@ -48,17 +44,17 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                     `;
                 }).join("");
-
-                // 標記學校選項已經更新過
-                isSchoolUpdated = true;
+                
+                // 觸發一次 "change" 事件，模擬更新或其他操作
+                schoolSelectDiv.dispatchEvent(new Event("change"));
             });
 
-            // 初始時觸發一次 "change" 事件，更新學校選項
+            // 模擬觸發 change 事件，以便一開始就顯示學校選項
             countrySelectDiv.dispatchEvent(new Event("change"));
         })
         .catch(error => {
             console.error("載入 JSON 失敗：", error);
-            countrySelectDiv.innerHTML = "載入失敗，請重試。";
-            schoolSelectDiv.innerHTML = "載入失敗，請重試。";
+            countrySelectDiv.innerHTML = "Loading failed, please try again.";
+            schoolSelectDiv.innerHTML = "Loading failed, please try again.";
         });
 });

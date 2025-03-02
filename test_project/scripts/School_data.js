@@ -45,6 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     `;
                 }).join("");
             });
+
+            // 模擬觸發 change 事件，以便一開始就顯示學校選項
+            countrySelectDiv.dispatchEvent(new Event("change"));
         })
         .catch(error => {
             console.error("載入 JSON 失敗：", error);

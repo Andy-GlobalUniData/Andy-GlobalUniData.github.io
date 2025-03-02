@@ -12,22 +12,30 @@
 </head>
 
 <body>
-  <button id="export-json">Export JSON</button>
-  <button id="export-excel">Export Excel</button>
-  
-  <div id="country-select">
+  <!-- 匯出資料的按鈕 -->
+  <div class="export-buttons">
+    <button id="export-json">Export JSON</button>
+    <button id="export-excel">Export Excel</button>
+  </div>
+
+  <!-- 國家選擇區域 -->
+  <div id="country-select" class="select-container">
+    <h3>Select Country</h3>
     <!-- 這裡會動態生成國家選項 -->
   </div>
 
-  <div id="school-select">
-      <!-- 這裡會顯示選擇國家後對應的大學 -->
+  <!-- 大學選擇區域 -->
+  <div id="school-select" class="select-container">
+    <h3>Select School</h3>
+    <!-- 這裡會顯示選擇國家後對應的大學 -->
   </div>
 
-  <div>
-    <label>Search School: <input type="text" id="search-school"></label>
+  <!-- 搜尋欄 -->
+  <div class="search-container">
     <label>Search Department: <input type="text" id="search-department"></label>
   </div>
 
+  <!-- 表格 -->
   <table id="json-table" class="display">
     <thead>
       <tr>
@@ -43,6 +51,7 @@
     </tbody>
   </table>
 
+  <!-- 引入 jQuery, DataTables 和 Select2 -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>

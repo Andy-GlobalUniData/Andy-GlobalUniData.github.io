@@ -3,11 +3,36 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
   margin: 20px;
+  padding: 0;
 }
 
 h2 {
   color: #007bff;
   font-weight: bold;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+/* 按鈕樣式 */
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+}
+
+/* 設定連結樣式 */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /* 表格樣式 */
@@ -16,6 +41,12 @@ table {
   margin-top: 20px;
   border-collapse: collapse;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+table.display {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
 th, td {
@@ -55,16 +86,6 @@ tr:hover td {
   font-size: 14px;
 }
 
-/* 設定連結樣式 */
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 /* 設定響應式，讓表格可以滾動 */
 @media (max-width: 768px) {
   table {
@@ -85,33 +106,8 @@ a:hover {
   min-width: 50px;
   max-width: 300px;
   width: auto; /* 讓欄位自動調整 */
-}
-
-/* 設定行高 */
-#json-table td {
-  height: 40px;  /* 設定單元格的高度 */
-}
-
-/* 讓行可以被拖動來調整高度 */
-#json-table tr {
-  cursor: ns-resize;  /* 改變鼠標光標樣式 */
-}
-
-/* 當表格列被拖動時顯示適合的光標樣式 */
-#json-table td {
+  height: 40px; /* 設定單元格的高度 */
   cursor: pointer;  /* 在單元格內顯示可調整光標 */
-}
-
-/* 設定連結顯示樣式 */
-#json-table td a.url-link {
-  display: inline-block;
-  max-width: 300px; /* 設定最大寬度，您可以根據需要調整 */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  color: #1a73e8; /* 設定超連結顏色 */
-  text-decoration: none; /* 去掉底線 */
 }
 
 /* 提高可讀性，調整表格樣式 */
@@ -125,14 +121,6 @@ a:hover {
   width: 100%;
   table-layout: auto;
 }
-
-/* 避免表格的列被過度限制，適應內容 */
-#json-table td {
-  width: auto;
-  min-width: 50px;
-  max-width: none;
-}
-
 
 /* 使國家選擇框與大學選擇框並排顯示 */
 #country-select, #school-select {
@@ -156,4 +144,28 @@ a:hover {
 #school-select {
   max-height: 300px; /* 如果選擇的學校太多，設置最大高度 */
   overflow-y: scroll; /* 滾動條 */
+}
+
+/* 基本排版設置 */
+select, input[type="text"], button {
+  margin-bottom: 15px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+/* 按鈕區域樣式 */
+.export-buttons {
+  margin-bottom: 20px;
+}
+
+/* 選擇框區域樣式 */
+.select-container {
+  display: inline-block;
+  width: 45%;
+  margin-right: 5%;
+}
+
+.search-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

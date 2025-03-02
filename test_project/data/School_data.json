@@ -10,16 +10,6 @@
         "City": "Bath"
     },
     {
-        "School_name": "Carnegie Mellon University",
-        "Country": "United States",
-        "City": "Pittsburgh"
-    },
-    {
-        "School_name": "Elon University",
-        "Country": "United States",
-        "City": "Elon"
-    },
-    {
         "School_name": "Erasmus Universitiet Rotterdam",
         "Country": "Netherlands",
         "City": "Rotterdam"
@@ -28,11 +18,6 @@
         "School_name": "George Mason University",
         "Country": "United States",
         "City": "Fairfax"
-    },
-    {
-        "School_name": "Häme University of Applied Sciences",
-        "Country": "Finland",
-        "City": "Hämeenlinna"
     },
     {
         "School_name": "Newcastle University",
@@ -65,21 +50,6 @@
         "City": "San Jose"
     },
     {
-        "School_name": "SATAKUNTA University of Applied Sciences",
-        "Country": "Finland",
-        "City": "Rauma"
-    },
-    {
-        "School_name": "The University of Vermont",
-        "Country": "United States",
-        "City": "Burlington"
-    },
-    {
-        "School_name": "Turku University of Applied Sciences",
-        "Country": "Finland",
-        "City": "Salo"
-    },
-    {
         "School_name": "UCLA",
         "Country": "United States",
         "City": "Los Angeles"
@@ -95,11 +65,6 @@
         "City": "Amsterdam"
     },
     {
-        "School_name": "University of East Anglia",
-        "Country": "United Kingdom",
-        "City": "Norwich"
-    },
-    {
         "School_name": "University of Essex",
         "Country": "United Kingdom",
         "City": "Colchester"
@@ -108,11 +73,6 @@
         "School_name": "University of Exeter",
         "Country": "United Kingdom",
         "City": "Exeter"
-    },
-    {
-        "School_name": "University of Groningen",
-        "Country": "Netherlands",
-        "City": "Groningen"
     },
     {
         "School_name": "University of Leeds",
@@ -130,11 +90,6 @@
         "City": "Southampton"
     },
     {
-        "School_name": "University of South California",
-        "Country": "United States",
-        "City": "Los Angeles"
-    },
-    {
         "School_name": "University of Stirling",
         "Country": "United Kingdom",
         "City": "Stirling"
@@ -148,20 +103,5 @@
         "School_name": "University of Washington",
         "Country": "United States",
         "City": "Seattle"
-    },
-    {
-        "School_name": "Vancouver Film School",
-        "Country": "Canada",
-        "City": "Vancouver"
-    },
-    {
-        "School_name": "Vrije Universiteit Amsterdam",
-        "Country": "Netherlands",
-        "City": "Amsterdam"
-    },
-    {
-        "School_name": "Washington University",
-        "Country": "United States",
-        "City": "St. Louis"
     }
 ]

@@ -34,14 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 `).join("");
             });
-
-            // 6. 檢查資料缺失
-            data.forEach((item, index) => {
-                if (!item["School Name"] || !item["Department Name"] || !item.URL) {
-                    console.warn(`第 ${index + 1} 筆資料有缺失:`, item);
-                }
-            });
-
         })
         .catch(error => {
             console.error("載入 JSON 失敗：", error);

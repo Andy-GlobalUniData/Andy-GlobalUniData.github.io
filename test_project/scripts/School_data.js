@@ -20,20 +20,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 <label><input type="checkbox" class="country-checkbox" value="${country}" checked> ${country}</label><br>
             `).join("");
 
-            // 4. 當國家選擇改變時，更新大學選項
-            countrySelectDiv.addEventListener("change", function () {
-                const selectedCountries = [...document.querySelectorAll(".country-checkbox:checked")]
-                    .map(checkbox => checkbox.value);
+            // 在這裡加上延遲，讓國家選項顯示後稍等一會兒
+            setTimeout(() => {
+                // 4. 當國家選擇改變時，更新大學選項
+                countrySelectDiv.addEventListener("change", function () {
+                    const selectedCountries = [...document.querySelectorAll(".country-checkbox:checked")]
+                        .map(checkbox => checkbox.value);
 
-                // 根據選中的國家篩選對應的大學
-                const selectedSchools = universityData.filter(item => selectedCountries.includes(item.Country));
+                    // 根據選中的國家篩選對應的大學
+                    const selectedSchools = universityData.filter(item => selectedCountries.includes(item.Country));
 
-                // 5. 取得所有學校名並排序
-                const schoolNames = selectedSchools.map(school => school.School_name)
-                    .sort(); // 按字典序排序
+                    // 5. 取得所有學校名並排序
+                    const schoolNames = selectedSchools.map(school => school.School_name)
+                        .sort(); // 按字典序排序
 
-                // 添加小延遲再更新學校選項
-                setTimeout(() => {
                     // 顯示對應的大學，並使用 checkbox 形式，預設勾選
                     schoolSelectDiv.innerHTML = schoolNames.map(schoolName => {
                         // 找到對應的學校資訊
@@ -44,8 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             </div>
                         `;
                     }).join("");
-                }, 50); // 設置延遲時間為 50 毫秒
-            });
+                });
+            }, 50); // 延遲 50 毫秒
         })
         .catch(error => {
             console.error("載入 JSON 失敗：", error);

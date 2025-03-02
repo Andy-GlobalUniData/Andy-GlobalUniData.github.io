@@ -32,16 +32,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 const schoolNames = selectedSchools.map(school => school.School_name)
                     .sort(); // 按字典序排序
 
-                // 顯示對應的大學，並使用 checkbox 形式，預設勾選
-                schoolSelectDiv.innerHTML = schoolNames.map(schoolName => {
-                    // 找到對應的學校資訊
-                    const school = selectedSchools.find(item => item.School_name === schoolName);
-                    return `
-                        <div class="school-item">
-                            <label><input type="checkbox" class="school-checkbox" value="${school.School_name}" checked> ${school.School_name} (${school.City})</label>
-                        </div>
-                    `;
-                }).join("");
+                // 添加小延遲再更新學校選項
+                setTimeout(() => {
+                    // 顯示對應的大學，並使用 checkbox 形式，預設勾選
+                    schoolSelectDiv.innerHTML = schoolNames.map(schoolName => {
+                        // 找到對應的學校資訊
+                        const school = selectedSchools.find(item => item.School_name === schoolName);
+                        return `
+                            <div class="school-item">
+                                <label><input type="checkbox" class="school-checkbox" value="${school.School_name}" checked> ${school.School_name} (${school.City})</label>
+                            </div>
+                        `;
+                    }).join("");
+                }, 50); // 設置延遲時間為 50 毫秒
             });
         })
         .catch(error => {

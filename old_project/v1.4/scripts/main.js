@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let dataTable;
   let totalData = [];
   let index = 0;
-  const chunkSize = 200;
+  const chunkSize = 500;
 
   // 初始 selectedCountries 和 selectedSchools 為空陣列
   let selectedCountries = [];
@@ -69,7 +69,8 @@ document.addEventListener("DOMContentLoaded", function () {
             },
           },
         ],
-        pageLength: 10,
+        pageLength: 100,  // 預設顯示 100 筆
+        lengthMenu: [ [10, 100, 500, 1000], [10, 100, 500, 1000] ], // 設定下拉選單選項
         searching: true,
         destroy: false,
       });

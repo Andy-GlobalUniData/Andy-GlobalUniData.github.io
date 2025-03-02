@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let dataTable;
   let totalData = [];
   let index = 0;
-  const chunkSize = 200;
+  const chunkSize = 500;
 
   // 初始 selectedCountries 和 selectedSchools 為空陣列
   let selectedCountries = [];

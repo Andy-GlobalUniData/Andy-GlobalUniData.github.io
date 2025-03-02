@@ -27,9 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 // 根據選中的國家篩選對應的大學
                 const selectedSchools = universityData.filter(item => selectedCountries.includes(item.Country));
 
-                // 5. 顯示對應的大學
+                // 5. 顯示對應的大學，並使用 checkbox 形式
                 schoolSelectDiv.innerHTML = selectedSchools.map(school => `
-                    <div>${school.School_name} (${school.City})</div>
+                    <div class="school-item">
+                        <label><input type="checkbox" class="school-checkbox" value="${school.School_name}"> ${school.School_name} (${school.City})</label>
+                    </div>
                 `).join("");
             });
 

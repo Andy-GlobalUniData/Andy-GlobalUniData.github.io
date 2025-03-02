@@ -11,12 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("載入 JSON：", data);
             universityData = data; // 賦值給 universityData
 
-            // 2. 取得所有不重複的國家
-            const countries = [...new Set(universityData.map(item => item.Country))];
+            // 2. 取得所有不重複的國家並排序
+            const countries = [...new Set(universityData.map(item => item.Country))]
+                .sort(); // 按字典序排序
 
-            // 3. 動態生成國家選項
+            // 3. 動態生成國家選項並預設勾選
             countrySelectDiv.innerHTML = countries.map(country => `
-                <label><input type="checkbox" class="country-checkbox" value="${country}"> ${country}</label><br>
+                <label><input type="checkbox" class="country-checkbox" value="${country}" checked> ${country}</label><br>
             `).join("");
 
             // 4. 當國家選擇改變時，更新大學選項
@@ -27,12 +28,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 // 根據選中的國家篩選對應的大學
                 const selectedSchools = universityData.filter(item => selectedCountries.includes(item.Country));
 
-                // 5. 顯示對應的大學，並使用 checkbox 形式
-                schoolSelectDiv.innerHTML = selectedSchools.map(school => `
-                    <div class="school-item">
-                        <label><input type="checkbox" class="school-checkbox" value="${school.School_name}"> ${school.School_name} (${school.City})</label>
-                    </div>
-                `).join("");
+                // 5. 取得所有學校名並排序
+                const schoolNames = selectedSchools.map(school => school.School_name)
+                    .sort(); // 按字典序排序
+
+                // 顯示對應的大學，並使用 checkbox 形式，預設勾選
+                schoolSelectDiv.innerHTML = schoolNames.map(schoolName => {
+                    // 找到對應的學校資訊
+                    const school = selectedSchools.find(item => item.School_name === schoolName);
+                    return `
+                        <div class="school-item">
+                            <label><input type="checkbox" class="school-checkbox" value="${school.School_name}" checked> ${school.School_name} (${school.City})</label>
+                        </div>
+                    `;
+                }).join("");
             });
         })
         .catch(error => {

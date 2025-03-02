@@ -33,12 +33,14 @@
 **添加國家列表**
 [🔗 v1.3 連結](https://andy-globalunidata.github.io/old_project/v1.3)
 
-## 未來改進方向
+**國家和學校可以自選的列表**
+[🔗 v1.4 連結](https://andy-globalunidata.github.io/old_project/v1.4)
+
+## 未來目標方向
+- **勾選科系並且下載Excel**
+- **新增學位判斷**
 - **自動化資料載入**
-- **提升 UI/UX 以改善使用者體驗**
-- **修正現有 Bug，確保系統穩定性**
 - **註冊帳號與密碼**
-- **勾選科系並且下載**
 
 ## 目前有載入的學校
 - Aston University

@@ -15,6 +15,13 @@ h3 {
   margin-bottom: 10px;
 }
 
+/* 基本排版設置 */
+select, input[type="text"], button {
+  margin-bottom: 15px;
+  padding: 8px;
+  font-size: 14px;
+}
+
 /* 按鈕樣式 */
 button {
   padding: 10px 15px;
@@ -25,7 +32,12 @@ button:hover {
   background-color: #f0f0f0;
 }
 
-/* 設定連結樣式 */
+/* 匯出按鈕區域樣式 */
+.export-buttons {
+  margin-bottom: 20px;
+}
+
+/* 連結樣式 */
 a {
   color: #007bff;
   text-decoration: none;
@@ -33,6 +45,32 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* 搜尋欄樣式 */
+.search-container {
+  background-color: #f2f2f2; /* 設定背景色 */
+  padding: 20px; /* 增加內邊距，讓內容更有空間 */
+  border-radius: 8px; /* 圓角邊框 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 增加陰影效果 */
+  margin: 20px 0; /* 設置外邊距，讓搜尋欄不會貼近其他元素 */
+  font-size: 16px; /* 增加字體大小 */
+}
+
+.search-container label {
+  font-weight: bold; /* 設定標籤字型為粗體 */
+}
+
+.search-container input {
+  padding: 8px 12px; /* 增加輸入框內的間距 */
+  margin-left: 10px; /* 增加標籤和輸入框之間的間隔 */
+  border: 1px solid #ccc; /* 輸入框邊框顏色 */
+  border-radius: 4px; /* 輸入框圓角 */
+}
+
+.search-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* 表格樣式 */
@@ -122,6 +160,13 @@ tr:hover td {
   table-layout: auto;
 }
 
+/* 選擇框區域樣式 */
+.select-container {
+  display: inline-block;
+  width: 45%;
+  margin-right: 5%;
+}
+
 /* 使國家選擇框與大學選擇框並排顯示 */
 #country-select, #school-select {
   display: inline-block;
@@ -144,28 +189,4 @@ tr:hover td {
 #school-select {
   max-height: 300px; /* 如果選擇的學校太多，設置最大高度 */
   overflow-y: scroll; /* 滾動條 */
-}
-
-/* 基本排版設置 */
-select, input[type="text"], button {
-  margin-bottom: 15px;
-  padding: 8px;
-  font-size: 14px;
-}
-
-/* 按鈕區域樣式 */
-.export-buttons {
-  margin-bottom: 20px;
-}
-
-/* 選擇框區域樣式 */
-.select-container {
-  display: inline-block;
-  width: 45%;
-  margin-right: 5%;
-}
-
-.search-container {
-  margin-top: 20px;
-  margin-bottom: 20px;
 }

@@ -1,61 +1,59 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let universityData = []; // 這裡將初始值設為空陣列
+    let universityData = [];
 
-    const countrySelectDiv = document.getElementById("country-select");
-    const schoolSelectDiv = document.getElementById("school-select");
+    const countrySelect = $('#country-dropdown');
+    const schoolSelect = $('#school-dropdown');
 
-    // 顯示載入中的提示
-    countrySelectDiv.innerHTML = "loading...";
-    schoolSelectDiv.innerHTML = "loading...";
+    // 初始化 Select2
+    countrySelect.select2({
+        placeholder: "Please select a country",
+        allowClear: true,
+        width: '100%'
+    });
 
-    // 1. 讀取 JSON 檔案並賦值給 universityData
+    schoolSelect.select2({
+        placeholder: "Please select a school",
+        allowClear: true,
+        width: '100%'
+    });
+
     fetch("data/School_data.json")
         .then(response => response.json())
         .then((data) => {
-            console.log("載入 JSON：", data);
-            universityData = data; // 賦值給 universityData
+            universityData = data;
 
-            // 2. 取得所有不重複的國家並排序
-            const countries = [...new Set(universityData.map(item => item.Country))].sort(); // 按字典序排序
+            // 取得所有不重複的國家並排序
+            const countries = [...new Set(universityData.map(item => item.Country))].sort();
 
-            // 3. 動態生成國家選項並預設勾選
-            countrySelectDiv.innerHTML = countries.map(country => `
-                <label><input type="checkbox" class="country-checkbox" value="${country}" checked> ${country}</label><br>
-            `).join(" ");
+            // 動態生成國家選項
+            countrySelect.empty(); // 清空現有選項
+            countries.forEach(country => {
+                countrySelect.append(new Option(country, country));
+            });
 
-            // 4. 當國家選擇改變時，更新大學選項
-            countrySelectDiv.addEventListener("change", function () {
-                const selectedCountries = [...document.querySelectorAll(".country-checkbox:checked")]
-                    .map(checkbox => checkbox.value);
+            // 當國家選擇變動時，更新學校選項
+            countrySelect.on('change', function () {
+                const selectedCountries = countrySelect.val();
 
                 // 根據選中的國家篩選對應的大學
                 const selectedSchools = universityData.filter(item => selectedCountries.includes(item.Country));
 
-                // 5. 取得所有學校名並排序
-                const schoolNames = selectedSchools.map(school => school.School_name).sort(); // 按字典序排序
+                // 取得所有不重複的學校並排序
+                const schoolNames = [...new Set(selectedSchools.map(school => school.School_name))].sort();
 
-                // 顯示對應的大學，並使用 checkbox 形式，預設勾選
-                schoolSelectDiv.innerHTML = schoolNames.map(schoolName => {
-                    // 找到對應的學校資訊
-                    const school = selectedSchools.find(item => item.School_name === schoolName);
-                    return `
-                        <div class="school-item">
-                            <label><input type="checkbox" class="school-checkbox" value="${school.School_name}" checked> 
-                            ${school.School_name} (${school.City})</label>
-                        </div>
-                    `;
-                }).join(" ");
-
-                // 觸發一次 "change" 事件，模擬更新或其他操作
-                schoolSelectDiv.dispatchEvent(new Event("change"));
+                // 動態生成學校選項
+                schoolSelect.empty();
+                schoolNames.forEach(schoolName => {
+                    schoolSelect.append(new Option(schoolName, schoolName));
+                });
             });
 
-            // 模擬觸發 change 事件，以便一開始就顯示學校選項
-            countrySelectDiv.dispatchEvent(new Event("change"));
+            // 模擬觸發一次選擇變動，來載入學校
+            countrySelect.trigger('change');
         })
         .catch(error => {
             console.error("載入 JSON 失敗：", error);
-            countrySelectDiv.innerHTML = "Loading failed, please try again.";
-            schoolSelectDiv.innerHTML = "Loading failed, please try again.";
+            countrySelect.html("Loading failed, please try again.");
+            schoolSelect.html("Loading failed, please try again.");
         });
 });

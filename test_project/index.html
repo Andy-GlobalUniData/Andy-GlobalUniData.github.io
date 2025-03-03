@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andy Global Uni Data</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/hamburger_button.css">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
@@ -19,22 +20,23 @@
   </div>
 
   <div class="selection-wrapper">
+    <!-- 國家選擇 -->
     <div id="country-select" class="select-container">
       <h3>Select Country</h3>
-      <select id="country-dropdown" class="custom-select">
-        <option value="">Please select a country</option>
-        <!-- 動態填充國家 -->
+      <select id="country-dropdown" class="custom-select" multiple="multiple">
+        <!-- 國家選項將會動態填充 -->
       </select>
     </div>
   
+    <!-- 學校選擇 -->
     <div id="school-select" class="select-container">
       <h3>Select School</h3>
-      <select id="school-dropdown" class="custom-select">
-        <option value="">Please select a school</option>
-        <!-- 動態填充學校 -->
+      <select id="school-dropdown" class="custom-select" multiple="multiple">
+        <!-- 學校選項將會動態填充 -->
       </select>
     </div>
   </div>
+
 
   <!-- 搜尋欄 -->
   <div class="search-container">

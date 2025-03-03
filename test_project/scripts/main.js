@@ -31,9 +31,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 頁面加載後，將所有國家和學校的勾選框設為選中狀態
   $(document).ready(function () {
-    $(".country-checkbox").prop("checked", true); // 使所有選擇框預設為選中狀態
-    $(".school-checkbox").prop("checked", true);  // 使所有學校選擇框預設為選中狀態
-    updateSelectedFilters(); // 呼叫更新函數以加載資料
+    // 初始化 Select2
+    $('#country-dropdown').select2();
+    $('#school-dropdown').select2();
+  
+    // 監聽變更事件
+    $('#country-dropdown, #school-dropdown').on('change', function() {
+      updateSelectedFilters();
+    });
   });
 
   // 監聽勾選框的變更事件

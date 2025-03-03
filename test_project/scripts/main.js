@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateSelectedFilters() {
     selectedCountries = [];
     selectedSchools = [];
-
+    
     // 更新選擇的國家
     $(".country-checkbox:checked").each(function () {
       selectedCountries.push($(this).val());
@@ -31,14 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 頁面加載後，將所有國家和學校的勾選框設為選中狀態
   $(document).ready(function () {
-    // 初始化 Select2
-    $('#country-dropdown').select2();
-    $('#school-dropdown').select2();
-  
-    // 監聽變更事件
-    $('#country-dropdown, #school-dropdown').on('change', function() {
-      updateSelectedFilters();
-    });
+    $(".country-checkbox").prop("checked", true); // 使所有選擇框預設為選中狀態
+    $(".school-checkbox").prop("checked", true);  // 使所有學校選擇框預設為選中狀態
+    updateSelectedFilters(); // 呼叫更新函數以加載資料
   });
 
   // 監聽勾選框的變更事件
@@ -50,38 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       const response = await fetch(url);
       totalData = await response.json();
-  
-      // 提取唯一的國家和學校選項
-      const countries = [...new Set(totalData.map(item => item["Country"]))];
-      const schools = [...new Set(totalData.map(item => item["School Name"]))];
-  
-      // 動態填充國家選項
-      const countrySelect = $(".country-select");
-      countries.forEach(country => {
-        countrySelect.append(`
-          <li>
-            <label class="country-label">
-              <input type="checkbox" class="country-checkbox" value="${country}" checked>
-              ${country}
-            </label>
-          </li>
-        `);
-      });
-  
-      // 動態填充學校選項
-      const schoolSelect = $(".school-select");
-      schools.forEach(school => {
-        schoolSelect.append(`
-          <li>
-            <label class="school-label">
-              <input type="checkbox" class="school-checkbox" value="${school}" checked>
-              ${school}
-            </label>
-          </li>
-        `);
-      });
-  
-      // 初始化表格
+
       dataTable = $("#json-table").DataTable({
         data: [],
         columns: [
@@ -110,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
         searching: true,
         destroy: false,
       });
-  
+
       setupSearchFilters(dataTable);
       loadNextChunk();
     } catch (error) {
@@ -128,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const formattedData = chunk.map((item) => {
       const isCountrySelected = selectedCountries.includes(item["Country"]);
       const isSchoolSelected = selectedSchools.includes(item["School Name"]);
-
       return [
         (isCountrySelected && isSchoolSelected) ? '<input type="checkbox" class="row-checkbox" checked>' : '<input type="checkbox" class="row-checkbox">', // 只有當國家和學校都選擇時才自動選取
         item["Country"] || "N/A",
@@ -139,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // 只新增選中的國家和學校的資料
-    const filteredData = formattedData.filter(row =>
+    const filteredData = formattedData.filter(row => 
       selectedCountries.includes(row[1]) && selectedSchools.includes(row[2])
     );
     dataTable.rows.add(filteredData).draw(false);
@@ -148,7 +111,6 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(loadNextChunk, 10);
     }
   }
-
 
   function setupSearchFilters(table) {
     $("#search-country").on("keyup", function () {

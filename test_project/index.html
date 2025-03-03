@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andy Global Uni Data</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/hamburger_button.css">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
@@ -16,26 +15,19 @@
   <!-- 匯出資料的按鈕 -->
   <div class="export-buttons">
     <button id="export-json">Export JSON</button>
+    <!--<button id="export-excel">Export Excel</button>-->
   </div>
 
-  <!-- 漢堡選單按鈕 -->
-  <div class="hamburger-menu">
-    <button class="hamburger-btn" id="hamburger-btn">&#9776;</button>
-    <div class="sidebar" id="sidebar">
-      <div class="select-container">
-        <h3>Select Country</h3>
-        <ul id="country-list">
-          <!-- 國家選項將會動態填充 -->
-        </ul>
-      </div>
+  <!-- 國家選擇區域 -->
+  <div id="country-select" class="select-container">
+    <h3>Select Country</h3>
+    <!-- 這裡會動態生成國家選項 -->
+  </div>
 
-      <div class="select-container">
-        <h3>Select School</h3>
-        <ul id="school-list">
-          <!-- 學校選項將會動態填充 -->
-        </ul>
-      </div>
-    </div>
+  <!-- 大學選擇區域 -->
+  <div id="school-select" class="select-container">
+    <h3>Select School</h3>
+    <!-- 這裡會顯示選擇國家後對應的大學 -->
   </div>
 
   <!-- 搜尋欄 -->

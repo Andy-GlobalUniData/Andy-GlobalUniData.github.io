@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateSelectedFilters() {
     selectedCountries = [];
     selectedSchools = [];
-    
+
     // 更新選擇的國家
     $(".country-checkbox:checked").each(function () {
       selectedCountries.push($(this).val());
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
           },
         ],
         pageLength: 100,  // 預設顯示 100 筆
-        lengthMenu: [ [10, 100, 500, 1000], [10, 100, 500, 1000] ], // 設定下拉選單選項
+        lengthMenu: [[10, 100, 500, 1000], [10, 100, 500, 1000]], // 設定下拉選單選項
         searching: true,
         destroy: false,
       });
@@ -92,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const formattedData = chunk.map((item) => {
       const isCountrySelected = selectedCountries.includes(item["Country"]);
       const isSchoolSelected = selectedSchools.includes(item["School Name"]);
+
       return [
         (isCountrySelected && isSchoolSelected) ? '<input type="checkbox" class="row-checkbox" checked>' : '<input type="checkbox" class="row-checkbox">', // 只有當國家和學校都選擇時才自動選取
         item["Country"] || "N/A",
@@ -102,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // 只新增選中的國家和學校的資料
-    const filteredData = formattedData.filter(row => 
+    const filteredData = formattedData.filter(row =>
       selectedCountries.includes(row[1]) && selectedSchools.includes(row[2])
     );
     dataTable.rows.add(filteredData).draw(false);
@@ -111,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(loadNextChunk, 10);
     }
   }
+
 
   function setupSearchFilters(table) {
     $("#search-country").on("keyup", function () {

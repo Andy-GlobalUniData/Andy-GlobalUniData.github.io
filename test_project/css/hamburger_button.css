@@ -1,28 +1,45 @@
 /* 漢堡選單樣式 */
-.select2-container .select2-selection--multiple {
-    background-color: #f0f0f0;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    padding: 5px;
-  }
-  
-  .select2-container .select2-selection--multiple .select2-selection__choice {
-    background-color: #2196F3;
-    color: white;
-    border-radius: 4px;
-    margin: 2px;
-    padding: 5px;
-  }
-  
-  .select2-container .select2-selection--multiple .select2-selection__choice:hover {
-    background-color: #1976D2; /* 當選項被點選時變色 */
-  }
-  
-  .select2-container .select2-selection--multiple .select2-selection__choice__remove {
-    color: white;
-  }
-  
-  .select2-container .select2-dropdown {
-    border: 1px solid #ccc;
-  }
-  
+.hamburger-menu {
+  position: relative;
+}
+
+.hamburger-btn {
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.sidebar {
+  display: none; /* 隱藏側邊欄 */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar.show {
+  display: block; /* 顯示側邊欄 */
+}

@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const countries = [...new Set(universityData.map(item => item.Country))].sort();
 
             // 動態生成國家選項
-            countrySelect.empty(); // 清空現有選項
             countries.forEach(country => {
                 countrySelect.append(new Option(country, country));
             });
@@ -41,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // 取得所有不重複的學校並排序
                 const schoolNames = [...new Set(selectedSchools.map(school => school.School_name))].sort();
 
-                // 動態生成學校選項
+                // 動態更新學校選項
                 schoolSelect.empty();
                 schoolNames.forEach(schoolName => {
                     schoolSelect.append(new Option(schoolName, schoolName));

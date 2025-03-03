@@ -16,27 +16,27 @@
   <!-- 匯出資料的按鈕 -->
   <div class="export-buttons">
     <button id="export-json">Export JSON</button>
-    <!--<button id="export-excel">Export Excel</button>-->
   </div>
 
-  <div class="selection-wrapper">
-    <!-- 國家選擇 -->
-    <div id="country-select" class="select-container">
-      <h3>Select Country</h3>
-      <select id="country-dropdown" class="custom-select" multiple="multiple">
-        <!-- 國家選項將會動態填充 -->
-      </select>
-    </div>
-  
-    <!-- 學校選擇 -->
-    <div id="school-select" class="select-container">
-      <h3>Select School</h3>
-      <select id="school-dropdown" class="custom-select" multiple="multiple">
-        <!-- 學校選項將會動態填充 -->
-      </select>
+  <!-- 漢堡選單按鈕 -->
+  <div class="hamburger-menu">
+    <button class="hamburger-btn" id="hamburger-btn">&#9776;</button>
+    <div class="sidebar" id="sidebar">
+      <div class="select-container">
+        <h3>Select Country</h3>
+        <ul id="country-list">
+          <!-- 國家選項將會動態填充 -->
+        </ul>
+      </div>
+
+      <div class="select-container">
+        <h3>Select School</h3>
+        <ul id="school-list">
+          <!-- 學校選項將會動態填充 -->
+        </ul>
+      </div>
     </div>
   </div>
-
 
   <!-- 搜尋欄 -->
   <div class="search-container">

@@ -15,7 +15,11 @@ h3 {
   margin-bottom: 10px;
 }
 
-/* 按鈕樣式 */
+/* 按鈕區域樣式 */
+.export-buttons {
+  margin-bottom: 20px;
+}
+
 button {
   padding: 10px 15px;
   cursor: pointer;
@@ -33,6 +37,22 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* 基本排版設置 */
+select, input[type="text"], button {
+  margin-bottom: 15px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+/* 設定響應式，讓表格可以滾動 */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
 }
 
 /* 表格樣式 */
@@ -86,15 +106,6 @@ tr:hover td {
   font-size: 14px;
 }
 
-/* 設定響應式，讓表格可以滾動 */
-@media (max-width: 768px) {
-  table {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-  }
-}
-
 /* 讓表格的每一列都能夠調整大小 */
 #json-table th {
   position: relative;
@@ -123,6 +134,12 @@ tr:hover td {
 }
 
 /* 使國家選擇框與大學選擇框並排顯示 */
+.selection-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
 #country-select, #school-select {
   display: inline-block;
   margin-right: 30px; /* 兩者之間加點空隙 */
@@ -146,23 +163,41 @@ tr:hover td {
   overflow-y: scroll; /* 滾動條 */
 }
 
-/* 基本排版設置 */
-select, input[type="text"], button {
-  margin-bottom: 15px;
-  padding: 8px;
-  font-size: 14px;
-}
-
-/* 按鈕區域樣式 */
-.export-buttons {
-  margin-bottom: 20px;
-}
-
 /* 選擇框區域樣式 */
 .select-container {
   display: inline-block;
   width: 45%;
   margin-right: 5%;
+}
+
+.select-container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 250px;
+  transition: 0.3s ease-in-out;
+}
+
+.select-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.custom-select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  cursor: pointer;
 }
 
 .search-container {

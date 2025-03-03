@@ -18,16 +18,22 @@
     <!--<button id="export-excel">Export Excel</button>-->
   </div>
 
-  <!-- 國家選擇區域 -->
-  <div id="country-select" class="select-container">
-    <h3>Select Country</h3>
-    <!-- 這裡會動態生成國家選項 -->
-  </div>
-
-  <!-- 大學選擇區域 -->
-  <div id="school-select" class="select-container">
-    <h3>Select School</h3>
-    <!-- 這裡會顯示選擇國家後對應的大學 -->
+  <div class="selection-wrapper">
+    <div id="country-select" class="select-container">
+      <h3>Select Country</h3>
+      <select id="country-dropdown" class="custom-select">
+        <option value="">Please select a country</option>
+        <!-- 動態填充國家 -->
+      </select>
+    </div>
+  
+    <div id="school-select" class="select-container">
+      <h3>Select School</h3>
+      <select id="school-dropdown" class="custom-select">
+        <option value="">Please select a school</option>
+        <!-- 動態填充學校 -->
+      </select>
+    </div>
   </div>
 
   <!-- 搜尋欄 -->

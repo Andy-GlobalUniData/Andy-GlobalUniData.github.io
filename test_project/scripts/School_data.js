@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // 3. 動態生成國家選項並預設勾選
             countrySelectDiv.innerHTML = countries.map(country => `
                 <label><input type="checkbox" class="country-checkbox" value="${country}" checked> ${country}</label><br>
-            `).join("");
+            `).join(" ");
 
             // 4. 當國家選擇改變時，更新大學選項
             countrySelectDiv.addEventListener("change", function () {
@@ -40,11 +40,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     const school = selectedSchools.find(item => item.School_name === schoolName);
                     return `
                         <div class="school-item">
-                            <label><input type="checkbox" class="school-checkbox" value="${school.School_name}" checked> ${school.School_name} (${school.City})</label>
+                            <label><input type="checkbox" class="school-checkbox" value="${school.School_name}" checked> 
+                            ${school.School_name} (${school.City})</label>
                         </div>
                     `;
-                }).join("");
-                
+                }).join(" ");
+
                 // 觸發一次 "change" 事件，模擬更新或其他操作
                 schoolSelectDiv.dispatchEvent(new Event("change"));
             });

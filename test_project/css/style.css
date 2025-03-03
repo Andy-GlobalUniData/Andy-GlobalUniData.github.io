@@ -46,15 +46,6 @@ select, input[type="text"], button {
   font-size: 14px;
 }
 
-/* 設定響應式，讓表格可以滾動 */
-@media (max-width: 768px) {
-  table {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-  }
-}
-
 /* 表格樣式 */
 table {
   width: 100%;
@@ -133,6 +124,25 @@ tr:hover td {
   table-layout: auto;
 }
 
+/* 響應式設計 */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  #country-select,
+  #school-select {
+    width: 100%;
+  }
+
+  .select-container {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
 /* 使國家選擇框與大學選擇框並排顯示 */
 .selection-wrapper {
   display: flex;
@@ -140,27 +150,71 @@ tr:hover td {
   justify-content: center;
 }
 
-#country-select, #school-select {
-  display: inline-block;
-  margin-right: 30px; /* 兩者之間加點空隙 */
-  vertical-align: top;
+/* 國家選擇框的樣式 */
+#country-select {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+#country-select label {
+  display: block;
+  font-size: 14px;
+  padding: 5px;
+}
+
+#country-select input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2); /* 放大勾選框 */
+}
+
+/* 學校選擇框的樣式 */
+#school-select {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .school-item {
-  display: inline-block;
-  margin-right: 20px; /* 使大學勾選框不會擠在一起 */
-  margin-bottom: 10px; /* 讓每一排大學有點間隔 */
+  display: block;
+  margin-bottom: 12px;
 }
 
 .school-item label {
-  display: inline-block;
-  margin-right: 10px;
   font-size: 14px;
+  line-height: 1.5;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
 }
 
-#school-select {
-  max-height: 300px; /* 如果選擇的學校太多，設置最大高度 */
-  overflow-y: scroll; /* 滾動條 */
+.school-item input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+/* 滾動條的樣式 */
+#country-select::-webkit-scrollbar,
+#school-select::-webkit-scrollbar {
+  width: 8px;
+}
+
+#country-select::-webkit-scrollbar-thumb,
+#school-select::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 10px;
+}
+
+#country-select::-webkit-scrollbar-track,
+#school-select::-webkit-scrollbar-track {
+  background: #f0f0f0;
 }
 
 /* 選擇框區域樣式 */

@@ -45,7 +45,38 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       const response = await fetch(url);
       totalData = await response.json();
-
+  
+      // 提取唯一的國家和學校選項
+      const countries = [...new Set(totalData.map(item => item["Country"]))];
+      const schools = [...new Set(totalData.map(item => item["School Name"]))];
+  
+      // 動態填充國家選項
+      const countrySelect = $(".country-select");
+      countries.forEach(country => {
+        countrySelect.append(`
+          <li>
+            <label class="country-label">
+              <input type="checkbox" class="country-checkbox" value="${country}" checked>
+              ${country}
+            </label>
+          </li>
+        `);
+      });
+  
+      // 動態填充學校選項
+      const schoolSelect = $(".school-select");
+      schools.forEach(school => {
+        schoolSelect.append(`
+          <li>
+            <label class="school-label">
+              <input type="checkbox" class="school-checkbox" value="${school}" checked>
+              ${school}
+            </label>
+          </li>
+        `);
+      });
+  
+      // 初始化表格
       dataTable = $("#json-table").DataTable({
         data: [],
         columns: [
@@ -70,11 +101,11 @@ document.addEventListener("DOMContentLoaded", function () {
           },
         ],
         pageLength: 100,  // 預設顯示 100 筆
-        lengthMenu: [[10, 100, 500, 1000], [10, 100, 500, 1000]], // 設定下拉選單選項
+        lengthMenu: [ [10, 100, 500, 1000], [10, 100, 500, 1000] ], // 設定下拉選單選項
         searching: true,
         destroy: false,
       });
-
+  
       setupSearchFilters(dataTable);
       loadNextChunk();
     } catch (error) {

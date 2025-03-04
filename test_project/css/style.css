@@ -162,9 +162,13 @@ tr:hover td {
 
 /* 選擇框區域樣式 */
 .select-container {
-  display: inline-block;
-  width: 45%;
-  margin-right: 5%;
+  border: 2px solid #000; /* 黑色邊框 */
+  padding: 10px; /* 內邊距 */
+  margin: 10px 0; /* 上下間距 */
+  width: 300px; /* 固定寬度 */
+  min-height: 100px; /* 最小高度 */
+  background-color: #f9f9f9; /* 淺灰色背景 */
+  border-radius: 5px; /* 圓角邊框 */
 }
 
 /* 使國家選擇框與大學選擇框並排顯示 */

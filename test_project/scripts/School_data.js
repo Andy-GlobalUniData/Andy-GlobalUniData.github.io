@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // 加入「全選國家」按鈕
             countrySelectDiv.innerHTML = `
+                <h3>Select Country</h3>
                 <label><input type="checkbox" id="select-all-countries" checked> 全選</label><br>
                 ${countryHTML}
             `;
@@ -56,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // 加入「全選學校」按鈕
                 schoolSelectDiv.innerHTML = `
+                    <h3>Select School</h3>
                     <label><input type="checkbox" id="select-all-schools" checked> 全選</label><br>
                     ${schoolHTML}
                 `;

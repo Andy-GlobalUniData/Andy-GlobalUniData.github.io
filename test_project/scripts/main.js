@@ -4,15 +4,17 @@ document.addEventListener("DOMContentLoaded", function () {
   let index = 0;
   const chunkSize = 500;
 
-  // 初始 selectedCountries 和 selectedSchools 為空陣列
+  // 初始 selectedCountries, selectedSchools 和 selectedDepartments 為空陣列
   let selectedCountries = [];
   let selectedSchools = [];
+  let selectedDepartments = [];
 
-  // 更新 selectedCountries 和 selectedSchools 為勾選的國家和學校
+  // 更新 selectedCountries、selectedSchools 和 selectedDepartments 為勾選的選項
   function updateSelectedFilters() {
     selectedCountries = [];
     selectedSchools = [];
-    
+    selectedDepartments = [];
+
     // 更新選擇的國家
     $(".country-checkbox:checked").each(function () {
       selectedCountries.push($(this).val());
@@ -23,21 +25,27 @@ document.addEventListener("DOMContentLoaded", function () {
       selectedSchools.push($(this).val());
     });
 
+    // 更新選擇的學位
+    $(".degree-checkbox:checked").each(function () {
+      selectedDepartments.push($(this).val());
+    });
+
     // 當選擇變更後重新載入資料
     dataTable.clear();
     index = 0; // 重置索引
     loadNextChunk(); // 重新加載資料
   }
 
-  // 頁面加載後，將所有國家和學校的勾選框設為選中狀態
+  // 頁面加載後，將所有國家、學校和學位的勾選框設為選中狀態
   $(document).ready(function () {
     $(".country-checkbox").prop("checked", true); // 使所有選擇框預設為選中狀態
     $(".school-checkbox").prop("checked", true);  // 使所有學校選擇框預設為選中狀態
+    $(".degree-checkbox").prop("checked", true); // 使所有學位選擇框預設為選中狀態
     updateSelectedFilters(); // 呼叫更新函數以加載資料
   });
 
   // 監聽勾選框的變更事件
-  $(document).on("change", ".country-checkbox, .school-checkbox", function () {
+  $(document).on("change", ".country-checkbox, .school-checkbox, .degree-checkbox", function () {
     updateSelectedFilters();
   });
 
@@ -92,8 +100,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const formattedData = chunk.map((item) => {
       const isCountrySelected = selectedCountries.includes(item["Country"]);
       const isSchoolSelected = selectedSchools.includes(item["School Name"]);
+      const isDepartmentSelected = selectedDepartments.includes(item["Department Name"]);
+
       return [
-        (isCountrySelected && isSchoolSelected) ? '<input type="checkbox" class="row-checkbox" checked>' : '<input type="checkbox" class="row-checkbox">', // 只有當國家和學校都選擇時才自動選取
+        (isCountrySelected || isSchoolSelected || isDepartmentSelected) 
+          ? '<input type="checkbox" class="row-checkbox" checked>' 
+          : '<input type="checkbox" class="row-checkbox">', 
         item["Country"] || "N/A",
         item["School Name"] || "N/A",
         item["Department Name"] || "N/A",
@@ -101,9 +113,9 @@ document.addEventListener("DOMContentLoaded", function () {
       ];
     });
 
-    // 只新增選中的國家和學校的資料
+    // 只新增選中的國家、學校和學位的資料
     const filteredData = formattedData.filter(row => 
-      selectedCountries.includes(row[1]) && selectedSchools.includes(row[2])
+      selectedSchools.includes(row[2]) || selectedDepartments.includes(row[3])
     );
     dataTable.rows.add(filteredData).draw(false);
 

@@ -18,30 +18,29 @@
     <!--<button id="export-excel">Export Excel</button>-->
   </div>
 
-  <!-- 國家選擇區域 -->
-  <div id="country-select" class="select-container">
-    <h3>Select Country</h3>
-    <!-- 這裡會動態生成國家選項 -->
-  </div>
-
-  <!-- 大學選擇區域 -->
-  <div id="school-select" class="select-container">
-    <h3>Select School</h3>
-    <!-- 這裡會顯示選擇國家後對應的大學 -->
-  </div>
-
-  <!-- 學位選擇區域 -->
-  <div id="school-select" class="select-container">
-    <h3>Select Degree</h3>
-    <!-- 這裡會顯示選擇學位 -->
+  
+  <div style="display: flex; justify-content: space-between;">
+    <!-- 國家選擇區域 -->
+    <div id="country-select" class="select-container">
+      <h3>Select Country</h3>
+      <!-- 這裡會動態生成國家選項 -->
+    </div>
+  
+    <div id="school-select" class="select-container">
+      <h3>Select School</h3>
+      <!-- 這裡會顯示選擇國家後對應的大學 -->
+    </div>
+  
+    <div id="degree-select" class="select-container">
+      <h3>Select Degree</h3>
+      <!-- 這裡會顯示學位選項 -->
+    </div>
   </div>
 
   <!-- 搜尋欄 -->
   <div class="search-container">
     <label>Search Department: <input type="text" id="search-department"></label>
   </div>
-
-  
 
   <!-- 表格 -->
   <table id="json-table" class="display">
@@ -65,6 +64,7 @@
   <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
   <script src="scripts/School_data.js"></script>
+  <script src="scripts/degreeFilter.js"></script>
   <script src="scripts/main.js"></script>
 </body>
 

@@ -1,55 +1,96 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let universityData = []; // 這裡將初始值設為空陣列
+    let universityData = [];
+    let selectedSchools = []; // 用來記錄選中的學校
 
     const countrySelectDiv = document.getElementById("country-select");
     const schoolSelectDiv = document.getElementById("school-select");
 
-    // 顯示載入中的提示
     countrySelectDiv.innerHTML = "loading...";
     schoolSelectDiv.innerHTML = "loading...";
 
-    // 1. 讀取 JSON 檔案並賦值給 universityData
     fetch("data/School_data.json")
         .then(response => response.json())
         .then((data) => {
             console.log("載入 JSON：", data);
-            universityData = data; // 賦值給 universityData
+            universityData = data;
 
-            // 2. 取得所有不重複的國家並排序
-            const countries = [...new Set(universityData.map(item => item.Country))].sort(); // 按字典序排序
+            const countries = [...new Set(universityData.map(item => item.Country))].sort();
 
-            // 3. 動態生成國家選項並預設勾選
-            countrySelectDiv.innerHTML = countries.map(country => `
+            // 生成國家選項
+            let countryHTML = countries.map(country => `
                 <label><input type="checkbox" class="country-checkbox" value="${country}" checked> ${country}</label><br>
             `).join("");
 
-            // 4. 當國家選擇改變時，更新大學選項
+            // 加入「全選國家」按鈕
+            countrySelectDiv.innerHTML = `
+                <label><input type="checkbox" id="select-all-countries" checked> 全選</label><br>
+                ${countryHTML}
+            `;
+
+            // 監聽全選國家按鈕
+            const selectAllCountriesCheckbox = document.getElementById("select-all-countries");
+            selectAllCountriesCheckbox.addEventListener("change", function () {
+                const countryCheckboxes = document.querySelectorAll(".country-checkbox");
+                countryCheckboxes.forEach(checkbox => checkbox.checked = selectAllCountriesCheckbox.checked);
+                countrySelectDiv.dispatchEvent(new Event("change"));
+            });
+
             countrySelectDiv.addEventListener("change", function () {
                 const selectedCountries = [...document.querySelectorAll(".country-checkbox:checked")]
                     .map(checkbox => checkbox.value);
 
-                // 根據選中的國家篩選對應的大學
-                const selectedSchools = universityData.filter(item => selectedCountries.includes(item.Country));
+                const selectedSchoolsList = universityData.filter(item => selectedCountries.includes(item.Country));
+                const schoolNames = selectedSchoolsList.map(school => school.School_name).sort();
 
-                // 5. 取得所有學校名並排序
-                const schoolNames = selectedSchools.map(school => school.School_name).sort(); // 按字典序排序
-
-                // 顯示對應的大學，並使用 checkbox 形式，預設勾選
-                schoolSelectDiv.innerHTML = schoolNames.map(schoolName => {
-                    // 找到對應的學校資訊
-                    const school = selectedSchools.find(item => item.School_name === schoolName);
+                // 生成學校選項
+                let schoolHTML = schoolNames.map(schoolName => {
+                    const school = selectedSchoolsList.find(item => item.School_name === schoolName);
+                    // 根據先前的選擇來保持學校的勾選狀態
+                    const isChecked = selectedSchools.includes(school.School_name) ? 'checked' : '';
                     return `
                         <div class="school-item">
-                            <label><input type="checkbox" class="school-checkbox" value="${school.School_name}" checked> ${school.School_name} (${school.City})</label>
+                            <label><input type="checkbox" class="school-checkbox" value="${school.School_name}" ${isChecked}> ${school.School_name} (${school.City})</label>
                         </div>
                     `;
                 }).join("");
-                
-                // 觸發一次 "change" 事件，模擬更新或其他操作
+
+                // 加入「全選學校」按鈕
+                schoolSelectDiv.innerHTML = `
+                    <label><input type="checkbox" id="select-all-schools" checked> 全選</label><br>
+                    ${schoolHTML}
+                `;
+
+                // 監聽全選學校按鈕
+                const selectAllSchoolsCheckbox = document.getElementById("select-all-schools");
+                selectAllSchoolsCheckbox.addEventListener("change", function () {
+                    const schoolCheckboxes = document.querySelectorAll(".school-checkbox");
+                    schoolCheckboxes.forEach(checkbox => checkbox.checked = selectAllSchoolsCheckbox.checked);
+                    schoolSelectDiv.dispatchEvent(new Event("change"));
+                });
+
+                // 更新全選按鈕狀態
+                updateSelectAllCheckbox(".country-checkbox", selectAllCountriesCheckbox);
+                updateSelectAllCheckbox(".school-checkbox", selectAllSchoolsCheckbox);
+
                 schoolSelectDiv.dispatchEvent(new Event("change"));
             });
 
-            // 模擬觸發 change 事件，以便一開始就顯示學校選項
+            // 監聽個別 checkbox 變化，調整「全選」狀態
+            function updateSelectAllCheckbox(selector, selectAllCheckbox) {
+                document.addEventListener("change", function () {
+                    const checkboxes = document.querySelectorAll(selector);
+                    const checkedBoxes = document.querySelectorAll(`${selector}:checked`);
+                    selectAllCheckbox.checked = checkboxes.length === checkedBoxes.length;
+                });
+            }
+
+            // 監聽學校的選擇狀態變化
+            schoolSelectDiv.addEventListener("change", function () {
+                selectedSchools = [...document.querySelectorAll(".school-checkbox:checked")]
+                    .map(checkbox => checkbox.value);
+            });
+
+            // 更新國家選擇區域
             countrySelectDiv.dispatchEvent(new Event("change"));
         })
         .catch(error => {

@@ -1,0 +1,107 @@
+[
+    {
+        "School_name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham"
+    },
+    {
+        "School_name": "Bath Spa University",
+        "Country": "United Kingdom",
+        "City": "Bath"
+    },
+    {
+        "School_name": "Erasmus Universitiet Rotterdam",
+        "Country": "Netherlands",
+        "City": "Rotterdam"
+    },
+    {
+        "School_name": "George Mason University",
+        "Country": "United States",
+        "City": "Fairfax"
+    },
+    {
+        "School_name": "Newcastle University",
+        "Country": "United Kingdom",
+        "City": "Newcastle upon Tyne"
+    },
+    {
+        "School_name": "Northeastern University",
+        "Country": "United States",
+        "City": "Boston"
+    },
+    {
+        "School_name": "Nottingham Trent University",
+        "Country": "United Kingdom",
+        "City": "Nottingham"
+    },
+    {
+        "School_name": "Oregon State University",
+        "Country": "United States",
+        "City": "Corvallis"
+    },
+    {
+        "School_name": "Queen's University Belfast",
+        "Country": "United Kingdom",
+        "City": "Belfast"
+    },
+    {
+        "School_name": "San Jose State University",
+        "Country": "United States",
+        "City": "San Jose"
+    },
+    {
+        "School_name": "UCLA",
+        "Country": "United States",
+        "City": "Los Angeles"
+    },
+    {
+        "School_name": "Universiteit Leiden",
+        "Country": "Netherlands",
+        "City": "Leiden"
+    },
+    {
+        "School_name": "Universiteit van Amsterdam",
+        "Country": "Netherlands",
+        "City": "Amsterdam"
+    },
+    {
+        "School_name": "University of Essex",
+        "Country": "United Kingdom",
+        "City": "Colchester"
+    },
+    {
+        "School_name": "University of Exeter",
+        "Country": "United Kingdom",
+        "City": "Exeter"
+    },
+    {
+        "School_name": "University of Leeds",
+        "Country": "United Kingdom",
+        "City": "Leeds"
+    },
+    {
+        "School_name": "University of Leicester",
+        "Country": "United Kingdom",
+        "City": "Leicester"
+    },
+    {
+        "School_name": "University of Southampton",
+        "Country": "United Kingdom",
+        "City": "Southampton"
+    },
+    {
+        "School_name": "University of Stirling",
+        "Country": "United Kingdom",
+        "City": "Stirling"
+    },
+    {
+        "School_name": "University of Warwick",
+        "Country": "United Kingdom",
+        "City": "Coventry"
+    },
+    {
+        "School_name": "University of Washington",
+        "Country": "United States",
+        "City": "Seattle"
+    }
+]

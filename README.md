@@ -36,9 +36,11 @@
 **國家和學校可以自選的列表 顯示城市與 Page讀取更快更大**
 [🔗 v1.4 連結](https://andy-globalunidata.github.io/old_project/v1.4)
 
+**可以篩選學位、學校和國家可以全選、搜尋欄變美觀**
+[🔗 v1.5 連結](https://andy-globalunidata.github.io/old_project/v1.5)
+
 ## 未來目標方向
 - **勾選科系並且下載Excel**
-- **新增學位判斷**
 - **自動化資料載入**
 - **註冊帳號與密碼**
 - **中文與英文介面**

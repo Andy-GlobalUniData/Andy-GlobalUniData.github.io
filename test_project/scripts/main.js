@@ -204,12 +204,19 @@ document.addEventListener("DOMContentLoaded", function () {
     link.click();
   }
 
-  function exportToExcel(data) {
+  // Function to export data to Excel using SheetJS
+  function exportToExcel(data, filename = 'data.xlsx') {
+    const ws = XLSX.utils.json_to_sheet(data);
     const wb = XLSX.utils.book_new();
-    const ws = XLSX.utils.aoa_to_sheet([["Country", "School Name", "Department Name", "URL"], ...data]);
-    XLSX.utils.book_append_sheet(wb, ws, "Data");
-    XLSX.writeFile(wb, "data.xlsx");
+    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+    XLSX.writeFile(wb, filename);
   }
+
+  // Bind the export function to the button click event
+  document.getElementById('export-excel').addEventListener('click', function () {
+    const selectedData = getSelectedData();
+    exportToExcel(selectedData);
+  });
 
   fetchJsonData("data/data.json").then((data) => {
     console.log("載入 JSON：", data);

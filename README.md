@@ -12,32 +12,17 @@
 ## 測試版本
 本專案經歷多個版本的開發與改進，以下是各個測試版本的連結與簡要說明：
 
-**初代版本** - 使用 HTML、CSS、JavaScript 開發，能夠基本顯示資料。
-[🔗 v0.1 連結](https://andy-globalunidata.github.io/old_project/v0.1)
-
-**嘗試載入大量資料，但 DataTables 運行緩慢，出現卡頓問題。**
-[🔗 v0.2 連結](https://andy-globalunidata.github.io/old_project/v0.2)
-
-**成功載入部分學校資料，但仍待進一步優化。**
-[🔗 v0.5 連結](https://andy-globalunidata.github.io/old_project/v0.5)
-
-**新增分批載入資料功能，但尚未自動化，並且仍有部分 Bug 需要修復。**
-[🔗 v1.0 連結](https://andy-globalunidata.github.io/old_project/v1.0)
-
-**能大量與快速的載入資料功能**
-[🔗 v1.1 連結](https://andy-globalunidata.github.io/old_project/v1.1)
-
-**能搜尋個別搜尋(學校和科系) 並且提供下載Json的版本**
-[🔗 v1.2 連結](https://andy-globalunidata.github.io/old_project/v1.2)
-
-**添加國家列表**
-[🔗 v1.3 連結](https://andy-globalunidata.github.io/old_project/v1.3)
-
-**國家和學校可以自選的列表 顯示城市與 Page讀取更快更大**
-[🔗 v1.4 連結](https://andy-globalunidata.github.io/old_project/v1.4)
-
-**可以篩選學位、學校和國家可以全選、搜尋欄變美觀**
-[🔗 v1.5 連結](https://andy-globalunidata.github.io/old_project/v1.5)
+| 版本 | 說明 | 連結 |
+|------|------|------|
+| **初代版本** | 使用 HTML、CSS、JavaScript 開發，能夠基本顯示資料。 | [🔗 v0.1 連結](https://andy-globalunidata.github.io/old_project/v0.1) |
+| **v0.2** | 嘗試載入大量資料，但 DataTables 運行緩慢，出現卡頓問題。 | [🔗 v0.2 連結](https://andy-globalunidata.github.io/old_project/v0.2) |
+| **v0.5** | 成功載入部分學校資料，但仍待進一步優化。 | [🔗 v0.5 連結](https://andy-globalunidata.github.io/old_project/v0.5) |
+| **v1.0** | 新增分批載入資料功能，但尚未自動化，並且仍有部分 Bug 需要修復。 | [🔗 v1.0 連結](https://andy-globalunidata.github.io/old_project/v1.0) |
+| **v1.1** | 能大量與快速的載入資料功能。 | [🔗 v1.1 連結](https://andy-globalunidata.github.io/old_project/v1.1) |
+| **v1.2** | 能搜尋個別搜尋(學校和科系) 並且提供下載Json的版本。 | [🔗 v1.2 連結](https://andy-globalunidata.github.io/old_project/v1.2) |
+| **v1.3** | 添加國家列表。 | [🔗 v1.3 連結](https://andy-globalunidata.github.io/old_project/v1.3) |
+| **v1.4** | 國家和學校可以自選的列表 顯示城市與 Page讀取更快更大。 | [🔗 v1.4 連結](https://andy-globalunidata.github.io/old_project/v1.4) |
+| **v1.5** | 可以篩選學位、學校和國家可以全選、搜尋欄變美觀。 | [🔗 v1.5 連結](https://andy-globalunidata.github.io/old_project/v1.5) |
 
 ## 未來目標方向
 - **勾選科系並且下載Excel**
@@ -48,6 +33,7 @@
 ## 目前有載入的學校
 - Aston University
 - Bath Spa University
+- Elon University
 - Erasmus Universitiet Rotterdam
 - George Mason University
 - Newcastle University

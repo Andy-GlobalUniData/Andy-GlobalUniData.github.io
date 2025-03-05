@@ -15,16 +15,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
             degreeSelectDiv.innerHTML = `
                 <h3>Select Degree Level</h3>
+                <label><input type="checkbox" class="degree-checkbox" value="No Filter"> No Filter</label><br>
                 ${degreeOptions}
             `;
 
-            degreeSelectDiv.addEventListener("change", function () {
+            degreeSelectDiv.addEventListener("change", function (event) {
                 const selectedDegrees = [...document.querySelectorAll(".degree-checkbox:checked")]
                     .map(checkbox => checkbox.value);
 
-                if (selectedDegrees.length === 0) {
+                if (selectedDegrees.includes("No Filter")) {
+                    document.querySelectorAll(".degree-checkbox").forEach(checkbox => {
+                        if (checkbox.value !== "No Filter") {
+                            checkbox.checked = false;
+                            checkbox.disabled = true;
+                        }
+                    });
                     dataTable.column(3).search("").draw();  // 沒有選擇學位時顯示所有資料
                 } else {
+                    document.querySelectorAll(".degree-checkbox").forEach(checkbox => {
+                        checkbox.disabled = false;
+                    });
+
                     let degreeFilter = selectedDegrees.reduce((acc, degree) => {
                         const degreeList = degreeLevels[degree];
                         if (degreeList) {

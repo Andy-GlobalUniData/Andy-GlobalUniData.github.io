@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // 加入「全選學校」按鈕
                 schoolSelectDiv.innerHTML = `
                     <h3>Select School</h3>
-                    <label><input type="checkbox" id="select-all-schools" checked> 全選</label><br>
+                    <label><input type="checkbox" id="select-all-schools"> 全選</label><br>
                     ${schoolHTML}
                 `;
 
@@ -90,6 +90,8 @@ document.addEventListener("DOMContentLoaded", function () {
             schoolSelectDiv.addEventListener("change", function () {
                 selectedSchools = [...document.querySelectorAll(".school-checkbox:checked")]
                     .map(checkbox => checkbox.value);
+                // 觸發自定義事件以更新數據表格
+                document.dispatchEvent(new Event("schoolSelectionChanged"));
             });
 
             // 更新國家選擇區域

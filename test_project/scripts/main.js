@@ -49,6 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
     updateSelectedFilters();
   });
 
+  // 監聽自定義的學校選擇變更事件
+  document.addEventListener("schoolSelectionChanged", function () {
+    updateSelectedFilters();
+  });
+
   async function fetchJsonData(url) {
     try {
       const response = await fetch(url);

@@ -33,7 +33,16 @@ document.addEventListener("DOMContentLoaded", function () {
                         return acc;
                     }, []).join("|");
 
-                    dataTable.column(3).search(degreeFilter, true, false).draw();
+                    console.log("Selected degree filter: ", degreeFilter); // Debugging log
+
+                    if ($.fn.dataTable.isDataTable('#json-table')) {
+                        var table = $('#json-table').DataTable();
+                        console.log("DataTable instance: ", table); // Debugging log
+
+                        table.column(3).search(degreeFilter, true, false).draw();
+                    } else {
+                        console.error("DataTable is not initialized.");
+                    }
                 }
             });
 
@@ -43,4 +52,23 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("載入學位資料失敗：", error);
             degreeSelectDiv.innerHTML = "Loading failed, please try again.";
         });
+});
+
+$(document).ready(function() {
+    // Ensure degreeFilter is correctly set
+    $('#degree-select').on('change', function() {
+        var degreeFilter = $(this).val();
+        console.log("Selected degree filter: ", degreeFilter); // Debugging log
+
+        // Ensure DataTable is initialized
+        if ($.fn.dataTable.isDataTable('#json-table')) {
+            var table = $('#json-table').DataTable();
+            console.log("DataTable instance: ", table); // Debugging log
+
+            // Apply the filter
+            table.column(3).search(degreeFilter, true, false).draw();
+        } else {
+            console.error("DataTable is not initialized.");
+        }
+    });
 });

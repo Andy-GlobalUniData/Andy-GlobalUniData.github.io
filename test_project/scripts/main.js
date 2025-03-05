@@ -42,6 +42,14 @@ document.addEventListener("DOMContentLoaded", function () {
     $(".school-checkbox").prop("checked", true);  // 使所有學校選擇框預設為選中狀態
     $(".degree-checkbox").prop("checked", true); // 使所有學位選擇框預設為選中狀態
     updateSelectedFilters(); // 呼叫更新函數以加載資料
+
+    // Initialize DataTable
+    var table = $('#json-table').DataTable({
+        // ...existing DataTable options...
+    });
+
+    // Ensure the DataTable is initialized
+    console.log("DataTable initialized: ", table); // Debugging log
   });
 
   // 監聽勾選框的變更事件

@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     const isChecked = selectedSchools.includes(school.School_name) ? 'checked' : '';
                     return `
                         <div class="school-item">
-                            <label><input type="checkbox" class="school-checkbox" value="${school.School_name}" ${isChecked}> ${school.School_name} (${school.City})</label>
+                            <label><input type="checkbox" class="school-checkbox" value="${school.School_name}" ${isChecked} checked> ${school.School_name} (${school.City})</label>
                         </div>
                     `;
                 }).join("");
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // 加入「全選學校」按鈕
                 schoolSelectDiv.innerHTML = `
                     <h3>Select School</h3>
-                    <label><input type="checkbox" id="select-all-schools"> 全選</label><br>
+                    <label><input type="checkbox" id="select-all-schools" checked> 全選</label><br>
                     ${schoolHTML}
                 `;
 

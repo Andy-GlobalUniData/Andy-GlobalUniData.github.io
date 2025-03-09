@@ -9,6 +9,14 @@
 
 [測試版本](https://andy-globalunidata.github.io/test_project)
 
+## 使用條款
+本專案僅供使用者查詢資料，不允許 fork 或修改程式碼。如有任何問題，請聯繫開發者。
+
+## License
+This software is proprietary and **not open-source**.  
+Users are allowed to **use** this software but are strictly prohibited from forking, modifying, or redistributing it.  
+For special usage requests, please contact [andy8787main@gmail.com]。
+
 ## 測試版本
 本專案經歷多個版本的開發與改進，以下是各個測試版本的連結與簡要說明：
 

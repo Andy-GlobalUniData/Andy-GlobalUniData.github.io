@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             degreeSelectDiv.innerHTML = `
                 <h3>Select Degree Level</h3>
-                <label><input type="checkbox" class="degree-checkbox" value="No Filter"> No Filter</label><br>
+                <label><input type="checkbox" class="degree-checkbox" value="No Filter"> 不篩選學位</label><br>
                 ${degreeOptions}
             `;
 

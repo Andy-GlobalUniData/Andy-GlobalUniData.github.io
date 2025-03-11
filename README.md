@@ -31,6 +31,7 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 | **v1.3** | 添加國家列表。 | [🔗 v1.3 連結](https://andy-globalunidata.github.io/old_project/v1.3) |
 | **v1.4** | 國家和學校可以自選的列表 顯示城市與 Page讀取更快更大。 | [🔗 v1.4 連結](https://andy-globalunidata.github.io/old_project/v1.4) |
 | **v1.5** | 可以篩選學位、學校和國家可以全選、搜尋欄變美觀。 | [🔗 v1.5 連結](https://andy-globalunidata.github.io/old_project/v1.5) |
+| **v1.55** | 添加Excel輸出。 | [🔗 v1.5 連結](https://andy-globalunidata.github.io/old_project/v1.55) |
 
 ## 未來目標方向
 - **勾選科系並且下載Excel**

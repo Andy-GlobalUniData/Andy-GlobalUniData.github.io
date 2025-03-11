@@ -169,13 +169,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // 匯出 Excel
   $("#export-excel").on("click", function () {
     const selectedData = getSelectedData();
-    const excelData = selectedData.map((item) => [
-      item["Country"],
-      item["School Name"],
-      item["Department Name"],
-      item.URL,
-    ]);
-    exportToExcel(excelData);
+    const columns = ["Country", "School Name", "Department Name", "URL"];
+    const excelData = selectedData.map((item) => ({
+        "Country": item["Country"],
+        "School Name": item["School Name"],
+        "Department Name": item["Department Name"],
+        "URL": item.URL,
+    }));
+    exportToExcel(excelData, columns);
   });
 
   function getSelectedData() {
@@ -204,9 +205,9 @@ document.addEventListener("DOMContentLoaded", function () {
     link.click();
   }
 
-  // Function to export data to Excel using SheetJS
-  function exportToExcel(data, filename = 'data.xlsx') {
-    const ws = XLSX.utils.json_to_sheet(data);
+  // Function to export data to Excel using SheetJS with custom column names
+  function exportToExcel(data, columns, filename = 'data.xlsx') {
+    const ws = XLSX.utils.json_to_sheet(data, { header: columns });
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
     XLSX.writeFile(wb, filename);

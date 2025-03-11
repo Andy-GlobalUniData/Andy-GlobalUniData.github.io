@@ -212,12 +212,6 @@ document.addEventListener("DOMContentLoaded", function () {
     XLSX.writeFile(wb, filename);
   }
 
-  // Bind the export function to the button click event
-  document.getElementById('export-excel').addEventListener('click', function () {
-    const selectedData = getSelectedData();
-    exportToExcel(selectedData);
-  });
-
   fetchJsonData("data/data.json").then((data) => {
     console.log("載入 JSON：", data);
 

@@ -22,7 +22,8 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 
 | 版本 | 說明 | 連結 |
 |------|------|------|
-| **初代版本** | 使用 HTML、CSS、JavaScript 開發，能夠基本顯示資料。 | [🔗 v0.1 連結](https://andy-globalunidata.github.io/old_project/v0.1) |
+| **v0.01** | 最初代的版本，直接生成HTML | [🔗 v0.01 連結](https://andy-globalunidata.github.io/old_project/v0.01) |
+| **v0.1** | 使用 HTML、CSS、JavaScript 開發，能夠基本顯示資料。 | [🔗 v0.1 連結](https://andy-globalunidata.github.io/old_project/v0.1) |
 | **v0.2** | 嘗試載入大量資料，但 DataTables 運行緩慢，出現卡頓問題。 | [🔗 v0.2 連結](https://andy-globalunidata.github.io/old_project/v0.2) |
 | **v0.5** | 成功載入部分學校資料，但仍待進一步優化。 | [🔗 v0.5 連結](https://andy-globalunidata.github.io/old_project/v0.5) |
 | **v1.0** | 新增分批載入資料功能，但尚未自動化，並且仍有部分 Bug 需要修復。 | [🔗 v1.0 連結](https://andy-globalunidata.github.io/old_project/v1.0) |
@@ -37,6 +38,7 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 - **自動化資料載入**
 - **註冊帳號與密碼**
 - **中文與英文介面**
+- **大學學校的資料(更新資料時間、排名等等)**
 
 ## 目前有載入的學校
 - Aston University

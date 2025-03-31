@@ -6,6 +6,14 @@ body {
   padding: 0;
 }
 
+/* 手機版樣式（螢幕寬度小於 768px 時適用） */
+@media (max-width: 768px) {
+  body {
+    background-color: lightgray;
+    font-size: 14px;
+  }
+}
+
 h2 {
   color: #007bff;
   font-weight: bold;
@@ -16,7 +24,9 @@ h3 {
 }
 
 /* 基本排版設置 */
-select, input[type="text"], button {
+select,
+input[type="text"],
+button {
   margin-bottom: 15px;
   padding: 8px;
   font-size: 14px;
@@ -49,23 +59,34 @@ a:hover {
 
 /* 搜尋欄樣式 */
 .search-container {
-  background-color: #f2f2f2; /* 設定背景色 */
-  padding: 20px; /* 增加內邊距，讓內容更有空間 */
-  border-radius: 8px; /* 圓角邊框 */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 增加陰影效果 */
-  margin: 20px 0; /* 設置外邊距，讓搜尋欄不會貼近其他元素 */
-  font-size: 16px; /* 增加字體大小 */
+  background-color: #f2f2f2;
+  /* 設定背景色 */
+  padding: 20px;
+  /* 增加內邊距，讓內容更有空間 */
+  border-radius: 8px;
+  /* 圓角邊框 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* 增加陰影效果 */
+  margin: 20px 0;
+  /* 設置外邊距，讓搜尋欄不會貼近其他元素 */
+  font-size: 16px;
+  /* 增加字體大小 */
 }
 
 .search-container label {
-  font-weight: bold; /* 設定標籤字型為粗體 */
+  font-weight: bold;
+  /* 設定標籤字型為粗體 */
 }
 
 .search-container input {
-  padding: 8px 12px; /* 增加輸入框內的間距 */
-  margin-left: 10px; /* 增加標籤和輸入框之間的間隔 */
-  border: 1px solid #ccc; /* 輸入框邊框顏色 */
-  border-radius: 4px; /* 輸入框圓角 */
+  padding: 8px 12px;
+  /* 增加輸入框內的間距 */
+  margin-left: 10px;
+  /* 增加標籤和輸入框之間的間隔 */
+  border: 1px solid #ccc;
+  /* 輸入框邊框顏色 */
+  border-radius: 4px;
+  /* 輸入框圓角 */
 }
 
 .search-container {
@@ -87,7 +108,8 @@ table.display {
   margin-top: 20px;
 }
 
-th, td {
+th,
+td {
   padding: 12px 15px;
   text-align: center;
 }
@@ -136,22 +158,27 @@ tr:hover td {
 /* 讓表格的每一列都能夠調整大小 */
 #json-table th {
   position: relative;
-  cursor: ew-resize; /* 改變鼠標光標樣式 */
+  cursor: ew-resize;
+  /* 改變鼠標光標樣式 */
 }
 
 /* 設定列寬最小值和最大值 */
 #json-table td {
   min-width: 50px;
   max-width: 300px;
-  width: auto; /* 讓欄位自動調整 */
-  height: 40px; /* 設定單元格的高度 */
-  cursor: pointer;  /* 在單元格內顯示可調整光標 */
+  width: auto;
+  /* 讓欄位自動調整 */
+  height: 40px;
+  /* 設定單元格的高度 */
+  cursor: pointer;
+  /* 在單元格內顯示可調整光標 */
 }
 
 /* 提高可讀性，調整表格樣式 */
 #json-table td,
 #json-table th {
-  word-wrap: break-word; /* 使單元格文字換行 */
+  word-wrap: break-word;
+  /* 使單元格文字換行 */
 }
 
 /* 提高表格的彈性，使其在小螢幕上不會被擠壓 */
@@ -162,26 +189,37 @@ tr:hover td {
 
 /* 選擇框區域樣式 */
 .select-container {
-  border: 2px solid #000; /* 黑色邊框 */
-  padding: 10px; /* 內邊距 */
-  margin: 10px 0; /* 上下間距 */
-  width: 300px; /* 固定寬度 */
-  min-height: 100px; /* 最小高度 */
-  background-color: #f9f9f9; /* 淺灰色背景 */
-  border-radius: 5px; /* 圓角邊框 */
+  border: 2px solid #000;
+  /* 黑色邊框 */
+  padding: 10px;
+  /* 內邊距 */
+  margin: 10px 0;
+  /* 上下間距 */
+  width: 300px;
+  /* 固定寬度 */
+  min-height: 100px;
+  /* 最小高度 */
+  background-color: #f9f9f9;
+  /* 淺灰色背景 */
+  border-radius: 5px;
+  /* 圓角邊框 */
 }
 
 /* 使國家選擇框與大學選擇框並排顯示 */
-#country-select, #school-select {
+#country-select,
+#school-select {
   display: inline-block;
-  margin-right: 30px; /* 兩者之間加點空隙 */
+  margin-right: 30px;
+  /* 兩者之間加點空隙 */
   vertical-align: top;
 }
 
 .school-item {
   display: inline-block;
-  margin-right: 20px; /* 使大學勾選框不會擠在一起 */
-  margin-bottom: 10px; /* 讓每一排大學有點間隔 */
+  margin-right: 20px;
+  /* 使大學勾選框不會擠在一起 */
+  margin-bottom: 10px;
+  /* 讓每一排大學有點間隔 */
 }
 
 .school-item label {
@@ -191,6 +229,8 @@ tr:hover td {
 }
 
 #school-select {
-  max-height: 300px; /* 如果選擇的學校太多，設置最大高度 */
-  overflow-y: scroll; /* 滾動條 */
+  max-height: 300px;
+  /* 如果選擇的學校太多，設置最大高度 */
+  overflow-y: scroll;
+  /* 滾動條 */
 }

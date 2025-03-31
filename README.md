@@ -59,6 +59,7 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 - University of Exeter
 - University of Leeds
 - University of Leicester
+- University of Nottingham
 - University of Southampton
 - University of Stirling
 - University of Warwick

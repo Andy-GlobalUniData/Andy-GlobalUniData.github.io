@@ -10,6 +10,11 @@
         "City": "Bath"
     },
     {
+        "School_name": "Elon University",
+        "Country": "United States",
+        "City": "Elon"
+    },
+    {
         "School_name": "Erasmus Universitiet Rotterdam",
         "Country": "Netherlands",
         "City": "Rotterdam"
@@ -85,9 +90,9 @@
         "City": "Leicester"
     },
     {
-        "School_name": "University of Southampton",
-        "Country": "United Kingdom",
-        "City": "Southampton"
+        "School_name": "University of South California",
+        "Country": "United States",
+        "City": "Los Angeles"
     },
     {
         "School_name": "University of Stirling",
@@ -103,5 +108,10 @@
         "School_name": "University of Washington",
         "Country": "United States",
         "City": "Seattle"
+    },
+    {
+        "School_name": "University of Nottingham",
+        "Country": "United Kingdom",
+        "City": "Nottingham"
     }
 ]

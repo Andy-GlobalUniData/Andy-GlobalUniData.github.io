@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Initialize DataTable
     var table = $('#json-table').DataTable({
-        // ...existing DataTable options...
+      // ...existing DataTable options...
     });
 
     // Ensure the DataTable is initialized
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
           },
         ],
         pageLength: 100,  // 預設顯示 100 筆
-        lengthMenu: [ [10, 100, 500, 1000], [10, 100, 500, 1000] ], // 設定下拉選單選項
+        lengthMenu: [[10, 100, 500, 1000], [10, 100, 500, 1000]], // 設定下拉選單選項
         searching: true,
         destroy: false,
       });
@@ -116,9 +116,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const isDepartmentSelected = selectedDepartments.includes(item["Department Name"]);
 
       return [
-        (isCountrySelected || isSchoolSelected || isDepartmentSelected) 
-          ? '<input type="checkbox" class="row-checkbox" checked>' 
-          : '<input type="checkbox" class="row-checkbox">', 
+        (isCountrySelected || isSchoolSelected || isDepartmentSelected)
+          ? '<input type="checkbox" class="row-checkbox" checked>'
+          : '<input type="checkbox" class="row-checkbox">',
         item["Country"] || "N/A",
         item["School Name"] || "N/A",
         item["Department Name"] || "N/A",
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // 只新增選中的國家、學校和學位的資料
-    const filteredData = formattedData.filter(row => 
+    const filteredData = formattedData.filter(row =>
       selectedSchools.includes(row[2]) || selectedDepartments.includes(row[3])
     );
     dataTable.rows.add(filteredData).draw(false);
@@ -171,10 +171,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const selectedData = getSelectedData();
     const columns = ["Country", "School Name", "Department Name", "URL"];
     const excelData = selectedData.map((item) => ({
-        "Country": item["Country"],
-        "School Name": item["School Name"],
-        "Department Name": item["Department Name"],
-        "URL": item.URL,
+      "Country": item["Country"],
+      "School Name": item["School Name"],
+      "Department Name": item["Department Name"],
+      "URL": item.URL,
     }));
     exportToExcel(excelData, columns);
   });

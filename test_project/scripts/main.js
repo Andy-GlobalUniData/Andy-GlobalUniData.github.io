@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
             defaultContent: "N/A",
             render: function (data) {
               if (!data) return "N/A";
-              return `<a href="${data}" target="_blank">${data.length > 50 ? data.substring(0, 50) + "..." : data}</a>`;
+              return `<a href="${data}" target="_blank">${data.length > 30 ? data.substring(0, 30) + "..." : data}</a>`;
             },
           },
           {
@@ -117,8 +117,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add event listener for "Copy URL" buttons
   $(document).on("click", ".copy-url-btn", function () {
     const url = $(this).data("url");
+    const row = $(this).closest("tr");
+    const schoolName = row.find("td:nth-child(3)").text(); // Get School Name
+    const departmentName = row.find("td:nth-child(4)").text(); // Get Department Name
+
     navigator.clipboard.writeText(url).then(() => {
-      alert("URL copied to clipboard!");
+      alert(`URL copied to clipboard!\n\nSchool: ${schoolName}\nDepartment: ${departmentName}\nURL: ${url}`);
     }).catch(err => {
       console.error("Failed to copy URL: ", err);
     });

@@ -89,6 +89,16 @@ document.addEventListener("DOMContentLoaded", function () {
               return `<a href="${data}" target="_blank">${data.length > 50 ? data.substring(0, 50) + "..." : data}</a>`;
             },
           },
+          {
+            title: "Copy URL",
+            orderable: false,
+            render: function (data, type, row) {
+              const url = row[4] || ""; // Ensure URL exists
+              return url
+                ? `<button class="copy-url-btn" data-url="${url}">Copy URL</button>`
+                : "N/A";
+            },
+          },
         ],
         pageLength: 100,  // 預設顯示 100 筆
         lengthMenu: [[10, 100, 500, 1000], [10, 100, 500, 1000]], // 設定下拉選單選項
@@ -103,6 +113,16 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Error loading JSON: " + error.message);
     }
   }
+
+  // Add event listener for "Copy URL" buttons
+  $(document).on("click", ".copy-url-btn", function () {
+    const url = $(this).data("url");
+    navigator.clipboard.writeText(url).then(() => {
+      alert("URL copied to clipboard!");
+    }).catch(err => {
+      console.error("Failed to copy URL: ", err);
+    });
+  });
 
   function loadNextChunk() {
     if (index >= totalData.length) return;

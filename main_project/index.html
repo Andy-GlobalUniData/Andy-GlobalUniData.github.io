@@ -18,6 +18,7 @@
     <button id="export-excel">Export Excel</button>
   </div>
 
+  <h3>Data Table</h3>
   
   <div style="display: flex; justify-content: space-between;">
     <!-- 國家選擇區域 -->
@@ -50,13 +51,30 @@
         <th>Country</th>
         <th>School Name</th>
         <th>Department Name</th>
-        <th>Link</th>
+        <th>URL</th>
+        <th>Copy URL</th>
       </tr>
     </thead>
     <tbody>
-      <!-- JSON data will be inserted here -->
+      <!-- Data will be dynamically loaded here -->
     </tbody>
   </table>
+
+  <div id="school-data-table-container" style="border: 2px solid #ccc; background-color: #f9f9f9; padding: 15px; border-radius: 5px;">
+    <h3>School Data Table</h3>
+    <table id="school-data-table" class="display">
+      <thead>
+        <tr>
+          <th>School Name</th>
+          <th>Country</th>
+          <th>City</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- School data will be dynamically loaded here -->
+      </tbody>
+    </table>
+  </div>
 
   <!-- 引入 jQuery, DataTables 和 Select2 -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -67,6 +85,7 @@
   <script src="scripts/main.js"></script>
   <script src="scripts/School_data.js"></script>
   <script src="scripts/degreeFilter.js"></script>
+  <script src="scripts/loadSchoolData.js"></script>
 </body>
 
 </html>

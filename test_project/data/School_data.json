@@ -2,116 +2,139 @@
     {
         "School_name": "Aston University",
         "Country": "United Kingdom",
-        "City": "Birmingham"
+        "City": "Birmingham",
+        "Number_of_departments": 255
     },
     {
         "School_name": "Bath Spa University",
         "Country": "United Kingdom",
-        "City": "Bath"
+        "City": "Bath",
+        "Number_of_departments": 207
     },
     {
         "School_name": "Elon University",
         "Country": "United States",
-        "City": "Elon"
+        "City": "Elon",
+        "Number_of_departments": 141
     },
     {
         "School_name": "Erasmus Universitiet Rotterdam",
         "Country": "Netherlands",
-        "City": "Rotterdam"
+        "City": "Rotterdam",
+        "Number_of_departments": 222
     },
     {
         "School_name": "George Mason University",
         "Country": "United States",
-        "City": "Fairfax"
+        "City": "Fairfax",
+        "Number_of_departments": 548
     },
     {
         "School_name": "Newcastle University",
         "Country": "United Kingdom",
-        "City": "Newcastle upon Tyne"
+        "City": "Newcastle upon Tyne",
+        "Number_of_departments": 307
     },
     {
         "School_name": "Northeastern University",
         "Country": "United States",
-        "City": "Boston"
+        "City": "Boston",
+        "Number_of_departments": 230
     },
     {
         "School_name": "Nottingham Trent University",
         "Country": "United Kingdom",
-        "City": "Nottingham"
+        "City": "Nottingham",
+        "Number_of_departments": 50
     },
     {
         "School_name": "Oregon State University",
         "Country": "United States",
-        "City": "Corvallis"
+        "City": "Corvallis",
+        "Number_of_departments": 92
     },
     {
         "School_name": "Queen's University Belfast",
         "Country": "United Kingdom",
-        "City": "Belfast"
+        "City": "Belfast",
+        "Number_of_departments": 701
     },
     {
         "School_name": "San Jose State University",
         "Country": "United States",
-        "City": "San Jose"
+        "City": "San Jose",
+        "Number_of_departments": 466
     },
     {
         "School_name": "UCLA",
         "Country": "United States",
-        "City": "Los Angeles"
+        "City": "Los Angeles",
+        "Number_of_departments": 137
     },
     {
         "School_name": "Universiteit Leiden",
         "Country": "Netherlands",
-        "City": "Leiden"
+        "City": "Leiden",
+        "Number_of_departments": 39
     },
     {
         "School_name": "Universiteit van Amsterdam",
         "Country": "Netherlands",
-        "City": "Amsterdam"
+        "City": "Amsterdam",
+        "Number_of_departments": 188
     },
     {
         "School_name": "University of Essex",
         "Country": "United Kingdom",
-        "City": "Colchester"
+        "City": "Colchester",
+        "Number_of_departments": 833
     },
     {
         "School_name": "University of Exeter",
         "Country": "United Kingdom",
-        "City": "Exeter"
+        "City": "Exeter",
+        "Number_of_departments": 491
     },
     {
         "School_name": "University of Leeds",
         "Country": "United Kingdom",
-        "City": "Leeds"
+        "City": "Leeds",
+        "Number_of_departments": 651
     },
     {
         "School_name": "University of Leicester",
         "Country": "United Kingdom",
-        "City": "Leicester"
+        "City": "Leicester",
+        "Number_of_departments": 294
     },
     {
-        "School_name": "University of South California",
-        "Country": "United States",
-        "City": "Los Angeles"
+        "School_name": "University of Southampton",
+        "Country": "United Kingdom",
+        "City": "Southampton",
+        "Number_of_departments": 954
     },
     {
         "School_name": "University of Stirling",
         "Country": "United Kingdom",
-        "City": "Stirling"
+        "City": "Stirling",
+        "Number_of_departments": 217
     },
     {
         "School_name": "University of Warwick",
         "Country": "United Kingdom",
-        "City": "Coventry"
+        "City": "Coventry",
+        "Number_of_departments": 254
     },
     {
         "School_name": "University of Washington",
         "Country": "United States",
-        "City": "Seattle"
+        "City": "Seattle",
+        "Number_of_departments": 530
     },
     {
         "School_name": "University of Nottingham",
         "Country": "United Kingdom",
-        "City": "Nottingham"
+        "City": "Nottingham",
+        "Number_of_departments": 288
     }
 ]

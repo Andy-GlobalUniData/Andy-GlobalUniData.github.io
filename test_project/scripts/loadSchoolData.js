@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <td>${school.School_name}</td>
                     <td>${school.Country}</td>
                     <td>${school.City}</td>
+                    <td>${school.Number_of_departments}</td>
                 </tr>
             `).join("");
 

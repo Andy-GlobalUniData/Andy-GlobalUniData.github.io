@@ -24,26 +24,31 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 - **大學學校的資料(更新資料時間)**
 
 ## 目前有載入的學校
-- Aston University
-- Bath Spa University
-- Elon University
-- Erasmus Universitiet Rotterdam
-- George Mason University
-- Newcastle University
-- Northeastern University
-- Nottingham Trent University
-- Oregon State University
-- Queen's University Belfast
-- San Jose State University
-- UCLA
-- Universiteit Leiden
-- Universiteit van Amsterdam
-- University of Essex
-- University of Exeter
-- University of Leeds
-- University of Leicester
-- University of Nottingham
-- University of Southampton
-- University of Stirling
-- University of Warwick
-- University of Washington
+
+| 學校名稱                          | 科系數量 |
+|-----------------------------------|----------|
+| Aston University                    | 255| 
+| Bath Spa University                 | 207| 
+| Elon University                     | 141| 
+| Erasmus Universitiet Rotterdam      | 222| 
+| George Mason University             | 548| 
+| Newcastle University                | 307| 
+| Northeastern University             | 230| 
+| Nottingham Trent University         |  50| 
+| Oregon State University             |  92| 
+| Queen's University Belfast          | 701| 
+| San Jose State University           | 466| 
+| UCLA                                | 137| 
+| Universiteit Leiden                 |  39| 
+| Universiteit van Amsterdam          | 188| 
+| University of Essex                 | 833| 
+| University of Exeter                | 491| 
+| University of Leeds                 | 651| 
+| University of Leicester             | 294| 
+| University of Nottingham            | 288| 
+| University of Southampton           | 954| 
+| University of Stirling              | 217| 
+| University of Warwick               | 254| 
+| University of Washington            | 530| 
+
+

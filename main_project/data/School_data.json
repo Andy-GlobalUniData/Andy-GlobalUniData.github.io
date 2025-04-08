@@ -81,19 +81,19 @@
         "School_name": "Universiteit van Amsterdam",
         "Country": "Netherlands",
         "City": "Amsterdam",
-        "Number_of_departments": 188
+        "Number_of_departments": 189
     },
     {
         "School_name": "University of Essex",
         "Country": "United Kingdom",
         "City": "Colchester",
-        "Number_of_departments": 833
+        "Number_of_departments": 822
     },
     {
         "School_name": "University of Exeter",
         "Country": "United Kingdom",
         "City": "Exeter",
-        "Number_of_departments": 491
+        "Number_of_departments": 523
     },
     {
         "School_name": "University of Leeds",

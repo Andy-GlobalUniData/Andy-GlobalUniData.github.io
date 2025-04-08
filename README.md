@@ -40,9 +40,9 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 | San Jose State University           | 466| 
 | UCLA                                | 137| 
 | Universiteit Leiden                 |  39| 
-| Universiteit van Amsterdam          | 188| 
-| University of Essex                 | 833| 
-| University of Exeter                | 491| 
+| Universiteit van Amsterdam          | 189| 
+| University of Essex                 | 822| 
+| University of Exeter                | 523| 
 | University of Leeds                 | 651| 
 | University of Leicester             | 294| 
 | University of Nottingham            | 288| 
@@ -50,5 +50,6 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 | University of Stirling              | 217| 
 | University of Warwick               | 254| 
 | University of Washington            | 530| 
+
 
 

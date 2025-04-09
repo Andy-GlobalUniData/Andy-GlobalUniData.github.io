@@ -21,7 +21,6 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 - **自動化資料載入**
 - **註冊帳號與密碼**
 - **中文與英文介面**
-- **大學學校的資料(更新資料時間)**
 
 ## 目前有載入的學校
 
@@ -41,7 +40,7 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 | UCLA                                | 137| 
 | Universiteit Leiden                 |  39| 
 | Universiteit van Amsterdam          | 189| 
-| University of Essex                 | 822| 
+| University of Essex                 | 833| 
 | University of Exeter                | 523| 
 | University of Leeds                 | 651| 
 | University of Leicester             | 294| 
@@ -49,7 +48,7 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 | University of Southampton           | 954| 
 | University of Stirling              | 217| 
 | University of Warwick               | 254| 
-| University of Washington            | 530| 
+| University of Washington            | 529| 
 
 
 

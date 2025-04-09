@@ -12,26 +12,30 @@
 </head>
 
 <body>
-  <!-- 匯出資料的按鈕 -->
-  <div class="export-buttons">
-    <button id="export-json">Export JSON</button>
-    <button id="export-excel">Export Excel</button>
+  <!-- 顯示 GitHub Push 時間 -->
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h3 style="display: inline; margin-right: 10px;">Last updated time:</h3>
+    <div id="github-push-time" style="display: inline; font-size: 16px; color: #333; margin-top: 10px;"></div>
+
+    <!-- 匯出資料的按鈕 -->
+    <div class="export-buttons" style="margin-left: auto;">
+      <button id="export-json">Export JSON</button>
+      <button id="export-excel">Export Excel</button>
+    </div>
   </div>
 
-  <h3>Data Table</h3>
-  
   <div style="display: flex; justify-content: space-between;">
     <!-- 國家選擇區域 -->
     <div id="country-select" class="select-container">
       <h3>Select Country</h3>
       <!-- 這裡會動態生成國家選項 -->
     </div>
-  
+
     <div id="school-select" class="select-container">
       <h3>Select School</h3>
       <!-- 這裡會顯示選擇國家後對應的大學 -->
     </div>
-  
+
     <div id="degree-select" class="select-container">
       <h3>Select Degree</h3>
       <!-- 這裡會顯示學位選項 -->
@@ -60,7 +64,8 @@
     </tbody>
   </table>
 
-  <div id="school-data-table-container" style="border: 2px solid #ccc; background-color: #f9f9f9; padding: 15px; border-radius: 5px;">
+  <div id="school-data-table-container"
+    style="border: 2px solid #ccc; background-color: #f9f9f9; padding: 15px; border-radius: 5px;">
     <h3>School Data Table</h3>
     <table id="school-data-table" class="display">
       <thead>
@@ -87,6 +92,8 @@
   <script src="scripts/School_data.js"></script>
   <script src="scripts/degreeFilter.js"></script>
   <script src="scripts/loadSchoolData.js"></script>
+  <script src="scripts/github-push-time.js"></script>
+
 </body>
 
 </html>

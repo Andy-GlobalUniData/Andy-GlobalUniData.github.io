@@ -3,138 +3,161 @@
         "School_name": "Aston University",
         "Country": "United Kingdom",
         "City": "Birmingham",
+        "URL": "https://www.aston.ac.uk/courses-atoz",
         "Number_of_departments": 255
     },
     {
         "School_name": "Bath Spa University",
         "Country": "United Kingdom",
         "City": "Bath",
+        "URL": "https://www.bathspa.ac.uk//courses/?page=1000",
         "Number_of_departments": 207
     },
     {
         "School_name": "Elon University",
         "Country": "United States",
         "City": "Elon",
+        "URL": "https://www.elon.edu/u/academics/majors-minors-programs/",
         "Number_of_departments": 141
     },
     {
         "School_name": "Erasmus Universitiet Rotterdam",
         "Country": "Netherlands",
         "City": "Rotterdam",
+        "URL": "https://www.eur.nl/en/search?s=computer&f[0]=education_type%3Abachelor&f[1]=education_type%3Acourse&f[2]=education_type%3Amaster&f[3]=education_type%3Apost_experience_master&f[4]=education_type%3Aresearch_master",
         "Number_of_departments": 222
     },
     {
         "School_name": "George Mason University",
         "Country": "United States",
         "City": "Fairfax",
+        "URL": "https://catalog.gmu.edu/programs/programsa-z/",
         "Number_of_departments": 548
     },
     {
         "School_name": "Newcastle University",
         "Country": "United Kingdom",
         "City": "Newcastle upon Tyne",
+        "URL": "https://www.ncl.ac.uk/postgraduate/degrees/",
         "Number_of_departments": 307
     },
     {
         "School_name": "Northeastern University",
         "Country": "United States",
         "City": "Boston",
+        "URL": "https://catalog.northeastern.edu/course-descriptions/",
         "Number_of_departments": 230
     },
     {
         "School_name": "Nottingham Trent University",
         "Country": "United Kingdom",
         "City": "Nottingham",
+        "URL": "https://www.ntu.ac.uk/search?query=&category=&category=Courses&start_rank=",
         "Number_of_departments": 50
     },
     {
         "School_name": "Oregon State University",
         "Country": "United States",
         "City": "Corvallis",
+        "URL": "https://admissions.oregonstate.edu/find-your-major",
         "Number_of_departments": 92
     },
     {
         "School_name": "Queen's University Belfast",
         "Country": "United Kingdom",
         "City": "Belfast",
+        "URL": "https://www.qub.ac.uk/courses/",
         "Number_of_departments": 701
     },
     {
         "School_name": "San Jose State University",
         "Country": "United States",
         "City": "San Jose",
+        "URL": "https://catalog.sjsu.edu/content.php?catoid=13&navoid=4973",
         "Number_of_departments": 466
     },
     {
         "School_name": "UCLA",
         "Country": "United States",
         "City": "Los Angeles",
+        "URL": "https://admission.ucla.edu/apply/majors#The_College",
         "Number_of_departments": 137
     },
     {
         "School_name": "Universiteit Leiden",
         "Country": "Netherlands",
         "City": "Leiden",
+        "URL": "https://www.universiteitleiden.nl/en/education/study-programmes/professionals?pageNumber=1&language=english",
         "Number_of_departments": 39
     },
     {
         "School_name": "Universiteit van Amsterdam",
         "Country": "Netherlands",
         "City": "Amsterdam",
+        "URL": "https://www.uva.nl/en/education/master-s/master-s-programmes/masters-programmes.html",
         "Number_of_departments": 189
     },
     {
         "School_name": "University of Essex",
         "Country": "United Kingdom",
         "City": "Colchester",
-        "Number_of_departments": 822
+        "URL": "https://www.essex.ac.uk/course-search?collection=essex~sp-courses-meta&start_rank=",
+        "Number_of_departments": 833
     },
     {
         "School_name": "University of Exeter",
         "Country": "United Kingdom",
         "City": "Exeter",
+        "URL": "https://search.exeter.ac.uk/s/search.html?collection=uoe~sp-search&f.Tabs%7Cuoe~ds-courses=Courses&num_ranks=1000&sort=",
         "Number_of_departments": 523
     },
     {
         "School_name": "University of Leeds",
         "Country": "United Kingdom",
         "City": "Leeds",
+        "URL": "https://www.leeds.ac.uk/search?complete_url=?num_ranks=10000&query=%21FunDoesNotExist%3APadreNull&f.Filter+your+results%7CFUN6339tqai975jbmvk19nt89li3=Courses&collection=leeds-meta&sort=title",
         "Number_of_departments": 651
     },
     {
         "School_name": "University of Leicester",
         "Country": "United Kingdom",
         "City": "Leicester",
+        "URL": "https://le.ac.uk/courses",
         "Number_of_departments": 294
     },
     {
         "School_name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
+        "URL": "https://www.usc.edu/majors-minors/",
         "Number_of_departments": 954
     },
     {
         "School_name": "University of Stirling",
         "Country": "United Kingdom",
         "City": "Stirling",
+        "URL": "https://www.stir.ac.uk/search/?tab=courses",
         "Number_of_departments": 217
     },
     {
         "School_name": "University of Warwick",
         "Country": "United Kingdom",
         "City": "Coventry",
+        "URL": "https://warwick.ac.uk/study/postgraduate/courses/",
         "Number_of_departments": 254
     },
     {
         "School_name": "University of Washington",
         "Country": "United States",
         "City": "Seattle",
-        "Number_of_departments": 530
+        "URL": "https://grad.uw.edu/programs/find-a-program/",
+        "Number_of_departments": 529
     },
     {
         "School_name": "University of Nottingham",
         "Country": "United Kingdom",
         "City": "Nottingham",
+        "URL": "https://www.nottingham.ac.uk/",
         "Number_of_departments": 288
     }
 ]

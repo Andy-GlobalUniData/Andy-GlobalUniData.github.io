@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
         searching: true,
         destroy: false,
         language: {
-          search: "Search Department: ：",  // 這裡修改搜尋框的名稱
+          search: "Search Department：",  // 這裡修改搜尋框的名稱
         },
         initComplete: function () {
           // 調整搜尋框字體大小

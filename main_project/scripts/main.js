@@ -112,6 +112,16 @@ document.addEventListener("DOMContentLoaded", function () {
         lengthMenu: [[10, 100, 500, 1000], [10, 100, 500, 1000]], // 設定下拉選單選項
         searching: true,
         destroy: false,
+        language: {
+          search: "Search Department：",  // 這裡修改搜尋框的名稱
+        },
+        initComplete: function () {
+          // 調整搜尋框字體大小
+          $('.dataTables_filter input').css({
+            'font-size': '18px',  // 設定搜尋框的字體大小
+            'padding': '10px'      // 也可以調整內邊距，讓框變大
+          });
+        }
       });
 
       setupSearchFilters(dataTable);

@@ -146,6 +146,18 @@ tr:hover td {
   font-size: 14px;
 }
 
+/* 將搜尋框移到右邊 */
+.dataTables_filter {
+  float: right;  /* 將搜尋框元素浮動到右邊 */
+  text-align: right;  /* 確保搜尋框中的文字靠右對齊 */
+}
+
+/* 調整搜尋框內部的字體大小等樣式 */
+.dataTables_filter input {
+  font-size: 18px;
+  padding: 5px;
+}
+
 /* 設定響應式，讓表格可以滾動 */
 @media (max-width: 768px) {
   table {

@@ -9,11 +9,24 @@ document.addEventListener("DOMContentLoaded", function () {
   let selectedSchools = [];
   let selectedDepartments = [];
 
+  // 更新選擇的學位
+  function updateSelectedDepartments() {
+    selectedDepartments = [];
+    $(".degree-checkbox:checked").each(function () {
+      selectedDepartments.push($(this).val());
+    });
+  }
+
+  // 判斷是否選擇了學位
+  function isDepartmentSelected(departmentName) {
+    return selectedDepartments.includes(departmentName);
+  }
+
   // 更新 selectedCountries、selectedSchools 和 selectedDepartments 為勾選的選項
   function updateSelectedFilters() {
     selectedCountries = [];
     selectedSchools = [];
-    selectedDepartments = [];
+    updateSelectedDepartments(); // 單獨更新學位
 
     // 更新選擇的國家
     $(".country-checkbox:checked").each(function () {
@@ -23,11 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // 更新選擇的學校
     $(".school-checkbox:checked").each(function () {
       selectedSchools.push($(this).val());
-    });
-
-    // 更新選擇的學位
-    $(".degree-checkbox:checked").each(function () {
-      selectedDepartments.push($(this).val());
     });
 
     // 當選擇變更後重新載入資料
@@ -137,10 +145,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const formattedData = chunk.map((item) => {
       const isCountrySelected = selectedCountries.includes(item["Country"]);
       const isSchoolSelected = selectedSchools.includes(item["School Name"]);
-      const isDepartmentSelected = selectedDepartments.includes(item["Department Name"]);
+      const departmentSelected = isDepartmentSelected(item["Department Name"]); // 使用單獨的判斷函數
 
       return [
-        (isCountrySelected || isSchoolSelected || isDepartmentSelected)
+        (isCountrySelected || isSchoolSelected || departmentSelected)
           ? '<input type="checkbox" class="row-checkbox" checked>'
           : '<input type="checkbox" class="row-checkbox">',
         item["Country"] || "N/A",
@@ -152,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 只新增選中的國家、學校和學位的資料
     const filteredData = formattedData.filter(row =>
-      selectedSchools.includes(row[2]) || selectedDepartments.includes(row[3])
+      selectedSchools.includes(row[2]) || isDepartmentSelected(row[3])
     );
     dataTable.rows.add(filteredData).draw(false);
 

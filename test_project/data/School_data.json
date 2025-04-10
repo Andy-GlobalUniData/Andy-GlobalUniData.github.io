@@ -116,14 +116,14 @@
         "Country": "United Kingdom",
         "City": "Leeds",
         "URL": "https://www.leeds.ac.uk/search?complete_url=?num_ranks=10000&query=%21FunDoesNotExist%3APadreNull&f.Filter+your+results%7CFUN6339tqai975jbmvk19nt89li3=Courses&collection=leeds-meta&sort=title",
-        "Number_of_departments": 651
+        "Number_of_departments": 638
     },
     {
         "School_name": "University of Leicester",
         "Country": "United Kingdom",
         "City": "Leicester",
         "URL": "https://le.ac.uk/courses",
-        "Number_of_departments": 294
+        "Number_of_departments": 293
     },
     {
         "School_name": "University of Southampton",

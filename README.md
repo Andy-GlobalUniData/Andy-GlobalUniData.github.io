@@ -42,8 +42,8 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 | Universiteit van Amsterdam          | 189| 
 | University of Essex                 | 833| 
 | University of Exeter                | 523| 
-| University of Leeds                 | 651| 
-| University of Leicester             | 294| 
+| University of Leeds                 | 638| 
+| University of Leicester             | 293| 
 | University of Nottingham            | 288| 
 | University of Southampton           | 954| 
 | University of Stirling              | 217| 

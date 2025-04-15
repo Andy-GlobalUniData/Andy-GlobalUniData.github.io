@@ -4,7 +4,7 @@
         "Country": "United Kingdom",
         "City": "Birmingham",
         "URL": "https://www.aston.ac.uk/courses-atoz",
-        "Number_of_departments": 254
+        "Number_of_departments": 243
     },
     {
         "School_name": "Bath Spa University",
@@ -116,14 +116,14 @@
         "Country": "United Kingdom",
         "City": "Leeds",
         "URL": "https://www.leeds.ac.uk/search?complete_url=?num_ranks=10000&query=%21FunDoesNotExist%3APadreNull&f.Filter+your+results%7CFUN6339tqai975jbmvk19nt89li3=Courses&collection=leeds-meta&sort=title",
-        "Number_of_departments": 653
+        "Number_of_departments": 643
     },
     {
         "School_name": "University of Leicester",
         "Country": "United Kingdom",
         "City": "Leicester",
         "URL": "https://le.ac.uk/courses",
-        "Number_of_departments": 293
+        "Number_of_departments": 292
     },
     {
         "School_name": "University of Southampton",

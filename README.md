@@ -27,13 +27,13 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 | 學校名稱                          | 科系數量 |
 |-----------------------------------|----------|
 | Aston University                    | 243| 
-| Bath Spa University                 | 214| 
+| Bath Spa University                 | 211| 
 | Elon University                     | 141| 
 | Erasmus Universitiet Rotterdam      | 222| 
 | George Mason University             | 548| 
-| Newcastle University                | 307| 
+| Newcastle University                | 582| 
 | Northeastern University             | 230| 
-| Nottingham Trent University         |  40| 
+| Nottingham Trent University         |  84| 
 | Oregon State University             |  92| 
 | Queen's University Belfast          | 701| 
 | San Jose State University           | 466| 
@@ -43,9 +43,9 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 | University of Essex                 | 822| 
 | University of Exeter                | 523| 
 | University of Leeds                 | 643| 
-| University of Leicester             | 292| 
+| University of Leicester             | 293| 
 | University of Nottingham            | 288| 
-| University of Southampton           | 954| 
+| University of Southampton           | 961| 
 | University of Stirling              | 217| 
 | University of Warwick               | 254| 
 | University of Washington            | 529| 

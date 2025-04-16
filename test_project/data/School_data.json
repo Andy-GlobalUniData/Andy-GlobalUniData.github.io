@@ -11,7 +11,7 @@
         "Country": "United Kingdom",
         "City": "Bath",
         "URL": "https://www.bathspa.ac.uk//courses/?page=1000",
-        "Number_of_departments": 214
+        "Number_of_departments": 211
     },
     {
         "School_name": "Elon University",
@@ -39,7 +39,7 @@
         "Country": "United Kingdom",
         "City": "Newcastle upon Tyne",
         "URL": "https://www.ncl.ac.uk/postgraduate/degrees/",
-        "Number_of_departments": 307
+        "Number_of_departments": 582
     },
     {
         "School_name": "Northeastern University",
@@ -53,7 +53,7 @@
         "Country": "United Kingdom",
         "City": "Nottingham",
         "URL": "https://www.ntu.ac.uk/search?query=&category=&category=Courses&start_rank=",
-        "Number_of_departments": 40
+        "Number_of_departments": 84
     },
     {
         "School_name": "Oregon State University",
@@ -123,14 +123,14 @@
         "Country": "United Kingdom",
         "City": "Leicester",
         "URL": "https://le.ac.uk/courses",
-        "Number_of_departments": 292
+        "Number_of_departments": 293
     },
     {
         "School_name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
         "URL": "https://www.usc.edu/majors-minors/",
-        "Number_of_departments": 954
+        "Number_of_departments": 961
     },
     {
         "School_name": "University of Stirling",

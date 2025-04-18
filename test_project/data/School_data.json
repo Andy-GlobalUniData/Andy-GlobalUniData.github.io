@@ -39,7 +39,7 @@
         "Country": "United Kingdom",
         "City": "Newcastle upon Tyne",
         "URL": "https://www.ncl.ac.uk/postgraduate/degrees/",
-        "Number_of_departments": 582
+        "Number_of_departments": 307
     },
     {
         "School_name": "Northeastern University",
@@ -53,7 +53,7 @@
         "Country": "United Kingdom",
         "City": "Nottingham",
         "URL": "https://www.ntu.ac.uk/search?query=&category=&category=Courses&start_rank=",
-        "Number_of_departments": 84
+        "Number_of_departments": 40
     },
     {
         "School_name": "Oregon State University",
@@ -102,7 +102,7 @@
         "Country": "United Kingdom",
         "City": "Colchester",
         "URL": "https://www.essex.ac.uk/course-search?collection=essex~sp-courses-meta&start_rank=",
-        "Number_of_departments": 822
+        "Number_of_departments": 833
     },
     {
         "School_name": "University of Exeter",
@@ -116,7 +116,7 @@
         "Country": "United Kingdom",
         "City": "Leeds",
         "URL": "https://www.leeds.ac.uk/search?complete_url=?num_ranks=10000&query=%21FunDoesNotExist%3APadreNull&f.Filter+your+results%7CFUN6339tqai975jbmvk19nt89li3=Courses&collection=leeds-meta&sort=title",
-        "Number_of_departments": 643
+        "Number_of_departments": 650
     },
     {
         "School_name": "University of Leicester",
@@ -130,7 +130,7 @@
         "Country": "United Kingdom",
         "City": "Southampton",
         "URL": "https://www.usc.edu/majors-minors/",
-        "Number_of_departments": 961
+        "Number_of_departments": 954
     },
     {
         "School_name": "University of Stirling",

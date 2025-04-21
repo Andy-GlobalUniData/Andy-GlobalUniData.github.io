@@ -38,11 +38,11 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 | Queen's University Belfast          | 701| 
 | San Jose State University           | 466| 
 | UCLA                                | 137| 
-| Universiteit Leiden                 |  39| 
+| Universiteit Leiden                 |  38| 
 | Universiteit van Amsterdam          | 189| 
 | University of Essex                 | 833| 
 | University of Exeter                | 523| 
-| University of Leeds                 | 650| 
+| University of Leeds                 | 648| 
 | University of Leicester             | 293| 
 | University of Nottingham            | 288| 
 | University of Southampton           | 954| 

@@ -88,7 +88,7 @@
         "Country": "Netherlands",
         "City": "Leiden",
         "URL": "https://www.universiteitleiden.nl/en/education/study-programmes/professionals?pageNumber=1&language=english",
-        "Number_of_departments": 39
+        "Number_of_departments": 38
     },
     {
         "School_name": "Universiteit van Amsterdam",
@@ -116,7 +116,7 @@
         "Country": "United Kingdom",
         "City": "Leeds",
         "URL": "https://www.leeds.ac.uk/search?complete_url=?num_ranks=10000&query=%21FunDoesNotExist%3APadreNull&f.Filter+your+results%7CFUN6339tqai975jbmvk19nt89li3=Courses&collection=leeds-meta&sort=title",
-        "Number_of_departments": 650
+        "Number_of_departments": 648
     },
     {
         "School_name": "University of Leicester",

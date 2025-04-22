@@ -109,14 +109,14 @@
         "Country": "United Kingdom",
         "City": "Exeter",
         "URL": "https://search.exeter.ac.uk/s/search.html?collection=uoe~sp-search&f.Tabs%7Cuoe~ds-courses=Courses&num_ranks=1000&sort=",
-        "Number_of_departments": 523
+        "Number_of_departments": 522
     },
     {
         "School_name": "University of Leeds",
         "Country": "United Kingdom",
         "City": "Leeds",
         "URL": "https://www.leeds.ac.uk/search?complete_url=?num_ranks=10000&query=%21FunDoesNotExist%3APadreNull&f.Filter+your+results%7CFUN6339tqai975jbmvk19nt89li3=Courses&collection=leeds-meta&sort=title",
-        "Number_of_departments": 648
+        "Number_of_departments": 662
     },
     {
         "School_name": "University of Leicester",

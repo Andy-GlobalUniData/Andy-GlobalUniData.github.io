@@ -11,7 +11,7 @@
         "Country": "United Kingdom",
         "City": "Bath",
         "URL": "https://www.bathspa.ac.uk//courses/?page=1000",
-        "Number_of_departments": 211
+        "Number_of_departments": 210
     },
     {
         "School_name": "Elon University",
@@ -95,28 +95,28 @@
         "Country": "Netherlands",
         "City": "Amsterdam",
         "URL": "https://www.uva.nl/en/education/master-s/master-s-programmes/masters-programmes.html",
-        "Number_of_departments": 189
+        "Number_of_departments": 188
     },
     {
         "School_name": "University of Essex",
         "Country": "United Kingdom",
         "City": "Colchester",
         "URL": "https://www.essex.ac.uk/course-search?collection=essex~sp-courses-meta&start_rank=",
-        "Number_of_departments": 833
+        "Number_of_departments": 837
     },
     {
         "School_name": "University of Exeter",
         "Country": "United Kingdom",
         "City": "Exeter",
         "URL": "https://search.exeter.ac.uk/s/search.html?collection=uoe~sp-search&f.Tabs%7Cuoe~ds-courses=Courses&num_ranks=1000&sort=",
-        "Number_of_departments": 522
+        "Number_of_departments": 521
     },
     {
         "School_name": "University of Leeds",
         "Country": "United Kingdom",
         "City": "Leeds",
         "URL": "https://www.leeds.ac.uk/search?complete_url=?num_ranks=10000&query=%21FunDoesNotExist%3APadreNull&f.Filter+your+results%7CFUN6339tqai975jbmvk19nt89li3=Courses&collection=leeds-meta&sort=title",
-        "Number_of_departments": 662
+        "Number_of_departments": 633
     },
     {
         "School_name": "University of Leicester",
@@ -144,7 +144,7 @@
         "Country": "United Kingdom",
         "City": "Coventry",
         "URL": "https://warwick.ac.uk/study/postgraduate/courses/",
-        "Number_of_departments": 254
+        "Number_of_departments": 253
     },
     {
         "School_name": "University of Washington",

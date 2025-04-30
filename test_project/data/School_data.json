@@ -11,7 +11,7 @@
         "Country": "United Kingdom",
         "City": "Bath",
         "URL": "https://www.bathspa.ac.uk//courses/?page=1000",
-        "Number_of_departments": 210
+        "Number_of_departments": 211
     },
     {
         "School_name": "Elon University",
@@ -53,7 +53,7 @@
         "Country": "United Kingdom",
         "City": "Nottingham",
         "URL": "https://www.ntu.ac.uk/search?query=&category=&category=Courses&start_rank=",
-        "Number_of_departments": 40
+        "Number_of_departments": 50
     },
     {
         "School_name": "Oregon State University",
@@ -67,7 +67,7 @@
         "Country": "United Kingdom",
         "City": "Belfast",
         "URL": "https://www.qub.ac.uk/courses/",
-        "Number_of_departments": 701
+        "Number_of_departments": 702
     },
     {
         "School_name": "San Jose State University",
@@ -88,7 +88,7 @@
         "Country": "Netherlands",
         "City": "Leiden",
         "URL": "https://www.universiteitleiden.nl/en/education/study-programmes/professionals?pageNumber=1&language=english",
-        "Number_of_departments": 38
+        "Number_of_departments": 40
     },
     {
         "School_name": "Universiteit van Amsterdam",
@@ -109,14 +109,14 @@
         "Country": "United Kingdom",
         "City": "Exeter",
         "URL": "https://search.exeter.ac.uk/s/search.html?collection=uoe~sp-search&f.Tabs%7Cuoe~ds-courses=Courses&num_ranks=1000&sort=",
-        "Number_of_departments": 521
+        "Number_of_departments": 522
     },
     {
         "School_name": "University of Leeds",
         "Country": "United Kingdom",
         "City": "Leeds",
         "URL": "https://www.leeds.ac.uk/search?complete_url=?num_ranks=10000&query=%21FunDoesNotExist%3APadreNull&f.Filter+your+results%7CFUN6339tqai975jbmvk19nt89li3=Courses&collection=leeds-meta&sort=title",
-        "Number_of_departments": 633
+        "Number_of_departments": 644
     },
     {
         "School_name": "University of Leicester",
@@ -130,7 +130,7 @@
         "Country": "United Kingdom",
         "City": "Southampton",
         "URL": "https://www.usc.edu/majors-minors/",
-        "Number_of_departments": 954
+        "Number_of_departments": 958
     },
     {
         "School_name": "University of Stirling",

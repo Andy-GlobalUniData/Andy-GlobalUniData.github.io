@@ -4,14 +4,14 @@
         "Country": "United Kingdom",
         "City": "Birmingham",
         "URL": "https://www.aston.ac.uk/courses-atoz",
-        "Number_of_departments": 243
+        "Number_of_departments": 283
     },
     {
         "School_name": "Bath Spa University",
         "Country": "United Kingdom",
         "City": "Bath",
         "URL": "https://www.bathspa.ac.uk//courses/?page=1000",
-        "Number_of_departments": 211
+        "Number_of_departments": 212
     },
     {
         "School_name": "Elon University",
@@ -67,7 +67,7 @@
         "Country": "United Kingdom",
         "City": "Belfast",
         "URL": "https://www.qub.ac.uk/courses/",
-        "Number_of_departments": 702
+        "Number_of_departments": 701
     },
     {
         "School_name": "San Jose State University",
@@ -109,14 +109,14 @@
         "Country": "United Kingdom",
         "City": "Exeter",
         "URL": "https://search.exeter.ac.uk/s/search.html?collection=uoe~sp-search&f.Tabs%7Cuoe~ds-courses=Courses&num_ranks=1000&sort=",
-        "Number_of_departments": 522
+        "Number_of_departments": 523
     },
     {
         "School_name": "University of Leeds",
         "Country": "United Kingdom",
         "City": "Leeds",
         "URL": "https://www.leeds.ac.uk/search?complete_url=?num_ranks=10000&query=%21FunDoesNotExist%3APadreNull&f.Filter+your+results%7CFUN6339tqai975jbmvk19nt89li3=Courses&collection=leeds-meta&sort=title",
-        "Number_of_departments": 644
+        "Number_of_departments": 1324
     },
     {
         "School_name": "University of Leicester",

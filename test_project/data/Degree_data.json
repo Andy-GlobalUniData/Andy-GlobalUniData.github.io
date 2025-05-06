@@ -15,7 +15,9 @@
         "BBA",
         "BFA",
         "LLB",
-        "BEd"
+        "BEd",
+        "Majors",
+        "Minors"
     ],
     "Graduate / Master Degrees": [
         "Graduate",
@@ -37,6 +39,7 @@
     ],
     "Doctoral Degrees / Ph.D.": [
         "PhD",
-        "Ph.D."
+        "Ph.D.",
+        "Doctoral"
     ]
 }

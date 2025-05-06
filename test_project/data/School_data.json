@@ -159,5 +159,12 @@
         "City": "Nottingham",
         "URL": "https://www.nottingham.ac.uk/",
         "Number_of_departments": 288
+    },
+    {
+        "School_name": "Drew University",
+        "Country": "United States",
+        "City": "New Jersey",
+        "URL": "https://drew.edu/academic/programs-of-study/",
+        "Number_of_departments": 183
     }
 ]

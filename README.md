@@ -5,19 +5,23 @@
 > 本專案是為公司開發的查找工具，透過爬蟲技術抓取外國大學的資料。目前仍在開發階段，因此暫時對外開放，未來將提供 Demo 版本供公司以外的使用者參考。
 
 ## 📌 專案連結
+
 [主專案](https://andy-globalunidata.github.io/main_project)
 
 [測試版本](https://andy-globalunidata.github.io/test_project)
 
 ## 使用條款
+
 本專案僅供使用者查詢資料，不允許 fork 或修改程式碼。如有任何問題，請聯繫開發者。
 
 ## License
+
 This software is proprietary and **not open-source**.  
 Users are allowed to **use** this software but are strictly prohibited from forking, modifying, or redistributing it.  
 For special usage requests, please contact [andy8787main@gmail.com]。
 
 ## 未來目標方向
+
 - **自動化資料載入**
 - **註冊帳號與密碼**
 - **中文與英文介面**
@@ -26,26 +30,27 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 
 | 學校名稱                          | 科系數量 |
 |-----------------------------------|----------|
-| Aston University                    | 283| 
-| Bath Spa University                 | 212| 
-| Elon University                     | 141| 
-| Erasmus Universitiet Rotterdam      | 222| 
-| George Mason University             | 548| 
-| Newcastle University                | 307| 
-| Northeastern University             | 230| 
-| Nottingham Trent University         |  30| 
-| Oregon State University             |  92| 
-| Queen's University Belfast          | 701| 
-| San Jose State University           | 466| 
-| UCLA                                | 137| 
-| Universiteit Leiden                 |  40| 
-| Universiteit van Amsterdam          | 188| 
-| University of Essex                 | 837| 
-| University of Exeter                | 523| 
-| University of Leeds                 |1157| 
-| University of Leicester             | 293| 
-| University of Nottingham            | 288| 
-| University of Southampton           | 958| 
-| University of Stirling              | 217| 
-| University of Warwick               | 253| 
-| University of Washington            | 529| 
+| Aston University                    | 283|
+| Bath Spa University                 | 212|
+| Drew University                     | 183|
+| Elon University                     | 141|
+| Erasmus Universitiet Rotterdam      | 222|
+| George Mason University             | 548|
+| Newcastle University                | 307|
+| Northeastern University             | 230|
+| Nottingham Trent University         |  30|
+| Oregon State University             |  92|
+| Queen's University Belfast          | 701|
+| San Jose State University           | 466|
+| UCLA                                | 137|
+| Universiteit Leiden                 |  40|
+| Universiteit van Amsterdam          | 188|
+| University of Essex                 | 837|
+| University of Exeter                | 523|
+| University of Leeds                 |1157|
+| University of Leicester             | 293|
+| University of Nottingham            | 288|
+| University of Southampton           | 958|
+| University of Stirling              | 217|
+| University of Warwick               | 253|
+| University of Washington            | 529|

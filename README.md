@@ -33,7 +33,7 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 | George Mason University             | 548| 
 | Newcastle University                | 307| 
 | Northeastern University             | 230| 
-| Nottingham Trent University         |  50| 
+| Nottingham Trent University         |  30| 
 | Oregon State University             |  92| 
 | Queen's University Belfast          | 701| 
 | San Jose State University           | 466| 
@@ -42,7 +42,7 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 | Universiteit van Amsterdam          | 188| 
 | University of Essex                 | 837| 
 | University of Exeter                | 523| 
-| University of Leeds                 |1324| 
+| University of Leeds                 |1157| 
 | University of Leicester             | 293| 
 | University of Nottingham            | 288| 
 | University of Southampton           | 958| 

@@ -2,49 +2,123 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
-  margin: 20px;
-  padding: 0;
+  margin: 0; /* 移除預設的 body margin */
+  padding: 15px; /* 在 body 周圍添加一些內邊距 */
+  display: flex; /* 使用 flexbox 進行整體佈局 */
+  flex-direction: column; /* 主軸方向為垂直 */
+  min-height: 100vh; /* 確保 body 至少佔滿整個視窗高度 */
 }
 
-/* 手機版樣式（螢幕寬度小於 768px 時適用） */
-@media (max-width: 768px) {
-  body {
-    background-color: lightgray;
-    font-size: 14px;
-  }
+/* 頁首區域 (包含更新時間和匯出按鈕) */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* 在小螢幕時允許換行 */
 }
 
-h2 {
+.last-updated-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* 在小螢幕換行時增加底部間距 */
+}
+
+.last-updated-container h3 {
+  margin-right: 10px;
+  margin-bottom: 0; /* 移除 h3 預設的底部間距 */
+}
+
+#github-push-time {
+  font-size: 16px;
+  color: #333;
+}
+
+.export-buttons {
+  margin-left: auto; /* 保持在右側 */
+}
+
+/* 選擇器區域 */
+.select-area-container {
+  display: flex;
+  justify-content: space-between; /* 平均分配空間 */
+  flex-wrap: wrap; /* 在小螢幕時允許換行 */
+  gap: 15px; /* 項目之間的間距 */
+  margin-bottom: 20px;
+}
+
+.select-container {
+  border: 1px solid #ddd; /* 稍微柔和的邊框 */
+  padding: 15px;
+  background-color: #fff; /* 背景改為白色，更清晰 */
+  border-radius: 8px; /* 更大的圓角 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* 細微陰影 */
+  flex-grow: 1; /* 允許容器擴展以填充可用空間 */
+  min-width: 280px; /* 設定最小寬度，避免在 flex 佈局中過度壓縮 */
+  margin-bottom: 15px; /* 在換行時提供間距 */
+}
+
+.select-container h3 {
+  margin-top: 0; /* 移除 h3 頂部預設間距 */
+  margin-bottom: 15px; /* 增加標題和內容之間的間距 */
+  color: #333;
+  font-size: 1.1em;
+}
+
+#school-select {
+  max-height: 250px; /* 稍微減少最大高度 */
+  overflow-y: auto; /* 保留滾動條 */
+}
+
+.school-item {
+  display: block; /* 讓每個學校選項獨佔一行，更清晰 */
+  margin-bottom: 8px;
+}
+
+.school-item label {
+  font-size: 14px;
+  display: flex; /* 使用 flex 讓 checkbox 和文字對齊 */
+  align-items: center;
+}
+
+.school-item input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+
+h2 { /* 如果網頁中有 h2，也統一樣式 */
   color: #007bff;
   font-weight: bold;
-}
-
-h3 {
-  margin-bottom: 10px;
+  margin-top: 25px;
+  margin-bottom: 15px;
 }
 
 /* 基本排版設置 */
 select,
 input[type="text"],
 button {
-  margin-bottom: 15px;
-  padding: 8px;
+  padding: 10px 12px; /* 增加內邊距 */
   font-size: 14px;
+  border-radius: 5px; /* 統一圓角 */
+  border: 1px solid #ccc;
+  margin-bottom: 10px; /* 統一底部間距 */
 }
 
 /* 按鈕樣式 */
 button {
-  padding: 10px 15px;
   cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none; /* 移除預設邊框 */
+  transition: background-color 0.2s ease-in-out; /* 平滑過渡效果 */
 }
 
 button:hover {
-  background-color: #f0f0f0;
+  background-color: #0056b3; /* 滑鼠懸停時加深顏色 */
 }
 
-/* 匯出按鈕區域樣式 */
-.export-buttons {
-  margin-bottom: 20px;
+.export-buttons button {
+  margin-left: 10px; /* 匯出按鈕之間的間距 */
 }
 
 /* 連結樣式 */
@@ -57,192 +131,235 @@ a:hover {
   text-decoration: underline;
 }
 
-/* 搜尋欄樣式 */
+/* 搜尋欄樣式 (如果取消註解使用) */
 .search-container {
-  background-color: #f2f2f2;
-  /* 設定背景色 */
-  padding: 20px;
-  /* 增加內邊距，讓內容更有空間 */
+  background-color: #f9f9f9;
+  padding: 15px;
   border-radius: 8px;
-  /* 圓角邊框 */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* 增加陰影效果 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   margin: 20px 0;
-  /* 設置外邊距，讓搜尋欄不會貼近其他元素 */
-  font-size: 16px;
-  /* 增加字體大小 */
+  display: flex; /* 使用 flex 佈局 */
+  align-items: center; /* 垂直居中 */
 }
 
 .search-container label {
   font-weight: bold;
-  /* 設定標籤字型為粗體 */
+  margin-right: 10px; /* 標籤和輸入框之間的間隔 */
 }
 
-.search-container input {
-  padding: 8px 12px;
-  /* 增加輸入框內的間距 */
-  margin-left: 10px;
-  /* 增加標籤和輸入框之間的間隔 */
-  border: 1px solid #ccc;
-  /* 輸入框邊框顏色 */
-  border-radius: 4px;
-  /* 輸入框圓角 */
-}
-
-.search-container {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.search-container input[type="text"] {
+  flex-grow: 1; /* 讓輸入框填滿剩餘空間 */
+  margin-left: 0; /* 因為 label 已經有 margin-right */
 }
 
 /* 表格樣式 */
-table {
-  width: 100%;
-  margin-top: 20px;
-  border-collapse: collapse;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.table-container { /* 為表格添加一個容器，方便管理樣式 */
+  overflow-x: auto; /* 允許表格水平滾動 */
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px; /* 與下方元素的間距 */
 }
 
 table.display {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 0; /* 移除表格自身的 margin-top，由容器控制 */
 }
 
 th,
 td {
   padding: 12px 15px;
-  text-align: center;
+  text-align: left; /* 文字靠左，通常更易讀 */
+  border-bottom: 1px solid #e0e0e0; /* 更細緻的邊框 */
 }
 
 th {
-  background-color: #007bff;
-  color: white;
+  background-color: #f0f2f5; /* 更柔和的表頭背景色 */
+  color: #333; /* 深色文字 */
+  font-weight: bold; /* 加粗表頭文字 */
+  white-space: nowrap; /* 防止表頭文字換行 */
 }
 
 td {
   background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
+  word-wrap: break-word;
 }
 
 tr:nth-child(even) td {
-  background-color: #f2f2f2;
+  background-color: #f9f9f9;
 }
 
 tr:hover td {
-  background-color: #f1f1f1;
+  background-color: #e9ecef; /* 懸停時的背景色 */
 }
 
 /* DataTables 調整 */
 .dataTables_wrapper {
-  padding: 20px;
+  padding: 0; /* 移除 DataTables 自身的 padding，由 .table-container 控制 */
 }
 
 .dataTables_length,
 .dataTables_filter {
+  margin-bottom: 15px; /* 增加與表格的間距 */
   font-size: 14px;
 }
 
 .dataTables_info {
   font-size: 14px;
+  padding-top: 10px; /* 與分頁元件的間距 */
 }
 
-/* 將搜尋框移到右邊 */
+/* 將搜尋框移到右邊 (DataTables 預設行為，可微調) */
 .dataTables_filter {
-  float: right;  /* 將搜尋框元素浮動到右邊 */
-  text-align: right;  /* 確保搜尋框中的文字靠右對齊 */
+  float: right;
+  text-align: right;
 }
 
-/* 調整搜尋框內部的字體大小等樣式 */
 .dataTables_filter input {
-  font-size: 18px;
-  padding: 5px;
-}
-
-/* 設定響應式，讓表格可以滾動 */
-@media (max-width: 768px) {
-  table {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-  }
-}
-
-/* 讓表格的每一列都能夠調整大小 */
-#json-table th {
-  position: relative;
-  cursor: ew-resize;
-  /* 改變鼠標光標樣式 */
-}
-
-/* 設定列寬最小值和最大值 */
-#json-table td {
-  min-width: 50px;
-  max-width: 300px;
-  width: auto;
-  /* 讓欄位自動調整 */
-  height: 40px;
-  /* 設定單元格的高度 */
-  cursor: pointer;
-  /* 在單元格內顯示可調整光標 */
-}
-
-/* 提高可讀性，調整表格樣式 */
-#json-table td,
-#json-table th {
-  word-wrap: break-word;
-  /* 使單元格文字換行 */
-}
-
-/* 提高表格的彈性，使其在小螢幕上不會被擠壓 */
-#json-table {
-  width: 100%;
-  table-layout: auto;
-}
-
-/* 選擇框區域樣式 */
-.select-container {
-  border: 2px solid #000;
-  /* 黑色邊框 */
-  padding: 10px;
-  /* 內邊距 */
-  margin: 10px 0;
-  /* 上下間距 */
-  width: 300px;
-  /* 固定寬度 */
-  min-height: 100px;
-  /* 最小高度 */
-  background-color: #f9f9f9;
-  /* 淺灰色背景 */
+  font-size: 14px; /* 調整 DataTables 搜尋框字體 */
+  padding: 8px 10px; /* 調整 DataTables 搜尋框內邊距 */
+  margin-left: 5px;
   border-radius: 5px;
-  /* 圓角邊框 */
+  border: 1px solid #ccc;
 }
 
-/* 使國家選擇框與大學選擇框並排顯示 */
-#country-select,
-#school-select {
-  display: inline-block;
-  margin-right: 30px;
-  /* 兩者之間加點空隙 */
-  vertical-align: top;
+/* 表格列調整 (如果需要可調整寬度的功能) */
+#json-table th,
+#school-data-table th {
+  position: relative;
+  /* cursor: ew-resize; */ /* 如果需要手動調整列寬，取消註解 */
 }
 
-.school-item {
-  display: inline-block;
-  margin-right: 20px;
-  /* 使大學勾選框不會擠在一起 */
-  margin-bottom: 10px;
-  /* 讓每一排大學有點間隔 */
+#json-table td,
+#school-data-table td {
+  min-width: 80px; /* 增加最小寬度 */
+  /* max-width: 300px; */ /* 視情況設定最大寬度 */
+  height: auto; /* 高度自動 */
+  /* cursor: pointer; */
 }
 
-.school-item label {
-  display: inline-block;
-  margin-right: 10px;
-  font-size: 14px;
+#json-table, #school-data-table {
+  table-layout: auto; /* 讓瀏覽器自動決定列寬 */
 }
 
-#school-select {
-  max-height: 300px;
-  /* 如果選擇的學校太多，設置最大高度 */
-  overflow-y: scroll;
-  /* 滾動條 */
+/* School Data Table 容器樣式 */
+#school-data-table-container {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 0; /* 內部的 table-container 會處理 padding */
+  border-radius: 8px;
+  margin-top: 20px; /* 與上方表格的間距 */
+}
+
+#school-data-table-container h3 {
+  margin: 15px; /* 標題的內邊距 */
+  padding-bottom: 10px; /* 標題下方的間距 */
+  border-bottom: 1px solid #eee; /* 標題下的分隔線 */
+}
+
+/* 手機版樣式 */
+@media (max-width: 768px) {
+  body {
+    padding: 10px; /* 調整 body 內邊距 */
+    font-size: 15px; /* 稍微增大基礎字體，方便閱讀 */
+  }
+
+  .header-container {
+    flex-direction: column; /* 標題和按鈕垂直排列 */
+    align-items: flex-start; /* 左對齊 */
+  }
+
+  .export-buttons {
+    margin-left: 0; /* 移除左邊距 */
+    margin-top: 15px; /* 與上方元素的間距 */
+    width: 100%; /* 讓按鈕容器佔滿寬度 */
+    display: flex;
+    gap: 10px; /* 按鈕之間的間距 */
+  }
+
+  .export-buttons button {
+    flex-grow: 1; /* 讓按鈕平均分配空間 */
+  }
+
+  .select-area-container {
+    flex-direction: column; /* 選擇器垂直堆疊 */
+    gap: 10px;
+  }
+
+  .select-container {
+    width: 100%; /* 選擇器佔滿寬度 */
+    margin-right: 0; /* 移除右邊距 */
+    min-width: unset; /* 重置最小寬度 */
+  }
+
+  .dataTables_filter {
+    float: none; /* 取消浮動 */
+    text-align: left; /* 靠左對齊 */
+    width: 100%; /* 佔滿寬度 */
+    margin-bottom: 10px;
+  }
+
+  .dataTables_filter input {
+    width: calc(100% - 50px); /* 調整輸入框寬度，給標籤留空間 */
+    margin-left: 0;
+  }
+
+  .dataTables_length {
+    float: none; /* 取消浮動 */
+    text-align: left; /* 靠左對齊 */
+    margin-bottom: 10px;
+  }
+
+  /* 讓 DataTables 的控制元件在小螢幕上更好排列 */
+  .dataTables_wrapper .dataTables_length,
+  .dataTables_wrapper .dataTables_filter,
+  .dataTables_wrapper .dataTables_info,
+  .dataTables_wrapper .dataTables_paginate {
+    text-align: center; /* 或 left/right 根據喜好調整 */
+    margin-bottom: 10px;
+  }
+
+  .dataTables_paginate .paginate_button {
+    padding: 0.3em 0.8em; /* 調整分頁按鈕大小 */
+  }
+
+  th, td {
+    padding: 10px 8px; /* 調整表格儲存格內邊距 */
+    font-size: 13px; /* 調整表格內字體大小 */
+  }
+
+  /* 如果表格內容在手機上還是太寬，可以考慮隱藏不重要的列，
+     或者使用更激進的響應式表格方案 (例如將每一行轉為卡片式)
+     但這通常需要 JavaScript 輔助。
+     目前 `overflow-x: auto;` 已經提供了基本的水平滾動。
+  */
+}
+
+/* 更小螢幕的調整 (例如小於 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .export-buttons {
+    flex-direction: column; /* 極小螢幕時，匯出按鈕也垂直排列 */
+  }
+
+  .export-buttons button {
+    width: 100%; /* 每個按鈕佔滿寬度 */
+  }
+
+  th, td {
+    font-size: 12px; /* 進一步縮小表格字體 */
+  }
+
+  #github-push-time {
+    font-size: 14px;
+  }
+
+  .last-updated-container h3 {
+    font-size: 1.1em;
+  }
 }

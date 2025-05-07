@@ -53,7 +53,7 @@
         "Country": "United Kingdom",
         "City": "Nottingham",
         "URL": "https://www.ntu.ac.uk/search?query=&category=&category=Courses&start_rank=",
-        "Number_of_departments": 30
+        "Number_of_departments": 40
     },
     {
         "School_name": "Oregon State University",
@@ -102,7 +102,7 @@
         "Country": "United Kingdom",
         "City": "Colchester",
         "URL": "https://www.essex.ac.uk/course-search?collection=essex~sp-courses-meta&start_rank=",
-        "Number_of_departments": 837
+        "Number_of_departments": 826
     },
     {
         "School_name": "University of Exeter",
@@ -151,7 +151,7 @@
         "Country": "United States",
         "City": "Seattle",
         "URL": "https://grad.uw.edu/programs/find-a-program/",
-        "Number_of_departments": 529
+        "Number_of_departments": 531
     },
     {
         "School_name": "University of Nottingham",

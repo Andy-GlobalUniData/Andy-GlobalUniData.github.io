@@ -17,7 +17,7 @@
         "School_name": "Drew University",
         "Country": "United States",
         "City": "New Jersey",
-        "URL": "https://drew.edu/academic/programs-of-study/",
+        "URL": "https://drew.edu/academic/programs-of-study/   https://drew-undergraduate-catalog.coursedog.com/programs?page=1&pq=",
         "Number_of_departments": 183
     },
     {
@@ -79,7 +79,7 @@
     {
         "School_name": "Saint Louis University",
         "Country": "United States",
-        "City": NaN,
+        "City": "St. Louis, Missouri",
         "URL": "https://catalog.slu.edu/programs/",
         "Number_of_departments": 501
     },

@@ -14,6 +14,13 @@
         "Number_of_departments": 212
     },
     {
+        "School_name": "Colorado State University",
+        "Country": "United States",
+        "City": NaN,
+        "URL": NaN,
+        "Number_of_departments": 778
+    },
+    {
         "School_name": "Drew University",
         "Country": "United States",
         "City": "New Jersey",
@@ -60,7 +67,7 @@
         "Country": "United Kingdom",
         "City": "Nottingham",
         "URL": "https://www.ntu.ac.uk/search?query=&category=&category=Courses&start_rank=",
-        "Number_of_departments": 40
+        "Number_of_departments": 50
     },
     {
         "School_name": "Oregon State University",
@@ -79,7 +86,7 @@
     {
         "School_name": "Saint Louis University",
         "Country": "United States",
-        "City": "St. Louis, Missouri",
+        "City": NaN,
         "URL": "https://catalog.slu.edu/programs/",
         "Number_of_departments": 501
     },
@@ -116,7 +123,7 @@
         "Country": "United Kingdom",
         "City": "Colchester",
         "URL": "https://www.essex.ac.uk/course-search?collection=essex~sp-courses-meta&start_rank=",
-        "Number_of_departments": 826
+        "Number_of_departments": 837
     },
     {
         "School_name": "University of Exeter",

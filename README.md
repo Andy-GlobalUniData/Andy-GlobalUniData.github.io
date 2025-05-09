@@ -32,13 +32,14 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 |-----------------------------------|----------|
 | Aston University                    | 283| 
 | Bath Spa University                 | 212| 
+| Colorado State University           | 778| 
 | Drew University                     | 183| 
 | Elon University                     | 141| 
 | Erasmus Universitiet Rotterdam      | 222| 
 | George Mason University             | 548| 
 | Newcastle University                | 307| 
 | Northeastern University             | 230| 
-| Nottingham Trent University         |  40| 
+| Nottingham Trent University         |  50| 
 | Oregon State University             | 105| 
 | Queen's University Belfast          | 702| 
 | Saint Louis University              | 501| 
@@ -46,7 +47,7 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 | UCLA                                | 137| 
 | Universiteit Leiden                 |  40| 
 | Universiteit van Amsterdam          | 188| 
-| University of Essex                 | 826| 
+| University of Essex                 | 837| 
 | University of Exeter                | 522| 
 | University of Leeds                 |1109| 
 | University of Leicester             | 293| 

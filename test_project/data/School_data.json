@@ -16,8 +16,8 @@
     {
         "School_name": "Colorado State University",
         "Country": "United States",
-        "City": NaN,
-        "URL": NaN,
+        "City": "Fort Collins",
+        "URL": "https://catalog.colostate.edu/general-catalog/programsaz/",
         "Number_of_departments": 778
     },
     {
@@ -86,7 +86,7 @@
     {
         "School_name": "Saint Louis University",
         "Country": "United States",
-        "City": NaN,
+        "City": "St. Louis",
         "URL": "https://catalog.slu.edu/programs/",
         "Number_of_departments": 501
     },

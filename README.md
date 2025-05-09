@@ -39,19 +39,19 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 | Newcastle University                | 307| 
 | Northeastern University             | 230| 
 | Nottingham Trent University         |  40| 
-| Oregon State University             |  92| 
-| Queen's University Belfast          | 701| 
+| Oregon State University             | 105| 
+| Queen's University Belfast          | 702| 
+| Saint Louis University              | 501| 
 | San Jose State University           | 466| 
 | UCLA                                | 137| 
 | Universiteit Leiden                 |  40| 
 | Universiteit van Amsterdam          | 188| 
 | University of Essex                 | 826| 
-| University of Exeter                | 523| 
-| University of Leeds                 |1157| 
+| University of Exeter                | 522| 
+| University of Leeds                 |1109| 
 | University of Leicester             | 293| 
 | University of Nottingham            | 288| 
 | University of Southampton           | 958| 
 | University of Stirling              | 217| 
 | University of Warwick               | 253| 
 | University of Washington            | 531| 
-

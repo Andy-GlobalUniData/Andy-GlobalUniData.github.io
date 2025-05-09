@@ -14,6 +14,13 @@
         "Number_of_departments": 212
     },
     {
+        "School_name": "Drew University",
+        "Country": "United States",
+        "City": "New Jersey",
+        "URL": "https://drew.edu/academic/programs-of-study/   https://drew-undergraduate-catalog.coursedog.com/programs?page=1&pq=",
+        "Number_of_departments": 183
+    },
+    {
         "School_name": "Elon University",
         "Country": "United States",
         "City": "Elon",
@@ -60,14 +67,21 @@
         "Country": "United States",
         "City": "Corvallis",
         "URL": "https://admissions.oregonstate.edu/find-your-major",
-        "Number_of_departments": 92
+        "Number_of_departments": 105
     },
     {
         "School_name": "Queen's University Belfast",
         "Country": "United Kingdom",
         "City": "Belfast",
         "URL": "https://www.qub.ac.uk/courses/",
-        "Number_of_departments": 701
+        "Number_of_departments": 702
+    },
+    {
+        "School_name": "Saint Louis University",
+        "Country": "United States",
+        "City": NaN,
+        "URL": "https://catalog.slu.edu/programs/",
+        "Number_of_departments": 501
     },
     {
         "School_name": "San Jose State University",
@@ -109,14 +123,14 @@
         "Country": "United Kingdom",
         "City": "Exeter",
         "URL": "https://search.exeter.ac.uk/s/search.html?collection=uoe~sp-search&f.Tabs%7Cuoe~ds-courses=Courses&num_ranks=1000&sort=",
-        "Number_of_departments": 523
+        "Number_of_departments": 522
     },
     {
         "School_name": "University of Leeds",
         "Country": "United Kingdom",
         "City": "Leeds",
         "URL": "https://www.leeds.ac.uk/search?complete_url=?num_ranks=10000&query=%21FunDoesNotExist%3APadreNull&f.Filter+your+results%7CFUN6339tqai975jbmvk19nt89li3=Courses&collection=leeds-meta&sort=title",
-        "Number_of_departments": 1157
+        "Number_of_departments": 1109
     },
     {
         "School_name": "University of Leicester",
@@ -126,10 +140,17 @@
         "Number_of_departments": 293
     },
     {
+        "School_name": "University of Nottingham",
+        "Country": "United Kingdom",
+        "City": "Nottingham",
+        "URL": "https://www.nottingham.ac.uk/",
+        "Number_of_departments": 288
+    },
+    {
         "School_name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "URL": "https://www.usc.edu/majors-minors/",
+        "URL": "https://www.southampton.ac.uk/courses/undergraduate?keyword_filter=",
         "Number_of_departments": 958
     },
     {
@@ -152,19 +173,5 @@
         "City": "Seattle",
         "URL": "https://grad.uw.edu/programs/find-a-program/",
         "Number_of_departments": 531
-    },
-    {
-        "School_name": "University of Nottingham",
-        "Country": "United Kingdom",
-        "City": "Nottingham",
-        "URL": "https://www.nottingham.ac.uk/",
-        "Number_of_departments": 288
-    },
-    {
-        "School_name": "Drew University",
-        "Country": "United States",
-        "City": "New Jersey",
-        "URL": "https://drew.edu/academic/programs-of-study/",
-        "Number_of_departments": 183
     }
 ]

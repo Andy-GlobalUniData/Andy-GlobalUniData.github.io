@@ -4,7 +4,7 @@
         "Country": "United Kingdom",
         "City": "Birmingham",
         "URL": "https://www.aston.ac.uk/courses-atoz",
-        "Number_of_departments": 283
+        "Number_of_departments": 282
     },
     {
         "School_name": "Bath Spa University",
@@ -42,11 +42,25 @@
         "Number_of_departments": 222
     },
     {
+        "School_name": "Fisher College",
+        "Country": "United States",
+        "City": "Boston",
+        "URL": "https://www.fisher.edu/academics/undergraduate-programs https://www.fisher.edu/academics/graduate-programs",
+        "Number_of_departments": 73
+    },
+    {
         "School_name": "George Mason University",
         "Country": "United States",
         "City": "Fairfax",
         "URL": "https://catalog.gmu.edu/programs/programsa-z/",
         "Number_of_departments": 548
+    },
+    {
+        "School_name": "Hofstra University",
+        "Country": "United States",
+        "City": "New York",
+        "URL": "https://www.hofstra.edu/undergraduate/ https://www.hofstra.edu/graduate/programs/",
+        "Number_of_departments": 354
     },
     {
         "School_name": "Newcastle University",
@@ -67,7 +81,7 @@
         "Country": "United Kingdom",
         "City": "Nottingham",
         "URL": "https://www.ntu.ac.uk/search?query=&category=&category=Courses&start_rank=",
-        "Number_of_departments": 50
+        "Number_of_departments": 40
     },
     {
         "School_name": "Oregon State University",
@@ -137,7 +151,7 @@
         "Country": "United Kingdom",
         "City": "Leeds",
         "URL": "https://www.leeds.ac.uk/search?complete_url=?num_ranks=10000&query=%21FunDoesNotExist%3APadreNull&f.Filter+your+results%7CFUN6339tqai975jbmvk19nt89li3=Courses&collection=leeds-meta&sort=title",
-        "Number_of_departments": 1109
+        "Number_of_departments": 1163
     },
     {
         "School_name": "University of Leicester",
@@ -179,6 +193,6 @@
         "Country": "United States",
         "City": "Seattle",
         "URL": "https://grad.uw.edu/programs/find-a-program/",
-        "Number_of_departments": 531
+        "Number_of_departments": 533
     }
 ]

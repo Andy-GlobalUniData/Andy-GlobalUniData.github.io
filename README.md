@@ -30,16 +30,20 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 
 | 學校名稱                          | 科系數量 |
 |-----------------------------------|----------|
-| Aston University                    | 283| 
+| Aston University                    | 282| 
 | Bath Spa University                 | 212| 
 | Colorado State University           | 778| 
 | Drew University                     | 183| 
 | Elon University                     | 141| 
 | Erasmus Universitiet Rotterdam      | 222| 
+| Fisher College                      |  73| 
 | George Mason University             | 548| 
+| Hofstra University                  | 354| 
+| Long Island University              |  63| 
+| Montclair State University          | 150| 
 | Newcastle University                | 307| 
 | Northeastern University             | 230| 
-| Nottingham Trent University         |  50| 
+| Nottingham Trent University         |  40| 
 | Oregon State University             | 105| 
 | Queen's University Belfast          | 702| 
 | Saint Louis University              | 501| 
@@ -47,12 +51,13 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 | UCLA                                | 137| 
 | Universiteit Leiden                 |  40| 
 | Universiteit van Amsterdam          | 188| 
-| University of Essex                 | 837| 
+| University of Arizona               | 679| 
+| University of Essex                 | 841| 
 | University of Exeter                | 522| 
-| University of Leeds                 |1109| 
+| University of Leeds                 |1163| 
 | University of Leicester             | 293| 
 | University of Nottingham            | 288| 
 | University of Southampton           | 958| 
 | University of Stirling              | 217| 
 | University of Warwick               | 253| 
-| University of Washington            | 531| 
+| University of Washington            | 533| 

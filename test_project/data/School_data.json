@@ -1,12 +1,21 @@
 [
     {
+        "School_name": "The University of Alabama at Birmingham",
+        "Country": "USA",
+        "City": "Birmingham",
+        "URL": "NONE",
+        "合作": "INTO",
+        "重複": "NONE",
+        "Number_of_departments": 285
+    },
+    {
         "School_name": "University of Leeds",
         "Country": "United Kingdom",
         "City": "Leeds",
         "URL": "NONE",
         "合作": "Studygroup",
         "重複": "NONE",
-        "Number_of_departments": 1163
+        "Number_of_departments": 1157
     },
     {
         "School_name": "Long Island University",
@@ -24,7 +33,7 @@
         "URL": "https://www.usc.edu/majors-minors/",
         "合作": "INTO",
         "重複": "NONE",
-        "Number_of_departments": 282
+        "Number_of_departments": 296
     },
     {
         "School_name": "University of Arizona",
@@ -33,7 +42,7 @@
         "URL": "https://www.arizona.edu/degree-search/majors?cat-interest=",
         "合作": "INTO",
         "重複": "NONE",
-        "Number_of_departments": 679
+        "Number_of_departments": 678
     },
     {
         "School_name": "Bath Spa University",
@@ -42,7 +51,7 @@
         "URL": "https://www.aston.ac.uk/courses-atoz",
         "合作": "INTO",
         "重複": "NONE",
-        "Number_of_departments": 212
+        "Number_of_departments": 211
     },
     {
         "School_name": "Colorado State University",
@@ -108,6 +117,15 @@
         "Number_of_departments": 354
     },
     {
+        "School_name": "Illinois State University",
+        "Country": "USA",
+        "City": "Normal, Illinois",
+        "URL": "https://www.hofstra.edu/undergraduate/ https://www.hofstra.edu/graduate/programs/",
+        "合作": "INTO",
+        "重複": "NONE",
+        "Number_of_departments": 166
+    },
+    {
         "School_name": "Newcastle University",
         "Country": "United Kingdom",
         "City": "Newcastle upon Tyne",
@@ -150,7 +168,7 @@
         "URL": "https://admissions.oregonstate.edu/find-your-major",
         "合作": "INTO",
         "重複": "NONE",
-        "Number_of_departments": 702
+        "Number_of_departments": 701
     },
     {
         "School_name": "Saint Louis University",
@@ -159,7 +177,7 @@
         "URL": "https://www.qub.ac.uk/courses/",
         "合作": "INTO",
         "重複": "NONE",
-        "Number_of_departments": 501
+        "Number_of_departments": 490
     },
     {
         "School_name": "San Jose State University",

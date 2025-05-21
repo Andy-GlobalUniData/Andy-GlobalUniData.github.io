@@ -31,10 +31,17 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 | 學校名稱                          | 科系數量 |
 |-----------------------------------|----------|
 <<<<<<< HEAD
+<<<<<<< HEAD
 | Aston University                    | 296| 
 =======
 | Aston University                    | 333| 
 >>>>>>> 54a0792 (2025.05.21資料更新)
+=======
+| Aston University                    | 333| 
+=======
+| Aston University                    | 296| 
+>>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
+>>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
 | Bath Spa University                 | 211| 
 | Colorado State University           | 778| 
 | Drew University                     | 183| 
@@ -51,6 +58,7 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 | Nottingham Trent University         |  30| 
 | Oregon State University             | 105| 
 <<<<<<< HEAD
+<<<<<<< HEAD
 | Queen's University Belfast          | 701| 
 | Saint Louis University              | 490| 
 | San Jose State University           | 466| 
@@ -60,6 +68,17 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 | San Jose State University           | 466| 
 | Suffolk University Boston           | 174| 
 >>>>>>> 54a0792 (2025.05.21資料更新)
+=======
+| Queen's University Belfast          | 702| 
+| Saint Louis University              | 490| 
+| San Jose State University           | 466| 
+| Suffolk University Boston           | 174| 
+=======
+| Queen's University Belfast          | 701| 
+| Saint Louis University              | 490| 
+| San Jose State University           | 466| 
+>>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
+>>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
 | The University of Alabama at Birmingham | 285| 
 | UCLA                                | 137| 
 | Universiteit Leiden                 |  40| 
@@ -68,12 +87,23 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 | University of Essex                 | 841| 
 | University of Exeter                | 522| 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+| University of Leeds                 |1164| 
+| University of Leicester             | 293| 
+| University of Nottingham            | 288| 
+| University of Southampton           | 954| 
+| University of Stirling              | 215| 
+| University of Warwick               | 252| 
+=======
+>>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
 | University of Leeds                 |1157| 
 | University of Leicester             | 293| 
 | University of Nottingham            | 288| 
 | University of Southampton           | 958| 
 | University of Stirling              | 217| 
 | University of Warwick               | 253| 
+<<<<<<< HEAD
 =======
 | University of Leeds                 |1164| 
 | University of Leicester             | 293| 
@@ -82,4 +112,7 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 | University of Stirling              | 215| 
 | University of Warwick               | 252| 
 >>>>>>> 54a0792 (2025.05.21資料更新)
+=======
+>>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
+>>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
 | University of Washington            | 533| 

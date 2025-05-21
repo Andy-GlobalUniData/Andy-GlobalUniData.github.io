@@ -1,12 +1,36 @@
 [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        "School_name": "Suffolk University Boston",
+        "Country": "USA",
+        "City": "Boston",
+        "URL": "https://www.suffolk.edu/academics/undergraduate-programs https://www.suffolk.edu/academics/graduate-programs",
+        "合作": "INTO",
+        "重複": "NONE",
+        "unnamed: 7": "NONE",
+        "unnamed: 8": "..",
+        "Number_of_departments": 174
+    },
+    {
+        "School_name": "The University of Alabama at Birmingham",
+        "Country": "USA",
+        "City": "Birmingham",
+        "URL": "https://www.uab.edu/degrees/",
+        "合作": "INTO",
+        "重複": "NONE",
+        "unnamed: 7": "NONE",
+        "unnamed: 8": "NONE",
+=======
+>>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
         "School_name": "The University of Alabama at Birmingham",
         "Country": "USA",
         "City": "Birmingham",
         "URL": "NONE",
         "合作": "INTO",
         "重複": "NONE",
+<<<<<<< HEAD
 =======
         "School_name": "Suffolk University Boston",
         "Country": "USA",
@@ -28,6 +52,9 @@
         "unnamed: 7": "NONE",
         "unnamed: 8": "NONE",
 >>>>>>> 54a0792 (2025.05.21資料更新)
+=======
+>>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
+>>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
         "Number_of_departments": 285
     },
     {
@@ -38,12 +65,21 @@
         "合作": "Studygroup",
         "重複": "NONE",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "Number_of_departments": 1157
 =======
         "unnamed: 7": "NONE",
         "unnamed: 8": "NONE",
         "Number_of_departments": 1164
 >>>>>>> 54a0792 (2025.05.21資料更新)
+=======
+        "unnamed: 7": "NONE",
+        "unnamed: 8": "NONE",
+        "Number_of_departments": 1164
+=======
+        "Number_of_departments": 1157
+>>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
+>>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
     },
     {
         "School_name": "Long Island University",
@@ -64,12 +100,21 @@
         "合作": "INTO",
         "重複": "NONE",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "Number_of_departments": 296
 =======
         "unnamed: 7": "NONE",
         "unnamed: 8": "NONE",
         "Number_of_departments": 333
 >>>>>>> 54a0792 (2025.05.21資料更新)
+=======
+        "unnamed: 7": "NONE",
+        "unnamed: 8": "NONE",
+        "Number_of_departments": 333
+=======
+        "Number_of_departments": 296
+>>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
+>>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
     },
     {
         "School_name": "University of Arizona",
@@ -79,10 +124,17 @@
         "合作": "INTO",
         "重複": "NONE",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         "unnamed: 7": "NONE",
         "unnamed: 8": "NONE",
 >>>>>>> 54a0792 (2025.05.21資料更新)
+=======
+        "unnamed: 7": "NONE",
+        "unnamed: 8": "NONE",
+=======
+>>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
+>>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
         "Number_of_departments": 678
     },
     {
@@ -93,10 +145,17 @@
         "合作": "INTO",
         "重複": "NONE",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         "unnamed: 7": "NONE",
         "unnamed: 8": "NONE",
 >>>>>>> 54a0792 (2025.05.21資料更新)
+=======
+        "unnamed: 7": "NONE",
+        "unnamed: 8": "NONE",
+=======
+>>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
+>>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
         "Number_of_departments": 211
     },
     {
@@ -184,10 +243,17 @@
         "合作": "INTO",
         "重複": "NONE",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         "unnamed: 7": "NONE",
         "unnamed: 8": "NONE",
 >>>>>>> 54a0792 (2025.05.21資料更新)
+=======
+        "unnamed: 7": "NONE",
+        "unnamed: 8": "NONE",
+=======
+>>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
+>>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
         "Number_of_departments": 166
     },
     {
@@ -242,12 +308,21 @@
         "合作": "INTO",
         "重複": "NONE",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "Number_of_departments": 701
 =======
         "unnamed: 7": "NONE",
         "unnamed: 8": "NONE",
         "Number_of_departments": 702
 >>>>>>> 54a0792 (2025.05.21資料更新)
+=======
+        "unnamed: 7": "NONE",
+        "unnamed: 8": "NONE",
+        "Number_of_departments": 702
+=======
+        "Number_of_departments": 701
+>>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
+>>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
     },
     {
         "School_name": "Saint Louis University",
@@ -257,10 +332,17 @@
         "合作": "INTO",
         "重複": "NONE",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         "unnamed: 7": "NONE",
         "unnamed: 8": "NONE",
 >>>>>>> 54a0792 (2025.05.21資料更新)
+=======
+        "unnamed: 7": "NONE",
+        "unnamed: 8": "NONE",
+=======
+>>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
+>>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
         "Number_of_departments": 490
     },
     {

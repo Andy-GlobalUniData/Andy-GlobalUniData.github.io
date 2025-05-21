@@ -1,85 +1,30 @@
 [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "School_name": "Suffolk University Boston",
         "Country": "USA",
         "City": "Boston",
-        "URL": "https://www.suffolk.edu/academics/undergraduate-programs https://www.suffolk.edu/academics/graduate-programs",
+        "URL": ".",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "..",
+        "重複": ".",
         "Number_of_departments": 174
     },
     {
         "School_name": "The University of Alabama at Birmingham",
         "Country": "USA",
         "City": "Birmingham",
-        "URL": "https://www.uab.edu/degrees/",
+        "URL": ".",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
-=======
->>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
-        "School_name": "The University of Alabama at Birmingham",
-        "Country": "USA",
-        "City": "Birmingham",
-        "URL": "NONE",
-        "合作": "INTO",
-        "重複": "NONE",
-<<<<<<< HEAD
-=======
-        "School_name": "Suffolk University Boston",
-        "Country": "USA",
-        "City": "Boston",
-        "URL": "https://www.suffolk.edu/academics/undergraduate-programs https://www.suffolk.edu/academics/graduate-programs",
-        "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "..",
-        "Number_of_departments": 174
-    },
-    {
-        "School_name": "The University of Alabama at Birmingham",
-        "Country": "USA",
-        "City": "Birmingham",
-        "URL": "https://www.uab.edu/degrees/",
-        "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
->>>>>>> 54a0792 (2025.05.21資料更新)
-=======
->>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
->>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
+        "重複": ".",
         "Number_of_departments": 285
     },
     {
         "School_name": "University of Leeds",
         "Country": "United Kingdom",
         "City": "Leeds",
-        "URL": "NONE",
+        "URL": "https://www.leeds.ac.uk/search?complete_url=?num_ranks=10000&query=%21FunDoesNotExist%3APadreNull&f.Filter+your+results%7CFUN6339tqai975jbmvk19nt89li3=Courses&collection=leeds-meta&sort=title",
         "合作": "Studygroup",
-        "重複": "NONE",
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "Number_of_departments": 1157
-=======
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 1164
->>>>>>> 54a0792 (2025.05.21資料更新)
-=======
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
-        "Number_of_departments": 1164
-=======
-        "Number_of_departments": 1157
->>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
->>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
     },
     {
         "School_name": "Long Island University",
@@ -87,9 +32,7 @@
         "City": "Brooklyn and Brookville, New York",
         "URL": "https://liu.edu/post/academics/undergraduate",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 63
     },
     {
@@ -98,23 +41,8 @@
         "City": "Birmingham",
         "URL": "https://www.usc.edu/majors-minors/",
         "合作": "INTO",
-        "重複": "NONE",
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "Number_of_departments": 296
-=======
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 333
->>>>>>> 54a0792 (2025.05.21資料更新)
-=======
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
-        "Number_of_departments": 333
-=======
-        "Number_of_departments": 296
->>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
->>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
     },
     {
         "School_name": "University of Arizona",
@@ -122,19 +50,7 @@
         "City": "Tucson",
         "URL": "https://www.arizona.edu/degree-search/majors?cat-interest=",
         "合作": "INTO",
-        "重複": "NONE",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
->>>>>>> 54a0792 (2025.05.21資料更新)
-=======
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
-=======
->>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
->>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
+        "重複": ".",
         "Number_of_departments": 678
     },
     {
@@ -143,19 +59,7 @@
         "City": "Bath, Somerset",
         "URL": "https://www.aston.ac.uk/courses-atoz",
         "合作": "INTO",
-        "重複": "NONE",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
->>>>>>> 54a0792 (2025.05.21資料更新)
-=======
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
-=======
->>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
->>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
+        "重複": ".",
         "Number_of_departments": 211
     },
     {
@@ -164,9 +68,7 @@
         "City": "Fort Collins, Colorado",
         "URL": "https://www.bathspa.ac.uk//courses/?page=1000",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 778
     },
     {
@@ -175,9 +77,7 @@
         "City": "Madison, New Jersey",
         "URL": "https://catalog.colostate.edu/general-catalog/programsaz/",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 183
     },
     {
@@ -186,9 +86,7 @@
         "City": "Elon, North Carolina",
         "URL": "https://drew.edu/academic/programs-of-study/   https://drew-undergraduate-catalog.coursedog.com/programs?page=1&pq=",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 141
     },
     {
@@ -197,9 +95,7 @@
         "City": "Rotterdam",
         "URL": "https://www.elon.edu/u/academics/majors-minors-programs/",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 223
     },
     {
@@ -208,9 +104,7 @@
         "City": "Boston, Massachusetts",
         "URL": "https://www.eur.nl/en/search?s=computer&f[0]=education_type%3Abachelor&f[1]=education_type%3Acourse&f[2]=education_type%3Amaster&f[3]=education_type%3Apost_experience_master&f[4]=education_type%3Aresearch_master",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 73
     },
     {
@@ -219,9 +113,7 @@
         "City": "Fairfax, Virginia",
         "URL": "https://www.fisher.edu/academics/undergraduate-programs https://www.fisher.edu/academics/graduate-programs",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 548
     },
     {
@@ -230,9 +122,7 @@
         "City": "Hempstead, New York",
         "URL": "https://catalog.gmu.edu/programs/programsa-z/",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 354
     },
     {
@@ -241,19 +131,7 @@
         "City": "Normal, Illinois",
         "URL": "https://www.hofstra.edu/undergraduate/ https://www.hofstra.edu/graduate/programs/",
         "合作": "INTO",
-        "重複": "NONE",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
->>>>>>> 54a0792 (2025.05.21資料更新)
-=======
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
-=======
->>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
->>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
+        "重複": ".",
         "Number_of_departments": 166
     },
     {
@@ -262,9 +140,7 @@
         "City": "Newcastle upon Tyne",
         "URL": "https://illinoisstate.edu/academics/majors/",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 307
     },
     {
@@ -273,9 +149,7 @@
         "City": "Boston, Massachusetts",
         "URL": "https://www.ncl.ac.uk/postgraduate/degrees/",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 230
     },
     {
@@ -284,9 +158,7 @@
         "City": "Nottingham",
         "URL": "https://catalog.northeastern.edu/course-descriptions/",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 30
     },
     {
@@ -295,9 +167,7 @@
         "City": "Corvallis, Oregon",
         "URL": "https://www.ntu.ac.uk/search?query=&category=&category=Courses&start_rank=",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 105
     },
     {
@@ -306,23 +176,8 @@
         "City": "Belfast",
         "URL": "https://admissions.oregonstate.edu/find-your-major",
         "合作": "INTO",
-        "重複": "NONE",
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "Number_of_departments": 701
-=======
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 702
->>>>>>> 54a0792 (2025.05.21資料更新)
-=======
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
-        "Number_of_departments": 702
-=======
-        "Number_of_departments": 701
->>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
->>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
     },
     {
         "School_name": "Saint Louis University",
@@ -330,19 +185,7 @@
         "City": "St. Louis, Missouri",
         "URL": "https://www.qub.ac.uk/courses/",
         "合作": "INTO",
-        "重複": "NONE",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
->>>>>>> 54a0792 (2025.05.21資料更新)
-=======
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
-=======
->>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
->>>>>>> 0244b1ddca5716020ce55ebc2a543fa242ff52fd
+        "重複": ".",
         "Number_of_departments": 490
     },
     {
@@ -351,9 +194,7 @@
         "City": "San Jose, California",
         "URL": "https://catalog.slu.edu/programs/",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 466
     },
     {
@@ -362,9 +203,7 @@
         "City": "Los Angeles, California",
         "URL": "https://catalog.sjsu.edu/content.php?catoid=13&navoid=4973",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 137
     },
     {
@@ -373,9 +212,7 @@
         "City": "Leiden",
         "URL": "https://admission.ucla.edu/apply/majors#The_College",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 40
     },
     {
@@ -384,9 +221,7 @@
         "City": "Amsterdam",
         "URL": "https://www.universiteitleiden.nl/en/education/study-programmes/professionals?pageNumber=1&language=english",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 188
     },
     {
@@ -395,9 +230,7 @@
         "City": "Colchester",
         "URL": "https://www.uva.nl/en/education/master-s/master-s-programmes/masters-programmes.html",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 841
     },
     {
@@ -406,9 +239,7 @@
         "City": "Exeter",
         "URL": "https://www.essex.ac.uk/course-search?collection=essex~sp-courses-meta&start_rank=",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 522
     },
     {
@@ -417,9 +248,7 @@
         "City": "Leicester",
         "URL": "https://search.exeter.ac.uk/s/search.html?collection=uoe~sp-search&f.Tabs%7Cuoe~ds-courses=Courses&num_ranks=1000&sort=",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 293
     },
     {
@@ -428,9 +257,7 @@
         "City": "Nottingham",
         "URL": "https://www.leeds.ac.uk/search?complete_url=?num_ranks=10000&query=%21FunDoesNotExist%3APadreNull&f.Filter+your+results%7CFUN6339tqai975jbmvk19nt89li3=Courses&collection=leeds-meta&sort=title",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 288
     },
     {
@@ -439,9 +266,7 @@
         "City": "Southampton",
         "URL": "https://le.ac.uk/courses",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 954
     },
     {
@@ -450,9 +275,7 @@
         "City": "Stirling",
         "URL": "https://www.nottingham.ac.uk/",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 215
     },
     {
@@ -461,9 +284,7 @@
         "City": "Coventry",
         "URL": "https://www.southampton.ac.uk/courses/undergraduate?keyword_filter=",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 252
     },
     {
@@ -472,9 +293,7 @@
         "City": "Seattle, Washington",
         "URL": "https://www.stir.ac.uk/search/?tab=courses",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 533
     },
     {
@@ -483,9 +302,7 @@
         "City": "Montclair, New Jersey",
         "URL": "https://warwick.ac.uk/study/postgraduate/courses/",
         "合作": "INTO",
-        "重複": "NONE",
-        "unnamed: 7": "NONE",
-        "unnamed: 8": "NONE",
+        "重複": ".",
         "Number_of_departments": 150
     }
 ]

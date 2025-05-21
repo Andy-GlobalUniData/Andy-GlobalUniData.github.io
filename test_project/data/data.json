@@ -8,10 +8,23 @@
         "URL": "https://www.aston.ac.uk/study/courses/accounting-and-finance-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Accounting and Finance BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/accounting-and-finance-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Accounting and Finance Manager Degree Apprenticeship BSc",
         "URL": "https://www.aston.ac.uk/study/courses/accounting-and-finance-manager-degree-apprenticeship-bsc"
     },
@@ -104,10 +117,23 @@
         "URL": "https://www.aston.ac.uk/node/8228"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Artificial Intelligence MSc -\nPostgraduate MA/MSc courses",
+        "URL": "https://www.aston.ac.uk/study/courses/artificial-intelligence-msc/january-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Artificial Intelligence and Robotics BSc",
         "URL": "https://www.aston.ac.uk/study/courses/ai-and-robotics-bsc"
     },
@@ -136,10 +162,23 @@
         "URL": "https://www.aston.ac.uk/study/courses/artificial-intelligence-business-strategy-msc/september-2025"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Artificial Intelligence with Business Strategy MSc -\nPostgraduate MA/MSc courses",
+        "URL": "https://www.aston.ac.uk/study/courses/artificial-intelligence-business-strategy-msc/january-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Aston Executive Leadership Degree Apprenticeship PgDip -\nDegree apprenticeships, MBA",
         "URL": "https://www.aston.ac.uk/study/courses/aston-executive-leadership-degree-apprenticeship-pgdip/september-2025"
     },
@@ -152,18 +191,30 @@
         "URL": "https://www.aston.ac.uk/study/courses/biochemistry-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Biochemistry BSc",
         "URL": "https://www.aston.ac.uk/study/courses/biochemistry-bsc/september-2026"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Bioinformatics and Genomic Medicine MSc -\nPostgraduate MA/MSc courses",
         "URL": "https://www.aston.ac.uk/study/courses/bioinformatics-and-genomic-medicine-msc/september-2025"
     },
@@ -224,18 +275,30 @@
         "URL": "https://www.aston.ac.uk/study/courses/biomedical-science-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Biomedical Science BSc",
         "URL": "https://www.aston.ac.uk/study/courses/biomedical-science-bsc/september-2026"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Biosciences MRes -\nPostgraduate MA/MSc courses",
         "URL": "https://www.aston.ac.uk/study/courses/biosciences-mres"
     },
@@ -280,18 +343,44 @@
         "URL": "https://www.aston.ac.uk/node/8199"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Business Analytics BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/business-analytics-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Business and International Relations BSc",
         "URL": "https://www.aston.ac.uk/study/courses/business-and-international-relations-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Business and International Relations BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/business-and-international-relations-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Business and Management BSc",
         "URL": "https://www.aston.ac.uk/study/courses/business-and-management-bsc"
     },
@@ -312,10 +401,23 @@
         "URL": "https://www.aston.ac.uk/node/8243"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Business and Management BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/business-and-management-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Business and Management MSc -\nPostgraduate MA/MSc courses",
         "URL": "https://www.aston.ac.uk/study/courses/business-and-management-msc/september-2025"
     },
@@ -328,18 +430,44 @@
         "URL": "https://www.aston.ac.uk/study/courses/business-and-politics-bsc/september-2025"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Business and Politics BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/business-and-politics-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Business and Sociology BSc",
         "URL": "https://www.aston.ac.uk/study/courses/business-and-sociology-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Business and Sociology BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/business-and-sociology-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Business and Supply Chain Management BSc",
         "URL": "https://www.aston.ac.uk/study/courses/business-and-supply-chain-management-bsc"
     },
@@ -360,18 +488,44 @@
         "URL": "https://www.aston.ac.uk/study/courses/business-computing-and-it-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Business Computing and IT BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/business-computing-and-it-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Business Enterprise Development BSc",
         "URL": "https://www.aston.ac.uk/study/courses/business-enterprise-development-bsc/september-2025"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Business Enterprise Development BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/business-enterprise-development-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Cell Biology Standalone module -\nProfessional courses/CPD, Online courses",
         "URL": "https://www.aston.ac.uk/study/courses/cell-biology-standalone-module/september-2025"
     },
@@ -544,10 +698,23 @@
         "URL": "https://www.aston.ac.uk/study/courses/computer-science-bsc/september-2026"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Computer Science MSc -\nPostgraduate MA/MSc courses",
+        "URL": "https://www.aston.ac.uk/study/courses/computer-science-msc/january-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Concepts of Forensic Inference and Statistics Standalone module -\nProfessional courses/CPD",
         "URL": "https://www.aston.ac.uk/study/courses/concepts-forensic-inference-and-statistics-standalone-module/september-2025"
     },
@@ -592,10 +759,23 @@
         "URL": "https://www.aston.ac.uk/study/courses/criminology-msc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Criminology BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/criminology-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Cyber Security MSc -\nPostgraduate MA/MSc courses",
         "URL": "https://www.aston.ac.uk/study/courses/cyber-security-msc/september-2025"
     },
@@ -680,10 +860,23 @@
         "URL": "https://www.aston.ac.uk/study/courses/data-science-and-artificial-intelligence-msc/september-2025"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Data Science and Artificial Intelligence MSc -\nPostgraduate MA/MSc courses",
+        "URL": "https://www.aston.ac.uk/study/courses/data-science-and-artificial-intelligence-msc/january-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Design Engineering BEng",
         "URL": "https://www.aston.ac.uk/study/courses/design-engineering-beng"
     },
@@ -776,10 +969,23 @@
         "URL": "https://www.aston.ac.uk/study/courses/economics-and-politics-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Economics and Politics BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/economics-and-politics-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "EEG in Practice Standalone module -\nProfessional courses/CPD, Online courses",
         "URL": "https://www.aston.ac.uk/study/courses/eeg-practice-standalone-module/september-2025"
     },
@@ -864,10 +1070,23 @@
         "URL": "https://www.aston.ac.uk/study/courses/engineering-management-msc/september-2025"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Engineering Management MSc -\nPostgraduate MA/MSc courses",
+        "URL": "https://www.aston.ac.uk/study/courses/engineering-management-msc/january-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "English MA -\nPostgraduate MA/MSc courses",
         "URL": "https://www.aston.ac.uk/study/courses/english-ma"
     },
@@ -888,26 +1107,65 @@
         "URL": "https://www.aston.ac.uk/study/courses/english-and-sociology-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "English and Sociology BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/english-and-sociology-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "English Language BA",
         "URL": "https://www.aston.ac.uk/study/courses/english-language-ba"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "English Language BA",
+        "URL": "https://www.aston.ac.uk/study/courses/english-language-ba/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "English Language and Literature BA",
         "URL": "https://www.aston.ac.uk/study/courses/english-language-and-literature-ba"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "English Language and Literature BA",
+        "URL": "https://www.aston.ac.uk/study/courses/english-language-and-literature-ba/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Entrepreneurship and Innovation MSc -\nPostgraduate MA/MSc courses",
         "URL": "https://www.aston.ac.uk/study/courses/entrepreneurship-msc/september-2025"
     },
@@ -952,10 +1210,23 @@
         "URL": "https://www.aston.ac.uk/study/courses/finance-msc/september-2025"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Finance BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/finance-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Financial Management MSc -\nPostgraduate MA/MSc courses",
         "URL": "https://www.aston.ac.uk/study/courses/financial-management-msc/september-2025"
     },
@@ -1000,10 +1271,23 @@
         "URL": "https://www.aston.ac.uk/study/courses/foundation-programme-business-and-social-science-bsc/september-2025"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Foundation Programme in Business and Social Science BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/foundation-programme-business-and-social-science-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Foundation Programme: Artificial Intelligence and Robotics -\nFoundation programmes",
         "URL": "https://www.aston.ac.uk/study/courses/artificial-intelligence-and-robotics-foundation"
     },
@@ -1280,10 +1564,23 @@
         "URL": "https://www.aston.ac.uk/study/courses/future-vehicle-technologies-msc/september-2025"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Future Vehicle Technologies MSc -\nPostgraduate MA/MSc courses",
+        "URL": "https://www.aston.ac.uk/study/courses/future-vehicle-technologies-msc/january-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "General Dental Practice MSc -\nPostgraduate MA/MSc courses",
         "URL": "https://www.aston.ac.uk/study/courses/general-dental-practice-programme-msc/september-2025"
     },
@@ -1328,10 +1625,23 @@
         "URL": "https://www.aston.ac.uk/study/courses/global-business-and-management-top-bsc/september-2025"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Global Business and Management",
+        "URL": "https://www.aston.ac.uk/study/courses/global-business-and-management-top-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Haematology and Transfusion Science Standalone module -\nProfessional courses/CPD, Online courses",
         "URL": "https://www.aston.ac.uk/study/courses/haematology-and-transfusion-science-standalone-module/september-2025"
     },
@@ -1381,6 +1691,13 @@
         "City": "Unknown",
         "﻿School Name": "Aston University",
         "Department Name": "Healthcare Science",
+        "URL": "https://www.aston.ac.uk/study/courses/healthcare-science-audiology-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Healthcare Science",
         "URL": "https://www.aston.ac.uk/study/courses/healthcare-science-audiology-degree-apprenticeship-bsc/september-2025"
     },
     {
@@ -1392,18 +1709,30 @@
         "URL": "https://www.aston.ac.uk/study/courses/healthcare-science-audiology-direct-entry-final-year-bsc/september-2025"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Healthcare Science Audiology",
         "URL": "https://www.aston.ac.uk/study/courses/healthcare-science-audiology-direct-entry-final-year-bsc/september-2026"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Hearing Therapy Professional Doctorate -\nResearch degrees/PhD",
         "URL": "https://www.aston.ac.uk/study/courses/professional-doctorate-doctor-hearing-therapy-msc/september-2025"
     },
@@ -1424,34 +1753,86 @@
         "URL": "https://www.aston.ac.uk/study/courses/history-ba"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "History BA",
+        "URL": "https://www.aston.ac.uk/study/courses/history-ba/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "History and English BSc",
         "URL": "https://www.aston.ac.uk/study/courses/history-and-english-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "History and English BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/history-and-english-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "History and International Relations BSc",
         "URL": "https://www.aston.ac.uk/study/courses/history-and-international-relations-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "History and International Relations BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/history-and-international-relations-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "History and Politics BSc",
         "URL": "https://www.aston.ac.uk/study/courses/history-and-politics-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "History and Politics BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/history-and-politics-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Human Anatomy and Physiology Standalone module -\nProfessional courses/CPD, Online courses",
         "URL": "https://www.aston.ac.uk/study/courses/human-anatomy-and-physiology-standalone-module/september-2025"
     },
@@ -1480,10 +1861,23 @@
         "URL": "https://www.aston.ac.uk/study/courses/human-resources-and-business-management-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Human Resources and Business Management BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/human-resources-and-business-management-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Immunology Standalone module -\nProfessional courses/CPD, Online courses",
         "URL": "https://www.aston.ac.uk/study/courses/immunology-standalone-module/september-2025"
     },
@@ -1528,20 +1922,41 @@
         "URL": "https://www.aston.ac.uk/study/courses/international-business-and-economics-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "International Business and Economics BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/international-business-and-economics-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "International Business and Management BSc",
         "URL": "https://www.aston.ac.uk/study/courses/international-business-and-management-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
         "Department Name": "International Development Management BSc",
         "URL": "https://www.aston.ac.uk/study/courses/international-development-management-bsc"
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "International Business and Management BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/international-business-and-management-bsc/september-2026"
+>>>>>>> 54a0792 (2025.05.21資料更新)
     },
     {
         "School Name": null,
@@ -1560,10 +1975,23 @@
         "URL": "https://www.aston.ac.uk/study/courses/international-relations-and-sociology-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "International Relations and Sociology BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/international-relations-and-sociology-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Investment Analysis and Risk MSc -\nPostgraduate MA/MSc courses",
         "URL": "https://www.aston.ac.uk/study/courses/investment-analysis-msc"
     },
@@ -1584,10 +2012,23 @@
         "URL": "https://www.aston.ac.uk/study/courses/law-llb"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Law LLB",
+        "URL": "https://www.aston.ac.uk/study/courses/law-llb/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Logistics with Supply Chain Management BSc",
         "URL": "https://www.aston.ac.uk/study/courses/logistics-supply-chain-management-bsc"
     },
@@ -1616,12 +2057,20 @@
         "URL": "https://www.aston.ac.uk/study/courses/marketing-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
         "Department Name": "Masters in Management MiM -\nOnline courses",
         "URL": "https://www.aston.ac.uk/node/6960"
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Marketing BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/marketing-bsc/september-2026"
+>>>>>>> 54a0792 (2025.05.21資料更新)
     },
     {
         "School Name": null,
@@ -1808,18 +2257,30 @@
         "URL": "https://www.aston.ac.uk/study/courses/neuroscience-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Neuroscience BSc",
         "URL": "https://www.aston.ac.uk/study/courses/neuroscience-bsc/september-2026"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Neuroscience for Drug Discovery MSc -\nPostgraduate MA/MSc courses",
         "URL": "https://www.aston.ac.uk/study/courses/neuroscience-drug-discovery-msc/september-2025"
     },
@@ -1845,21 +2306,40 @@
         "City": "Unknown",
         "﻿School Name": "Aston University",
         "Department Name": "Nursing Studies",
+        "URL": "https://www.aston.ac.uk/study/courses/nursing-studies-registered-nurse-adult-nursing-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Nursing Studies",
         "URL": "https://www.aston.ac.uk/study/courses/nursing-studies-registered-nurse-mental-health-nursing-bsc/september-2025"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Nursing Studies",
         "URL": "https://www.aston.ac.uk/study/courses/nursing-studies-registered-nurse-mental-health-nursing-bsc/september-2026"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Ocular Surface Disease Management Standalone module -\nProfessional courses/CPD, Online courses",
         "URL": "https://www.aston.ac.uk/study/courses/ocular-surface-disease-management-standalone-module/october-2025"
     },
@@ -1872,18 +2352,30 @@
         "URL": "https://www.aston.ac.uk/study/courses/optometry-moptom"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Optometry MOptom -\nUndergraduate degrees",
         "URL": "https://www.aston.ac.uk/study/courses/optometry-moptom/september-2026"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Optometry / Ophthalmic Science MSc -\nPostgraduate MA/MSc courses, Research degrees/PhD",
         "URL": "https://www.aston.ac.uk/study/courses/optometry-ophthalmic-science-msc/september-2025"
     },
@@ -1944,18 +2436,30 @@
         "URL": "https://www.aston.ac.uk/study/courses/pharmacy-mpharm"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Pharmacy MPharm -\nUndergraduate degrees",
         "URL": "https://www.aston.ac.uk/study/courses/pharmacy-mpharm/september-2026"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "PhD - Aston Business School -\nResearch degrees/PhD",
         "URL": "https://www.aston.ac.uk/study/courses/phd-aston-business-school/october-2025"
     },
@@ -2008,18 +2512,44 @@
         "URL": "https://www.aston.ac.uk/study/courses/politics-and-sociology-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Politics and Sociology BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/politics-and-sociology-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Politics with International Relations BSc",
         "URL": "https://www.aston.ac.uk/study/courses/politics-international-relations-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Politics with International Relations BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/politics-international-relations-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Practical Process Engineering -\nProfessional courses/CPD",
         "URL": "https://www.aston.ac.uk/study/courses/practical-process-engineering/october-2021"
     },
@@ -2136,74 +2666,128 @@
         "URL": "https://www.aston.ac.uk/study/courses/psychology-conversion-msc/september-2025"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Psychology - 3 Year BSc",
         "URL": "https://www.aston.ac.uk/study/courses/psychology-3-year-bsc/september-2026"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Psychology - 4 Year BSc",
         "URL": "https://www.aston.ac.uk/study/courses/psychology-bsc/september-2026"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Psychology and Business BSc",
         "URL": "https://www.aston.ac.uk/study/courses/psychology-and-business-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Psychology and Business BSc",
         "URL": "https://www.aston.ac.uk/study/courses/psychology-and-business-bsc/september-2026"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Psychology and Marketing BSc",
         "URL": "https://www.aston.ac.uk/study/courses/psychology-and-marketing-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Psychology and Marketing BSc",
         "URL": "https://www.aston.ac.uk/study/courses/psychology-and-marketing-bsc/september-2026"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Psychology and Sociology BSc",
         "URL": "https://www.aston.ac.uk/study/courses/psychology-and-sociology-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Psychology and Sociology BSc",
         "URL": "https://www.aston.ac.uk/study/courses/psychology-and-sociology-bsc/september-2026"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Public Health MPH -\nPostgraduate MA/MSc courses",
         "URL": "https://www.aston.ac.uk/study/courses/public-health-mph/september-2025"
     },
@@ -2256,10 +2840,23 @@
         "URL": "https://www.aston.ac.uk/study/courses/robotics-and-autonomous-systems-msc/september-2025"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Robotics and Autonomous Systems MSc -\nPostgraduate MA/MSc courses",
+        "URL": "https://www.aston.ac.uk/study/courses/robotics-and-autonomous-systems-msc/january-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Science Industry Process/Plant Engineer Degree Apprenticeship BEng",
         "URL": "https://www.aston.ac.uk/study/courses/science-industry-processplant-engineer-degree-apprenticeship-beng/september-2025"
     },
@@ -2272,18 +2869,44 @@
         "URL": "https://www.aston.ac.uk/study/courses/smart-manufacturing-msc/september-2025"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Smart Manufacturing MSc -\nPostgraduate MA/MSc courses",
+        "URL": "https://www.aston.ac.uk/study/courses/smart-manufacturing-msc/january-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Sociology BSc",
         "URL": "https://www.aston.ac.uk/study/courses/sociology-bsc"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Sociology BSc",
+        "URL": "https://www.aston.ac.uk/study/courses/sociology-bsc/september-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Stem Cells and Regenerative Medicine MSc -\nPostgraduate MA/MSc courses",
         "URL": "https://www.aston.ac.uk/study/courses/stem-cells-and-regenerative-medicines-msc/september-2025"
     },
@@ -2320,10 +2943,23 @@
         "URL": "https://www.aston.ac.uk/study/courses/supply-chain-management-msc/september-2025"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Supply Chain Management MSc -\nPostgraduate MA/MSc courses",
+        "URL": "https://www.aston.ac.uk/study/courses/supply-chain-management-msc/january-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Supply Chain Management",
         "URL": "https://www.aston.ac.uk/study/courses/supply-chain-management-professional-practice-degree-apprenticeship-bsc/september-2025"
     },
@@ -2344,10 +2980,23 @@
         "URL": "https://www.aston.ac.uk/study/courses/sustainable-engineering-msc/september-2025"
     },
     {
+<<<<<<< HEAD
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
         "﻿School Name": "Aston University",
+=======
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+        "Department Name": "Sustainable Engineering MSc -\nPostgraduate MA/MSc courses",
+        "URL": "https://www.aston.ac.uk/study/courses/sustainable-engineering-msc/january-2026"
+    },
+    {
+        "School Name": "Aston University",
+        "Country": "United Kingdom",
+        "City": "Birmingham",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "TESOL MA -\nPostgraduate MA/MSc courses",
         "URL": "https://www.aston.ac.uk/study/courses/tesol-ma/september-2025"
     },
@@ -17971,6 +18620,14 @@
         "Duration_Study_list": " months"
     },
     {
+        "School Name": "Erasmus Universitiet Rotterdam",
+        "Country": "Netherlands",
+        "City": "Rotterdam",
+        "Department Name": "Technical Medicine",
+        "URL": "https://www.eur.nl/en/master/technical-medicine",
+        "Duration_Study_list": " years"
+    },
+    {
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
@@ -32631,81 +33288,149 @@
         "School Name": "Nottingham Trent University",
         "Country": "United Kingdom",
         "City": "Nottingham",
+<<<<<<< HEAD
         "Department Name": "Occupational Therapy - BSc (Hons)",
         "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fsocial-sciences%2Fug%2Fbsc-occupational-therapy&auth=eYCvg%2FYMjYpcPepGKsoJTQ&profile=_default&rank=11&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/social-sciences/ug/bsc-occupational-therapy"
+=======
+        "Department Name": "Social Work - NTU in Mansfield - BA (Hons)",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fmansfield%2Fug%2Fsocial-work&auth=Hcr5pAC%2B1Qt8pGnccwc56Q&profile=_default&rank=1&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "Description": "ntu.ac.uk/course/mansfield/ug/social-work"
+>>>>>>> 54a0792 (2025.05.21資料更新)
     },
     {
         "School Name": "Nottingham Trent University",
         "Country": "United Kingdom",
         "City": "Nottingham",
+<<<<<<< HEAD
         "Department Name": "Project Management",
         "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Fenterprising-ashfield%2Fproject-management&auth=%2FDObrr2Yj8cDs8whf8yjbQ&profile=_default&rank=12&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/short-courses/enterprising-ashfield/project-management"
+=======
+        "Department Name": "Korean",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Faah%2Fkorean&auth=omNdhmDwbiizeM3rwOmuxw&profile=_default&rank=2&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "Description": "ntu.ac.uk/course/short-courses/aah/korean"
+>>>>>>> 54a0792 (2025.05.21資料更新)
     },
     {
         "School Name": "Nottingham Trent University",
         "Country": "United Kingdom",
         "City": "Nottingham",
+<<<<<<< HEAD
         "Department Name": "Media Communications - BA (Hons)",
         "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Farts-and-humanities%2Fug%2Fmedia-communications&auth=bJMokOklCOc8MMuDExUmcA&profile=_default&rank=13&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/arts-and-humanities/ug/media-communications"
+=======
+        "Department Name": "VR for Designers",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Fadbe%2Fvr-for-designers&auth=OOv2NyvAyrq4BPZCjth%2BLA&profile=_default&rank=3&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "Description": "ntu.ac.uk/course/short-courses/adbe/vr-for-designers"
+>>>>>>> 54a0792 (2025.05.21資料更新)
     },
     {
         "School Name": "Nottingham Trent University",
         "Country": "United Kingdom",
         "City": "Nottingham",
+<<<<<<< HEAD
         "Department Name": "Criminal Justice - NTU in Mansfield - FdA",
         "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fmansfield%2Fug%2Ffda-criminal-justice&auth=dl6nfn6FYIEeRhOnbIXuDw&profile=_default&rank=14&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/mansfield/ug/fda-criminal-justice"
+=======
+        "Department Name": "Spanish (online)",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Faah%2Fspanish-online&auth=IqFW%2BmCgCWYuZCBs5oYYvg&profile=_default&rank=4&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "Description": "ntu.ac.uk/course/short-courses/aah/spanish-online"
+>>>>>>> 54a0792 (2025.05.21資料更新)
     },
     {
         "School Name": "Nottingham Trent University",
         "Country": "United Kingdom",
         "City": "Nottingham",
+<<<<<<< HEAD
         "Department Name": "Further Education and Skills - Cert Ed",
         "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Feducation%2Fpg%2Fcerted-further-education-and-skills&auth=saVznjujKIj0KIGgvazK6A&profile=_default&rank=15&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/education/pg/certed-further-education-and-skills"
+=======
+        "Department Name": "Project Management Insights",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Fnbs%2Fproject-management2&auth=B96sX%2B4V6NfIfG0kh%2BEF1Q&profile=_default&rank=5&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "Description": "ntu.ac.uk/course/short-courses/nbs/project-management2"
+>>>>>>> 54a0792 (2025.05.21資料更新)
     },
     {
         "School Name": "Nottingham Trent University",
         "Country": "United Kingdom",
         "City": "Nottingham",
+<<<<<<< HEAD
         "Department Name": "Sociology - MA",
         "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fsocial-sciences%2Fpg%2Fma-sociology&auth=4SqfpclOiwCtAOzeKzG1jA&profile=_default&rank=16&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/social-sciences/pg/ma-sociology"
+=======
+        "Department Name": "French",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Faah%2Ffrench&auth=8DKI3P1cbSn9n4DfqIifyA&profile=_default&rank=6&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "Description": "ntu.ac.uk/course/short-courses/aah/french"
+>>>>>>> 54a0792 (2025.05.21資料更新)
     },
     {
         "School Name": "Nottingham Trent University",
         "Country": "United Kingdom",
         "City": "Nottingham",
+<<<<<<< HEAD
         "Department Name": "Mechanical Engineering for England - NTU in Mansfield - Higher National Certificate",
         "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fmansfield%2Fug%2Fhnc-mechanical-engineering&auth=UPSBCos2QOHoZkvPsCidwA&profile=_default&rank=17&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/mansfield/ug/hnc-mechanical-engineering"
+=======
+        "Department Name": "Arabic",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Faah%2Farabic&auth=H46FBzNP7ME0bBBE%2BBd9Gg&profile=_default&rank=7&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "Description": "ntu.ac.uk/course/short-courses/aah/arabic"
+>>>>>>> 54a0792 (2025.05.21資料更新)
     },
     {
         "School Name": "Nottingham Trent University",
         "Country": "United Kingdom",
         "City": "Nottingham",
+<<<<<<< HEAD
         "Department Name": "Mechanical Engineering for England - NTU in Mansfield - Higher National Diploma",
         "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fmansfield%2Fug%2Fhnd-mechanical-engineering&auth=2D019WlwcRceTvg6YrNfBA&profile=_default&rank=18&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/mansfield/ug/hnd-mechanical-engineering"
+=======
+        "Department Name": "German",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Faah%2Fgerman&auth=SP7ZNM%2BFJsa8roQXgcJisA&profile=_default&rank=8&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "Description": "ntu.ac.uk/course/short-courses/aah/german"
+>>>>>>> 54a0792 (2025.05.21資料更新)
     },
     {
         "School Name": "Nottingham Trent University",
         "Country": "United Kingdom",
         "City": "Nottingham",
+<<<<<<< HEAD
         "Department Name": "How to Build Leadership Resilience",
         "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Fnbs%2Fhow-to-build-leadership-resilience&auth=Yds61lMq2r9%2BPrREzhswjA&profile=_default&rank=19&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/short-courses/nbs/how-to-build-leadership-resilience"
+=======
+        "Department Name": "Filmmaking - MA",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fart-and-design%2Fpg%2Fma-filmmaking&auth=UMBT6fs94gYDZK63DUM26g&profile=_default&rank=9&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "Description": "ntu.ac.uk/course/art-and-design/pg/ma-filmmaking"
+>>>>>>> 54a0792 (2025.05.21資料更新)
     },
     {
         "School Name": "Nottingham Trent University",
         "Country": "United Kingdom",
         "City": "Nottingham",
+<<<<<<< HEAD
         "Department Name": "Mandarin Chinese",
         "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Faah%2Fmandarin-chinese&auth=%2F7QfzfbzDmXqL5RfII501w&profile=_default&rank=20&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/short-courses/aah/mandarin-chinese"
+=======
+        "Department Name": "Renal Care - BSc (Hons)",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fsocial-sciences%2Fpr%2Frenal-care&auth=VkfzKqOMRUnOwuCZ5QrfWg&profile=_default&rank=10&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "Description": "ntu.ac.uk/course/social-sciences/pr/renal-care"
+    },
+    {
+        "School Name": "Nottingham Trent University",
+        "Country": "United Kingdom",
+        "City": "Nottingham",
+        "Department Name": "Games Art - BA (Hons)",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fart-and-design%2Fug%2Fba-hons-games-art&auth=5XHjugtpHPpESD2nMhenjg&profile=_default&rank=31&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "Description": "ntu.ac.uk/course/art-and-design/ug/ba-hons-games-art"
+>>>>>>> 54a0792 (2025.05.21資料更新)
     },
     {
         "School Name": "Nottingham Trent University",
@@ -32792,16 +33517,8 @@
         "Country": "United Kingdom",
         "City": "Nottingham",
         "Department Name": "Architectural Model Making: Traditional and Digital Techniques",
-        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Fadbe%2Farchitectural-model-making&auth=NzdlbHYpYW%2FkipvRHBJdRw&profile=_default&rank=31&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Fadbe%2Farchitectural-model-making&auth=NzdlbHYpYW%2FkipvRHBJdRw&profile=_default&rank=32&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/short-courses/adbe/architectural-model-making"
-    },
-    {
-        "School Name": "Nottingham Trent University",
-        "Country": "United Kingdom",
-        "City": "Nottingham",
-        "Department Name": "Games Art - BA (Hons)",
-        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fart-and-design%2Fug%2Fba-hons-games-art&auth=5XHjugtpHPpESD2nMhenjg&profile=_default&rank=32&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
-        "Description": "ntu.ac.uk/course/art-and-design/ug/ba-hons-games-art"
     },
     {
         "School Name": "Nottingham Trent University",
@@ -32815,16 +33532,8 @@
         "School Name": "Nottingham Trent University",
         "Country": "United Kingdom",
         "City": "Nottingham",
-        "Department Name": "People Management Skills",
-        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Fenterprising-ashfield%2Fpeople-management-skills&auth=yY%2Fv3uTNpr8IT5QHoAiLmw&profile=_default&rank=34&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
-        "Description": "ntu.ac.uk/course/short-courses/enterprising-ashfield/people-management-skills"
-    },
-    {
-        "School Name": "Nottingham Trent University",
-        "Country": "United Kingdom",
-        "City": "Nottingham",
         "Department Name": "Nursing (Adult) - NTU in Mansfield - BSc (Hons)",
-        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fmansfield%2Fug%2Fnursing-adult&auth=g3EaI%2BVbnw0zbGJOcrd1IQ&profile=_default&rank=35&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fmansfield%2Fug%2Fnursing-adult&auth=g3EaI%2BVbnw0zbGJOcrd1IQ&profile=_default&rank=34&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/mansfield/ug/nursing-adult"
     },
     {
@@ -32832,7 +33541,7 @@
         "Country": "United Kingdom",
         "City": "Nottingham",
         "Department Name": "CAD for Improvers",
-        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Fadbe%2Fcad-for-improvers&auth=EeuuJgCSZaOQfQiktaPj2g&profile=_default&rank=36&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Fadbe%2Fcad-for-improvers&auth=EeuuJgCSZaOQfQiktaPj2g&profile=_default&rank=35&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/short-courses/adbe/cad-for-improvers"
     },
     {
@@ -32840,8 +33549,29 @@
         "Country": "United Kingdom",
         "City": "Nottingham",
         "Department Name": "Engineering Management (top up) - NTU in Mansfield - BEng (Hons)",
+<<<<<<< HEAD
         "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fmansfield%2Fug%2Fengineering-management-top-up&auth=iNqQ7TQiBiMYFhAU%2FFcoew&profile=_default&rank=37&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/mansfield/ug/engineering-management-top-up"
+    },
+    {
+        "School Name": "Nottingham Trent University",
+        "Country": "United Kingdom",
+        "City": "Nottingham",
+        "Department Name": "Hand Weaving Summer School",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Fart-and-design%2Fhand-weaving-summer-school&auth=EgLrDsIzePXr876SEE5kXw&profile=_default&rank=38&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "Description": "ntu.ac.uk/course/short-courses/art-and-design/hand-weaving-summer-school"
+=======
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fmansfield%2Fug%2Fengineering-management-top-up&auth=iNqQ7TQiBiMYFhAU%2FFcoew&profile=_default&rank=36&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "Description": "ntu.ac.uk/course/mansfield/ug/engineering-management-top-up"
+>>>>>>> 54a0792 (2025.05.21資料更新)
+    },
+    {
+        "School Name": "Nottingham Trent University",
+        "Country": "United Kingdom",
+        "City": "Nottingham",
+        "Department Name": "Education - FdA",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fmansfield%2Fug%2Ffda-education&auth=U3idWazkK%2FRRl9lByTh%2F8g&profile=_default&rank=37&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "Description": "ntu.ac.uk/course/mansfield/ug/fda-education"
     },
     {
         "School Name": "Nottingham Trent University",
@@ -32855,9 +33585,9 @@
         "School Name": "Nottingham Trent University",
         "Country": "United Kingdom",
         "City": "Nottingham",
-        "Department Name": "Education - FdA",
-        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fmansfield%2Fug%2Ffda-education&auth=U3idWazkK%2FRRl9lByTh%2F8g&profile=_default&rank=39&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
-        "Description": "ntu.ac.uk/course/mansfield/ug/fda-education"
+        "Department Name": "TikTok Marketing",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Fart-and-design%2Ftiktok-marketing&auth=3jxDqZd048spZ1%2Bl3%2BUAog&profile=_default&rank=39&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "Description": "ntu.ac.uk/course/short-courses/art-and-design/tiktok-marketing"
     },
     {
         "School Name": "Nottingham Trent University",
@@ -32871,6 +33601,7 @@
         "School Name": "Nottingham Trent University",
         "Country": "United Kingdom",
         "City": "Nottingham",
+<<<<<<< HEAD
         "Department Name": "TikTok Marketing",
         "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Fart-and-design%2Ftiktok-marketing&auth=3jxDqZd048spZ1%2Bl3%2BUAog&profile=_default&rank=41&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/short-courses/art-and-design/tiktok-marketing"
@@ -32881,6 +33612,10 @@
         "City": "Nottingham",
         "Department Name": "Understanding Client Needs",
         "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Faah%2Funderstanding-client-needs&auth=zxkKpKAFfgviw%2FWUR4w%2F0A&profile=_default&rank=42&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+=======
+        "Department Name": "Understanding Client Needs",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Faah%2Funderstanding-client-needs&auth=zxkKpKAFfgviw%2FWUR4w%2F0A&profile=_default&rank=41&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Description": "ntu.ac.uk/course/short-courses/aah/understanding-client-needs"
     },
     {
@@ -32888,7 +33623,11 @@
         "Country": "United Kingdom",
         "City": "Nottingham",
         "Department Name": "Oil Painting",
+<<<<<<< HEAD
         "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Fart-and-design%2Foil-painting&auth=BauBDios57GWFpTNdNllWg&profile=_default&rank=43&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+=======
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Fart-and-design%2Foil-painting&auth=BauBDios57GWFpTNdNllWg&profile=_default&rank=42&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Description": "ntu.ac.uk/course/short-courses/art-and-design/oil-painting"
     },
     {
@@ -32904,7 +33643,7 @@
         "Country": "United Kingdom",
         "City": "Nottingham",
         "Department Name": "Ambulance Technician Practice - NTU in Mansfield - Certificate of Higher Education in",
-        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fmansfield%2Fug%2Fambulance-technician-practice&auth=Vq8%2FCwF825YbcfLgRj60Rw&profile=_default&rank=45&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fmansfield%2Fug%2Fambulance-technician-practice&auth=Vq8%2FCwF825YbcfLgRj60Rw&profile=_default&rank=43&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/mansfield/ug/ambulance-technician-practice"
     },
     {
@@ -32912,15 +33651,23 @@
         "Country": "United Kingdom",
         "City": "Nottingham",
         "Department Name": "Exploring Colour",
-        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Fart-and-design%2Fexploring-colour&auth=lPw3uJk9h4P71HGcWZeH3A&profile=_default&rank=46&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Fart-and-design%2Fexploring-colour&auth=lPw3uJk9h4P71HGcWZeH3A&profile=_default&rank=44&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/short-courses/art-and-design/exploring-colour"
     },
     {
         "School Name": "Nottingham Trent University",
         "Country": "United Kingdom",
         "City": "Nottingham",
+        "Department Name": "Exploring Neurodiversity in the Workplace",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Fnbs%2Fexploring-neurodiversity-in-the-workplace2&auth=lg3tt536esxn83N1aHjydA&profile=_default&rank=45&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "Description": "ntu.ac.uk/course/short-courses/nbs/exploring-neurodiversity-in-the-workplace2"
+    },
+    {
+        "School Name": "Nottingham Trent University",
+        "Country": "United Kingdom",
+        "City": "Nottingham",
         "Department Name": "Games Design - BSc (Hons)",
-        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fart-and-design%2Fug%2Fbsc-hons-games-design&auth=SAT50c7Q%2BC3dPgLocSvUbQ&profile=_default&rank=47&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fart-and-design%2Fug%2Fbsc-hons-games-design&auth=SAT50c7Q%2BC3dPgLocSvUbQ&profile=_default&rank=46&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/art-and-design/ug/bsc-hons-games-design"
     },
     {
@@ -32928,7 +33675,7 @@
         "Country": "United Kingdom",
         "City": "Nottingham",
         "Department Name": "Confident Writing for Business",
-        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Faah%2Fwriting-skills&auth=XjMYwvqFGRSU86PZr37ogg&profile=_default&rank=48&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fshort-courses%2Faah%2Fwriting-skills&auth=XjMYwvqFGRSU86PZr37ogg&profile=_default&rank=47&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/short-courses/aah/writing-skills"
     },
     {
@@ -32936,7 +33683,7 @@
         "Country": "United Kingdom",
         "City": "Nottingham",
         "Department Name": "Chemistry - MChem (Hons)",
-        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fscience-and-technology%2Fug%2Fmchem-chemistry&auth=s0r%2FCkNDEzcCGjxAW5XDCw&profile=_default&rank=49&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fscience-and-technology%2Fug%2Fmchem-chemistry&auth=s0r%2FCkNDEzcCGjxAW5XDCw&profile=_default&rank=48&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/science-and-technology/ug/mchem-chemistry"
     },
     {
@@ -32944,8 +33691,16 @@
         "Country": "United Kingdom",
         "City": "Nottingham",
         "Department Name": "Filmmaking - BA (Hons)",
-        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fart-and-design%2Fug%2Fba-hons-filmmaking&auth=8EwMmccdz%2Fpm%2BTJ1k%2F8WMg&profile=_default&rank=50&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fart-and-design%2Fug%2Fba-hons-filmmaking&auth=8EwMmccdz%2Fpm%2BTJ1k%2F8WMg&profile=_default&rank=49&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
         "Description": "ntu.ac.uk/course/art-and-design/ug/ba-hons-filmmaking"
+    },
+    {
+        "School Name": "Nottingham Trent University",
+        "Country": "United Kingdom",
+        "City": "Nottingham",
+        "Department Name": "Executive PhD - PhD",
+        "URL": "https://ntu-search.funnelback.squiz.cloud/s/redirect?collection=ntu~sp-global&url=https%3A%2F%2Fwww.ntu.ac.uk%2Fcourse%2Fnottingham-business-school%2Fres%2Fexecutive-phd&auth=gYm36b7wSNWf9HWY3gEw5A&profile=_default&rank=50&query=%7Ccategory%3A%22%24%2B%2B+Courses+%24%2B%2B%22",
+        "Description": "ntu.ac.uk/course/nottingham-business-school/res/executive-phd"
     },
     {
         "School Name": null,
@@ -34766,6 +35521,13 @@
         "City": "Belfast",
         "Department Name": "Biomedical SciencesFD",
         "URL": "https://www.qub.ac.uk//home/courses/undergraduate/2025/biomedical-sciences-fd-b94a/"
+    },
+    {
+        "School Name": "Queen's University Belfast",
+        "Country": "United Kingdom",
+        "City": "Belfast",
+        "Department Name": "Biomedical SciencesFD",
+        "URL": "https://www.qub.ac.uk//home/courses/undergraduate/biomedical-sciences-fd/"
     },
     {
         "School Name": "Queen's University Belfast",
@@ -46475,6 +47237,1401 @@
         "School Name": null,
         "Country": "Unknown",
         "City": "Unknown",
+<<<<<<< HEAD
+=======
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Accounting (Major, Minor, Accelerated Master's (4+1))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/accounting"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Actuarial Science (Minor, Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/mathematics"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Advertising (Major/Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/advertising-public-relations-and-social-media"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "American Politics (Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/political-science-legal-studies"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Applied Ethics (Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/philosophy"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Art History (Major, Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/history"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Artificial Intelligence (Artificial Intelligence Minor, Artificial Intelligence Concentration)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/information-systems-operations-management/undergraduate/artificial-intelligence-minor"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Arts Administration (Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/interdisciplinary-programs"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Asian Studies (Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/interdisciplinary-programs/undergraduate/asian-studies-minor"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Associate of Arts (AA) (Associate's)",
+        "URL": "https://suffolk.smartcatalogiq.com/CURRENT/Catalog/College-of-Arts-and-Sciences-Undergraduate-Programs/Undergraduate-Degree-Requirements/Associate-of-Arts-AA"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Associate of Science (AS) (Associate's)",
+        "URL": "https://suffolk.smartcatalogiq.com/CURRENT/Catalog/College-of-Arts-and-Sciences-Undergraduate-Programs/Undergraduate-Degree-Requirements/Associate-of-Science-AS"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Biochemistry (Major)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/bicep"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Biology (Major/Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/biology"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Biotechnology (Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/biology"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Black Studies (Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/interdisciplinary-programs"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Business Analytics (Major, Minor, Accelerated Bachelor's/Master's)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/big-data-business-analytics"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Business Analytics & Information Systems (Major)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/information-systems-operations-management"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Business Economics (Major, Minor)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/business-economics"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Business Law (Minor)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/accounting"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "CAS Self-Designed Major (Major)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/interdisciplinary-programs"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Chemistry (Major/Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/bicep"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Computer Science (Major/Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/computer-science"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Corporate Accounting & Finance (Major)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/finance/undergraduate/caf-major"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Corporate Entrepreneurship (Minor, Concentration)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/management-entrepreneurship"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Corporate Finance (Minor, Concentration)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/finance"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Creative Writing (Minor, Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/english"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Criminal Justice (Major/Minor, Accelerated Bachelor's/Master's)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/sociology"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Culture, Conflict & Communication (Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/interdisciplinary-programs"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Cybersecurity (Minor)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/information-systems-operations-management"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Digital Marketing (Minor, Concentration)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/marketing"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Diversity, Equity, and Inclusion (Minor, Concentration)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/management-entrepreneurship"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Economics (Major/Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/economics"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "English (Major/Minor, Creative Writing Minor, Public and Professional Writing Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/english"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Entrepreneurship (Major, Minor)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/management-entrepreneurship"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Environmental Science (Major/Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/bicep"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Environmental Studies (Major/Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/bicep"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Exploratory/Undeclared (Exploratory/Undeclared CAS)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/exploratory"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Family Entrepreneurship (Minor, Concentration)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/management-entrepreneurship"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Finance (Major, Minor, Accelerated Master's (4+1))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/finance"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Financial Institutions (Minor, Concentration)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/finance"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Financial Planning (Major, Concentration, Certificate)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/finance"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "FinTech (Minor)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/finance"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Forensic Science (Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/interdisciplinary-programs"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Foundation Studies (Art) (Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/art-design"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "General Business/Undeclared (General Business/Undeclared Options)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/undeclared"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Global & Cultural Communication (Major/Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/communication-journalism-and-media"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Global Business (Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/interdisciplinary-programs"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Global Business (Major)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/strategy-and-international-business"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Global Cultural Studies (Major)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/interdisciplinary-programs"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Global Marketing (Minor, Concentration)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/marketing"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Graphic Design (Major/Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/art-design"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Health Careers (Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/biology/undergraduate/major"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Healthcare Systems and Innovation (Minor)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/healthcare-administration"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "History (Major/Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/history"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "History & Literature (Major (Honors))",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/interdisciplinary-programs/undergraduate/history-literature-honors-major"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Information Systems (Major, Minor)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/information-systems-operations-management"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Innovation Strategy (Minor)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/strategy-and-international-business"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Interdisciplinary Arts (Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/interdisciplinary-programs"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Interdisciplinary Business Studies (Major)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/interdisciplinary-business-studies"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Interior Design (Major)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/art-design"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "International Business (Minor)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/strategy-and-international-business"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "International Relations (Major/Minor, Accelerated Bachelor's/Master's)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/political-science-legal-studies"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Investments (Minor, Concentration)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/finance"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Journalism (Major/Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/communication-journalism-and-media"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Journalism (Broadcast) (Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/communication-journalism-and-media"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Journalism (Print/Web) (Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/communication-journalism-and-media"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Launching a New Venture (Minor, Concentration)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/management-entrepreneurship"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Law & Paralegal Studies (Major/Minor, Certificate, Associate's)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/political-science-legal-studies"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Leadership (Minor, Concentration)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/management-entrepreneurship"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Literature (Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/english"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Management (Major, Minor)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/management-entrepreneurship"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Marine Science (Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/biology"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Marketing (Major, Minor, Accelerated Master's (4+1))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/marketing"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Mathematics (Major/Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/mathematics"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Media & Film (Major/Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/communication-journalism-and-media"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Media & Film Production (Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/communication-journalism-and-media"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Nonprofit Management (Minor, Concentration)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/public-administration"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Philosophy (Major/Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/philosophy"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Physics (Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/bicep"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Political Science (Major/Minor, Accelerated Bachelor's/Master's)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/political-science-legal-studies"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Political Theory (Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/political-science-legal-studies"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Politics, Philosophy, & Economics (Major)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/interdisciplinary-programs/undergraduate/politics-philosophy-economics-major"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Product Innovation & Brand Marketing (Minor, Concentration)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/marketing"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Professional Sales (Minor, Concentration)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/marketing"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Psychology (Major/Minor, Accelerated Bachelor's/Master's)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/psychology"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Public & Professional Writing (Concentration, Public and Professional Writing Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/english"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Public History (Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/history"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Public Policy & Law (Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/political-science-legal-studies"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Public Relations (Major/Minor, Accelerated Bachelor's/Master's)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/advertising-public-relations-and-social-media"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Public Service (Minor)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/public-administration"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Pure Mathematics (Minor, Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/mathematics"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Radiation Science (Major/Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/radiation-science-radiation-therapy"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Radiation Therapy (Major)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/radiation-science-radiation-therapy"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Real Estate (Minor)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/accounting"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Regional & Global Histories (Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/history"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Regional Practices (Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/interdisciplinary-programs"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Religious Studies (Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/interdisciplinary-programs"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Social Entrepreneurship (Minor, Concentration)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/management-entrepreneurship"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Social Media (Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/advertising-public-relations-and-social-media"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Sociology (Major/Minor, Accelerated Bachelor's/Master's Degree)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/sociology"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Spanish (Major/Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/history"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Sports Management (Major, Minor)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/sports-management"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Sports Marketing (Minor, Concentration)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/marketing"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Studio Art (Major/Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/art-design"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Theatre (Major/Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/theatre"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "United States History (Concentration)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/history"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Women's & Gender Studies (Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/interdisciplinary-programs"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Youth & Community Studies (Minor)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/interdisciplinary-programs"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Academic Microcredentials (Academic Microcredentials)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/academic-microcredentials"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Accounting (MSA, Dual Degree Options, Accelerated Master's (4+1))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/accounting"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Accounting Principles (Concentration (MBA))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/mba"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Applied Developmental Psychology (PhD)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/psychology/graduate/phd-in-applied-developmental-psychology"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Applied Politics (MA, MPA/MAAP, MAAP/JD)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/political-science-legal-studies/graduate/master-of-arts-in-applied-politics"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Business Analysis & Reporting (Certificate)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/accounting"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Business Analytics (MSBA, Dual Degree Options)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/big-data-business-analytics"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Business Essentials (Certificate)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/mba"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Business Intelligence (Concentration (MSA))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/accounting"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Business Intelligence (Concentration (MBA))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/mba"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Clinical Psychology (PhD)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/psychology/graduate/phd-in-clinical-psychology"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Communication (Integrated Marketing Communication) (MA)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/advertising-public-relations-and-social-media/graduate/master-of-communication-integrated-marketing-communication-concentration"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Communication (Public Relations & Advertising) (MA)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/advertising-public-relations-and-social-media/graduate/master-of-communication-public-relations-advertising-concentration"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Community Health (Concentration (MPA))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/public-administration"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Corporate Accounting and Finance (Concentration (MSA))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/accounting"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Corporate Finance (Concentration (MSF), Certificate)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/finance"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Creative Disruption (Concentration (MBA))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/mba"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Crime & Justice Studies (MS, Dual Degree Options)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/sociology/graduate/master-of-science-crime-justice-studies"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Customer Insights (Certificate)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/marketing"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Data Analytics (Certificate)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/big-data-business-analytics"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Data Management (Certificate)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/big-data-business-analytics"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Data Science (Certificate)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/big-data-business-analytics"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Data Science (MS)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/computer-science"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Digital Marketing Analytics (Certificate)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/marketing"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Executive MBA (Executive MBA)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/mba"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Finance (MSF, Certificate, Dual Degree Options, Concentration (MBA), Concentration (MSBA), Accelerated Master's (4+1))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/finance"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Financial Technology (FinTech) (Certificate)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/finance"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Forensic Accounting (Concentration (MBA), Concentration (MSA))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/mba"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Foundations of Accounting & Taxation (Certificate)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/accounting"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Global Marketing (Concentration (MSM))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/marketing"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Global Public Policy (MA, MPA/MAGPP, MAGPP/JD)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/political-science-legal-studies/graduate/master-of-arts-in-global-public-policy"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Global Strategy & Leadership",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/mba"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Governmental and Not-for-Profit Accounting (Concentration (MSA))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/accounting"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Graphic Design (MA)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/art-design/graduate/master-of-arts-in-graphic-design"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Health Sector Management (Concentration (MBA))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/mba"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Healthcare Administration (MHA, MBA Health Specialized Degree, MHA Online, Dual Degree Options)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/healthcare-administration"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Healthcare Management (Concentration (MSBA))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/big-data-business-analytics"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Information Systems & Controls (Certificate)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/accounting"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Interior Architecture (MA)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/art-design/graduate/master-of-arts-in-interior-architecture"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Investments (Concentration (MSF))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/finance"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Law: Life Sciences (MSLL)",
+        "URL": "https://www.suffolk.edu/law/academics-clinics/master-of-science-in-law-life-sciences"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Leading Teams and Projects (Certificate)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/management-studies"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Management and Organizational Leadership (MMOL, Dual Degree Options)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/management-studies/graduate/master-in-management-and-organizational-leadership"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Managerial Skills (Certificate)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/management-studies"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Managing Talent (Certificate)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/management-studies"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Market Research & Customer Insights (Concentration (MSM))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/marketing"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Marketing (MSM, Dual Degree Options, Concentration (MBA), Concentration (MSBA))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/marketing"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Marketing Research (Concentration (MSM))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/marketing"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Marketing Research (Concentration (MBA))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/mba"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "MBA (MBA, Executive MBA, MBA Dual Degree Options, MBA Accelerated Programs, MBA Online)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/mba"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Medical Dosimetry (MS)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/biology/graduate/master-of-science-in-medical-dosimetry"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Mental Health Counseling (MS, Dual Degree Options)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/psychology/graduate/master-of-science-in-mental-health-counseling"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Nonprofit Management (Certificate, Concentration (MPA))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/public-administration"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Political Science (MAAP, MAAP/JD, MPA/MAAP, MAGPP, MAGPP/JD, MPA/MAGPP)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/political-science-legal-studies"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Product Management (Concentration (MSM))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/marketing/concentrations"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Public Administration (MPA, Dual Degree Options)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/public-administration"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Quantitative Finance (Concentration (MBA))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/mba"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Radiation Therapy (Certificate)",
+        "URL": "https://www.suffolk.edu/cas/degrees-programs/radiation-science-radiation-therapy"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Restorative Justice (Professional Certificate in Restorative Justice Practice)",
+        "URL": "https://www.suffolk.edu/cas/centers-institutes/center-for-restorative-justice/professional-certificate-in-restorative-justice-practice"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Risk Management (Concentration (MSF))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/finance"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "State & Local Government (Certificate, Concentration (MPA))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/public-administration"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Strategic Management (Concentration (MBA))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/mba"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Strategic Marketing (Certificate)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/marketing"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Supply Chain Management (Concentration (MBA))",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/mba"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Tax Compliance & Planning (Certificate)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/accounting"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+        "﻿School Name": "Suffolk University Boston",
+        "Department Name": "Teams & Innovation (Certificate)",
+        "URL": "https://www.suffolk.edu/business/degrees-programs/mba"
+    },
+    {
+        "School Name": null,
+        "Country": "Unknown",
+        "City": "Unknown",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "﻿School Name": "The University of Alabama at Birmingham",
         "Department Name": "Academic Advising (Graduate Certificate)",
         "URL": "https://www.uab.edu/degrees/graduate/academic-advising-gc"
@@ -68488,14 +70645,14 @@
         "Country": "United Kingdom",
         "City": "Leeds",
         "Department Name": "Course Search",
-        "URL": "https://courses.leeds.ac.uk/course-search/masters-courses"
+        "URL": "https://courses.leeds.ac.uk/course-search/undergraduate-courses"
     },
     {
         "School Name": "University of Leeds",
         "Country": "United Kingdom",
         "City": "Leeds",
         "Department Name": "Course Search",
-        "URL": "https://courses.leeds.ac.uk/course-search/undergraduate-courses"
+        "URL": "https://courses.leeds.ac.uk/course-search/masters-courses"
     },
     {
         "School Name": "University of Leeds",
@@ -68678,6 +70835,13 @@
         "City": "Leeds",
         "Department Name": "Data Science BSc",
         "URL": "https://courses.leeds.ac.uk/j747/data-science-bsc"
+    },
+    {
+        "School Name": "University of Leeds",
+        "Country": "United Kingdom",
+        "City": "Leeds",
+        "Department Name": "Deaf Education (Teacher of the Deaf Qualification) Apprenticeship PGDip",
+        "URL": "https://courses.leeds.ac.uk/ap18/deaf-education-teacher-of-the-deaf-qualification-apprenticeship-pgdip"
     },
     {
         "School Name": "University of Leeds",
@@ -70434,6 +72598,16 @@
         "Country": "United Kingdom",
         "City": "Leeds",
         "Department Name": "Health Informatics with Data Science",
+<<<<<<< HEAD
+=======
+        "URL": "https://courses.leeds.ac.uk/j523/health-informatics-with-data-science-pgdip"
+    },
+    {
+        "School Name": "University of Leeds",
+        "Country": "United Kingdom",
+        "City": "Leeds",
+        "Department Name": "Health Informatics with Data Science PGDip",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "URL": "https://courses.leeds.ac.uk/j523/health-informatics-with-data-science-pgdip"
     },
     {
@@ -72730,6 +74904,7 @@
         "Country": "United Kingdom",
         "City": "Leeds",
         "Department Name": "Pharmacy Practice",
+<<<<<<< HEAD
         "URL": "https://courses.leeds.ac.uk/h390/pharmacy-practice-msc"
     },
     {
@@ -72737,13 +74912,26 @@
         "Country": "United Kingdom",
         "City": "Leeds",
         "Department Name": "Pharmacy Practice MSc",
+=======
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "URL": "https://courses.leeds.ac.uk/h390/pharmacy-practice-msc"
     },
     {
         "School Name": "University of Leeds",
         "Country": "United Kingdom",
         "City": "Leeds",
+<<<<<<< HEAD
         "Department Name": "Pharmacy Practice",
+=======
+        "Department Name": "Pharmacy Practice MSc",
+        "URL": "https://courses.leeds.ac.uk/h390/pharmacy-practice-msc"
+    },
+    {
+        "School Name": "University of Leeds",
+        "Country": "United Kingdom",
+        "City": "Leeds",
+        "Department Name": "Pharmacy Practice PGDip",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "URL": "https://courses.leeds.ac.uk/h391/pharmacy-practice-pgdip"
     },
     {
@@ -78911,15 +81099,15 @@
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "MEng Aerospace Electronic Engineering",
-        "URL": "https://www.southampton.ac.uk/courses/aerospace-electronic-engineering-degree-meng"
+        "Department Name": "BEng Aerospace Electronic Engineering",
+        "URL": "https://www.southampton.ac.uk/courses/aerospace-electronic-engineering-degree-beng"
     },
     {
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "BEng Aerospace Electronic Engineering",
-        "URL": "https://www.southampton.ac.uk/courses/aerospace-electronic-engineering-degree-beng"
+        "Department Name": "MEng Aerospace Electronic Engineering",
+        "URL": "https://www.southampton.ac.uk/courses/aerospace-electronic-engineering-degree-meng"
     },
     {
         "School Name": "University of Southampton",
@@ -79107,15 +81295,15 @@
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "BSc Audiology",
-        "URL": "https://www.southampton.ac.uk/courses/audiology-degree-bsc"
+        "Department Name": "MSci Audiology",
+        "URL": "https://www.southampton.ac.uk/courses/audiology-degree-msci"
     },
     {
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "MSci Audiology",
-        "URL": "https://www.southampton.ac.uk/courses/audiology-degree-msci"
+        "Department Name": "BSc Audiology",
+        "URL": "https://www.southampton.ac.uk/courses/audiology-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
@@ -79219,15 +81407,15 @@
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "BSc Biomedical Sciences",
-        "URL": "https://www.southampton.ac.uk/courses/biomedical-sciences-degree-bsc"
+        "Department Name": "MSci Biomedical Sciences",
+        "URL": "https://www.southampton.ac.uk/courses/biomedical-sciences-degree-msci"
     },
     {
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "MSci Biomedical Sciences",
-        "URL": "https://www.southampton.ac.uk/courses/biomedical-sciences-degree-msci"
+        "Department Name": "BSc Biomedical Sciences",
+        "URL": "https://www.southampton.ac.uk/courses/biomedical-sciences-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
@@ -79408,15 +81596,15 @@
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "MChem Chemistry (Digital Methods and Computational Modelling)",
-        "URL": "https://www.southampton.ac.uk/courses/chemistry-digital-methods-computational-modelling-degree-mchem"
+        "Department Name": "BSc Chemistry (Digital Methods and Computational Modelling)",
+        "URL": "https://www.southampton.ac.uk/courses/chemistry-digital-methods-computational-modelling-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "BSc Chemistry (Digital Methods and Computational Modelling)",
-        "URL": "https://www.southampton.ac.uk/courses/chemistry-digital-methods-computational-modelling-degree-bsc"
+        "Department Name": "MChem Chemistry (Digital Methods and Computational Modelling)",
+        "URL": "https://www.southampton.ac.uk/courses/chemistry-digital-methods-computational-modelling-degree-mchem"
     },
     {
         "School Name": "University of Southampton",
@@ -79431,20 +81619,6 @@
         "City": "Southampton",
         "Department Name": "MChem Chemistry with External Placement",
         "URL": "https://www.southampton.ac.uk/courses/chemistry-with-external-placement-degree-mchem"
-    },
-    {
-        "School Name": "University of Southampton",
-        "Country": "United Kingdom",
-        "City": "Southampton",
-        "Department Name": "MChem Chemistry with Maths",
-        "URL": "https://www.southampton.ac.uk/courses/chemistry-with-maths-degree-mchem"
-    },
-    {
-        "School Name": "University of Southampton",
-        "Country": "United Kingdom",
-        "City": "Southampton",
-        "Department Name": "BSc Chemistry with Maths",
-        "URL": "https://www.southampton.ac.uk/courses/chemistry-with-maths-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
@@ -80339,15 +82513,15 @@
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "BSc Geography",
-        "URL": "https://www.southampton.ac.uk/courses/geography-degree-bsc"
+        "Department Name": "BA Geography",
+        "URL": "https://www.southampton.ac.uk/courses/geography-degree-ba"
     },
     {
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "BA Geography",
-        "URL": "https://www.southampton.ac.uk/courses/geography-degree-ba"
+        "Department Name": "BSc Geography",
+        "URL": "https://www.southampton.ac.uk/courses/geography-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
@@ -80389,13 +82563,6 @@
         "Country": "United Kingdom",
         "City": "Southampton",
         "Department Name": "Gerontology (Distance Learning)",
-        "URL": "https://www.southampton.ac.uk/courses/gerontology-distance-learning-masters-msc"
-    },
-    {
-        "School Name": "University of Southampton",
-        "Country": "United Kingdom",
-        "City": "Southampton",
-        "Department Name": "Gerontology (Distance Learning)",
         "URL": "https://www.southampton.ac.uk/courses/gerontology-distance-learning-pgdip"
     },
     {
@@ -80404,6 +82571,13 @@
         "City": "Southampton",
         "Department Name": "Gerontology (Distance Learning)",
         "URL": "https://www.southampton.ac.uk/courses/gerontology-distance-learning-pgcert"
+    },
+    {
+        "School Name": "University of Southampton",
+        "Country": "United Kingdom",
+        "City": "Southampton",
+        "Department Name": "Gerontology (Distance Learning)",
+        "URL": "https://www.southampton.ac.uk/courses/gerontology-distance-learning-masters-msc"
     },
     {
         "School Name": "University of Southampton",
@@ -80780,15 +82954,15 @@
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "BSc Marine Biology",
-        "URL": "https://www.southampton.ac.uk/courses/marine-biology-degree-bsc"
+        "Department Name": "MSci Marine Biology",
+        "URL": "https://www.southampton.ac.uk/courses/marine-biology-degree-msci"
     },
     {
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "MSci Marine Biology",
-        "URL": "https://www.southampton.ac.uk/courses/marine-biology-degree-msci"
+        "Department Name": "BSc Marine Biology",
+        "URL": "https://www.southampton.ac.uk/courses/marine-biology-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
@@ -81425,19 +83599,22 @@
         "Country": "United Kingdom",
         "City": "Southampton",
         "Department Name": "Nursing: Adult",
-        "URL": "https://www.southampton.ac.uk/courses/nursing-adult-pgdip"
-    },
-    {
-        "School Name": "University of Southampton",
-        "Country": "United Kingdom",
-        "City": "Southampton",
-        "Department Name": "Nursing: Adult",
         "URL": "https://www.southampton.ac.uk/courses/nursing-adult-masters-msc"
     },
     {
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
+<<<<<<< HEAD
+=======
+        "Department Name": "Nursing: Adult",
+        "URL": "https://www.southampton.ac.uk/courses/nursing-adult-pgdip"
+    },
+    {
+        "School Name": "University of Southampton",
+        "Country": "United Kingdom",
+        "City": "Southampton",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Nursing: Child",
         "URL": "https://www.southampton.ac.uk/courses/nursing-child-pgdip"
     },
@@ -81447,6 +83624,16 @@
         "City": "Southampton",
         "Department Name": "Nursing: Child",
         "URL": "https://www.southampton.ac.uk/courses/nursing-child-masters-msc"
+<<<<<<< HEAD
+=======
+    },
+    {
+        "School Name": "University of Southampton",
+        "Country": "United Kingdom",
+        "City": "Southampton",
+        "Department Name": "Nursing: Mental Health",
+        "URL": "https://www.southampton.ac.uk/courses/nursing-mental-health-pgdip"
+>>>>>>> 54a0792 (2025.05.21資料更新)
     },
     {
         "School Name": "University of Southampton",
@@ -82264,15 +84451,15 @@
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "MEng Aerospace Electronic Engineering",
-        "URL": "https://www.southampton.ac.uk/courses/aerospace-electronic-engineering-degree-meng"
+        "Department Name": "BEng Aerospace Electronic Engineering",
+        "URL": "https://www.southampton.ac.uk/courses/aerospace-electronic-engineering-degree-beng"
     },
     {
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "BEng Aerospace Electronic Engineering",
-        "URL": "https://www.southampton.ac.uk/courses/aerospace-electronic-engineering-degree-beng"
+        "Department Name": "MEng Aerospace Electronic Engineering",
+        "URL": "https://www.southampton.ac.uk/courses/aerospace-electronic-engineering-degree-meng"
     },
     {
         "School Name": "University of Southampton",
@@ -82460,15 +84647,15 @@
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "BSc Audiology",
-        "URL": "https://www.southampton.ac.uk/courses/audiology-degree-bsc"
+        "Department Name": "MSci Audiology",
+        "URL": "https://www.southampton.ac.uk/courses/audiology-degree-msci"
     },
     {
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "MSci Audiology",
-        "URL": "https://www.southampton.ac.uk/courses/audiology-degree-msci"
+        "Department Name": "BSc Audiology",
+        "URL": "https://www.southampton.ac.uk/courses/audiology-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
@@ -82572,15 +84759,15 @@
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "BSc Biomedical Sciences",
-        "URL": "https://www.southampton.ac.uk/courses/biomedical-sciences-degree-bsc"
+        "Department Name": "MSci Biomedical Sciences",
+        "URL": "https://www.southampton.ac.uk/courses/biomedical-sciences-degree-msci"
     },
     {
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "MSci Biomedical Sciences",
-        "URL": "https://www.southampton.ac.uk/courses/biomedical-sciences-degree-msci"
+        "Department Name": "BSc Biomedical Sciences",
+        "URL": "https://www.southampton.ac.uk/courses/biomedical-sciences-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
@@ -82761,15 +84948,15 @@
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "MChem Chemistry (Digital Methods and Computational Modelling)",
-        "URL": "https://www.southampton.ac.uk/courses/chemistry-digital-methods-computational-modelling-degree-mchem"
+        "Department Name": "BSc Chemistry (Digital Methods and Computational Modelling)",
+        "URL": "https://www.southampton.ac.uk/courses/chemistry-digital-methods-computational-modelling-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "BSc Chemistry (Digital Methods and Computational Modelling)",
-        "URL": "https://www.southampton.ac.uk/courses/chemistry-digital-methods-computational-modelling-degree-bsc"
+        "Department Name": "MChem Chemistry (Digital Methods and Computational Modelling)",
+        "URL": "https://www.southampton.ac.uk/courses/chemistry-digital-methods-computational-modelling-degree-mchem"
     },
     {
         "School Name": "University of Southampton",
@@ -82784,20 +84971,6 @@
         "City": "Southampton",
         "Department Name": "MChem Chemistry with External Placement",
         "URL": "https://www.southampton.ac.uk/courses/chemistry-with-external-placement-degree-mchem"
-    },
-    {
-        "School Name": "University of Southampton",
-        "Country": "United Kingdom",
-        "City": "Southampton",
-        "Department Name": "MChem Chemistry with Maths",
-        "URL": "https://www.southampton.ac.uk/courses/chemistry-with-maths-degree-mchem"
-    },
-    {
-        "School Name": "University of Southampton",
-        "Country": "United Kingdom",
-        "City": "Southampton",
-        "Department Name": "BSc Chemistry with Maths",
-        "URL": "https://www.southampton.ac.uk/courses/chemistry-with-maths-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
@@ -83692,15 +85865,15 @@
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "BSc Geography",
-        "URL": "https://www.southampton.ac.uk/courses/geography-degree-bsc"
+        "Department Name": "BA Geography",
+        "URL": "https://www.southampton.ac.uk/courses/geography-degree-ba"
     },
     {
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "BA Geography",
-        "URL": "https://www.southampton.ac.uk/courses/geography-degree-ba"
+        "Department Name": "BSc Geography",
+        "URL": "https://www.southampton.ac.uk/courses/geography-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
@@ -83742,13 +85915,6 @@
         "Country": "United Kingdom",
         "City": "Southampton",
         "Department Name": "Gerontology (Distance Learning)",
-        "URL": "https://www.southampton.ac.uk/courses/gerontology-distance-learning-masters-msc"
-    },
-    {
-        "School Name": "University of Southampton",
-        "Country": "United Kingdom",
-        "City": "Southampton",
-        "Department Name": "Gerontology (Distance Learning)",
         "URL": "https://www.southampton.ac.uk/courses/gerontology-distance-learning-pgdip"
     },
     {
@@ -83757,6 +85923,13 @@
         "City": "Southampton",
         "Department Name": "Gerontology (Distance Learning)",
         "URL": "https://www.southampton.ac.uk/courses/gerontology-distance-learning-pgcert"
+    },
+    {
+        "School Name": "University of Southampton",
+        "Country": "United Kingdom",
+        "City": "Southampton",
+        "Department Name": "Gerontology (Distance Learning)",
+        "URL": "https://www.southampton.ac.uk/courses/gerontology-distance-learning-masters-msc"
     },
     {
         "School Name": "University of Southampton",
@@ -84133,15 +86306,15 @@
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "BSc Marine Biology",
-        "URL": "https://www.southampton.ac.uk/courses/marine-biology-degree-bsc"
+        "Department Name": "MSci Marine Biology",
+        "URL": "https://www.southampton.ac.uk/courses/marine-biology-degree-msci"
     },
     {
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
-        "Department Name": "MSci Marine Biology",
-        "URL": "https://www.southampton.ac.uk/courses/marine-biology-degree-msci"
+        "Department Name": "BSc Marine Biology",
+        "URL": "https://www.southampton.ac.uk/courses/marine-biology-degree-bsc"
     },
     {
         "School Name": "University of Southampton",
@@ -84778,19 +86951,22 @@
         "Country": "United Kingdom",
         "City": "Southampton",
         "Department Name": "Nursing: Adult",
-        "URL": "https://www.southampton.ac.uk/courses/nursing-adult-pgdip"
-    },
-    {
-        "School Name": "University of Southampton",
-        "Country": "United Kingdom",
-        "City": "Southampton",
-        "Department Name": "Nursing: Adult",
         "URL": "https://www.southampton.ac.uk/courses/nursing-adult-masters-msc"
     },
     {
         "School Name": "University of Southampton",
         "Country": "United Kingdom",
         "City": "Southampton",
+<<<<<<< HEAD
+=======
+        "Department Name": "Nursing: Adult",
+        "URL": "https://www.southampton.ac.uk/courses/nursing-adult-pgdip"
+    },
+    {
+        "School Name": "University of Southampton",
+        "Country": "United Kingdom",
+        "City": "Southampton",
+>>>>>>> 54a0792 (2025.05.21資料更新)
         "Department Name": "Nursing: Child",
         "URL": "https://www.southampton.ac.uk/courses/nursing-child-pgdip"
     },
@@ -84800,6 +86976,16 @@
         "City": "Southampton",
         "Department Name": "Nursing: Child",
         "URL": "https://www.southampton.ac.uk/courses/nursing-child-masters-msc"
+<<<<<<< HEAD
+=======
+    },
+    {
+        "School Name": "University of Southampton",
+        "Country": "United Kingdom",
+        "City": "Southampton",
+        "Department Name": "Nursing: Mental Health",
+        "URL": "https://www.southampton.ac.uk/courses/nursing-mental-health-pgdip"
+>>>>>>> 54a0792 (2025.05.21資料更新)
     },
     {
         "School Name": "University of Southampton",
@@ -86018,20 +88204,6 @@
         "City": "Stirling",
         "Department Name": "BA (Hons) / BSc (Hons) Psychology",
         "URL": "https://www.stir.ac.uk/courses/ug/psychology/"
-    },
-    {
-        "School Name": "University of Stirling",
-        "Country": "United Kingdom",
-        "City": "Stirling",
-        "Department Name": "BA (Hons) English Studies",
-        "URL": "https://www.stir.ac.uk/courses/ug/english-studies/"
-    },
-    {
-        "School Name": "University of Stirling",
-        "Country": "United Kingdom",
-        "City": "Stirling",
-        "Department Name": "BA (Hons) Religion",
-        "URL": "https://www.stir.ac.uk/courses/ug/religion/"
     },
     {
         "School Name": "University of Stirling",
@@ -88587,13 +90759,6 @@
         "City": "Coventry",
         "Department Name": "Social Policy and Social Work PhD",
         "URL": "https://warwick.ac.uk/study/postgraduate/courses/phd-social-policy-social-work"
-    },
-    {
-        "School Name": "University of Warwick",
-        "Country": "United Kingdom",
-        "City": "Coventry",
-        "Department Name": "Social Work PhD",
-        "URL": "https://warwick.ac.uk/study/postgraduate/courses/phd-social-work"
     },
     {
         "School Name": "University of Warwick",

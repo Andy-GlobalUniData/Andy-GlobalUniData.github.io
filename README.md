@@ -30,34 +30,37 @@ For special usage requests, please contact [andy8787main@gmail.com]。
 
 | 學校名稱                          | 科系數量 |
 |-----------------------------------|----------|
-| Aston University                    | 282| 
-| Bath Spa University                 | 212| 
+| Aston University                    | 333| 
+| Bath Spa University                 | 211| 
 | Colorado State University           | 778| 
 | Drew University                     | 183| 
 | Elon University                     | 141| 
-| Erasmus Universitiet Rotterdam      | 222| 
+| Erasmus Universitiet Rotterdam      | 223| 
 | Fisher College                      |  73| 
 | George Mason University             | 548| 
 | Hofstra University                  | 354| 
+| Illinois State University           | 166| 
 | Long Island University              |  63| 
 | Montclair State University          | 150| 
 | Newcastle University                | 307| 
 | Northeastern University             | 230| 
-| Nottingham Trent University         |  40| 
+| Nottingham Trent University         |  30| 
 | Oregon State University             | 105| 
 | Queen's University Belfast          | 702| 
-| Saint Louis University              | 501| 
+| Saint Louis University              | 490| 
 | San Jose State University           | 466| 
+| Suffolk University Boston           | 174| 
+| The University of Alabama at Birmingham | 285| 
 | UCLA                                | 137| 
 | Universiteit Leiden                 |  40| 
 | Universiteit van Amsterdam          | 188| 
-| University of Arizona               | 679| 
+| University of Arizona               | 678| 
 | University of Essex                 | 841| 
 | University of Exeter                | 522| 
-| University of Leeds                 |1163| 
+| University of Leeds                 |1164| 
 | University of Leicester             | 293| 
 | University of Nottingham            | 288| 
-| University of Southampton           | 958| 
-| University of Stirling              | 217| 
-| University of Warwick               | 253| 
+| University of Southampton           | 954| 
+| University of Stirling              | 215| 
+| University of Warwick               | 252| 
 | University of Washington            | 533| 

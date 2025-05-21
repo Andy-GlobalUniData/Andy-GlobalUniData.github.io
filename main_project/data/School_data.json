@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "School_name": "Suffolk University Boston",
         "Country": "USA",
         "City": "Boston",
@@ -19,6 +20,14 @@
         "重複": "NONE",
         "unnamed: 7": "NONE",
         "unnamed: 8": "NONE",
+=======
+        "School_name": "The University of Alabama at Birmingham",
+        "Country": "USA",
+        "City": "Birmingham",
+        "URL": "NONE",
+        "合作": "INTO",
+        "重複": "NONE",
+>>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
         "Number_of_departments": 285
     },
     {
@@ -28,9 +37,13 @@
         "URL": "NONE",
         "合作": "Studygroup",
         "重複": "NONE",
+<<<<<<< HEAD
         "unnamed: 7": "NONE",
         "unnamed: 8": "NONE",
         "Number_of_departments": 1164
+=======
+        "Number_of_departments": 1157
+>>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
     },
     {
         "School_name": "Long Island University",
@@ -50,9 +63,13 @@
         "URL": "https://www.usc.edu/majors-minors/",
         "合作": "INTO",
         "重複": "NONE",
+<<<<<<< HEAD
         "unnamed: 7": "NONE",
         "unnamed: 8": "NONE",
         "Number_of_departments": 333
+=======
+        "Number_of_departments": 296
+>>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
     },
     {
         "School_name": "University of Arizona",
@@ -61,8 +78,11 @@
         "URL": "https://www.arizona.edu/degree-search/majors?cat-interest=",
         "合作": "INTO",
         "重複": "NONE",
+<<<<<<< HEAD
         "unnamed: 7": "NONE",
         "unnamed: 8": "NONE",
+=======
+>>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
         "Number_of_departments": 678
     },
     {
@@ -72,8 +92,11 @@
         "URL": "https://www.aston.ac.uk/courses-atoz",
         "合作": "INTO",
         "重複": "NONE",
+<<<<<<< HEAD
         "unnamed: 7": "NONE",
         "unnamed: 8": "NONE",
+=======
+>>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
         "Number_of_departments": 211
     },
     {
@@ -160,8 +183,11 @@
         "URL": "https://www.hofstra.edu/undergraduate/ https://www.hofstra.edu/graduate/programs/",
         "合作": "INTO",
         "重複": "NONE",
+<<<<<<< HEAD
         "unnamed: 7": "NONE",
         "unnamed: 8": "NONE",
+=======
+>>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
         "Number_of_departments": 166
     },
     {
@@ -215,9 +241,13 @@
         "URL": "https://admissions.oregonstate.edu/find-your-major",
         "合作": "INTO",
         "重複": "NONE",
+<<<<<<< HEAD
         "unnamed: 7": "NONE",
         "unnamed: 8": "NONE",
         "Number_of_departments": 702
+=======
+        "Number_of_departments": 701
+>>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
     },
     {
         "School_name": "Saint Louis University",
@@ -226,8 +256,11 @@
         "URL": "https://www.qub.ac.uk/courses/",
         "合作": "INTO",
         "重複": "NONE",
+<<<<<<< HEAD
         "unnamed: 7": "NONE",
         "unnamed: 8": "NONE",
+=======
+>>>>>>> 3bfa55a9426c522cc242ca98e7bf2ebfdb68fd2c
         "Number_of_departments": 490
     },
     {

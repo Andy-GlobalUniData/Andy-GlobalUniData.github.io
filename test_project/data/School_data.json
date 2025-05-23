@@ -6,7 +6,7 @@
         "URL": ".",
         "合作": "INTO",
         "重複": ".",
-        "Number_of_departments": 174
+        "Number_of_departments": 173
     },
     {
         "School_name": "The University of Alabama at Birmingham",
@@ -15,7 +15,7 @@
         "URL": ".",
         "合作": "INTO",
         "重複": ".",
-        "Number_of_departments": 285
+        "Number_of_departments": 289
     },
     {
         "School_name": "University of Leeds",
@@ -42,7 +42,7 @@
         "URL": "https://www.usc.edu/majors-minors/",
         "合作": "INTO",
         "重複": ".",
-        "Number_of_departments": 333
+        "Number_of_departments": 351
     },
     {
         "School_name": "University of Arizona",
@@ -159,7 +159,7 @@
         "URL": "https://catalog.northeastern.edu/course-descriptions/",
         "合作": "INTO",
         "重複": ".",
-        "Number_of_departments": 30
+        "Number_of_departments": 40
     },
     {
         "School_name": "Oregon State University",
@@ -231,7 +231,7 @@
         "URL": "https://www.uva.nl/en/education/master-s/master-s-programmes/masters-programmes.html",
         "合作": "INTO",
         "重複": ".",
-        "Number_of_departments": 841
+        "Number_of_departments": 378
     },
     {
         "School_name": "University of Exeter",
@@ -240,7 +240,7 @@
         "URL": "https://www.essex.ac.uk/course-search?collection=essex~sp-courses-meta&start_rank=",
         "合作": "INTO",
         "重複": ".",
-        "Number_of_departments": 522
+        "Number_of_departments": 518
     },
     {
         "School_name": "University of Leicester",
@@ -267,7 +267,7 @@
         "URL": "https://le.ac.uk/courses",
         "合作": "INTO",
         "重複": ".",
-        "Number_of_departments": 954
+        "Number_of_departments": 964
     },
     {
         "School_name": "University of Stirling",

@@ -8,7 +8,7 @@
         "Check": "OK",
         "unnamed: 6": ".",
         "重複": ".",
-        "Number_of_departments": 333
+        "Number_of_departments": 353
     },
     {
         "School_name": "Bath Spa University",
@@ -19,7 +19,7 @@
         "Check": "OK",
         "unnamed: 6": ".",
         "重複": ".",
-        "Number_of_departments": 211
+        "Number_of_departments": 218
     },
     {
         "School_name": "Carnegie Mellon University",
@@ -118,7 +118,7 @@
         "Check": "OK",
         "unnamed: 6": ".",
         "重複": ".",
-        "Number_of_departments": 166
+        "Number_of_departments": 167
     },
     {
         "School_name": "Long Island University",
@@ -173,7 +173,7 @@
         "Check": "OK",
         "unnamed: 6": ".",
         "重複": ".",
-        "Number_of_departments": 30
+        "Number_of_departments": 20
     },
     {
         "School_name": "Oregon State University",
@@ -228,7 +228,7 @@
         "Check": "OK",
         "unnamed: 6": ".",
         "重複": ".",
-        "Number_of_departments": 174
+        "Number_of_departments": 65
     },
     {
         "School_name": "The University of Alabama at Birmingham",
@@ -239,7 +239,7 @@
         "Check": "OK",
         "unnamed: 6": ".",
         "重複": ".",
-        "Number_of_departments": 285
+        "Number_of_departments": 293
     },
     {
         "School_name": "The University of Vermont",
@@ -305,7 +305,7 @@
         "Check": "OK",
         "unnamed: 6": ".",
         "重複": ".",
-        "Number_of_departments": 841
+        "Number_of_departments": 840
     },
     {
         "School_name": "University of Exeter",
@@ -316,7 +316,7 @@
         "Check": "OK",
         "unnamed: 6": ".",
         "重複": ".",
-        "Number_of_departments": 522
+        "Number_of_departments": 520
     },
     {
         "School_name": "University of Leeds",
@@ -360,7 +360,7 @@
         "Check": "OK",
         "unnamed: 6": ".",
         "重複": ".",
-        "Number_of_departments": 954
+        "Number_of_departments": 964
     },
     {
         "School_name": "University of Stirling",
@@ -393,6 +393,6 @@
         "Check": "OK",
         "unnamed: 6": ".",
         "重複": ".",
-        "Number_of_departments": 533
+        "Number_of_departments": 536
     }
 ]

@@ -8,7 +8,7 @@
         "Check": "OK",
         "unnamed: 6": ".",
         "重複": ".",
-        "Number_of_departments": 353
+        "Number_of_departments": 355
     },
     {
         "School_name": "Bath Spa University",
@@ -96,7 +96,7 @@
         "Check": "OK",
         "unnamed: 6": ".",
         "重複": ".",
-        "Number_of_departments": 548
+        "Number_of_departments": 1
     },
     {
         "School_name": "Hofstra University",
@@ -173,7 +173,7 @@
         "Check": "OK",
         "unnamed: 6": ".",
         "重複": ".",
-        "Number_of_departments": 20
+        "Number_of_departments": 50
     },
     {
         "School_name": "Oregon State University",
@@ -228,7 +228,7 @@
         "Check": "OK",
         "unnamed: 6": ".",
         "重複": ".",
-        "Number_of_departments": 65
+        "Number_of_departments": 172
     },
     {
         "School_name": "The University of Alabama at Birmingham",
@@ -305,7 +305,7 @@
         "Check": "OK",
         "unnamed: 6": ".",
         "重複": ".",
-        "Number_of_departments": 840
+        "Number_of_departments": 841
     },
     {
         "School_name": "University of Exeter",
@@ -319,17 +319,6 @@
         "Number_of_departments": 520
     },
     {
-        "School_name": "University of Leeds",
-        "Country": "United Kingdom",
-        "City": "Leeds",
-        "URL": "https://www.leeds.ac.uk/search?complete_url=?num_ranks=10000&query=%21FunDoesNotExist%3APadreNull&f.Filter+your+results%7CFUN6339tqai975jbmvk19nt89li3=Courses&collection=leeds-meta&sort=title",
-        "合作": "Studygroup",
-        "Check": "OK",
-        "unnamed: 6": ".",
-        "重複": ".",
-        "Number_of_departments": 1164
-    },
-    {
         "School_name": "University of Leicester",
         "Country": "United Kingdom",
         "City": "Leicester",
@@ -338,7 +327,7 @@
         "Check": "OK",
         "unnamed: 6": ".",
         "重複": ".",
-        "Number_of_departments": 293
+        "Number_of_departments": 287
     },
     {
         "School_name": "University of Nottingham",
@@ -394,5 +383,16 @@
         "unnamed: 6": ".",
         "重複": ".",
         "Number_of_departments": 536
+    },
+    {
+        "School_name": "University of Leeds",
+        "Country": "United Kingdom",
+        "City": "Leeds",
+        "URL": "https://www.leeds.ac.uk/search?complete_url=?num_ranks=10000&query=%21FunDoesNotExist%3APadreNull&f.Filter+your+results%7CFUN6339tqai975jbmvk19nt89li3=Courses&collection=leeds-meta&sort=title",
+        "合作": "Studygroup",
+        "Check": "OK",
+        "unnamed: 6": ".",
+        "重複": ".",
+        "Number_of_departments": 1164
     }
 ]

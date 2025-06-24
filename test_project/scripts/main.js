@@ -146,6 +146,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // 新增：複製所有URL到剪貼簿
+  $(document).on("click", "#copy-all-urls", function () {
+    // 取得所有表格中的URL欄位（第5欄，index 4）
+    let urls = [];
+    $("#json-table tbody tr").each(function () {
+      const urlCell = $(this).find("td:nth-child(5) a");
+      if (urlCell.length) {
+        urls.push(urlCell.attr("href"));
+      }
+    });
+    if (urls.length === 0) {
+      alert("No URLs found on this page.");
+      return;
+    }
+    const urlText = urls.join("\n");
+    navigator.clipboard.writeText(urlText).then(() => {
+      alert("All URLs copied to clipboard!\n\n" + urlText);
+    }).catch(err => {
+      alert("Failed to copy URLs: " + err);
+    });
+  });
+
   function loadNextChunk() {
     if (index >= totalData.length) return;
 

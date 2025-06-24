@@ -21,21 +21,33 @@
       <button id="export-json">Export JSON</button>
       <button id="export-excel">Export Excel</button>
       <button id="export-txt">Export URL (TXT)</button>
+      <button id="copy-all-urls">Copy All URLs</button>
     </div>
   </div>
 
   <div class="select-area-container">
     <div id="country-select" class="select-container">
       <h3>Select Country</h3>
-      </div>
+    </div>
 
     <div id="school-select" class="select-container">
       <h3>Select School</h3>
-      </div>
+    </div>
 
     <div id="degree-select" class="select-container">
       <h3>Select Degree</h3>
-      </div>
+    </div>
+  </div>
+
+  <div class="user-guide" style="background:#fffbe6;border:1px solid #ffe58f;padding:18px 22px;margin-bottom:22px;border-radius:8px;box-shadow:0 2px 8px rgba(255,229,143,0.08);font-size:16px;line-height:1.7;">
+    <strong>使用說明：</strong><br>
+    1. 請先於左側選擇國家、學校、學位，表格會自動篩選顯示對應資料。<br>
+    2. 可於表格上方搜尋欄快速查找科系或網址。<br>
+    3. 點選每列的 <b>Copy URL</b> 可複製該科系網址。<br>
+    4. <b>Export JSON</b>、<b>Export Excel</b>、<b>Export URL (TXT)</b> 會匯出你勾選的資料。<br>
+    5. <b>Copy All URLs</b> 會複製目前表格所有網址（不論有無勾選）。<br>
+    6. 若遇資料載入異常，請重新整理頁面。<br>
+    <span style="color:#faad14;font-size:15px;">本工具僅供查詢使用，請勿未經授權轉載或修改。</span>
   </div>
 
   <div class="table-container">
@@ -51,13 +63,14 @@
         </tr>
       </thead>
       <tbody>
-        </tbody>
+      </tbody>
     </table>
   </div>
 
   <div id="school-data-table-container">
     <h3>School Data Table</h3>
-    <div class="table-container"> <table id="school-data-table" class="display">
+    <div class="table-container">
+      <table id="school-data-table" class="display">
         <thead>
           <tr>
             <th>School Name</th>
@@ -67,7 +80,7 @@
           </tr>
         </thead>
         <tbody>
-          </tbody>
+        </tbody>
       </table>
     </div>
   </div>

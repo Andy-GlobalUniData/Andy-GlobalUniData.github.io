@@ -1,5 +1,13 @@
 [
     {
+        "School_name": "University of Oklahoma",
+        "Country": "United States of America",
+        "City": "Norman",
+        "合作集團": "INTO",
+        "URL": "https://www.ou.edu/admissions/academics",
+        "Number_of_departments": 199
+    },
+    {
         "School_name": "Colorado State University",
         "Country": "United States of America",
         "City": "Fort Collins",
@@ -46,14 +54,6 @@
         "合作集團": "INTO",
         "URL": ".",
         "Number_of_departments": 167
-    },
-    {
-        "School_name": "Long Island University",
-        "Country": "United States of America",
-        "City": "Brookville",
-        "合作集團": "INTO、StudyGroup",
-        "URL": ".",
-        "Number_of_departments": 63
     },
     {
         "School_name": "Montclair State University",
@@ -110,6 +110,14 @@
         "合作集團": "INTO",
         "URL": ".",
         "Number_of_departments": 215
+    },
+    {
+        "School_name": "Long Island University",
+        "Country": "United States of America",
+        "City": "Brookville",
+        "合作集團": "INTO、StudyGroup",
+        "URL": ".",
+        "Number_of_departments": 63
     },
     {
         "School_name": "University of Leeds",

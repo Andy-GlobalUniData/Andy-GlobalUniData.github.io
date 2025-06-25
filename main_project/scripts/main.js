@@ -146,26 +146,109 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // 新增：複製所有URL到剪貼簿
+  // 新增：複製所有勾選的URL到剪貼簿
   $(document).on("click", "#copy-all-urls", function () {
-    // 取得所有表格中的URL欄位（第5欄，index 4）
-    let urls = [];
-    $("#json-table tbody tr").each(function () {
-      const urlCell = $(this).find("td:nth-child(5) a");
-      if (urlCell.length) {
-        urls.push(urlCell.attr("href"));
-      }
-    });
+    const selectedData = getSelectedData(); // 取得所有勾選的資料
+    if (selectedData.length === 0) {
+      alert("請先選擇至少一筆資料 (Please select at least one item).\nPlease select at least one item.");
+      return;
+    }
+    const urls = selectedData
+      .map(item => item && item.URL)
+      .filter(url => url !== undefined && url !== null && url !== "N/A")
+      .map(url => String(url));
     if (urls.length === 0) {
-      alert("No URLs found on this page.");
+      alert("勾選的資料沒有有效的URL。\nNo valid URLs in selected items.");
       return;
     }
     const urlText = urls.join("\n");
     navigator.clipboard.writeText(urlText).then(() => {
-      alert("All URLs copied to clipboard!\n\n" + urlText);
+      alert("已複製所有勾選的URL到剪貼簿！\nAll selected URLs copied to clipboard!\n\n" + urlText);
     }).catch(err => {
       alert("Failed to copy URLs: " + err);
     });
+  });
+
+  // 全域：跨頁勾選追蹤陣列（以URL為唯一key）
+  let selectedRowURLs = [];
+
+  // 監聽checkbox勾選，維護跨頁勾選陣列
+  $(document).on("change", ".row-checkbox", function () {
+    const row = $(this).closest("tr");
+    const url = row.find("td:nth-child(5) a").attr("href") || row.find("td:nth-child(5)").text();
+    if (!url) return;
+    if (this.checked) {
+      if (!selectedRowURLs.includes(url)) selectedRowURLs.push(url);
+    } else {
+      selectedRowURLs = selectedRowURLs.filter(u => u !== url);
+    }
+  });
+
+  // 切換分頁/搜尋/重繪時，根據陣列自動勾選checkbox
+  $(document).on("draw.dt", function () {
+    $("#json-table tbody tr").each(function () {
+      const url = $(this).find("td:nth-child(5) a").attr("href") || $(this).find("td:nth-child(5)").text();
+      if (selectedRowURLs.includes(url)) {
+        $(this).find(".row-checkbox").prop("checked", true);
+      } else {
+        $(this).find(".row-checkbox").prop("checked", false);
+      }
+    });
+  });
+
+  // select-all 勾選/取消時，同步更新陣列
+  $(document).on("click", "#select-all", function () {
+    const checked = this.checked;
+    $("#json-table tbody tr").each(function () {
+      const url = $(this).find("td:nth-child(5) a").attr("href") || $(this).find("td:nth-child(5)").text();
+      if (!url) return;
+      if (checked) {
+        if (!selectedRowURLs.includes(url)) selectedRowURLs.push(url);
+      } else {
+        selectedRowURLs = selectedRowURLs.filter(u => u !== url);
+      }
+    });
+  });
+
+  // 取得所有跨頁勾選的資料
+  function getSelectedDataStable() {
+    return totalData.filter(item => selectedRowURLs.includes(item.URL));
+  }
+
+  // 移除舊的 copy-all-urls 綁定，確保只會有一個穩定版
+  $(document).off("click", "#copy-all-urls");
+
+  // Copy All URLs/Export URL 都改用穩定版
+  $(document).on("click", "#copy-all-urls", function () {
+    const selectedData = getSelectedDataStable();
+    if (selectedData.length === 0) {
+      alert("請先選擇至少一筆資料 (Please select at least one item).\nPlease select at least one item.");
+      return;
+    }
+    const urls = selectedData
+      .map(item => item && item.URL)
+      .filter(url => url !== undefined && url !== null && url !== "N/A")
+      .map(url => String(url));
+    if (urls.length === 0) {
+      alert("勾選的資料沒有有效的URL。\nNo valid URLs in selected items.");
+      return;
+    }
+    const urlText = urls.join("\n");
+    navigator.clipboard.writeText(urlText).then(() => {
+      alert("已複製所有勾選的URL到剪貼簿！\nAll selected URLs copied to clipboard!\n\n" + urlText);
+    }).catch(err => {
+      alert("Failed to copy URLs: " + err);
+    });
+  });
+
+  // Export URL (TXT) 也改用穩定版
+  $(document).on("click", "#export-txt", function () {
+    const selectedData = getSelectedDataStable();
+    if (selectedData.length === 0) {
+      alert("請先選擇至少一筆資料 (Please select at least one item).\nPlease select at least one item.");
+      return;
+    }
+    exportUrlsToTxt(selectedData, "selected_urls.txt");
   });
 
   function loadNextChunk() {

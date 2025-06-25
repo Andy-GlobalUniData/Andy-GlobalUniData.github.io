@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <td>${school.Country}</td>
                     <td>${school.City}</td>
                     <td>${school.Number_of_departments}</td>
+                    <td>${school.合作集團}</td>
                 </tr>
             `).join("");
 

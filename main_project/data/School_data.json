@@ -1,11 +1,59 @@
 [
     {
+        "School_name": "Queen's University Belfast International Study Centre",
+        "Country": "United Kingdom",
+        "City": "Belfast",
+        "合作集團": "INTO",
+        "URL": "https://www.qub.ac.uk/International/International-students/Applying/University-Preparation-Courses/isc-academic-programmes/",
+        "Number_of_departments": 22
+    },
+    {
+        "School_name": "The University of Manchester",
+        "Country": "United Kingdom",
+        "City": "Manchester",
+        "合作集團": "INTO",
+        "URL": "https://www.manchester.ac.uk/study/undergraduate/courses/2026/\nhttps://www.manchester.ac.uk/study/masters/courses/list/",
+        "Number_of_departments": 484
+    },
+    {
+        "School_name": "Royal Holloway University of London",
+        "Country": "United Kingdom",
+        "City": "Egham",
+        "合作集團": "StudyGroup",
+        "URL": "https://www.royalholloway.ac.uk/research-and-education/departments-and-schools/",
+        "Number_of_departments": 31
+    },
+    {
+        "School_name": "University of Sussex",
+        "Country": "United Kingdom",
+        "City": "Brighton",
+        "合作集團": "StudyGroup",
+        "URL": "https://www.sussex.ac.uk/study/undergraduate/ https://www.sussex.ac.uk/study/masters",
+        "Number_of_departments": 252
+    },
+    {
+        "School_name": "Thomas Jefferson University",
+        "Country": "United States of America",
+        "City": "Philadelphia",
+        "合作集團": "INTO",
+        "URL": "https://www.jefferson.edu/academics/programs.html",
+        "Number_of_departments": 137
+    },
+    {
+        "School_name": "University of Massachusetts Amherst",
+        "Country": "United States of America",
+        "City": "Amherst",
+        "合作集團": "INTO",
+        "URL": "https://www.umass.edu/gateway/academics/explore-our-programs",
+        "Number_of_departments": 288
+    },
+    {
         "School_name": "University of Oklahoma",
         "Country": "United States of America",
         "City": "Norman",
         "合作集團": "INTO",
         "URL": "https://www.ou.edu/admissions/academics",
-        "Number_of_departments": 199
+        "Number_of_departments": 511
     },
     {
         "School_name": "Colorado State University",
@@ -93,7 +141,7 @@
         "City": "Birmingham",
         "合作集團": "INTO",
         "URL": ".",
-        "Number_of_departments": 295
+        "Number_of_departments": 297
     },
     {
         "School_name": "University of Arizona",
@@ -101,7 +149,7 @@
         "City": "Tucson",
         "合作集團": "INTO",
         "URL": ".",
-        "Number_of_departments": 678
+        "Number_of_departments": 841
     },
     {
         "School_name": "University of Stirling",
@@ -109,7 +157,7 @@
         "City": "Stirling",
         "合作集團": "INTO",
         "URL": ".",
-        "Number_of_departments": 215
+        "Number_of_departments": 1429
     },
     {
         "School_name": "Long Island University",
@@ -125,6 +173,6 @@
         "City": "Leeds",
         "合作集團": "StudyGroup",
         "URL": ".",
-        "Number_of_departments": 1164
+        "Number_of_departments": 286
     }
 ]

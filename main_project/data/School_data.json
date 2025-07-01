@@ -1,10 +1,29 @@
 [
     {
+        "School_name": "James Madison University",
+        "Country": "United States of America",
+        "City": "Harrisonburg",
+        "合作集團": "StudyGroup",
+        "URL": "https://www.jmu.edu/academics/undergraduate/majors/index.shtml",
+        "備註": ".",
+        "Number_of_departments": 138
+    },
+    {
+        "School_name": "Saint Louis University Madrid",
+        "Country": "United States of America",
+        "City": "Madrid",
+        "合作集團": "INTO",
+        "URL": "https://partnerportal2.intoglobal.com/en/universities/saint-louis-university-madrid/summary/directentry-undergraduate",
+        "備註": "?",
+        "Number_of_departments": 77
+    },
+    {
         "School_name": "Queen's University Belfast International Study Centre",
         "Country": "United Kingdom",
         "City": "Belfast",
         "合作集團": "INTO",
         "URL": "https://www.qub.ac.uk/International/International-students/Applying/University-Preparation-Courses/isc-academic-programmes/",
+        "備註": ".",
         "Number_of_departments": 22
     },
     {
@@ -12,24 +31,9 @@
         "Country": "United Kingdom",
         "City": "Manchester",
         "合作集團": "INTO",
-        "URL": "https://www.manchester.ac.uk/study/undergraduate/courses/2026/\nhttps://www.manchester.ac.uk/study/masters/courses/list/",
+        "URL": "https://www.manchester.ac.uk/study/masters/courses/list/",
+        "備註": ".",
         "Number_of_departments": 484
-    },
-    {
-        "School_name": "Royal Holloway University of London",
-        "Country": "United Kingdom",
-        "City": "Egham",
-        "合作集團": "StudyGroup",
-        "URL": "https://www.royalholloway.ac.uk/research-and-education/departments-and-schools/",
-        "Number_of_departments": 31
-    },
-    {
-        "School_name": "University of Sussex",
-        "Country": "United Kingdom",
-        "City": "Brighton",
-        "合作集團": "StudyGroup",
-        "URL": "https://www.sussex.ac.uk/study/undergraduate/ https://www.sussex.ac.uk/study/masters",
-        "Number_of_departments": 252
     },
     {
         "School_name": "Thomas Jefferson University",
@@ -37,6 +41,7 @@
         "City": "Philadelphia",
         "合作集團": "INTO",
         "URL": "https://www.jefferson.edu/academics/programs.html",
+        "備註": ".",
         "Number_of_departments": 137
     },
     {
@@ -45,6 +50,7 @@
         "City": "Amherst",
         "合作集團": "INTO",
         "URL": "https://www.umass.edu/gateway/academics/explore-our-programs",
+        "備註": ".",
         "Number_of_departments": 288
     },
     {
@@ -53,6 +59,7 @@
         "City": "Norman",
         "合作集團": "INTO",
         "URL": "https://www.ou.edu/admissions/academics",
+        "備註": ".",
         "Number_of_departments": 511
     },
     {
@@ -61,6 +68,7 @@
         "City": "Fort Collins",
         "合作集團": "INTO",
         "URL": "https://catalog.colostate.edu/general-catalog/programsaz/",
+        "備註": ".",
         "Number_of_departments": 778
     },
     {
@@ -69,6 +77,7 @@
         "City": "Madison",
         "合作集團": "INTO",
         "URL": "https://drew.edu/academic/programs-of-study/",
+        "備註": ".",
         "Number_of_departments": 183
     },
     {
@@ -77,6 +86,7 @@
         "City": "Boston",
         "合作集團": "INTO",
         "URL": "https://www.fisher.edu/academics/undergraduate-programs",
+        "備註": ".",
         "Number_of_departments": 73
     },
     {
@@ -85,6 +95,7 @@
         "City": "Fairfax",
         "合作集團": "INTO",
         "URL": "https://catalog.gmu.edu/programs/programsa-z/",
+        "備註": ".",
         "Number_of_departments": 559
     },
     {
@@ -93,6 +104,7 @@
         "City": "Hempstead",
         "合作集團": "INTO",
         "URL": "https://www.hofstra.edu/undergraduate/",
+        "備註": ".",
         "Number_of_departments": 354
     },
     {
@@ -101,6 +113,7 @@
         "City": "Normal",
         "合作集團": "INTO",
         "URL": "https://illinoisstate.edu/academics/majors/",
+        "備註": ".",
         "Number_of_departments": 167
     },
     {
@@ -109,6 +122,7 @@
         "City": "Montclair",
         "合作集團": "INTO",
         "URL": "https://www.montclair.edu/academics/all-programs/",
+        "備註": ".",
         "Number_of_departments": 150
     },
     {
@@ -117,6 +131,7 @@
         "City": "Corvallis",
         "合作集團": "INTO",
         "URL": "https://admissions.oregonstate.edu/find-your-major",
+        "備註": ".",
         "Number_of_departments": 105
     },
     {
@@ -125,6 +140,7 @@
         "City": "St. Louis",
         "合作集團": "INTO",
         "URL": "https://catalog.slu.edu/programs/",
+        "備註": ".",
         "Number_of_departments": 490
     },
     {
@@ -133,6 +149,7 @@
         "City": "Boston",
         "合作集團": "INTO",
         "URL": "https://www.suffolk.edu/academics/undergraduate-programs",
+        "備註": ".",
         "Number_of_departments": 172
     },
     {
@@ -141,6 +158,7 @@
         "City": "Birmingham",
         "合作集團": "INTO",
         "URL": "https://www.uab.edu/degrees/",
+        "備註": ".",
         "Number_of_departments": 297
     },
     {
@@ -149,6 +167,7 @@
         "City": "Tucson",
         "合作集團": "INTO",
         "URL": "https://www.arizona.edu/degree-search/majors?cat-interest=",
+        "備註": ".",
         "Number_of_departments": 841
     },
     {
@@ -157,7 +176,44 @@
         "City": "Stirling",
         "合作集團": "INTO",
         "URL": "https://www.stir.ac.uk/",
+        "備註": ".",
         "Number_of_departments": 1429
+    },
+    {
+        "School_name": "DePaul University",
+        "Country": "United States of America",
+        "City": "Chicago",
+        "合作集團": "StudyGroup",
+        "URL": "https://catalog.depaul.edu/programs/",
+        "備註": ".",
+        "Number_of_departments": 752
+    },
+    {
+        "School_name": "Durham University",
+        "Country": "United Kingdom",
+        "City": "Durham",
+        "合作集團": "StudyGroup",
+        "URL": "https://www.durham.ac.uk/search/?searchStudioQuery=&isGrid=false&facets=&orderBy=&start=0",
+        "備註": ".",
+        "Number_of_departments": 291
+    },
+    {
+        "School_name": "Royal Holloway University of London",
+        "Country": "United Kingdom",
+        "City": "Egham",
+        "合作集團": "StudyGroup",
+        "URL": "https://www.royalholloway.ac.uk/research-and-education/departments-and-schools/",
+        "備註": ".",
+        "Number_of_departments": 31
+    },
+    {
+        "School_name": "University of Sussex",
+        "Country": "United Kingdom",
+        "City": "Brighton",
+        "合作集團": "StudyGroup",
+        "URL": "https://www.sussex.ac.uk/study/undergraduate/ https://www.sussex.ac.uk/study/masters",
+        "備註": ".",
+        "Number_of_departments": 252
     },
     {
         "School_name": "University of Leeds",
@@ -165,6 +221,7 @@
         "City": "Leeds",
         "合作集團": "StudyGroup",
         "URL": "https://www.leeds.ac.uk/search?complete_url=?num_ranks=10000&query=%21FunDoesNotExist%3APadreNull&f.Filter+your+results%7CFUN6339tqai975jbmvk19nt89li3=Courses&collection=leeds-meta&sort=title",
+        "備註": ".",
         "Number_of_departments": 286
     }
 ]

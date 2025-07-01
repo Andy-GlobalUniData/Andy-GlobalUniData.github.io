@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <td>${school.City}</td>
                     <td>${school.Number_of_departments}</td>
                     <td>${school.合作集團}</td>
+                    <td>${school.URL ? `<a href="${school.URL}" target="_blank">${school.URL.length > 30 ? school.URL.substring(0, 30) + "..." : school.URL}</a>` : "N/A"}</td>
                 </tr>
             `).join("");
 

@@ -60,7 +60,7 @@
         "Country": "United States of America",
         "City": "Fort Collins",
         "合作集團": "INTO",
-        "URL": ".",
+        "URL": "https://catalog.colostate.edu/general-catalog/programsaz/",
         "Number_of_departments": 778
     },
     {
@@ -68,7 +68,7 @@
         "Country": "United States of America",
         "City": "Madison",
         "合作集團": "INTO",
-        "URL": ".",
+        "URL": "https://drew.edu/academic/programs-of-study/",
         "Number_of_departments": 183
     },
     {
@@ -76,7 +76,7 @@
         "Country": "United States of America",
         "City": "Boston",
         "合作集團": "INTO",
-        "URL": ".",
+        "URL": "https://www.fisher.edu/academics/undergraduate-programs",
         "Number_of_departments": 73
     },
     {
@@ -84,7 +84,7 @@
         "Country": "United States of America",
         "City": "Fairfax",
         "合作集團": "INTO",
-        "URL": ".",
+        "URL": "https://catalog.gmu.edu/programs/programsa-z/",
         "Number_of_departments": 559
     },
     {
@@ -92,7 +92,7 @@
         "Country": "United States of America",
         "City": "Hempstead",
         "合作集團": "INTO",
-        "URL": ".",
+        "URL": "https://www.hofstra.edu/undergraduate/",
         "Number_of_departments": 354
     },
     {
@@ -100,7 +100,7 @@
         "Country": "United States of America",
         "City": "Normal",
         "合作集團": "INTO",
-        "URL": ".",
+        "URL": "https://illinoisstate.edu/academics/majors/",
         "Number_of_departments": 167
     },
     {
@@ -108,7 +108,7 @@
         "Country": "United States of America",
         "City": "Montclair",
         "合作集團": "INTO",
-        "URL": ".",
+        "URL": "https://www.montclair.edu/academics/all-programs/",
         "Number_of_departments": 150
     },
     {
@@ -116,7 +116,7 @@
         "Country": "United States of America",
         "City": "Corvallis",
         "合作集團": "INTO",
-        "URL": ".",
+        "URL": "https://admissions.oregonstate.edu/find-your-major",
         "Number_of_departments": 105
     },
     {
@@ -124,7 +124,7 @@
         "Country": "United States of America",
         "City": "St. Louis",
         "合作集團": "INTO",
-        "URL": ".",
+        "URL": "https://catalog.slu.edu/programs/",
         "Number_of_departments": 490
     },
     {
@@ -132,7 +132,7 @@
         "Country": "United States of America",
         "City": "Boston",
         "合作集團": "INTO",
-        "URL": ".",
+        "URL": "https://www.suffolk.edu/academics/undergraduate-programs",
         "Number_of_departments": 172
     },
     {
@@ -140,7 +140,7 @@
         "Country": "United States of America",
         "City": "Birmingham",
         "合作集團": "INTO",
-        "URL": ".",
+        "URL": "https://www.uab.edu/degrees/",
         "Number_of_departments": 297
     },
     {
@@ -148,7 +148,7 @@
         "Country": "United States of America",
         "City": "Tucson",
         "合作集團": "INTO",
-        "URL": ".",
+        "URL": "https://www.arizona.edu/degree-search/majors?cat-interest=",
         "Number_of_departments": 841
     },
     {
@@ -156,23 +156,15 @@
         "Country": "United Kingdom",
         "City": "Stirling",
         "合作集團": "INTO",
-        "URL": ".",
+        "URL": "https://www.stir.ac.uk/",
         "Number_of_departments": 1429
-    },
-    {
-        "School_name": "Long Island University",
-        "Country": "United States of America",
-        "City": "Brookville",
-        "合作集團": "INTO、StudyGroup",
-        "URL": ".",
-        "Number_of_departments": 63
     },
     {
         "School_name": "University of Leeds",
         "Country": "United Kingdom",
         "City": "Leeds",
         "合作集團": "StudyGroup",
-        "URL": ".",
+        "URL": "https://www.leeds.ac.uk/search?complete_url=?num_ranks=10000&query=%21FunDoesNotExist%3APadreNull&f.Filter+your+results%7CFUN6339tqai975jbmvk19nt89li3=Courses&collection=leeds-meta&sort=title",
         "Number_of_departments": 286
     }
 ]

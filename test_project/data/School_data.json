@@ -1,5 +1,21 @@
 [
     {
+        "School_name": "University of Nebraska Omaha",
+        "Country": "United States of America",
+        "City": "Omaha",
+        "合作集團": "StudyGroup",
+        "URL": "https://catalog.unomaha.edu/undergraduate/programsaz/",
+        "Number_of_departments": 278
+    },
+    {
+        "School_name": "Texas State University",
+        "Country": "United States of America",
+        "City": "San Marcos",
+        "合作集團": "INTO",
+        "URL": "https://mycatalog.txstate.edu/undergraduate/undergraduate-majors/",
+        "Number_of_departments": 380
+    },
+    {
         "School_name": "Mercer University",
         "Country": "United States of America",
         "City": "Macon",
@@ -16,14 +32,6 @@
         "Number_of_departments": 500
     },
     {
-        "School_name": "Texas State University",
-        "Country": "United States of America",
-        "City": "San Marcos",
-        "合作集團": "INTO",
-        "URL": "https://mycatalog.txstate.edu/undergraduate/undergraduate-majors/",
-        "Number_of_departments": 380
-    },
-    {
         "School_name": "University of Huddersfield",
         "Country": "United Kingdom",
         "City": "Huddersfield",
@@ -37,7 +45,7 @@
         "City": "Henniker",
         "合作集團": "INTO",
         "URL": "https://www.nec.edu/degree-programs",
-        "Number_of_departments": 96
+        "Number_of_departments": 100
     },
     {
         "School_name": "James Madison University",
@@ -85,7 +93,7 @@
         "City": "Amherst",
         "合作集團": "INTO",
         "URL": "https://www.umass.edu/gateway/academics/explore-our-programs",
-        "Number_of_departments": 288
+        "Number_of_departments": 436
     },
     {
         "School_name": "University of Oklahoma",
@@ -197,7 +205,7 @@
         "City": "Stirling",
         "合作集團": "INTO",
         "URL": "https://www.stir.ac.uk/",
-        "Number_of_departments": 1432
+        "Number_of_departments": 736
     },
     {
         "School_name": "DePaul University",

@@ -1,27 +1,46 @@
+
 # Andy Global Uni Data
 
-本專案旨在收集與展示各大學校相關數據，並提供便捷的搜尋功能，特別針對外國大學的資訊。
+## 專案簡介
 
-> 本專案是為公司開發的查找工具，透過爬蟲技術抓取外國大學的資料。目前仍在開發階段，因此暫時對外開放，未來將提供 Demo 版本供公司以外的使用者參考。
+Andy Global Uni Data 是一個專為查詢全球大學資料而設計的網頁應用。專案透過自動化爬蟲技術，收集並整理各國大學的詳細資訊，包含學校名稱、地區、學位層級、科系等，並以互動式表格的方式呈現，方便用戶快速搜尋與篩選所需資料。此專案目前分為主專案與測試版本，持續優化中。
 
-## 📌 專案連結
+## 主要功能
 
-[主專案](https://andy-globalunidata.github.io/main_project)
+- **全球大學資料查詢**：收錄多國大學資訊，支援多條件篩選。
+- **學位層級篩選**：可依照學士、碩士、博士等學位層級進行篩選。
+- **部門/科系搜尋**：可輸入關鍵字搜尋特定部門或科系。
+- **即時資料過濾**：多重條件可同時作用，僅顯示同時符合所有條件的資料。
+- **資料自動更新**：後台定期自動爬取與更新資料，確保資訊新穎。
 
-[測試版本](https://andy-globalunidata.github.io/test_project)
+## 操作說明
 
-## 使用條款
+1. **進入網站**  
+   點擊 [主專案](https://andy-globalunidata.github.io/main_project) 或 [測試版本](https://andy-globalunidata.github.io/test_project) 進入查詢頁面。
 
-本專案僅供使用者查詢資料，不允許 fork 或修改程式碼。如有任何問題，請聯繫開發者。
+2. **學位層級篩選**  
+   頁面上方有「Select Degree Level」區塊，可勾選欲查詢的學位層級（如 Bachelor、Master、PhD 等）。
+   - 勾選「不篩選學位」則顯示所有學位資料。
+   - 可多選，僅顯示同時符合所選學位的資料。
 
-## License
+3. **科系搜尋**  
+   在「Search Department」欄位輸入關鍵字（如 Computer Science、Business 等），即可即時過濾顯示相關科系。
 
-This software is proprietary and **not open-source**.  
-Users are allowed to **use** this software but are strictly prohibited from forking, modifying, or redistributing it.  
-For special usage requests, please contact [andy8787main@gmail.com]。
+4. **多重條件篩選**  
+   學位層級與部門搜尋可同時作用，僅顯示同時符合所有條件的資料。
 
-## 未來目標方向
+5. **資料表格操作**  
+   - 點擊表頭可排序資料。
+   - 支援分頁、快速跳轉與複製資料。
 
-- **自動化資料載入**
-- **註冊帳號與密碼**
-- **中文與英文介面**
+## 系統運作原理
+
+- **資料來源**：透過自動化爬蟲定期抓取各國大學官方網站或公開資料，並整理為 JSON 格式。
+- **前端展示**：使用 DataTables.js 進行資料表格渲染與互動，並以 JavaScript 控制篩選邏輯。
+- **篩選機制**：所有篩選條件（學位、部門等）皆於前端即時運算，無需重新整理頁面。
+
+## 注意事項
+
+- 本專案僅供查詢使用，禁止 fork、修改或再散佈。
+- 若有特殊需求或合作意願，請聯繫開發者 [andy8787main@gmail.com]。
+

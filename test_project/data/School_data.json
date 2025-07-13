@@ -1,107 +1,187 @@
 [
     {
-        "School_name": "University of Nebraska Omaha",
-        "Country": "United States of America",
-        "City": "Omaha",
-        "合作集團": "StudyGroup",
-        "URL": "https://catalog.unomaha.edu/undergraduate/programsaz/",
-        "Number_of_departments": 278
-    },
-    {
         "School_name": "Texas State University",
         "Country": "United States of America",
         "City": "San Marcos",
         "合作集團": "INTO",
         "URL": "https://mycatalog.txstate.edu/undergraduate/undergraduate-majors/",
-        "Number_of_departments": 380
+        "Number_of_departments": 381
     },
     {
-        "School_name": "Mercer University",
+        "School_name": "Queens College",
         "Country": "United States of America",
-        "City": "Macon",
-        "合作集團": "StudyGroup",
-        "URL": "https://www.mercer.edu/academics/program-finder/",
-        "Number_of_departments": 248
+        "City": "New York",
+        "合作集團": ".",
+        "URL": "https://www.qc.cuny.edu/ga/graduate-programs/",
+        "Number_of_departments": 107
     },
     {
-        "School_name": "Teesside University",
+        "School_name": "Aston University",
         "Country": "United Kingdom",
-        "City": "Middlesbrough",
-        "合作集團": "StudyGroup",
-        "URL": "https://www.tees.ac.uk/undergraduate_courses/az.cfm",
-        "Number_of_departments": 500
+        "City": "Birmingham",
+        "合作集團": ".",
+        "URL": "https://www.aston.ac.uk/courses-atoz",
+        "Number_of_departments": 361
     },
     {
-        "School_name": "University of Huddersfield",
+        "School_name": "Bath Spa University",
         "Country": "United Kingdom",
-        "City": "Huddersfield",
-        "合作集團": "StudyGroup",
-        "URL": "https://courses.hud.ac.uk/2026-27/sort:title",
-        "Number_of_departments": 1164
+        "City": "Bath, Somerset",
+        "合作集團": ".",
+        "URL": "https://www.bathspa.ac.uk//courses/?page=1000",
+        "Number_of_departments": 220
     },
     {
-        "School_name": "New England College",
+        "School_name": "Carnegie Mellon University",
         "Country": "United States of America",
-        "City": "Henniker",
-        "合作集團": "INTO",
-        "URL": "https://www.nec.edu/degree-programs",
-        "Number_of_departments": 100
+        "City": "Pittsburgh, Pennsylvania",
+        "合作集團": ".",
+        "URL": "https://www.cmu.edu/admission/majors-programs/undergraduate-program-finder",
+        "Number_of_departments": 157
     },
     {
-        "School_name": "James Madison University",
+        "School_name": "Elon University",
         "Country": "United States of America",
-        "City": "Harrisonburg",
-        "合作集團": "StudyGroup",
-        "URL": "https://www.jmu.edu/academics/undergraduate/majors/index.shtml",
-        "Number_of_departments": 138
+        "City": "Elon, North Carolina",
+        "合作集團": ".",
+        "URL": "https://www.elon.edu/u/academics/majors-minors-programs/",
+        "Number_of_departments": 141
     },
     {
-        "School_name": "Saint Louis University Madrid",
+        "School_name": "Erasmus Universitiet Rotterdam",
+        "Country": "Netherlands",
+        "City": "Rotterdam",
+        "合作集團": ".",
+        "URL": "https://www.eur.nl/en/search?f[0]=education_type%3Abachelor&f[1]=education_type%3Acourse&f[2]=education_type%3Amaster&f[3]=education_type%3Apost_experience_master&f[4]=education_type%3Aresearch_master",
+        "Number_of_departments": 223
+    },
+    {
+        "School_name": "Newcastle University",
+        "Country": "United Kingdom",
+        "City": "Newcastle upon Tyne",
+        "合作集團": ".",
+        "URL": "https://www.ncl.ac.uk/postgraduate/degrees/",
+        "Number_of_departments": 310
+    },
+    {
+        "School_name": "Northeastern University",
         "Country": "United States of America",
-        "City": "Madrid",
-        "合作集團": "INTO",
-        "URL": "https://partnerportal2.intoglobal.com/en/universities/saint-louis-university-madrid/summary/directentry-undergraduate",
-        "Number_of_departments": 77
+        "City": "Boston, Massachusetts",
+        "合作集團": ".",
+        "URL": "https://catalog.northeastern.edu/course-descriptions/",
+        "Number_of_departments": 230
     },
     {
-        "School_name": "Queen's University Belfast International Study Centre",
+        "School_name": "Nottingham Trent University",
+        "Country": "United Kingdom",
+        "City": "Nottingham",
+        "合作集團": ".",
+        "URL": "https://www.ntu.ac.uk/search?query=&category=&category=Courses&start_rank=",
+        "Number_of_departments": 40
+    },
+    {
+        "School_name": "Queen's University Belfast",
         "Country": "United Kingdom",
         "City": "Belfast",
-        "合作集團": "INTO",
-        "URL": "https://www.qub.ac.uk/International/International-students/Applying/University-Preparation-Courses/isc-academic-programmes/",
-        "Number_of_departments": 22
+        "合作集團": ".",
+        "URL": "https://www.qub.ac.uk/courses/",
+        "Number_of_departments": 713
     },
     {
-        "School_name": "The University of Manchester",
+        "School_name": "San Jose State University",
+        "Country": "United States of America",
+        "City": "San Jose, California",
+        "合作集團": ".",
+        "URL": "https://catalog.sjsu.edu/content.php?catoid=13&navoid=4973",
+        "Number_of_departments": 466
+    },
+    {
+        "School_name": "The University of Vermont",
+        "Country": "United States of America",
+        "City": "Burlington, Vermont",
+        "合作集團": ".",
+        "URL": "https://catalogue.uvm.edu/undergraduate/majors/",
+        "Number_of_departments": 374
+    },
+    {
+        "School_name": "UCLA",
+        "Country": "United States of America",
+        "City": "Los Angeles, California",
+        "合作集團": ".",
+        "URL": "https://admission.ucla.edu/apply/majors#The_College",
+        "Number_of_departments": 38
+    },
+    {
+        "School_name": "Universiteit Leiden",
+        "Country": "Netherlands",
+        "City": "Leiden",
+        "合作集團": ".",
+        "URL": "https://www.universiteitleiden.nl/en/education/study-programmes/professionals?pageNumber={}&language=english",
+        "Number_of_departments": 188
+    },
+    {
+        "School_name": "Universiteit van Amsterdam",
+        "Country": "Netherlands",
+        "City": "Amsterdam",
+        "合作集團": ".",
+        "URL": "https://www.uva.nl/en/education/master-s/master-s-programmes/masters-programmes.html",
+        "Number_of_departments": 678
+    },
+    {
+        "School_name": "University of Essex",
         "Country": "United Kingdom",
-        "City": "Manchester",
-        "合作集團": "INTO",
-        "URL": "https://www.manchester.ac.uk/study/masters/courses/list/",
-        "Number_of_departments": 484
+        "City": "Colchester",
+        "合作集團": ".",
+        "URL": "https://www.essex.ac.uk/course-search?collection=essex~sp-courses-meta&start_rank=1",
+        "Number_of_departments": 535
     },
     {
-        "School_name": "Thomas Jefferson University",
-        "Country": "United States of America",
-        "City": "Philadelphia",
-        "合作集團": "INTO",
-        "URL": "https://www.jefferson.edu/academics/programs.html",
-        "Number_of_departments": 137
+        "School_name": "University of Exeter",
+        "Country": "United Kingdom",
+        "City": "Exeter",
+        "合作集團": ".",
+        "URL": "https://search.exeter.ac.uk/s/search.html?collection=uoe~sp-search&f.Tabs%7Cuoe~ds-courses=Courses&num_ranks=1000&sort=",
+        "Number_of_departments": 488
     },
     {
-        "School_name": "University of Massachusetts Amherst",
-        "Country": "United States of America",
-        "City": "Amherst",
-        "合作集團": "INTO",
-        "URL": "https://www.umass.edu/gateway/academics/explore-our-programs",
-        "Number_of_departments": 436
+        "School_name": "University of Leicester",
+        "Country": "United Kingdom",
+        "City": "Leicester",
+        "合作集團": ".",
+        "URL": "https://le.ac.uk/courses?Q=&Page=",
+        "Number_of_departments": 115
     },
     {
-        "School_name": "University of Oklahoma",
+        "School_name": "University of Nottingham",
+        "Country": "United Kingdom",
+        "City": "Nottingham",
+        "合作集團": ".",
+        "URL": "https://www.nottingham.ac.uk/pgstudy/courses/courses.aspx?letter=",
+        "Number_of_departments": 195
+    },
+    {
+        "School_name": "University of Southampton",
+        "Country": "United Kingdom",
+        "City": "Southampton",
+        "合作集團": ".",
+        "URL": "https://www.southampton.ac.uk/courses/undergraduate?keyword_filter=",
+        "Number_of_departments": 219
+    },
+    {
+        "School_name": "University of Warwick",
+        "Country": "United Kingdom",
+        "City": "Coventry",
+        "合作集團": ".",
+        "URL": "https://warwick.ac.uk/study/postgraduate/courses/",
+        "Number_of_departments": 547
+    },
+    {
+        "School_name": "University of Washington",
         "Country": "United States of America",
-        "City": "Norman",
-        "合作集團": "INTO",
-        "URL": "https://www.ou.edu/admissions/academics",
-        "Number_of_departments": 964
+        "City": "Seattle, Washington",
+        "合作集團": ".",
+        "URL": "https://grad.uw.edu/programs/find-a-program/",
+        "Number_of_departments": 121
     },
     {
         "School_name": "Colorado State University",
@@ -117,7 +197,7 @@
         "City": "Madison",
         "合作集團": "INTO",
         "URL": "https://drew.edu/academic/programs-of-study/",
-        "Number_of_departments": 183
+        "Number_of_departments": 184
     },
     {
         "School_name": "Fisher College",
@@ -160,6 +240,14 @@
         "Number_of_departments": 150
     },
     {
+        "School_name": "New England College",
+        "Country": "United States of America",
+        "City": "Henniker",
+        "合作集團": "INTO",
+        "URL": "https://www.nec.edu/degree-programs",
+        "Number_of_departments": 100
+    },
+    {
         "School_name": "Oregon State University",
         "Country": "United States of America",
         "City": "Corvallis",
@@ -168,12 +256,28 @@
         "Number_of_departments": 105
     },
     {
+        "School_name": "Queen's University Belfast International Study Centre",
+        "Country": "United Kingdom",
+        "City": "Belfast",
+        "合作集團": "INTO",
+        "URL": "https://www.qub.ac.uk/International/International-students/Applying/University-Preparation-Courses/isc-academic-programmes/",
+        "Number_of_departments": 22
+    },
+    {
         "School_name": "Saint Louis University",
         "Country": "United States of America",
         "City": "St. Louis",
         "合作集團": "INTO",
         "URL": "https://catalog.slu.edu/programs/",
         "Number_of_departments": 490
+    },
+    {
+        "School_name": "Saint Louis University Madrid",
+        "Country": "United States of America",
+        "City": "Madrid",
+        "合作集團": "INTO",
+        "URL": "https://partnerportal2.intoglobal.com/en/universities/saint-louis-university-madrid/summary/directentry-undergraduate",
+        "Number_of_departments": 77
     },
     {
         "School_name": "Suffolk University Boston",
@@ -192,12 +296,44 @@
         "Number_of_departments": 297
     },
     {
+        "School_name": "The University of Manchester",
+        "Country": "United Kingdom",
+        "City": "Manchester",
+        "合作集團": "INTO",
+        "URL": "https://www.manchester.ac.uk/study/masters/courses/list/",
+        "Number_of_departments": 484
+    },
+    {
+        "School_name": "Thomas Jefferson University",
+        "Country": "United States of America",
+        "City": "Philadelphia",
+        "合作集團": "INTO",
+        "URL": "https://www.jefferson.edu/academics/programs.html",
+        "Number_of_departments": 137
+    },
+    {
         "School_name": "University of Arizona",
         "Country": "United States of America",
         "City": "Tucson",
         "合作集團": "INTO",
         "URL": "https://www.arizona.edu/degree-search/majors?cat-interest=",
-        "Number_of_departments": 841
+        "Number_of_departments": 1248
+    },
+    {
+        "School_name": "University of Massachusetts Amherst",
+        "Country": "United States of America",
+        "City": "Amherst",
+        "合作集團": "INTO",
+        "URL": "https://www.umass.edu/gateway/academics/explore-our-programs",
+        "Number_of_departments": 436
+    },
+    {
+        "School_name": "University of Oklahoma",
+        "Country": "United States of America",
+        "City": "Norman",
+        "合作集團": "INTO",
+        "URL": "https://www.ou.edu/admissions/academics",
+        "Number_of_departments": 970
     },
     {
         "School_name": "University of Stirling",
@@ -205,7 +341,7 @@
         "City": "Stirling",
         "合作集團": "INTO",
         "URL": "https://www.stir.ac.uk/",
-        "Number_of_departments": 736
+        "Number_of_departments": 1434
     },
     {
         "School_name": "DePaul University",
@@ -224,6 +360,22 @@
         "Number_of_departments": 288
     },
     {
+        "School_name": "James Madison University",
+        "Country": "United States of America",
+        "City": "Harrisonburg",
+        "合作集團": "StudyGroup",
+        "URL": "https://www.jmu.edu/academics/undergraduate/majors/index.shtml",
+        "Number_of_departments": 138
+    },
+    {
+        "School_name": "Mercer University",
+        "Country": "United States of America",
+        "City": "Macon",
+        "合作集團": "StudyGroup",
+        "URL": "https://www.mercer.edu/academics/program-finder/",
+        "Number_of_departments": 251
+    },
+    {
         "School_name": "Royal Holloway University of London",
         "Country": "United Kingdom",
         "City": "Egham",
@@ -232,12 +384,20 @@
         "Number_of_departments": 31
     },
     {
-        "School_name": "University of Sussex",
+        "School_name": "Teesside University",
         "Country": "United Kingdom",
-        "City": "Brighton",
+        "City": "Middlesbrough",
         "合作集團": "StudyGroup",
-        "URL": "https://www.sussex.ac.uk/study/undergraduate/",
-        "Number_of_departments": 253
+        "URL": "https://www.tees.ac.uk/undergraduate_courses/az.cfm",
+        "Number_of_departments": 501
+    },
+    {
+        "School_name": "University of Huddersfield",
+        "Country": "United Kingdom",
+        "City": "Huddersfield",
+        "合作集團": "StudyGroup",
+        "URL": "https://courses.hud.ac.uk/2026-27/sort:title",
+        "Number_of_departments": 1164
     },
     {
         "School_name": "University of Leeds",
@@ -246,5 +406,21 @@
         "合作集團": "StudyGroup",
         "URL": "https://www.leeds.ac.uk/search?complete_url=?num_ranks=10000&query=%21FunDoesNotExist%3APadreNull&f.Filter+your+results%7CFUN6339tqai975jbmvk19nt89li3=Courses&collection=leeds-meta&sort=title",
         "Number_of_departments": 286
+    },
+    {
+        "School_name": "University of Nebraska Omaha",
+        "Country": "United States of America",
+        "City": "Omaha",
+        "合作集團": "StudyGroup",
+        "URL": "https://catalog.unomaha.edu/undergraduate/programsaz/",
+        "Number_of_departments": 304
+    },
+    {
+        "School_name": "University of Sussex",
+        "Country": "United Kingdom",
+        "City": "Brighton",
+        "合作集團": "StudyGroup",
+        "URL": "https://www.sussex.ac.uk/study/undergraduate/",
+        "Number_of_departments": 253
     }
 ]

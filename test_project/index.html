@@ -15,15 +15,27 @@
 
 
   <div class="header-container">
-    <div class="last-updated-container">
-      <h3>Last updated time:</h3>
-      <div id="github-push-time"></div>
+    <div style="display: flex; align-items: center;">
+      <button id="show-changelog" style="margin-right: 16px;">更新日誌</button>
+      <div class="last-updated-container">
+        <h3>Last updated time:</h3>
+        <div id="github-push-time"></div>
+      </div>
     </div>
     <div class="export-buttons">
       <button id="export-json">Export JSON</button>
       <button id="export-excel">Export Excel</button>
       <button id="export-txt">Export URL (TXT)</button>
       <button id="copy-all-urls">Copy All URLs</button>
+    </div>
+  </div>
+
+  <!-- 更新日誌彈窗 -->
+  <div id="changelog-modal" class="changelog-modal" style="display:none;">
+    <div class="changelog-modal-content">
+      <span class="changelog-close">&times;</span>
+      <h2>更新日誌</h2>
+      <div id="changelog-list">Loading...</div>
     </div>
   </div>
 

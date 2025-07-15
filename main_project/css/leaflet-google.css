@@ -1,0 +1,22 @@
+/* 學校名稱 label 樣式，仿 Google Maps */
+.leaflet-tooltip.school-label {
+    background: #fff;
+    color: #d32f2f;
+    border: 1.5px solid #d32f2f;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 2px 6px rgba(60, 60, 60, 0.08);
+    padding: 2px 8px;
+    opacity: 0.95;
+}
+
+/* leaflet-google.css: Google Maps 風格 for Leaflet */
+.leaflet-container {
+    background: #e5e3df;
+}
+
+/* Red marker icon (Google Maps style) */
+.leaflet-marker-icon.red-marker {
+    filter: hue-rotate(-30deg) saturate(2) brightness(1.1);
+}

@@ -456,4 +456,22 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+  // 更新日誌彈窗顯示/隱藏
+  var showBtn = document.getElementById('show-changelog');
+  var modal = document.getElementById('changelog-modal');
+  var closeBtn = document.querySelector('.changelog-close');
+  if (showBtn && modal && closeBtn) {
+    showBtn.onclick = function () {
+      modal.style.display = 'block';
+    };
+    closeBtn.onclick = function () {
+      modal.style.display = 'none';
+    };
+    // 點擊 modal 外部區域也關閉
+    window.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    };
+  }
 });

@@ -1,0 +1,155 @@
+/* Floating Navigation Sidebar Styles */
+.floating-nav {
+    position: fixed;
+    top: 80px;
+    left: 18px;
+    z-index: 1000;
+    background: #f7f7fa;
+    border: 1.5px solid #e0e0e0;
+    padding: 18px 20px 14px 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(180, 180, 180, 0.10);
+    font-size: 16px;
+    min-width: 170px;
+    transition: box-shadow 0.2s, left 0.3s, opacity 0.3s;
+    user-select: none;
+    background-clip: padding-box;
+    color: #333;
+    opacity: 1;
+}
+
+.floating-nav-title {
+    font-weight: bold;
+    color: #888;
+    font-size: 17px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.floating-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.floating-nav li {
+    margin-bottom: 10px;
+    border-radius: 6px;
+    transition: background 0.18s;
+}
+
+.floating-nav li:last-child {
+    margin-bottom: 0;
+}
+
+.floating-nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #3a3a3a;
+    font-weight: 500;
+    padding: 7px 10px 7px 6px;
+    border-radius: 6px;
+    transition: background 0.18s, color 0.18s;
+}
+
+.floating-nav a:hover {
+    background: #e0e0e0;
+    color: #222;
+    text-decoration: none;
+}
+
+.floating-nav .nav-icon {
+    margin-right: 8px;
+    font-size: 18px;
+    width: 22px;
+    text-align: center;
+}
+
+/* Hamburger button styles */
+#floating-nav-toggle {
+    position: fixed;
+    top: 28px;
+    left: 18px;
+    z-index: 1100;
+    width: 44px;
+    height: 44px;
+    background: #f7f7fa;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(180, 180, 180, 0.10);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.18s, border 0.18s;
+}
+
+#floating-nav-toggle:hover {
+    background: #e0e0e0;
+    border-color: #bdbdbd;
+}
+
+.hamburger-bar {
+    width: 24px;
+    height: 3px;
+    background: #888;
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+#floating-nav-toggle.open .hamburger-bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+#floating-nav-toggle.open .hamburger-bar:nth-child(2) {
+    opacity: 0;
+}
+
+#floating-nav-toggle.open .hamburger-bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Nav open/close animation */
+.floating-nav {
+    left: 18px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.floating-nav:not(.open) {
+    left: -260px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.floating-nav.open {
+    left: 18px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media (max-width: 900px) {
+    .floating-nav {
+        top: 60px;
+        left: -260px;
+        min-width: 180px;
+        max-width: 80vw;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .floating-nav.open {
+        left: 10px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    #floating-nav-toggle {
+        top: 18px;
+        left: 10px;
+    }
+}

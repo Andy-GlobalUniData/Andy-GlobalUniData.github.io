@@ -7,117 +7,176 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andy Global Uni Data</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/floating-nav.css">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
 </head>
 
+<a id="top-anchor"></a>
+
 <!-- Leaflet CSS for SchoolMap 多點地圖 -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
-<body>
+
+<!-- Hamburger Floating Navigation Sidebar -->
+<div id="floating-nav-wrapper">
+  <button id="floating-nav-toggle" aria-label="Open navigation" class="floating-nav-hamburger">
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+  </button>
+  <nav id="floating-nav" class="floating-nav">
+    <div class="floating-nav-title">快速導覽</div>
+    <ul>
+      <li><a href="#top-anchor"><span class="nav-icon">⬆️</span>Top</a></li>
+      <li><a href="#country-anchor"><span class="nav-icon">🌏</span>Select Country</a></li>
+      <li><a href="#json-table-anchor"><span class="nav-icon">📋</span>json-table</a></li>
+      <li><a href="#school-data-table-anchor"><span class="nav-icon">🏫</span>School Data Table</a></li>
+      <li><a href="#school-map-anchor"><span class="nav-icon">🗺️</span>School Locations on Map</a></li>
+    </ul>
+  </nav>
+</div>
+
+<a id="top-anchor"></a>
 
 
-  <div class="header-container">
-    <div style="display: flex; align-items: center;">
-      <button id="show-changelog" style="margin-right: 16px;">更新日誌</button>
-      <div class="last-updated-container">
-        <h3>Last updated time:</h3>
-        <div id="github-push-time"></div>
-      </div>
-    </div>
-    <div class="export-buttons">
-      <button id="export-json">Export JSON</button>
-      <button id="export-excel">Export Excel</button>
-      <button id="export-txt">Export URL (TXT)</button>
-      <button id="copy-all-urls">Copy All URLs</button>
-    </div>
-  </div>
-
-  <!-- 更新日誌彈窗 -->
-  <div id="changelog-modal" class="changelog-modal" style="display:none;">
-    <div class="changelog-modal-content">
-      <span class="changelog-close">&times;</span>
-      <h2>更新日誌</h2>
-      <div id="changelog-list">Loading...</div>
-    </div>
-  </div>
-
-  <div class="user-guide"
-    style="background:#fffbe6;border:1px solid #ffe58f;padding:18px 22px;margin-bottom:22px;border-radius:8px;box-shadow:0 2px 8px rgba(255,229,143,0.08);font-size:16px;line-height:1.7;">
-    <strong>使用說明：</strong><br>
-    1. 請先選擇國家、學校、學位，表格會自動篩選顯示對應資料。<br>
-    2. 可於表格上方搜尋欄快速查找科系或網址。<br>
-    3. 點選每列的 <b>Copy URL</b> 可複製該科系網址。<br>
-    4. <b>Export JSON</b>、<b>Export Excel</b>、<b>Export URL (TXT)</b> 會匯出你勾選的資料。<br>
-    5. <b>Copy All URLs</b> 會複製你勾選的資料的網址。<br>
-    6. 若遇資料載入異常，請重新整理頁面。<br>
-    <span style="color:#faad14;font-size:15px;">本工具僅供查詢使用，請勿未經授權轉載或修改。</span>
-  </div>
-
-  <div class="select-area-container">
-    <div id="country-select" class="select-container">
-      <h3>Select Country</h3>
-    </div>
-
-    <div id="school-select" class="select-container">
-      <h3>Select School</h3>
-    </div>
-
-    <div id="degree-select" class="select-container">
-      <h3>Select Degree</h3>
+<div class="header-container">
+  <div style="display: flex; align-items: center;">
+    <button id="show-changelog" style="margin-right: 16px;">更新日誌</button>
+    <div class="last-updated-container">
+      <h3>Last updated time:</h3>
+      <div id="github-push-time"></div>
     </div>
   </div>
+  <div class="export-buttons">
+    <button id="export-json">Export JSON</button>
+    <button id="export-excel">Export Excel</button>
+    <button id="export-txt">Export URL (TXT)</button>
+    <button id="copy-all-urls">Copy All URLs</button>
+  </div>
+</div>
 
+<!-- 更新日誌彈窗 -->
+<div id="changelog-modal" class="changelog-modal" style="display:none;">
+  <div class="changelog-modal-content">
+    <span class="changelog-close">&times;</span>
+    <h2>更新日誌</h2>
+    <div id="changelog-list">Loading...</div>
+  </div>
+</div>
+
+<div class="user-guide"
+  style="background:#fffbe6;border:1px solid #ffe58f;padding:18px 22px;margin-bottom:22px;border-radius:8px;box-shadow:0 2px 8px rgba(255,229,143,0.08);font-size:16px;line-height:1.7;">
+  <strong>使用說明：</strong><br>
+  1. 請先選擇國家、學校、學位，表格會自動篩選顯示對應資料。<br>
+  2. 可於表格上方搜尋欄快速查找科系或網址。<br>
+  3. 點選每列的 <b>Copy URL</b> 可複製該科系網址。<br>
+  4. <b>Export JSON</b>、<b>Export Excel</b>、<b>Export URL (TXT)</b> 會匯出你勾選的資料。<br>
+  5. <b>Copy All URLs</b> 會複製你勾選的資料的網址。<br>
+  6. 若遇資料載入異常，請重新整理頁面。<br>
+  <span style="color:#faad14;font-size:15px;">本工具僅供查詢使用，請勿未經授權轉載或修改。</span>
+</div>
+
+<div class="select-area-container">
+
+  <a id="country-anchor"></a>
+  <div id="country-select" class="select-container">
+    <h3>Select Country</h3>
+  </div>
+
+  <div id="school-select" class="select-container">
+    <h3>Select School</h3>
+  </div>
+
+  <div id="degree-select" class="select-container">
+    <h3>Select Degree</h3>
+  </div>
+</div>
+
+<div class="table-container">
+  <a id="json-table-anchor"></a>
+  <table id="json-table" class="display">
+    <thead>
+      <tr>
+        <th>Select</th>
+        <th>Country</th>
+        <th>School Name</th>
+        <th>Department Name</th>
+        <th>URL</th>
+        <th>Copy URL</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+
+<div id="school-data-table-container">
+  <a id="school-data-table-anchor"></a>
+  <h3>School Data Table</h3>
   <div class="table-container">
-    <table id="json-table" class="display">
+    <table id="school-data-table" class="display">
       <thead>
         <tr>
-          <th>Select</th>
-          <th>Country</th>
           <th>School Name</th>
-          <th>Department Name</th>
-          <th>URL</th>
-          <th>Copy URL</th>
+          <th>Country</th>
+          <th>City</th>
+          <th>科系數量</th>
+          <th>合作集團</th>
+          <th>School URL</th>
         </tr>
       </thead>
       <tbody>
       </tbody>
     </table>
   </div>
+</div>
 
-  <div id="school-data-table-container">
-    <h3>School Data Table</h3>
-    <div class="table-container">
-      <table id="school-data-table" class="display">
-        <thead>
-          <tr>
-            <th>School Name</th>
-            <th>Country</th>
-            <th>City</th>
-            <th>科系數量</th>
-            <th>合作集團</th>
-            <th>School URL</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-    </div>
-  </div>
 
-  <script src="scripts/SchoolMap.js"></script>
+<a id="school-map-anchor"></a>
+<script src="scripts/SchoolMap.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
-  <script src="scripts/main.js"></script>
-  <script src="scripts/School_data.js"></script>
-  <script src="scripts/degreeFilter.js"></script>
-  <script src="scripts/loadSchoolData.js"></script>
-  <script src="scripts/github-push-time.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/School_data.js"></script>
+<script src="scripts/degreeFilter.js"></script>
+<script src="scripts/loadSchoolData.js"></script>
+
+<script>
+  // Hamburger menu toggle logic
+  document.addEventListener('DOMContentLoaded', function () {
+    var nav = document.getElementById('floating-nav');
+    var btn = document.getElementById('floating-nav-toggle');
+    var wrapper = document.getElementById('floating-nav-wrapper');
+    function closeNav() {
+      nav.classList.remove('open');
+      btn.classList.remove('open');
+    }
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      nav.classList.toggle('open');
+      btn.classList.toggle('open');
+    });
+    // 點擊導覽連結自動收合
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        closeNav();
+      });
+    });
+    // 點擊外部自動收合
+    document.addEventListener('click', function (e) {
+      if (!wrapper.contains(e.target)) {
+        closeNav();
+      }
+    });
+  });
+</script>
+<script src="scripts/github-push-time.js"></script>
 
 
 

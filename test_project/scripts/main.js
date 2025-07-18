@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let selectedSchools = [];
   let selectedDepartments = [];
 
+  // 將 dataTable 設為全局變量以便其他腳本訪問
+  window.dataTable = null;
+
   // 更新選擇的學位
   function updateSelectedDepartments() {
     selectedDepartments = [];
@@ -39,25 +42,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // 當選擇變更後重新載入資料
-    dataTable.clear();
-    index = 0; // 重置索引
-    loadNextChunk(); // 重新加載資料
+    if (dataTable) {
+      dataTable.clear();
+      index = 0; // 重置索引
+      loadNextChunk(); // 重新加載資料
+    }
   }
 
   // 頁面加載後，將所有國家、學校和學位的勾選框設為選中狀態
   $(document).ready(function () {
-    $(".country-checkbox").prop("checked", true); // 使所有選擇框預設為選中狀態
-    $(".school-checkbox").prop("checked", true);  // 使所有學校選擇框預設為選中狀態
-    $(".degree-checkbox").prop("checked", true); // 使所有學位選擇框預設為選中狀態
-    updateSelectedFilters(); // 呼叫更新函數以加載資料
+    // 首先載入數據表格
+    fetchJsonData("data/data.json");
 
-    // Initialize DataTable
-    var table = $('#json-table').DataTable({
-      // ...existing DataTable options...
-    });
+    // 簡單的延遲等待，讓選擇器先載入
+    setTimeout(() => {
+      console.log("Setting default selections...");
+      $(".country-checkbox").prop("checked", true);
+      $(".school-checkbox").prop("checked", true);
+      $(".degree-checkbox").prop("checked", true);
 
-    // Ensure the DataTable is initialized
-    console.log("DataTable initialized: ", table); // Debugging log
+      // 確保"不篩選學位"選項被選中
+      $('.degree-checkbox[value="No Filter"]').prop("checked", true);
+
+      updateSelectedFilters();
+    }, 1500); // 1.5秒延遲
   });
 
   // 監聽勾選框的變更事件
@@ -74,6 +82,11 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       const response = await fetch(url);
       totalData = await response.json();
+
+      // 如果 DataTable 已經存在，先銷毀它
+      if ($.fn.dataTable.isDataTable('#json-table')) {
+        $('#json-table').DataTable().destroy();
+      }
 
       dataTable = $("#json-table").DataTable({
         data: [],
@@ -101,28 +114,30 @@ document.addEventListener("DOMContentLoaded", function () {
             title: "Copy URL",
             orderable: false,
             render: function (data, type, row) {
-              const url = row[4] || ""; // Ensure URL exists
+              const url = row[4] || "";
               return url
                 ? `<button class="copy-url-btn" data-url="${url}">Copy URL</button>`
                 : "N/A";
             },
           },
         ],
-        pageLength: 100,  // 預設顯示 100 筆
-        lengthMenu: [[10, 100, 500, 1000], [10, 100, 500, 1000]], // 設定下拉選單選項
+        pageLength: 100,
+        lengthMenu: [[10, 100, 500, 1000], [10, 100, 500, 1000]],
         searching: true,
-        destroy: false,
+        destroy: true,
         language: {
-          search: "Search Department：",  // 這裡修改搜尋框的名稱
+          search: "Search Department：",
         },
         initComplete: function () {
-          // 調整搜尋框字體大小
           $('.dataTables_filter input').css({
-            'font-size': '18px',  // 設定搜尋框的字體大小
-            'padding': '10px'      // 也可以調整內邊距，讓框變大
+            'font-size': '18px',
+            'padding': '10px'
           });
         }
       });
+
+      // 將 dataTable 設為全局變量
+      window.dataTable = dataTable;
 
       setupSearchFilters(dataTable);
       loadNextChunk();
@@ -252,32 +267,33 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function loadNextChunk() {
-    if (index >= totalData.length) return;
+    if (index >= totalData.length || !dataTable) return;
 
     const chunk = totalData.slice(index, index + chunkSize);
     index += chunkSize;
 
     const formattedData = chunk.map((item) => {
-      const isCountrySelected = selectedCountries.includes(item["Country"]);
-      const isSchoolSelected = selectedSchools.includes(item["School Name"]);
-      const departmentSelected = isDepartmentSelected(item["Department Name"]); // 使用單獨的判斷函數
+      const isCountrySelected = selectedCountries.length === 0 || selectedCountries.includes(item["Country"]);
+      const isSchoolSelected = selectedSchools.length === 0 || selectedSchools.includes(item["School Name"]);
+
+      // 如果沒有選擇任何篩選條件，顯示所有數據
+      const shouldShow = (selectedCountries.length === 0 && selectedSchools.length === 0) ||
+        isCountrySelected || isSchoolSelected;
+
+      if (!shouldShow) return null;
 
       return [
-        (isCountrySelected || isSchoolSelected || departmentSelected)
-          ? '<input type="checkbox" class="row-checkbox" checked>'
-          : '<input type="checkbox" class="row-checkbox">',
+        '<input type="checkbox" class="row-checkbox">',
         item["Country"] || "N/A",
         item["School Name"] || "N/A",
         item["Department Name"] || "N/A",
         item.URL || "N/A",
       ];
-    });
+    }).filter(row => row !== null); // 過濾掉null值
 
-    // 只新增選中的國家、學校和學位的資料
-    const filteredData = formattedData.filter(row =>
-      selectedSchools.includes(row[2]) || isDepartmentSelected(row[3])
-    );
-    dataTable.rows.add(filteredData).draw(false);
+    if (formattedData.length > 0) {
+      dataTable.rows.add(formattedData).draw(false);
+    }
 
     if (index < totalData.length) {
       setTimeout(loadNextChunk, 10);
@@ -301,161 +317,132 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  $(document).ready(function () {
-    $(document).on("click", "#select-all", function () {
-      $(".row-checkbox").prop("checked", this.checked);
-    });
+  $(document).on("click", "#select-all", function () {
+    $(".row-checkbox").prop("checked", this.checked);
+  });
 
-    // 匯出 JSON
-    $("#export-json").on("click", function () {
-      const selectedData = getSelectedData();
-      if (selectedData.length === 0) {
-        alert("請先選擇至少一筆資料 (Please select at least one item).");
-        return;
-      }
-      const jsonData = JSON.stringify(selectedData, null, 2);
-      downloadFile("data.json", jsonData); // 使用您提供的 downloadFile
-    });
+  // 匯出 JSON
+  $("#export-json").on("click", function () {
+    const selectedData = getSelectedDataStable();
+    if (selectedData.length === 0) {
+      alert("請先選擇至少一筆資料 (Please select at least one item).");
+      return;
+    }
+    const jsonData = JSON.stringify(selectedData, null, 2);
+    downloadFile("data.json", jsonData);
+  });
 
-    // 匯出 Excel
-    $("#export-excel").on("click", function () {
-      const selectedData = getSelectedData();
-      if (selectedData.length === 0) {
-        alert("請先選擇至少一筆資料 (Please select at least one item).");
-        return;
-      }
-      // 確保 Excel 欄位名稱與 getSelectedData 中建立的物件鍵名一致
-      const columns = ["Country", "School Name", "Department Name", "URL"];
-      exportToExcel(selectedData, columns, 'selected_data.xlsx');
-    });
+  // 匯出 Excel
+  $("#export-excel").on("click", function () {
+    const selectedData = getSelectedDataStable();
+    if (selectedData.length === 0) {
+      alert("請先選擇至少一筆資料 (Please select at least one item).");
+      return;
+    }
+    const columns = ["Country", "School Name", "Department Name", "URL"];
+    exportToExcel(selectedData, columns, 'selected_data.xlsx');
+  });
 
-    // 匯出 TXT (僅含 URL)
-    // 假設您有一個按鈕 <button id="export-txt">匯出 TXT</button>
-    $("#export-txt").on("click", function () {
-      const selectedData = getSelectedData(); // selectedData 是一個物件陣列
-      if (selectedData.length === 0) {
-        alert("請先選擇至少一筆資料 (Please select at least one item).");
-        return;
-      }
-      // exportUrlsToTxt 函式期望得到一個物件陣列，
-      // 並且它會從每個物件中尋找 'URL' 這個鍵。
-      exportUrlsToTxt(selectedData, "selected_urls.txt");
-    });
+  // 匯出 TXT (僅含 URL)
+  $("#export-txt").on("click", function () {
+    const selectedData = getSelectedDataStable();
+    if (selectedData.length === 0) {
+      alert("請先選擇至少一筆資料 (Please select at least one item).");
+      return;
+    }
+    exportUrlsToTxt(selectedData, "selected_urls.txt");
+  });
 
-
-    // ---------- Helper Functions (您的既有函式) ----------
-
-    // 從 DataTable 取得選中的資料
-    // 假設 dataTable 是您的 DataTable 實例
-    // 例如：var dataTable = $('#yourTableId').DataTable();
-    function getSelectedData() {
-      const selectedData = [];
-      // 確保 dataTable 變數在此作用域中可用，或者作為參數傳入
-      if (typeof dataTable === 'undefined' || !dataTable) {
-        console.error("DataTable instance is not defined or initialized.");
-        alert("表格尚未初始化，無法取得資料 (DataTable not initialized).");
-        return selectedData; // 返回空陣列
-      }
-
-      dataTable.rows().every(function () {
-        const rowNode = this.node(); // 取得 tr 元素
-        const checkbox = $(rowNode).find(".row-checkbox")[0]; // 尋找該行內的 checkbox
-
-        if (checkbox && checkbox.checked) {
-          const data = this.data(); // 取得該行的數據 (通常是陣列或物件)
-          // 根據您 DataTables 的數據結構調整索引
-          // 假設 data[0] 是 checkbox 本身或不需使用的欄位
-          // data[1] 是 Country, data[2] 是 School Name, data[3] 是 Department Name, data[4] 是 URL
-          selectedData.push({
-            "Country": data[1],
-            "School Name": data[2],
-            "Department Name": data[3],
-            "URL": data[4], // 確保這個鍵是 'URL'，與 exportUrlsToTxt 期望的一致
-          });
-        }
-      });
+  // 從 DataTable 取得選中的資料
+  function getSelectedData() {
+    const selectedData = [];
+    if (typeof dataTable === 'undefined' || !dataTable) {
+      console.error("DataTable instance is not defined or initialized.");
+      alert("表格尚未初始化，無法取得資料 (DataTable not initialized).");
       return selectedData;
     }
 
-    // 您原有的 downloadFile 函式 (用於 JSON)
-    // 注意：此函式中的 Blob type 是 application/json，不適用於 TXT
-    function downloadFile(filename, data) {
-      const blob = new Blob([data], { type: "application/json" });
-      const link = document.createElement("a");
-      link.href = URL.createObjectURL(blob);
-      link.download = filename;
-      document.body.appendChild(link); // 為了更穩定的觸發下載
+    dataTable.rows().every(function () {
+      const rowNode = this.node();
+      const checkbox = $(rowNode).find(".row-checkbox")[0];
+
+      if (checkbox && checkbox.checked) {
+        const data = this.data();
+        selectedData.push({
+          "Country": data[1],
+          "School Name": data[2],
+          "Department Name": data[3],
+          "URL": data[4],
+        });
+      }
+    });
+    return selectedData;
+  }
+
+  // 下載文件函數
+  function downloadFile(filename, data) {
+    const blob = new Blob([data], { type: "application/json" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+  }
+
+  // 匯出到 Excel
+  function exportToExcel(data, columns, filename = 'data.xlsx') {
+    const ws = XLSX.utils.json_to_sheet(data, { header: columns });
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+    XLSX.writeFile(wb, filename);
+  }
+
+  // 匯出 URLs 到 TXT
+  function exportUrlsToTxt(jsonData, filename = 'urls.txt') {
+    if (!Array.isArray(jsonData)) {
+      console.error("輸入的數據必須是一個陣列 (Input data must be an array).");
+      return;
+    }
+
+    const urls = jsonData
+      .map(item => item && item.URL)
+      .filter(url => url !== undefined && url !== null)
+      .map(url => String(url));
+
+    if (urls.length === 0) {
+      console.warn("在提供的數據中沒有找到有效的 URL (No valid URLs found in the provided data).");
+    }
+
+    const textContent = urls.join('\n');
+    const blob = new Blob([textContent], { type: 'text/plain;charset=utf-8;' });
+    const link = document.createElement('a');
+
+    if (link.download !== undefined) {
+      const url = URL.createObjectURL(blob);
+      link.setAttribute('href', url);
+      link.setAttribute('download', filename);
+      link.style.visibility = 'hidden';
+      document.body.appendChild(link);
       link.click();
-      document.body.removeChild(link); // 清理
-      URL.revokeObjectURL(link.href); // 釋放資源
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    } else {
+      alert("您的瀏覽器不支持此下載方法 (Your browser does not support this download method).");
     }
+  }
 
-    // 您原有的 exportToExcel 函式
-    // 假設 XLSX 函式庫已載入
-    function exportToExcel(data, columns, filename = 'data.xlsx') {
-      // data 應該是物件陣列，例如: [{ "Country": "USA", "URL": "http://..." }, ...]
-      // columns 應該是鍵名陣列，例如: ["Country", "School Name", "Department Name", "URL"]
-      // SheetJS 的 json_to_sheet 第二個參數的 header 選項可以指定欄位順序和名稱
-      const ws = XLSX.utils.json_to_sheet(data, { header: columns });
-      const wb = XLSX.utils.book_new();
-      XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
-      XLSX.writeFile(wb, filename);
-    }
-
-
-    // ---------- 新增的 Helper Function (用於 TXT) ----------
-    /**
-     * @description 從 JSON 數據中提取 'URL' 欄位的值，並將它們導出為 TXT 文件，每個 URL 佔一行。
-     * @param {Array<Object>} jsonData - 包含對象的陣列，每個對象期望有一個 'URL' 鍵。
-     * @param {string} [filename='urls.txt'] - 要導出的 TXT 文件的名稱。
-     */
-    function exportUrlsToTxt(jsonData, filename = 'urls.txt') {
-      if (!Array.isArray(jsonData)) {
-        console.error("輸入的數據必須是一個陣列 (Input data must be an array).");
-        return;
-      }
-
-      const urls = jsonData
-        .map(item => item && item.URL) // 取得 URL 值
-        .filter(url => url !== undefined && url !== null) // 過濾掉 undefined 和 null
-        .map(url => String(url)); // 確保是字串
-
-      if (urls.length === 0) {
-        console.warn("在提供的數據中沒有找到有效的 URL (No valid URLs found in the provided data).");
-        // 如果您不希望下載空檔案，可以在這裡加上 alert 並 return
-        // alert("未找到可匯出的 URL。");
-        // return;
-      }
-
-      const textContent = urls.join('\n');
-      const blob = new Blob([textContent], { type: 'text/plain;charset=utf-8;' });
-      const link = document.createElement('a');
-
-      if (link.download !== undefined) {
-        const url = URL.createObjectURL(blob);
-        link.setAttribute('href', url);
-        link.setAttribute('download', filename);
-        link.style.visibility = 'hidden';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
-      } else {
-        alert("您的瀏覽器不支持此下載方法 (Your browser does not support this download method).");
-      }
-    }
-
-  }); // End of $(document).ready
-
+  // 載入JSON數據並驗證
   fetchJsonData("data/data.json").then((data) => {
     console.log("載入 JSON：", data);
-
     data.forEach((item, index) => {
       if (!item["School Name"] || !item["Department Name"] || !item.URL) {
         console.warn(`第 ${index + 1} 筆資料有缺失:`, item);
       }
     });
   });
+
   // 更新日誌彈窗顯示/隱藏
   var showBtn = document.getElementById('show-changelog');
   var modal = document.getElementById('changelog-modal');
@@ -467,7 +454,6 @@ document.addEventListener("DOMContentLoaded", function () {
     closeBtn.onclick = function () {
       modal.style.display = 'none';
     };
-    // 點擊 modal 外部區域也關閉
     window.onclick = function (event) {
       if (event.target === modal) {
         modal.style.display = 'none';

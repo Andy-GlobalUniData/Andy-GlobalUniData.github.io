@@ -34,26 +34,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // 生成國家選項
                 let countryHTML = countries.map(country => `
-                <div class="school-item">
-                    <label><input type="checkbox" class="country-checkbox" value="${country}" checked> ${country}</label>
-                </div>
-            `).join("");
+                    <div class="school-item">
+                        <label><input type="checkbox" class="country-checkbox" value="${country}" checked> ${country}</label>
+                    </div>
+                `).join("");
 
                 // 加入「全選國家」按鈕
                 countryContentDiv.innerHTML = `
-                <div class="school-item" style="border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 8px;">
-                    <label><input type="checkbox" id="select-all-countries" checked> <strong>全選國家</strong></label>
-                </div>
-                ${countryHTML}
-            `;
+                    <div class="school-item" style="border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 8px;">
+                        <label><input type="checkbox" id="select-all-countries" checked> <strong>全選國家</strong></label>
+                    </div>
+                    ${countryHTML}
+                `;
 
                 // 監聽全選國家按鈕
                 const selectAllCountriesCheckbox = document.getElementById("select-all-countries");
-                selectAllCountriesCheckbox.addEventListener("change", function () {
-                    const countryCheckboxes = document.querySelectorAll(".country-checkbox");
-                    countryCheckboxes.forEach(checkbox => checkbox.checked = selectAllCountriesCheckbox.checked);
-                    updateSchoolList();
-                });
+                if (selectAllCountriesCheckbox) {
+                    selectAllCountriesCheckbox.addEventListener("change", function () {
+                        const countryCheckboxes = document.querySelectorAll(".country-checkbox");
+                        countryCheckboxes.forEach(checkbox => checkbox.checked = selectAllCountriesCheckbox.checked);
+                        updateSchoolList();
+                    });
+                }
 
                 // 監聽國家選擇變化
                 countryContentDiv.addEventListener("change", function (event) {
@@ -75,27 +77,29 @@ document.addEventListener("DOMContentLoaded", function () {
                         const school = selectedSchoolsList.find(item => item.School_name === schoolName);
                         const isChecked = selectedSchools.includes(school.School_name) ? 'checked' : 'checked';
                         return `
-                        <div class="school-item">
-                            <label><input type="checkbox" class="school-checkbox" value="${school.School_name}" ${isChecked}> ${school.School_name} (${school.City})</label>
-                        </div>
-                    `;
+                            <div class="school-item">
+                                <label><input type="checkbox" class="school-checkbox" value="${school.School_name}" ${isChecked}> ${school.School_name} (${school.City})</label>
+                            </div>
+                        `;
                     }).join("");
 
                     // 加入「全選學校」按鈕
                     schoolContentDiv.innerHTML = `
-                    <div class="school-item" style="border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 8px;">
-                        <label><input type="checkbox" id="select-all-schools" checked> <strong>全選學校</strong></label>
-                    </div>
-                    ${schoolHTML}
-                `;
+                        <div class="school-item" style="border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 8px;">
+                            <label><input type="checkbox" id="select-all-schools" checked> <strong>全選學校</strong></label>
+                        </div>
+                        ${schoolHTML}
+                    `;
 
                     // 監聽全選學校按鈕
                     const selectAllSchoolsCheckbox = document.getElementById("select-all-schools");
-                    selectAllSchoolsCheckbox.addEventListener("change", function () {
-                        const schoolCheckboxes = document.querySelectorAll(".school-checkbox");
-                        schoolCheckboxes.forEach(checkbox => checkbox.checked = selectAllSchoolsCheckbox.checked);
-                        updateSelectedSchools();
-                    });
+                    if (selectAllSchoolsCheckbox) {
+                        selectAllSchoolsCheckbox.addEventListener("change", function () {
+                            const schoolCheckboxes = document.querySelectorAll(".school-checkbox");
+                            schoolCheckboxes.forEach(checkbox => checkbox.checked = selectAllSchoolsCheckbox.checked);
+                            updateSelectedSchools();
+                        });
+                    }
 
                     // 監聽學校選擇變化
                     schoolContentDiv.addEventListener("change", function (event) {
@@ -112,7 +116,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     const selectAllCountriesCheckbox = document.getElementById("select-all-countries");
                     const countryCheckboxes = document.querySelectorAll(".country-checkbox");
                     const checkedCountries = document.querySelectorAll(".country-checkbox:checked");
-                    selectAllCountriesCheckbox.checked = countryCheckboxes.length === checkedCountries.length;
+                    if (selectAllCountriesCheckbox) {
+                        selectAllCountriesCheckbox.checked = countryCheckboxes.length === checkedCountries.length;
+                    }
                 }
 
                 function updateSchoolSelectAllState() {
@@ -140,37 +146,5 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (countryContentDiv) countryContentDiv.innerHTML = "<div class='loading-placeholder' style='color: var(--error-color);'>載入失敗，請重新整理頁面</div>";
                 if (schoolContentDiv) schoolContentDiv.innerHTML = "<div class='loading-placeholder' style='color: var(--error-color);'>載入失敗，請重新整理頁面</div>";
             });
-    });
-    const selectAllSchoolsCheckbox = document.getElementById("select-all-schools");
-    selectAllSchoolsCheckbox.addEventListener("change", function () {
-        const schoolCheckboxes = document.querySelectorAll(".school-checkbox");
-        schoolCheckboxes.forEach(checkbox => checkbox.checked = selectAllSchoolsCheckbox.checked);
-        schoolSelectDiv.dispatchEvent(new Event("change"));
-    });
-
-    // 更新全選按鈕狀態
-    updateSelectAllCheckbox(".country-checkbox", selectAllCountriesCheckbox);
-    updateSelectAllCheckbox(".school-checkbox", selectAllSchoolsCheckbox);
-
-    schoolSelectDiv.dispatchEvent(new Event("change"));
+    }, 100); // 稍微延遲確保DOM準備好
 });
-
-// 監聽個別 checkbox 變化，調整「全選」狀態
-function updateSelectAllCheckbox(selector, selectAllCheckbox) {
-    document.addEventListener("change", function () {
-        const checkboxes = document.querySelectorAll(selector);
-        const checkedBoxes = document.querySelectorAll(`${selector}:checked`);
-        selectAllCheckbox.checked = checkboxes.length === checkedBoxes.length;
-    });
-}
-
-// 監聽學校的選擇狀態變化
-schoolSelectDiv.addEventListener("change", function () {
-    selectedSchools = [...document.querySelectorAll(".school-checkbox:checked")]
-        .map(checkbox => checkbox.value);
-    // 觸發自定義事件以更新數據表格
-    document.dispatchEvent(new Event("schoolSelectionChanged"));
-});
-
-// 更新國家選擇區域
-// (This section was removed because it was misplaced and caused syntax errors)

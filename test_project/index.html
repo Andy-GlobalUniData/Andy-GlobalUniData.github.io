@@ -1,184 +1,320 @@
 <link rel="stylesheet" href="css/leaflet-google.css" />
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andy Global Uni Data</title>
+
+  <!-- 版權聲明 -->
+  <!-- 
+    Andy Global Uni Data - 全球大學資料查詢平台
+    Copyright (C) [2025] [@Andy87877]
+
+    All rights reserved.
+
+    This software is provided "as is" and is intended for personal or internal use only. 
+    Users are **not permitted** to modify, distribute, or create derivative works based on this software.
+    Forking, reverse engineering, or any modifications are strictly prohibited.
+
+    For inquiries regarding usage rights, please contact [andy8787main@gmail.com].
+    
+    網站: https://andy-globalunidata.github.io/
+    GitHub: https://github.com/Andy-GlobalUniData/Andy-GlobalUniData.github.io
+  -->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Files -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/floating-nav.css">
+  <link rel="stylesheet" href="css/leaflet-google.css" />
+
+  <!-- External Libraries CSS -->
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
+  <!-- Leaflet CSS for SchoolMap -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 
-<a id="top-anchor"></a>
-
-<!-- Leaflet CSS for SchoolMap 多點地圖 -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<body>
 
 
-<!-- Hamburger Floating Navigation Sidebar -->
-<div id="floating-nav-wrapper">
-  <button id="floating-nav-toggle" aria-label="Open navigation" class="floating-nav-hamburger">
-    <span class="hamburger-bar"></span>
-    <span class="hamburger-bar"></span>
-    <span class="hamburger-bar"></span>
-  </button>
-  <nav id="floating-nav" class="floating-nav">
-    <div class="floating-nav-title">快速導覽</div>
-    <ul>
-      <li><a href="#top-anchor"><span class="nav-icon">⬆️</span>Top</a></li>
-      <li><a href="#country-anchor"><span class="nav-icon">🌏</span>Select Country</a></li>
-      <li><a href="#json-table-anchor"><span class="nav-icon">📋</span>json-table</a></li>
-      <li><a href="#school-data-table-anchor"><span class="nav-icon">🏫</span>School Data Table</a></li>
-      <li><a href="#school-map-anchor"><span class="nav-icon">🗺️</span>School Locations on Map</a></li>
-    </ul>
-  </nav>
-</div>
+  <!-- Hamburger Floating Navigation Sidebar -->
+  <div id="floating-nav-wrapper">
+    <button id="floating-nav-toggle" aria-label="Open navigation" class="floating-nav-hamburger">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+    <nav id="floating-nav" class="floating-nav">
+      <div class="floating-nav-title">快速導覽</div>
+      <ul>
+        <li><a href="#top-anchor"><span class="nav-icon">⬆️</span>Top</a></li>
+        <li><a href="#country-anchor"><span class="nav-icon">🌏</span>Select Country</a></li>
+        <li><a href="#json-table-anchor"><span class="nav-icon">📋</span>json-table</a></li>
+        <li><a href="#school-data-table-anchor"><span class="nav-icon">🏫</span>School Data Table</a></li>
+        <li><a href="#school-map-anchor"><span class="nav-icon">🗺️</span>School Locations on Map</a></li>
+      </ul>
+    </nav>
+  </div>
 
-<a id="top-anchor"></a>
+  <a id="top-anchor"></a>
 
 
-<div class="header-container">
-  <div style="display: flex; align-items: center;">
-    <button id="show-changelog" style="margin-right: 16px;">更新日誌</button>
-    <div class="last-updated-container">
-      <h3>Last updated time:</h3>
-      <div id="github-push-time"></div>
+  <!-- Top Anchor -->
+  <a id="top-anchor"></a>
+
+  <!-- YouTube風格的頁面頭部 -->
+  <div class="header-container">
+    <div class="header-left">
+      <div class="brand-area">
+        <div class="brand-logo">A</div>
+        <div class="brand-text">
+          <h1>Andy Global Uni Data</h1>
+          <p>全球大學資料查詢平台</p>
+        </div>
+      </div>
+      <button id="show-changelog">
+        <span style="margin-right: 8px;">📋</span>
+        更新日誌
+      </button>
+      <div class="last-updated-container">
+        <h3>最後更新時間:</h3>
+        <div id="github-push-time" class="loading">載入中...</div>
+      </div>
+    </div>
+    <div class="header-right export-buttons">
+      <button id="export-json" class="primary">
+        <span style="margin-right: 6px;">📄</span>
+        Export JSON
+      </button>
+      <button id="export-excel" class="primary">
+        <span style="margin-right: 6px;">📊</span>
+        Export Excel
+      </button>
+      <button id="export-txt">
+        <span style="margin-right: 6px;">📝</span>
+        Export URL (TXT)
+      </button>
+      <button id="copy-all-urls">
+        <span style="margin-right: 6px;">📋</span>
+        Copy All URLs
+      </button>
     </div>
   </div>
-  <div class="export-buttons">
-    <button id="export-json">Export JSON</button>
-    <button id="export-excel">Export Excel</button>
-    <button id="export-txt">Export URL (TXT)</button>
-    <button id="copy-all-urls">Copy All URLs</button>
-  </div>
-</div>
 
-<!-- 更新日誌彈窗 -->
-<div id="changelog-modal" class="changelog-modal" style="display:none;">
-  <div class="changelog-modal-content">
-    <span class="changelog-close">&times;</span>
-    <h2>更新日誌</h2>
-    <div id="changelog-list">Loading...</div>
-  </div>
-</div>
-
-<div class="user-guide"
-  style="background:#fffbe6;border:1px solid #ffe58f;padding:18px 22px;margin-bottom:22px;border-radius:8px;box-shadow:0 2px 8px rgba(255,229,143,0.08);font-size:16px;line-height:1.7;">
-  <strong>使用說明：</strong><br>
-  1. 請先選擇國家、學校、學位，表格會自動篩選顯示對應資料。<br>
-  2. 可於表格上方搜尋欄快速查找科系或網址。<br>
-  3. 點選每列的 <b>Copy URL</b> 可複製該科系網址。<br>
-  4. <b>Export JSON</b>、<b>Export Excel</b>、<b>Export URL (TXT)</b> 會匯出你勾選的資料。<br>
-  5. <b>Copy All URLs</b> 會複製你勾選的資料的網址。<br>
-  6. 若遇資料載入異常，請重新整理頁面。<br>
-  <span style="color:#faad14;font-size:15px;">本工具僅供查詢使用，請勿未經授權轉載或修改。</span>
-</div>
-
-<div class="select-area-container">
-
-  <a id="country-anchor"></a>
-  <div id="country-select" class="select-container">
-    <h3>Select Country</h3>
+  <!-- 更新日誌彈窗 -->
+  <div id="changelog-modal" class="changelog-modal" style="display:none;">
+    <div class="changelog-modal-content">
+      <span class="changelog-close">&times;</span>
+      <h2>🔄 更新日誌</h2>
+      <div id="changelog-list">
+        <div style="text-align: center; color: #aaa; padding: 20px;">
+          載入中...
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div id="school-select" class="select-container">
-    <h3>Select School</h3>
+  <!-- YouTube風格的用戶指南卡片 -->
+  <div class="container">
+    <div class="user-guide">
+      <div
+        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; flex-wrap: wrap; gap: 16px;">
+        <h3 style="margin: 0; color: #ff6b6b; display: flex; align-items: center;">
+          <span style="margin-right: 12px; font-size: 20px;">💡</span>
+          <strong>使用說明</strong>
+        </h3>
+        <button id="theme-toggle" class="theme-toggle">
+          <span class="icon">🌙</span>
+          <span class="text">深色模式</span>
+        </button>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+        <div>
+          <p><strong>1. 選擇篩選條件</strong><br>
+            請先選擇國家、學校、學位，表格會自動篩選顯示對應資料。</p>
+
+          <p><strong>2. 搜尋功能</strong><br>
+            可於表格上方搜尋欄快速查找科系或網址。</p>
+        </div>
+        <div>
+          <p><strong>3. 複製功能</strong><br>
+            點選每列的 <strong>Copy URL</strong> 可複製該科系網址。</p>
+
+          <p><strong>4. 匯出功能</strong><br>
+            <strong>Export JSON</strong>、<strong>Export Excel</strong>、<strong>Export URL (TXT)</strong> 會匯出你勾選的資料。
+          </p>
+        </div>
+      </div>
+      <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #3f3f3f;">
+        <p style="color: #ffcc02; font-size: 14px; margin: 0;">
+          ⚠️ <strong>注意：</strong>本工具僅供查詢使用，請勿未經授權轉載或修改。若遇資料載入異常，請重新整理頁面。
+        </p>
+      </div>
+    </div>
   </div>
 
-  <div id="degree-select" class="select-container">
-    <h3>Select Degree</h3>
+  <!-- 選擇器區域 - 新的滾輪選擇設計 -->
+  <div class="select-area-container">
+    <div class="select-grid-container">
+
+      <!-- 國家選擇框 -->
+      <div class="scroll-select-container">
+        <h3 class="select-title">🌍 選擇國家</h3>
+        <div class="scroll-select-box">
+          <div id="country-selector-content" class="scroll-content">
+            <div class="loading-placeholder">載入中...</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 學校選擇框 -->
+      <div class="scroll-select-container">
+        <h3 class="select-title">🏫 選擇學校</h3>
+        <div class="scroll-select-box">
+          <div id="school-selector-content" class="scroll-content">
+            <div class="loading-placeholder">載入中...</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 學位選擇框 -->
+      <div class="scroll-select-container">
+        <h3 class="select-title">🎓 選擇學位</h3>
+        <div class="scroll-select-box">
+          <div id="degree-selector-content" class="scroll-content">
+            <div class="loading-placeholder">載入中...</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-
-<div class="table-container">
-  <a id="json-table-anchor"></a>
-  <table id="json-table" class="display">
-    <thead>
-      <tr>
-        <th>Select</th>
-        <th>Country</th>
-        <th>School Name</th>
-        <th>Department Name</th>
-        <th>URL</th>
-        <th>Copy URL</th>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
-</div>
-
-<div id="school-data-table-container">
-  <a id="school-data-table-anchor"></a>
-  <h3>School Data Table</h3>
-  <div class="table-container">
-    <table id="school-data-table" class="display">
-      <thead>
-        <tr>
-          <th>School Name</th>
-          <th>Country</th>
-          <th>City</th>
-          <th>科系數量</th>
-          <th>合作集團</th>
-          <th>School URL</th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
   </div>
-</div>
 
+  <!-- 科系查詢區域 -->
+  <div class="container">
+    <div class="department-search-container">
+      <h3>🔍 科系查詢</h3>
+      <div class="search-box-container">
+        <input type="text" id="department-search" placeholder="輸入科系名稱進行查詢..." class="department-search-input">
+        <button id="clear-search" class="clear-search-btn">清除</button>
+      </div>
+      <div id="search-results-info" class="search-info"></div>
+    </div>
+  </div>
 
-<a id="school-map-anchor"></a>
-<script src="scripts/SchoolMap.js"></script>
+  <!-- YouTube風格的數據表格 -->
+  <div class="container">
+    <div class="table-container">
+      <a id="json-table-anchor"></a>
+      <h3>📊 科系資料表</h3>
+      <table id="json-table" class="display">
+        <thead>
+          <tr>
+            <th>選擇</th>
+            <th>國家</th>
+            <th>學校名稱</th>
+            <th>科系名稱</th>
+            <th>網址</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
-<script src="scripts/main.js"></script>
-<script src="scripts/School_data.js"></script>
-<script src="scripts/degreeFilter.js"></script>
-<script src="scripts/loadSchoolData.js"></script>
+  <div class="container">
+    <div class="table-container" id="school-data-table-container">
+      <a id="school-data-table-anchor"></a>
+      <h3>🏫 學校資料表</h3>
+      <table id="school-data-table" class="display">
+        <thead>
+          <tr>
+            <th>學校名稱</th>
+            <th>國家</th>
+            <th>城市</th>
+            <th>科系數量</th>
+            <th>合作集團</th>
+            <th>學校網址</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-<script>
-  // Hamburger menu toggle logic
-  document.addEventListener('DOMContentLoaded', function () {
-    var nav = document.getElementById('floating-nav');
-    var btn = document.getElementById('floating-nav-toggle');
-    var wrapper = document.getElementById('floating-nav-wrapper');
-    function closeNav() {
-      nav.classList.remove('open');
-      btn.classList.remove('open');
-    }
-    btn.addEventListener('click', function (e) {
-      e.stopPropagation();
-      nav.classList.toggle('open');
-      btn.classList.toggle('open');
-    });
-    // 點擊導覽連結自動收合
-    nav.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        closeNav();
-      });
-    });
-    // 點擊外部自動收合
-    document.addEventListener('click', function (e) {
-      if (!wrapper.contains(e.target)) {
-        closeNav();
-      }
-    });
-  });
-</script>
-<script src="scripts/github-push-time.js"></script>
+  <!-- YouTube風格的地圖區域 -->
+  <div class="container">
+    <div class="table-container">
+      <a id="school-map-anchor"></a>
+      <h3>🗺️ 學校位置地圖</h3>
+      <div id="school-map-container">
+        <!-- 地圖容器將由SchoolMap.js生成 -->
+      </div>
+    </div>
+  </div>
 
+  </main>
 
+  <!-- Footer with Copyright -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Andy Global Uni Data</h4>
+        <p>全球大學資料查詢平台</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>聯絡資訊</h4>
+        <p>網站: <a href="https://andy-globalunidata.github.io/" target="_blank">andy-globalunidata.github.io</a></p>
+        <p>GitHub: <a href="https://github.com/Andy-GlobalUniData/Andy-GlobalUniData.github.io"
+            target="_blank">查看原始碼</a></p>
+      </div>
+
+      <div class="footer-section">
+        <h4>版權資訊</h4>
+        <p>Copyright (C) [2025] [@Andy87877]</p>
+        <p>All rights reserved. Personal or internal use only.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>This software is provided "as is" and is intended for personal or internal use only.</p>
+      <p>Users are not permitted to modify, distribute, or create derivative works based on this software.</p>
+      <p>For inquiries regarding usage rights, please contact <a
+          href="mailto:andy8787main@gmail.com">andy8787main@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="scripts/theme-toggle.js"></script>
+  <script src="scripts/floating-nav.js"></script>
+  <script src="scripts/ui-controls.js"></script>
+  <script src="scripts/School_data.js"></script>
+  <script src="scripts/degreeFilter.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/departmentSearch.js"></script>
+  <script src="scripts/SchoolMap.js"></script>
+  <script src="scripts/loadSchoolData.js"></script>
+  <script src="scripts/github-push-time.js"></script>
 
 </body>
 

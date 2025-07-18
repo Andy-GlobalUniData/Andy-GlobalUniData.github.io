@@ -27,19 +27,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const degreeLevels = data;
                 const degreeOptions = Object.keys(degreeLevels).map(degree => `
-                <div class="school-item">
-                    <label><input type="checkbox" class="degree-checkbox" value="${degree}"> ${degree}</label>
-                </div>
-            `).join("");
+                    <div class="school-item">
+                        <label><input type="checkbox" class="degree-checkbox" value="${degree}"> ${degree}</label>
+                    </div>
+                `).join("");
 
                 degreeContentDiv.innerHTML = `
-                <div class="school-item" style="border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 8px;">
-                    <label><input type="checkbox" class="degree-checkbox" value="No Filter" checked> <strong>不篩選學位</strong></label>
-                </div>
-                ${degreeOptions}
-            `;
+                    <div class="school-item" style="border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 8px;">
+                        <label><input type="checkbox" class="degree-checkbox" value="No Filter" checked> <strong>不篩選學位</strong></label>
+                    </div>
+                    ${degreeOptions}
+                `;
 
                 degreeContentDiv.addEventListener("change", function (event) {
+                    if (!event.target.classList.contains('degree-checkbox')) {
+                        return;
+                    }
+
                     const selectedDegrees = [...document.querySelectorAll(".degree-checkbox:checked")]
                         .map(checkbox => checkbox.value);
 
@@ -90,4 +94,5 @@ document.addEventListener("DOMContentLoaded", function () {
                     degreeContentDiv.innerHTML = "<div class='loading-placeholder' style='color: var(--error-color);'>載入失敗，請重新整理頁面</div>";
                 }
             });
-    });
+    }, 150); // 稍微延遲確保DOM準備好
+});

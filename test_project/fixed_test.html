@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修復測試</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .selector-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .selector-box {
+            background: white;
+            border: 2px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            min-height: 250px;
+        }
+
+        .selector-box h3 {
+            margin-top: 0;
+            color: #333;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .loading-placeholder {
+            color: #666;
+            font-style: italic;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .school-item {
+            padding: 8px;
+            margin: 4px 0;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .school-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        .school-item label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .school-item input {
+            margin-right: 8px;
+        }
+
+        .status {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 2px solid #4CAF50;
+        }
+
+        .error {
+            border-color: #f44336;
+        }
+
+        .success {
+            color: #4CAF50;
+        }
+
+        .fail {
+            color: #f44336;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test-container">
+        <h1>🔧 修復測試 - 國家、學校、學位選擇器</h1>
+
+        <div class="selector-grid">
+            <div class="selector-box">
+                <h3>🌍 國家選擇器</h3>
+                <div id="country-selector-content">
+                    <div class="loading-placeholder">載入中...</div>
+                </div>
+            </div>
+
+            <div class="selector-box">
+                <h3>🏫 學校選擇器</h3>
+                <div id="school-selector-content">
+                    <div class="loading-placeholder">載入中...</div>
+                </div>
+            </div>
+
+            <div class="selector-box">
+                <h3>🎓 學位選擇器</h3>
+                <div id="degree-selector-content">
+                    <div class="loading-placeholder">載入中...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="status" id="status">
+            <h3>🔍 測試狀態</h3>
+            <div id="status-content">準備中...</div>
+        </div>
+    </div>
+
+    <!-- 載入腳本 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/School_data.js"></script>
+    <script src="scripts/degreeFilter.js"></script>
+
+    <script>
+        // 監控選擇器載入狀態
+        function checkStatus() {
+            const countryItems = document.querySelectorAll('.country-checkbox').length;
+            const schoolItems = document.querySelectorAll('.school-checkbox').length;
+            const degreeItems = document.querySelectorAll('.degree-checkbox').length;
+
+            const statusContent = document.getElementById('status-content');
+            const statusDiv = document.getElementById('status');
+
+            let html = `
+                <p><strong>載入狀態:</strong></p>
+                <ul>
+                    <li>國家選項: ${countryItems > 0 ? `<span class="success">✅ ${countryItems} 個</span>` : '<span class="fail">❌ 未載入</span>'}</li>
+                    <li>學校選項: ${schoolItems > 0 ? `<span class="success">✅ ${schoolItems} 個</span>` : '<span class="fail">❌ 未載入</span>'}</li>
+                    <li>學位選項: ${degreeItems > 0 ? `<span class="success">✅ ${degreeItems} 個</span>` : '<span class="fail">❌ 未載入</span>'}</li>
+                </ul>
+                <p><strong>最後檢查時間:</strong> ${new Date().toLocaleTimeString()}</p>
+            `;
+
+            statusContent.innerHTML = html;
+
+            // 如果全部載入成功，改變狀態框顏色
+            if (countryItems > 0 && schoolItems > 0 && degreeItems > 0) {
+                statusDiv.style.borderColor = '#4CAF50';
+                html += '<p class="success"><strong>🎉 所有選擇器載入成功！</strong></p>';
+                statusContent.innerHTML = html;
+            } else {
+                statusDiv.style.borderColor = '#ff9800';
+            }
+        }
+
+        // 每秒檢查一次狀態
+        setInterval(checkStatus, 1000);
+
+        // 初始檢查
+        setTimeout(checkStatus, 500);
+    </script>
+</body>
+
+</html>

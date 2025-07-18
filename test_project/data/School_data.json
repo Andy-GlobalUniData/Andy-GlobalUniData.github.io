@@ -27,7 +27,7 @@
         "URL": "https://www.tees.ac.uk/undergraduate_courses/az.cfm",
         "latitude": 54.5695266,
         "longitude": -1.2355444,
-        "Number_of_departments": 502
+        "Number_of_departments": 503
     },
     {
         "School_name": "University of Leeds",
@@ -67,7 +67,7 @@
         "URL": "https://www.jmu.edu/academics/undergraduate/majors/index.shtml",
         "latitude": 38.4458605,
         "longitude": -78.8781075,
-        "Number_of_departments": 70
+        "Number_of_departments": 138
     },
     {
         "School_name": "Mercer University",
@@ -97,7 +97,7 @@
         "URL": "https://catalog.unomaha.edu/undergraduate/programsaz/",
         "latitude": 41.2577933,
         "longitude": -96.0104971,
-        "Number_of_departments": 305
+        "Number_of_departments": 306
     },
     {
         "School_name": "Universiteit van Amsterdam",
@@ -187,7 +187,7 @@
         "URL": "https://www.bathspa.ac.uk//courses/?page=1000",
         "latitude": 51.374858,
         "longitude": -2.4387146,
-        "Number_of_departments": 220
+        "Number_of_departments": 223
     },
     {
         "School_name": "University of Exeter",
@@ -197,7 +197,7 @@
         "URL": "https://search.exeter.ac.uk/s/search.html?collection=uoe~sp-search&f.Tabs%7Cuoe~ds-courses=Courses&num_ranks=1000&sort=",
         "latitude": 50.7369372,
         "longitude": -3.5347349,
-        "Number_of_departments": 488
+        "Number_of_departments": 490
     },
     {
         "School_name": "Queen's University Belfast",
@@ -487,7 +487,7 @@
         "URL": "https://www.ou.edu/admissions/academics",
         "latitude": 35.1959878,
         "longitude": -97.4457083,
-        "Number_of_departments": 970
+        "Number_of_departments": 485
     },
     {
         "School_name": "Colorado State University",
@@ -517,7 +517,7 @@
         "URL": "https://admissions.oregonstate.edu/find-your-major",
         "latitude": 44.5630559,
         "longitude": -123.2839234,
-        "Number_of_departments": 105
+        "Number_of_departments": 104
     },
     {
         "School_name": "Texas State University",
@@ -527,6 +527,6 @@
         "URL": "https://mycatalog.txstate.edu/undergraduate/undergraduate-majors/",
         "latitude": 29.8910941,
         "longitude": -97.9376839,
-        "Number_of_departments": 278
+        "Number_of_departments": 381
     }
 ]

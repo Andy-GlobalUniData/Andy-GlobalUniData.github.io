@@ -27,7 +27,7 @@
         "URL": "https://www.tees.ac.uk/undergraduate_courses/az.cfm",
         "latitude": 54.5695266,
         "longitude": -1.2355444,
-        "Number_of_departments": 503
+        "Number_of_departments": 504
     },
     {
         "School_name": "University of Leeds",
@@ -107,7 +107,7 @@
         "URL": "https://www.uva.nl/en/education/master-s/master-s-programmes/masters-programmes.html",
         "latitude": 52.3681334,
         "longitude": 4.8898042,
-        "Number_of_departments": 678
+        "Number_of_departments": 535
     },
     {
         "School_name": "Erasmus Universitiet Rotterdam",
@@ -207,7 +207,7 @@
         "URL": "https://www.qub.ac.uk/courses/",
         "latitude": 54.5842881,
         "longitude": -5.9336562,
-        "Number_of_departments": 713
+        "Number_of_departments": 714
     },
     {
         "School_name": "Northeastern University",
@@ -297,7 +297,7 @@
         "URL": "https://www.essex.ac.uk/course-search?collection=essex~sp-courses-meta&start_rank=1",
         "latitude": 51.8773639,
         "longitude": 0.9498751,
-        "Number_of_departments": 535
+        "Number_of_departments": 533
     },
     {
         "School_name": "Nottingham Trent University",
@@ -307,7 +307,7 @@
         "URL": "https://www.ntu.ac.uk/search?query=&category=&category=Courses&start_rank=",
         "latitude": 52.91164,
         "longitude": -1.1866048,
-        "Number_of_departments": 30
+        "Number_of_departments": 40
     },
     {
         "School_name": "University of Nottingham",
@@ -347,7 +347,7 @@
         "URL": "https://www.stir.ac.uk/",
         "latitude": 56.1451154,
         "longitude": -3.9173938,
-        "Number_of_departments": 1434
+        "Number_of_departments": 260
     },
     {
         "School_name": "Queen's University Belfast International Study Centre",
@@ -487,7 +487,7 @@
         "URL": "https://www.ou.edu/admissions/academics",
         "latitude": 35.1959878,
         "longitude": -97.4457083,
-        "Number_of_departments": 485
+        "Number_of_departments": 307
     },
     {
         "School_name": "Colorado State University",
@@ -520,6 +520,46 @@
         "Number_of_departments": 104
     },
     {
+        "School_name": "University of Surrey",
+        "Country": "United Kingdom",
+        "City": "Guildford",
+        "合作集團": "StudyGroup",
+        "URL": "https://www.surrey.ac.uk/undergraduate",
+        "latitude": 51.2430782,
+        "longitude": -0.5900545,
+        "Number_of_departments": 1434
+    },
+    {
+        "School_name": "University of Sheffield",
+        "Country": "United Kingdom",
+        "City": "Sheffield",
+        "合作集團": "StudyGroup",
+        "URL": "https://sheffield.ac.uk/undergraduate/courses/2026/",
+        "latitude": 53.3815042,
+        "longitude": -1.4833688,
+        "Number_of_departments": 485
+    },
+    {
+        "School_name": "Leeds Beckett University",
+        "Country": "United Kingdom",
+        "City": "Leeds",
+        "合作集團": "StudyGroup",
+        "URL": "https://www.leedsbeckett.ac.uk",
+        "latitude": 53.8261442,
+        "longitude": -1.5933537,
+        "Number_of_departments": 53
+    },
+    {
+        "School_name": "University of Aberdeen",
+        "Country": "United Kingdom",
+        "City": "Aberdeen",
+        "合作集團": "StudyGroup",
+        "URL": "https://www.abdn.ac.uk/study/undergraduate/degree-programmes/",
+        "latitude": 57.1645247,
+        "longitude": -2.1018364,
+        "Number_of_departments": 699
+    },
+    {
         "School_name": "Texas State University",
         "Country": "United States of America",
         "City": "San Marcos",
@@ -527,6 +567,6 @@
         "URL": "https://mycatalog.txstate.edu/undergraduate/undergraduate-majors/",
         "latitude": 29.8910941,
         "longitude": -97.9376839,
-        "Number_of_departments": 381
+        "Number_of_departments": 103
     }
 ]

@@ -65,9 +65,6 @@
     </nav>
   </div>
 
-  <a id="top-anchor"></a>
-
-
   <!-- Top Anchor -->
   <a id="top-anchor"></a>
 
@@ -81,42 +78,50 @@
           <p>全球大學資料查詢平台</p>
         </div>
       </div>
-      <button id="show-changelog">
-        <span style="margin-right: 8px;">📋</span>
-        更新日誌
-      </button>
       <div class="last-updated-container">
         <h3>最後更新時間:</h3>
         <div id="github-push-time" class="loading">載入中...</div>
       </div>
     </div>
-    <div class="header-right export-buttons">
-      <button id="export-json" class="primary">
-        <span style="margin-right: 6px;">📄</span>
-        Export JSON
-      </button>
-      <button id="export-excel" class="primary">
-        <span style="margin-right: 6px;">📊</span>
-        Export Excel
-      </button>
-      <button id="export-txt">
-        <span style="margin-right: 6px;">📝</span>
-        Export URL (TXT)
-      </button>
-      <button id="copy-all-urls">
-        <span style="margin-right: 6px;">📋</span>
-        Copy All URLs
-      </button>
+    <div class="header-right">
+      <div class="header-controls">
+        <button id="show-changelog" class="secondary-btn">
+          <span class="btn-icon">📋</span>
+          更新日誌
+        </button>
+        <button id="theme-toggle" class="theme-toggle">
+          <span class="icon">🌙</span>
+          <span class="text">深色模式</span>
+        </button>
+      </div>
+      <div class="export-buttons">
+        <button id="export-json" class="primary">
+          <span class="btn-icon">📄</span>
+          Export JSON
+        </button>
+        <button id="export-excel" class="primary">
+          <span class="btn-icon">📊</span>
+          Export Excel
+        </button>
+        <button id="export-txt" class="secondary-btn">
+          <span class="btn-icon">📝</span>
+          Export URL (TXT)
+        </button>
+        <button id="copy-all-urls" class="secondary-btn">
+          <span class="btn-icon">📋</span>
+          Copy All URLs
+        </button>
+      </div>
     </div>
   </div>
 
   <!-- 更新日誌彈窗 -->
-  <div id="changelog-modal" class="changelog-modal" style="display:none;">
+  <div id="changelog-modal" class="changelog-modal">
     <div class="changelog-modal-content">
       <span class="changelog-close">&times;</span>
       <h2>🔄 更新日誌</h2>
       <div id="changelog-list">
-        <div style="text-align: center; color: #aaa; padding: 20px;">
+        <div class="loading-placeholder">
           載入中...
         </div>
       </div>
@@ -126,26 +131,21 @@
   <!-- YouTube風格的用戶指南卡片 -->
   <div class="container">
     <div class="user-guide">
-      <div
-        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; flex-wrap: wrap; gap: 16px;">
-        <h3 style="margin: 0; color: #ff6b6b; display: flex; align-items: center;">
-          <span style="margin-right: 12px; font-size: 20px;">💡</span>
+      <div class="guide-header">
+        <h3 class="guide-title">
+          <span class="guide-icon">💡</span>
           <strong>使用說明</strong>
         </h3>
-        <button id="theme-toggle" class="theme-toggle">
-          <span class="icon">🌙</span>
-          <span class="text">深色模式</span>
-        </button>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
-        <div>
+      <div class="guide-content">
+        <div class="guide-section">
           <p><strong>1. 選擇篩選條件</strong><br>
             請先選擇國家、學校、學位，表格會自動篩選顯示對應資料。</p>
 
           <p><strong>2. 搜尋功能</strong><br>
             可於表格上方搜尋欄快速查找科系或網址。</p>
         </div>
-        <div>
+        <div class="guide-section">
           <p><strong>3. 複製功能</strong><br>
             點選每列的 <strong>Copy URL</strong> 可複製該科系網址。</p>
 
@@ -154,49 +154,52 @@
           </p>
         </div>
       </div>
-      <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #3f3f3f;">
-        <p style="color: #ffcc02; font-size: 14px; margin: 0;">
+      <div class="guide-notice">
+        <p class="notice-text">
           ⚠️ <strong>注意：</strong>本工具僅供查詢使用，請勿未經授權轉載或修改。若遇資料載入異常，請重新整理頁面。
         </p>
       </div>
     </div>
   </div>
 
-  <!-- 選擇器區域 - 新的滾輪選擇設計 -->
-  <div class="select-area-container">
-    <div class="select-grid-container">
+  <!-- 選擇器區域 - 改進的滾輪選擇設計 -->
+  <div class="container">
+    <a id="country-anchor"></a>
+    <div class="select-area-container">
+      <h2 class="section-title">📊 資料篩選</h2>
+      <div class="select-grid-container">
 
-      <!-- 國家選擇框 -->
-      <div class="scroll-select-container">
-        <h3 class="select-title">🌍 選擇國家</h3>
-        <div class="scroll-select-box">
-          <div id="country-selector-content" class="scroll-content">
-            <div class="loading-placeholder">載入中...</div>
+        <!-- 國家選擇框 -->
+        <div class="scroll-select-container">
+          <h3 class="select-title">🌍 選擇國家</h3>
+          <div class="scroll-select-box">
+            <div id="country-selector-content" class="scroll-content">
+              <div class="loading-placeholder">載入中...</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- 學校選擇框 -->
-      <div class="scroll-select-container">
-        <h3 class="select-title">🏫 選擇學校</h3>
-        <div class="scroll-select-box">
-          <div id="school-selector-content" class="scroll-content">
-            <div class="loading-placeholder">載入中...</div>
+        <!-- 學校選擇框 -->
+        <div class="scroll-select-container">
+          <h3 class="select-title">🏫 選擇學校</h3>
+          <div class="scroll-select-box">
+            <div id="school-selector-content" class="scroll-content">
+              <div class="loading-placeholder">載入中...</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- 學位選擇框 -->
-      <div class="scroll-select-container">
-        <h3 class="select-title">🎓 選擇學位</h3>
-        <div class="scroll-select-box">
-          <div id="degree-selector-content" class="scroll-content">
-            <div class="loading-placeholder">載入中...</div>
+        <!-- 學位選擇框 -->
+        <div class="scroll-select-container">
+          <h3 class="select-title">🎓 選擇學位</h3>
+          <div class="scroll-select-box">
+            <div id="degree-selector-content" class="scroll-content">
+              <div class="loading-placeholder">載入中...</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 
   <!-- 科系查詢區域 -->
@@ -211,56 +214,79 @@
     </div>
   </div>
 
-  <!-- YouTube風格的數據表格 -->
+  <!-- 標籤頁功能區域 -->
   <div class="container">
-    <div class="table-container">
-      <a id="json-table-anchor"></a>
-      <h3>📊 科系資料表</h3>
-      <table id="json-table" class="display">
-        <thead>
-          <tr>
-            <th>選擇</th>
-            <th>國家</th>
-            <th>學校名稱</th>
-            <th>科系名稱</th>
-            <th>網址</th>
-            <th>操作</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-    </div>
-  </div>
+    <div class="tabs-container">
+      <div class="tabs-header">
+        <button class="tab-button active" data-tab="department-data">
+          <span class="tab-icon">📋</span>
+          <span class="tab-text">科系資料</span>
+        </button>
+        <button class="tab-button" data-tab="school-data">
+          <span class="tab-icon">🏫</span>
+          <span class="tab-text">學校資料</span>
+        </button>
+        <button class="tab-button" data-tab="map-view">
+          <span class="tab-icon">🗺️</span>
+          <span class="tab-text">地圖檢視</span>
+        </button>
+      </div>
 
-  <div class="container">
-    <div class="table-container" id="school-data-table-container">
-      <a id="school-data-table-anchor"></a>
-      <h3>🏫 學校資料表</h3>
-      <table id="school-data-table" class="display">
-        <thead>
-          <tr>
-            <th>學校名稱</th>
-            <th>國家</th>
-            <th>城市</th>
-            <th>科系數量</th>
-            <th>合作集團</th>
-            <th>學校網址</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-    </div>
-  </div>
+      <div class="tabs-content">
+        <!-- 科系資料標籤頁 -->
+        <div class="tab-panel active" id="department-data">
+          <a id="json-table-anchor"></a>
+          <div class="table-container">
+            <h3>📊 科系資料表</h3>
+            <table id="json-table" class="display">
+              <thead>
+                <tr>
+                  <th>選擇</th>
+                  <th>國家</th>
+                  <th>學校名稱</th>
+                  <th>科系名稱</th>
+                  <th>網址</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
-  <!-- YouTube風格的地圖區域 -->
-  <div class="container">
-    <div class="table-container">
-      <a id="school-map-anchor"></a>
-      <h3>🗺️ 學校位置地圖</h3>
-      <div id="school-map-container">
-        <!-- 地圖容器將由SchoolMap.js生成 -->
+        <!-- 學校資料標籤頁 -->
+        <div class="tab-panel" id="school-data">
+          <a id="school-data-table-anchor"></a>
+          <div class="table-container" id="school-data-table-container">
+            <h3>🏫 學校資料表</h3>
+            <table id="school-data-table" class="display">
+              <thead>
+                <tr>
+                  <th>學校名稱</th>
+                  <th>國家</th>
+                  <th>城市</th>
+                  <th>科系數量</th>
+                  <th>合作集團</th>
+                  <th>學校網址</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 地圖檢視標籤頁 -->
+        <div class="tab-panel" id="map-view">
+          <a id="school-map-anchor"></a>
+          <div class="table-container">
+            <h3>🗺️ 學校位置地圖</h3>
+            <div id="school-map-container">
+              <!-- 地圖容器將由SchoolMap.js生成 -->
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -277,9 +303,10 @@
 
       <div class="footer-section">
         <h4>聯絡資訊</h4>
-        <p>網站: <a href="https://andy-globalunidata.github.io/" target="_blank">andy-globalunidata.github.io</a></p>
-        <p>GitHub: <a href="https://github.com/Andy-GlobalUniData/Andy-GlobalUniData.github.io"
-            target="_blank">查看原始碼</a></p>
+        <p>網站: <a href="https://andy-globalunidata.github.io/" target="_blank"
+            rel="noopener noreferrer">andy-globalunidata.github.io</a></p>
+        <p>GitHub: <a href="https://github.com/Andy-GlobalUniData/Andy-GlobalUniData.github.io" target="_blank"
+            rel="noopener noreferrer">查看原始碼</a></p>
       </div>
 
       <div class="footer-section">

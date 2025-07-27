@@ -10,6 +10,96 @@
     "Number_of_departments": 295
   },
   {
+    "School_name": "University of Adelaide",
+    "Country": "Australia",
+    "City": "Adelaide",
+    "合作集團": "Kaplan",
+    "URL": "https://www.adelaide.edu.au/degree-finder?v__s=&m=view&dsn=program.source_program&adv_avail_comm=1&adv_acad_career=0&adv_degree_type=0&adv_atar=0&year=2025&adv_subject=0&adv_career=0&adv_campus=0&adv_mid_year_entry=0",
+    "latitude": -34.9189226,
+    "longitude": 138.6042367,
+    "Number_of_departments": 356
+  },
+  {
+    "School_name": "Queen Mary University of London",
+    "Country": "United Kingdom",
+    "City": "London",
+    "合作集團": "Kaplan",
+    "URL": "https://www.qmul.ac.uk/undergraduate/coursefinder/",
+    "latitude": 51.5247403,
+    "longitude": -0.0393136,
+    "Number_of_departments": 148
+  },
+  {
+    "School_name": "University of Brighton",
+    "Country": "United Kingdom",
+    "City": "Brighton",
+    "合作集團": "Kaplan",
+    "URL": "https://www.brighton.ac.uk/courses/course-list.aspx",
+    "latitude": 50.8278078,
+    "longitude": -0.1341983,
+    "Number_of_departments": 305
+  },
+  {
+    "School_name": "University of Westminster",
+    "Country": "United Kingdom",
+    "City": "London",
+    "合作集團": "Kaplan",
+    "URL": ".",
+    "latitude": 51.5209064,
+    "longitude": -0.140073,
+    "Number_of_departments": 144
+  },
+  {
+    "School_name": "Cranfield University",
+    "Country": "United Kingdom",
+    "City": "Cranfield",
+    "合作集團": "Kaplan",
+    "URL": "https://www.cranfield.ac.uk/som/masters-courses",
+    "latitude": 52.0701329,
+    "longitude": -0.6287023,
+    "Number_of_departments": 44
+  },
+  {
+    "School_name": "University of York",
+    "Country": "United Kingdom",
+    "City": "York",
+    "合作集團": "Kaplan",
+    "URL": "https://www.york.ac.uk/study/undergraduate/courses/all",
+    "latitude": 53.9453903,
+    "longitude": -1.0314593,
+    "Number_of_departments": 705
+  },
+  {
+    "School_name": "Bournemouth University",
+    "Country": "United Kingdom",
+    "City": "Bournemouth",
+    "合作集團": "Kaplan",
+    "URL": "https://www.bournemouth.ac.uk/study/undergraduate/courses/undergraduate-course-list",
+    "latitude": 50.7253339,
+    "longitude": -1.8620533,
+    "Number_of_departments": 155
+  },
+  {
+    "School_name": "University of Birmingham",
+    "Country": "United Kingdom",
+    "City": "Birmingham",
+    "合作集團": "Kaplan",
+    "URL": "https://www.birmingham.ac.uk/study/courses?preventScrollTop=true",
+    "latitude": 52.4522956,
+    "longitude": -1.9312857,
+    "Number_of_departments": 164
+  },
+  {
+    "School_name": "University of Bristol",
+    "Country": "United Kingdom",
+    "City": "Bristol",
+    "合作集團": "Kaplan",
+    "URL": "https://www.bristol.ac.uk/study/undergraduate/search/?filterStudyYear=2026&page=1",
+    "latitude": 51.5007679,
+    "longitude": -2.5503106,
+    "Number_of_departments": 171
+  },
+  {
     "School_name": "Texas State University",
     "Country": "United States of America",
     "City": "San Marcos",
@@ -87,7 +177,7 @@
     "URL": "https://www.nec.edu/degree-programs",
     "latitude": 43.174571,
     "longitude": -71.8313457,
-    "Number_of_departments": 99
+    "Number_of_departments": 98
   },
   {
     "School_name": "University of Massachusetts Amherst",
@@ -207,7 +297,7 @@
     "URL": "https://www.arizona.edu/degree-search/majors?cat-interest=",
     "latitude": 32.2356928,
     "longitude": -110.951744,
-    "Number_of_departments": 699
+    "Number_of_departments": 709
   },
   {
     "School_name": "Oregon State University",
@@ -297,7 +387,7 @@
     "URL": "https://www.southampton.ac.uk/courses/undergraduate?keyword_filter=",
     "latitude": 50.9341804,
     "longitude": -1.3974844,
-    "Number_of_departments": 518
+    "Number_of_departments": 970
   },
   {
     "School_name": "University of Warwick",
@@ -437,7 +527,7 @@
     "URL": "https://grad.uw.edu/programs/find-a-program/",
     "latitude": 47.6554303,
     "longitude": -122.3001692,
-    "Number_of_departments": 548
+    "Number_of_departments": 10
   },
   {
     "School_name": "University of Sussex",
@@ -487,7 +577,7 @@
     "URL": "https://www.durham.ac.uk/search/?searchStudioQuery=&isGrid=false&facets=&orderBy=&start=0",
     "latitude": 54.7641281,
     "longitude": -1.5863066,
-    "Number_of_departments": 288
+    "Number_of_departments": 220
   },
   {
     "School_name": "University of Huddersfield",
@@ -557,7 +647,7 @@
     "URL": "https://www.surrey.ac.uk/undergraduate",
     "latitude": 51.2430782,
     "longitude": -0.5900545,
-    "Number_of_departments": 262
+    "Number_of_departments": 261
   },
   {
     "School_name": "University of Sheffield",

@@ -131,3 +131,115 @@ function toggleSelectContent(contentId, headerElement) {
         toggle.textContent = '顯示更多 ▼';
     }
 }
+
+// 標籤頁功能
+function initTabs() {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const targetTab = this.getAttribute('data-tab');
+
+            // 移除所有活動狀態
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabPanels.forEach(panel => panel.classList.remove('active'));
+
+            // 設置當前活動狀態
+            this.classList.add('active');
+            const targetPanel = document.getElementById(targetTab);
+            if (targetPanel) {
+                targetPanel.classList.add('active');
+            }
+
+            // 如果切換到地圖標籤，觸發地圖重新渲染（如果需要）
+            if (targetTab === 'map-view' && window.schoolMap) {
+                setTimeout(() => {
+                    window.schoolMap.invalidateSize();
+                }, 100);
+            }
+        });
+    });
+}
+
+// 增強的視覺效果
+function initVisualEnhancements() {
+    // 為選擇器容器添加懸停效果
+    const selectContainers = document.querySelectorAll('.scroll-select-container');
+    selectContainers.forEach(container => {
+        container.addEventListener('mouseenter', function () {
+            this.style.transform = 'translateY(-2px)';
+            this.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.15)';
+        });
+
+        container.addEventListener('mouseleave', function () {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+        });
+    });
+
+    // 為標籤按鈕添加波紋效果
+    const tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function (e) {
+            const ripple = document.createElement('div');
+            ripple.classList.add('ripple');
+
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+
+            ripple.style.cssText = `
+                position: absolute;
+                width: ${size}px;
+                height: ${size}px;
+                left: ${x}px;
+                top: ${y}px;
+                background: rgba(99, 102, 241, 0.3);
+                border-radius: 50%;
+                transform: scale(0);
+                animation: ripple 0.6s ease-out;
+                pointer-events: none;
+            `;
+
+            this.style.position = 'relative';
+            this.style.overflow = 'hidden';
+            this.appendChild(ripple);
+
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
+
+    // 添加CSS動畫
+    if (!document.getElementById('ui-interactions-styles')) {
+        const style = document.createElement('style');
+        style.id = 'ui-interactions-styles';
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+            
+            .scroll-select-container {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            .tab-button {
+                position: relative;
+                overflow: hidden;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+}
+
+// 初始化新功能
+setTimeout(function () {
+    initTabs();
+    initVisualEnhancements();
+}, 100);

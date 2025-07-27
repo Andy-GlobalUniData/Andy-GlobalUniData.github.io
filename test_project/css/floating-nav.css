@@ -1,7 +1,7 @@
 /* Floating Navigation Sidebar Styles - 支持主題切換 */
 .floating-nav {
     position: fixed;
-    top: 120px;
+    top: 140px;
     left: 18px;
     z-index: 1000;
     background: var(--bg-card, #212121);
@@ -19,6 +19,22 @@
     pointer-events: auto;
 }
 
+/* 明亮模式下的導航面板樣式 */
+:root:not([data-theme="dark"]) .floating-nav {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1), 0 10px 30px rgba(0, 0, 0, 0.05);
+    color: #1f2937;
+}
+
+/* 深色模式下的導航面板樣式 */
+[data-theme="dark"] .floating-nav {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    color: var(--text-primary);
+}
+
 .floating-nav.open {
     opacity: 1;
     transform: translateX(0);
@@ -33,13 +49,25 @@
 
 .floating-nav-title {
     font-weight: 600;
-    color: #ffffff;
+    color: var(--text-primary, #ffffff);
     font-size: 16px;
     margin-bottom: 16px;
     letter-spacing: 0.5px;
     text-align: left;
     padding-bottom: 8px;
-    border-bottom: 1px solid #3f3f3f;
+    border-bottom: 1px solid var(--border-color, #3f3f3f);
+}
+
+/* 明亮模式下的導航標題 */
+:root:not([data-theme="dark"]) .floating-nav-title {
+    color: #1f2937;
+    border-bottom-color: #e5e7eb;
+}
+
+/* 深色模式下的導航標題 */
+[data-theme="dark"] .floating-nav-title {
+    color: var(--text-primary);
+    border-bottom-color: var(--border-color);
 }
 
 .floating-nav ul {
@@ -62,18 +90,40 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #ffffff;
+    color: var(--text-primary, #ffffff);
     font-weight: 500;
     padding: 12px 16px;
     border-radius: 8px;
     transition: all 0.2s ease;
 }
 
+/* 明亮模式下的導航連結 */
+:root:not([data-theme="dark"]) .floating-nav a {
+    color: #374151;
+}
+
+/* 深色模式下的導航連結 */
+[data-theme="dark"] .floating-nav a {
+    color: var(--text-primary);
+}
+
 .floating-nav a:hover {
-    background: #3f3f3f;
-    color: #ffffff;
+    background: var(--bg-hover, #3f3f3f);
+    color: var(--text-primary, #ffffff);
     text-decoration: none;
     transform: translateX(4px);
+}
+
+/* 明亮模式下的導航連結hover */
+:root:not([data-theme="dark"]) .floating-nav a:hover {
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+/* 深色模式下的導航連結hover */
+[data-theme="dark"] .floating-nav a:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
 }
 
 .floating-nav .nav-icon {
@@ -87,7 +137,7 @@
 /* Hamburger button styles - 支援主題切換 - 明亮模式優化 */
 #floating-nav-toggle {
     position: fixed;
-    top: 28px;
+    top: 90px;
     left: 18px;
     z-index: 1100;
     width: 48px;
@@ -132,7 +182,7 @@
 
 /* 深色模式下的hover效果 */
 [data-theme="dark"] #floating-nav-toggle:hover {
-    background: var(--hover-bg);
+    background: var(--bg-hover);
     border-color: var(--accent-color);
 }
 
@@ -202,7 +252,7 @@
 
 @media (max-width: 900px) {
     .floating-nav {
-        top: 60px;
+        top: 90px;
         left: -260px;
         min-width: 180px;
         max-width: 80vw;
@@ -217,7 +267,20 @@
     }
 
     #floating-nav-toggle {
-        top: 18px;
+        top: 45px;
+        left: 10px;
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 768px) {
+    .floating-nav {
+        top: 100px;
+    }
+
+    #floating-nav-toggle {
+        top: 55px;
         left: 10px;
     }
 }

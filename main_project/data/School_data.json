@@ -1,5 +1,75 @@
 [
   {
+    "School_name": "Southern Illinois University",
+    "Country": "United States of America",
+    "City": "Carbondale",
+    "合作集團": "INTO",
+    "URL": "https://catalog.siu.edu/programs/",
+    "latitude": 37.7083423,
+    "longitude": -89.2275556,
+    "Number_of_departments": 209
+  },
+  {
+    "School_name": "University of Westminster",
+    "Country": "United Kingdom",
+    "City": "London",
+    "合作集團": "Kaplan",
+    "URL": "https://www.westminster.ac.uk/course-search?f[0]=course_type%3A926",
+    "latitude": 51.5209064,
+    "longitude": -0.140073,
+    "Number_of_departments": 60
+  },
+  {
+    "School_name": "University of Hartford",
+    "Country": "United States of America",
+    "City": "West Hartford",
+    "合作集團": "StudyGroup",
+    "URL": ".",
+    "latitude": 41.8002648,
+    "longitude": -72.7141205,
+    "Number_of_departments": 56
+  },
+  {
+    "School_name": "Texas State University",
+    "Country": "United States of America",
+    "City": "San Marcos",
+    "合作集團": "INTO",
+    "URL": "https://mycatalog.txstate.edu/undergraduate/undergraduate-majors/",
+    "latitude": 29.8910941,
+    "longitude": -97.9376839,
+    "Number_of_departments": 381
+  },
+  {
+    "School_name": "Arizona State University",
+    "Country": "United States of America",
+    "City": "Tempe",
+    "合作集團": "Kaplan",
+    "URL": "https://degrees.apps.asu.edu/bachelors/major-list/letter/all",
+    "latitude": 33.4213174,
+    "longitude": -111.9331631,
+    "Number_of_departments": 1124
+  },
+  {
+    "School_name": "University of Strathclyde",
+    "Country": "United Kingdom",
+    "City": "Glasgow",
+    "合作集團": "StudyGroup",
+    "URL": "https://www.strath.ac.uk/courses/?level=Undergraduate",
+    "latitude": 55.8618812,
+    "longitude": -4.2419566,
+    "Number_of_departments": 1308
+  },
+  {
+    "School_name": "Florida Atlantic University",
+    "Country": "United States of America",
+    "City": "Boca Raton",
+    "合作集團": "StudyGroup",
+    "URL": "https://www.fau.edu/programs/",
+    "latitude": 26.3743445,
+    "longitude": -80.1027236,
+    "Number_of_departments": 181
+  },
+  {
     "School_name": "University of Newcastle Australia",
     "Country": "Australia",
     "City": "Newcastle",
@@ -40,16 +110,6 @@
     "Number_of_departments": 305
   },
   {
-    "School_name": "University of Westminster",
-    "Country": "United Kingdom",
-    "City": "London",
-    "合作集團": "Kaplan",
-    "URL": ".",
-    "latitude": 51.5209064,
-    "longitude": -0.140073,
-    "Number_of_departments": 144
-  },
-  {
     "School_name": "Cranfield University",
     "Country": "United Kingdom",
     "City": "Cranfield",
@@ -87,7 +147,7 @@
     "URL": "https://www.birmingham.ac.uk/study/courses?preventScrollTop=true",
     "latitude": 52.4522956,
     "longitude": -1.9312857,
-    "Number_of_departments": 164
+    "Number_of_departments": 99
   },
   {
     "School_name": "University of Bristol",
@@ -98,16 +158,6 @@
     "latitude": 51.5007679,
     "longitude": -2.5503106,
     "Number_of_departments": 171
-  },
-  {
-    "School_name": "Texas State University",
-    "Country": "United States of America",
-    "City": "San Marcos",
-    "合作集團": "INTO",
-    "URL": "https://mycatalog.txstate.edu/undergraduate/undergraduate-majors/",
-    "latitude": 29.8910941,
-    "longitude": -97.9376839,
-    "Number_of_departments": 381
   },
   {
     "School_name": "The University of Manchester",
@@ -217,7 +267,7 @@
     "URL": "https://drew.edu/academic/programs-of-study/",
     "latitude": 40.7605379,
     "longitude": -74.4281605,
-    "Number_of_departments": 182
+    "Number_of_departments": 181
   },
   {
     "School_name": "Thomas Jefferson University",
@@ -327,7 +377,7 @@
     "URL": "https://www.ntu.ac.uk/search?query=&category=&category=Courses&start_rank=",
     "latitude": 52.91164,
     "longitude": -1.1866048,
-    "Number_of_departments": 50
+    "Number_of_departments": 40
   },
   {
     "School_name": "University of Nottingham",
@@ -377,7 +427,7 @@
     "URL": "https://le.ac.uk/courses?Q=&Page=",
     "latitude": 52.6087005,
     "longitude": -1.114824,
-    "Number_of_departments": 288
+    "Number_of_departments": 230
   },
   {
     "School_name": "University of Southampton",
@@ -387,7 +437,7 @@
     "URL": "https://www.southampton.ac.uk/courses/undergraduate?keyword_filter=",
     "latitude": 50.9341804,
     "longitude": -1.3974844,
-    "Number_of_departments": 970
+    "Number_of_departments": 968
   },
   {
     "School_name": "University of Warwick",
@@ -407,7 +457,7 @@
     "URL": "https://www.ncl.ac.uk/postgraduate/degrees/",
     "latitude": 54.980175,
     "longitude": -1.6146802,
-    "Number_of_departments": 313
+    "Number_of_departments": 316
   },
   {
     "School_name": "Aston University",
@@ -447,7 +497,7 @@
     "URL": "https://www.qub.ac.uk/courses/",
     "latitude": 54.5842881,
     "longitude": -5.9336562,
-    "Number_of_departments": 715
+    "Number_of_departments": 717
   },
   {
     "School_name": "Northeastern University",
@@ -457,7 +507,7 @@
     "URL": "https://catalog.northeastern.edu/course-descriptions/",
     "latitude": 42.3351052,
     "longitude": -71.0892579,
-    "Number_of_departments": 230
+    "Number_of_departments": 232
   },
   {
     "School_name": "Queens College",
@@ -597,7 +647,7 @@
     "URL": "https://www.jmu.edu/academics/undergraduate/majors/index.shtml",
     "latitude": 38.4458605,
     "longitude": -78.8781075,
-    "Number_of_departments": 139
+    "Number_of_departments": 69
   },
   {
     "School_name": "Mercer University",

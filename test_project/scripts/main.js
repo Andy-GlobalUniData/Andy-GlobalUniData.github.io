@@ -81,7 +81,61 @@ document.addEventListener("DOMContentLoaded", function () {
   async function fetchJsonData(url) {
     try {
       const response = await fetch(url);
-      totalData = await response.json();
+      const rawData = await response.json();
+
+      // 載入學位分類數據
+      const degreeResponse = await fetch('data/Degree_data.json');
+      const degreeData = await degreeResponse.json();
+
+      // 創建學位關鍵字到學位等級的映射
+      const degreeMapping = {};
+      Object.keys(degreeData).forEach(degreeLevel => {
+        degreeData[degreeLevel].forEach(keyword => {
+          degreeMapping[keyword.toLowerCase()] = degreeLevel;
+        });
+      });
+
+      // 處理數據，添加 Degree Level 欄位
+      totalData = rawData.map(item => {
+        const departmentName = item["Department Name"] || "";
+        let degreeLevel = "Other"; // 預設值
+
+        const deptLower = departmentName.toLowerCase();
+
+        // 博士學位識別
+        if (deptLower.includes('phd') || deptLower.includes('ph.d') || deptLower.includes('doctoral')) {
+          degreeLevel = "Doctoral Degrees / Ph.D.";
+        }
+        // 碩士學位識別
+        else if (deptLower.includes('msc') || deptLower.includes('m.sc') ||
+          deptLower.includes('ma ') || deptLower.includes('m.a') ||
+          deptLower.includes('mba') || deptLower.includes('m.b.a') ||
+          deptLower.includes('med') || deptLower.includes('m.ed') ||
+          deptLower.includes('meng') || deptLower.includes('m.eng') ||
+          deptLower.includes('mfa') || deptLower.includes('m.f.a') ||
+          deptLower.includes('llm') || deptLower.includes('ll.m') ||
+          deptLower.includes('master') || deptLower.includes('graduate') ||
+          deptLower.includes('postgraduate')) {
+          degreeLevel = "Graduate / Master Degrees";
+        }
+        // 學士學位識別
+        else if (deptLower.includes('bsc') || deptLower.includes('b.sc') ||
+          deptLower.includes('ba ') || deptLower.includes('b.a') ||
+          deptLower.includes('bba') || deptLower.includes('b.b.a') ||
+          deptLower.includes('bed') || deptLower.includes('b.ed') ||
+          deptLower.includes('beng') || deptLower.includes('b.eng') ||
+          deptLower.includes('bfa') || deptLower.includes('b.f.a') ||
+          deptLower.includes('llb') || deptLower.includes('ll.b') ||
+          deptLower.includes('bachelor') || deptLower.includes('undergraduate') ||
+          deptLower.includes('majors') || deptLower.includes('minors')) {
+          degreeLevel = "Undergraduate / Bachelor";
+        }
+
+        return {
+          ...item,
+          "Degree Level": degreeLevel
+        };
+      });
 
       // 如果 DataTable 已經存在，先銷毀它
       if ($.fn.dataTable.isDataTable('#json-table')) {
@@ -101,9 +155,10 @@ document.addEventListener("DOMContentLoaded", function () {
           { title: "Country", data: 1 },
           { title: "School Name", data: 2 },
           { title: "Department Name", data: 3 },
+          { title: "Degree Level", data: 4 },
           {
             title: "URL",
-            data: 4,
+            data: 5,
             defaultContent: "N/A",
             render: function (data) {
               if (!data) return "N/A";
@@ -114,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: "Copy URL",
             orderable: false,
             render: function (data, type, row) {
-              const url = row[4] || "";
+              const url = row[5] || "";
               return url
                 ? `<button class="copy-url-btn" data-url="${url}">Copy URL</button>`
                 : "N/A";
@@ -153,9 +208,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const row = $(this).closest("tr");
     const schoolName = row.find("td:nth-child(3)").text(); // Get School Name
     const departmentName = row.find("td:nth-child(4)").text(); // Get Department Name
+    const degreeLevel = row.find("td:nth-child(5)").text(); // Get Degree Level
 
     navigator.clipboard.writeText(url).then(() => {
-      alert(`URL copied to clipboard!\n\nSchool: ${schoolName}\nDepartment: ${departmentName}\nURL: ${url}`);
+      alert(`URL copied to clipboard!\n\nSchool: ${schoolName}\nDepartment: ${departmentName}\nDegree Level: ${degreeLevel}\nURL: ${url}`);
     }).catch(err => {
       console.error("Failed to copy URL: ", err);
     });
@@ -190,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 監聽checkbox勾選，維護跨頁勾選陣列
   $(document).on("change", ".row-checkbox", function () {
     const row = $(this).closest("tr");
-    const url = row.find("td:nth-child(5) a").attr("href") || row.find("td:nth-child(5)").text();
+    const url = row.find("td:nth-child(6) a").attr("href") || row.find("td:nth-child(6)").text();
     if (!url) return;
     if (this.checked) {
       if (!selectedRowURLs.includes(url)) selectedRowURLs.push(url);
@@ -275,10 +331,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const formattedData = chunk.map((item) => {
       const isCountrySelected = selectedCountries.length === 0 || selectedCountries.includes(item["Country"]);
       const isSchoolSelected = selectedSchools.length === 0 || selectedSchools.includes(item["School Name"]);
+      const isDegreeSelected = selectedDepartments.length === 0 ||
+        selectedDepartments.includes("No Filter") ||
+        selectedDepartments.includes(item["Degree Level"]);
 
       // 如果沒有選擇任何篩選條件，顯示所有數據
-      const shouldShow = (selectedCountries.length === 0 && selectedSchools.length === 0) ||
-        isCountrySelected || isSchoolSelected;
+      const shouldShow = (selectedCountries.length === 0 && selectedSchools.length === 0 &&
+        (selectedDepartments.length === 0 || selectedDepartments.includes("No Filter"))) ||
+        (isCountrySelected || isSchoolSelected) && isDegreeSelected;
 
       if (!shouldShow) return null;
 
@@ -287,6 +347,7 @@ document.addEventListener("DOMContentLoaded", function () {
         item["Country"] || "N/A",
         item["School Name"] || "N/A",
         item["Department Name"] || "N/A",
+        item["Degree Level"] || "Other",
         item.URL || "N/A",
       ];
     }).filter(row => row !== null); // 過濾掉null值
@@ -372,7 +433,8 @@ document.addEventListener("DOMContentLoaded", function () {
           "Country": data[1],
           "School Name": data[2],
           "Department Name": data[3],
-          "URL": data[4],
+          "Degree Level": data[4],
+          "URL": data[5],
         });
       }
     });

@@ -1,0 +1,399 @@
+<link rel="stylesheet" href="css/leaflet-google.css" />
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andy Global Uni Data - Modular System</title>
+
+  <!-- 版權聲明 -->
+  <!-- 
+    Andy Global Uni Data - 全球大學資料查詢平台 (Modular Version)
+    Copyright (C) [2025] [@Andy87877]
+
+    All rights reserved.
+
+    This software is provided "as is" and is intended for personal or internal use only. 
+    Users are **not permitted** to modify, distribute, or create derivative works based on this software.
+    Forking, reverse engineering, or any modifications are strictly prohibited.
+
+    For inquiries regarding usage rights, please contact [andy8787main@gmail.com].
+    
+    網站: https://andy-globalunidata.github.io/
+    GitHub: https://github.com/Andy-GlobalUniData/Andy-GlobalUniData.github.io
+  -->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/floating-nav.css">
+  <link rel="stylesheet" href="css/leaflet-google.css" />
+  <link rel="stylesheet" href="css/modules.css">
+
+  <!-- External Libraries CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
+  <!-- Leaflet CSS for Map Module -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo">A</div>
+      <h2>Andy Global Uni Data</h2>
+      <p>模塊化系統載入中...</p>
+      <div class="loading-progress-container">
+        <div id="loading-progress" class="loading-progress"></div>
+      </div>
+      <div id="loading-status" class="loading-status">正在初始化...</div>
+    </div>
+  </div>
+
+  <!-- Error Message -->
+  <div id="error-message" class="error-message" style="display: none;">
+    <h3>載入失敗</h3>
+    <p id="error-text">系統初始化時發生錯誤，請重新整理頁面再試。</p>
+    <button onclick="location.reload()" class="retry-btn">重新載入</button>
+  </div>
+
+  <!-- Hamburger Floating Navigation Sidebar -->
+  <div id="floating-nav-wrapper">
+    <button id="floating-nav-toggle" aria-label="Open navigation" class="floating-nav-hamburger">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+    <nav id="floating-nav" class="floating-nav">
+      <div class="floating-nav-title">快速導覽</div>
+      <ul>
+        <li><a href="#top-anchor"><span class="nav-icon">⬆️</span>Top</a></li>
+        <li><a href="#country-anchor"><span class="nav-icon">🌏</span>Select Country</a></li>
+        <li><a href="#json-table-anchor"><span class="nav-icon">📋</span>Department Data</a></li>
+        <li><a href="#school-data-table-anchor"><span class="nav-icon">🏫</span>School Data</a></li>
+        <li><a href="#school-map-anchor"><span class="nav-icon">🗺️</span>School Map</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Top Anchor -->
+  <a id="top-anchor"></a>
+
+  <!-- Header Container -->
+  <div class="header-container">
+    <div class="header-left">
+      <div class="brand-area">
+        <div class="brand-logo">A</div>
+        <div class="brand-text">
+          <h1>Andy Global Uni Data</h1>
+          <p>全球大學資料查詢平台 - 模塊化版本 <span id="app-version">v2.0.0</span></p>
+        </div>
+      </div>
+      <div class="last-updated-container">
+        <h3>最後更新時間:</h3>
+        <div id="github-push-time" class="loading">載入中...</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="header-controls">
+        <button id="show-changelog" class="secondary-btn">
+          <span class="btn-icon">📋</span>
+          更新日誌
+        </button>
+        <button id="theme-toggle" class="theme-toggle">
+          <span class="icon">🌙</span>
+          <span class="text">深色模式</span>
+        </button>
+      </div>
+      <div class="export-buttons">
+        <button id="export-json-btn" class="primary-btn">
+          <span class="btn-icon">📄</span>
+          Export JSON
+        </button>
+        <button id="export-excel-btn" class="primary-btn">
+          <span class="btn-icon">📊</span>
+          Export Excel
+        </button>
+        <button id="export-txt-btn" class="secondary-btn">
+          <span class="btn-icon">📝</span>
+          Export TXT
+        </button>
+        <button id="copy-all-urls-btn" class="secondary-btn">
+          <span class="btn-icon">📋</span>
+          Copy All URLs
+        </button>
+        <button id="copy-selected-urls-btn" class="secondary-btn" disabled>
+          <span class="btn-icon">📋</span>
+          Copy Selected URLs
+        </button>
+        <button id="export-selected-btn" class="primary-btn" disabled>
+          <span class="btn-icon">📥</span>
+          Export Selected
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Breadcrumb Navigation -->
+  <div id="breadcrumb-nav" class="breadcrumb-nav"></div>
+
+  <!-- User Guide -->
+  <div class="container">
+    <div class="user-guide">
+      <div class="guide-header">
+        <h3 class="guide-title">
+          <span class="guide-icon">💡</span>
+          <strong>使用說明 - 模塊化系統</strong>
+        </h3>
+      </div>
+      <div class="guide-content">
+        <div class="guide-section">
+          <p><strong>1. 三大功能模塊</strong><br>
+            📋 <strong>科系資料</strong>：瀏覽和搜尋科系資訊<br>
+            🏫 <strong>學校資料</strong>：查看學校統計和詳細資訊<br>
+            🗺️ <strong>地圖檢視</strong>：在地圖上查看學校位置</p>
+
+          <p><strong>2. 快捷鍵</strong><br>
+            Alt+1：切換到科系資料<br>
+            Alt+2：切換到學校資料<br>
+            Alt+3：切換到地圖檢視<br>
+            Ctrl+K：聚焦搜尋框</p>
+        </div>
+        <div class="guide-section">
+          <p><strong>3. 智能篩選</strong><br>
+            篩選器會自動同步到所有模塊，提供一致的數據視圖。</p>
+
+          <p><strong>4. 批量操作</strong><br>
+            可選擇多筆資料進行批量導出或URL複製。
+          </p>
+        </div>
+      </div>
+      <div class="guide-notice">
+        <p class="notice-text">
+          ⚠️ <strong>注意：</strong>本系統採用模塊化架構，各功能獨立運行，提供更佳的性能和穩定性。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter Section -->
+  <div class="container">
+    <a id="country-anchor"></a>
+    <div class="select-area-container">
+      <h2 class="section-title">📊 智能篩選系統</h2>
+      <div class="select-grid-container">
+        <!-- Country Filter -->
+        <div class="scroll-select-container">
+          <h3 class="select-title">🌍 選擇國家</h3>
+          <div class="scroll-select-box">
+            <div id="country-filters" class="scroll-content">
+              <div class="loading-placeholder">載入中...</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- School Filter -->
+        <div class="scroll-select-container">
+          <h3 class="select-title">🏫 選擇學校</h3>
+          <div class="scroll-select-box">
+            <div id="school-filters" class="scroll-content">
+              <div class="loading-placeholder">載入中...</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Degree Filter -->
+        <div class="scroll-select-container">
+          <h3 class="select-title">🎓 選擇學位</h3>
+          <div class="scroll-select-box">
+            <div id="degree-filters" class="scroll-content">
+              <div class="loading-placeholder">載入中...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Section -->
+  <div class="container">
+    <div class="department-search-container">
+      <h3>🔍 智能搜尋</h3>
+      <div class="search-box-container">
+        <input type="text" id="department-search" placeholder="輸入科系或學校名稱進行搜尋..." class="department-search-input">
+        <button id="clear-search" class="clear-search-btn">清除</button>
+      </div>
+      <div id="search-results-info" class="search-info"></div>
+    </div>
+  </div>
+
+  <!-- Tab System -->
+  <div class="container">
+    <div class="tabs-container">
+      <div class="tabs-header">
+        <button class="tab-button active" data-tab="department-data">
+          <span class="tab-icon">📋</span>
+          <span class="tab-text">科系資料</span>
+          <span class="tab-shortcut">Alt+1</span>
+        </button>
+        <button class="tab-button" data-tab="school-data">
+          <span class="tab-icon">🏫</span>
+          <span class="tab-text">學校資料</span>
+          <span class="tab-shortcut">Alt+2</span>
+        </button>
+        <button class="tab-button" data-tab="map-view">
+          <span class="tab-icon">🗺️</span>
+          <span class="tab-text">地圖檢視</span>
+          <span class="tab-shortcut">Alt+3</span>
+        </button>
+      </div>
+
+      <div class="tabs-content">
+        <!-- Department Data Tab -->
+        <div class="tab-content active" id="department-data">
+          <a id="json-table-anchor"></a>
+          <div class="table-container">
+            <h3>📊 科系資料表</h3>
+            <div class="table-info">
+              <span id="department-count">資料載入中...</span>
+            </div>
+            <table id="json-table" class="display">
+              <thead>
+                <tr>
+                  <th>選擇</th>
+                  <th>國家</th>
+                  <th>學校名稱</th>
+                  <th>科系名稱</th>
+                  <th>學位等級</th>
+                  <th>網址</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- School Data Tab -->
+        <div class="tab-content" id="school-data">
+          <a id="school-data-table-anchor"></a>
+          <div class="table-container">
+            <h3>🏫 學校資料表</h3>
+            <div class="table-info">
+              <span id="school-count">資料載入中...</span>
+            </div>
+            <table id="school-data-table" class="display">
+              <thead>
+                <tr>
+                  <th>學校名稱</th>
+                  <th>國家</th>
+                  <th>城市</th>
+                  <th>科系數量</th>
+                  <th>合作集團</th>
+                  <th>學校網址</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Map View Tab -->
+        <div class="tab-content" id="map-view">
+          <a id="school-map-anchor"></a>
+          <div class="table-container">
+            <h3>🗺️ 學校位置地圖</h3>
+            <div class="map-controls">
+              <button id="fit-to-markers" class="secondary-btn">
+                <span class="btn-icon">🎯</span>
+                顯示所有學校
+              </button>
+              <span id="map-info">地圖載入中...</span>
+            </div>
+            <div id="school-map" style="height: 600px; width: 100%; border-radius: 8px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Andy Global Uni Data</h4>
+        <p>全球大學資料查詢平台 - 模塊化版本</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>系統架構</h4>
+        <p>採用模塊化設計，支持獨立功能模塊</p>
+        <p>✅ 核心數據管理模塊</p>
+        <p>✅ 科系資料模塊</p>
+        <p>✅ 學校資料模塊</p>
+        <p>✅ 地圖檢視模塊</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>聯絡資訊</h4>
+        <p>網站: <a href="https://andy-globalunidata.github.io/" target="_blank" rel="noopener noreferrer">andy-globalunidata.github.io</a></p>
+        <p>GitHub: <a href="https://github.com/Andy-GlobalUniData/Andy-GlobalUniData.github.io" target="_blank" rel="noopener noreferrer">查看原始碼</a></p>
+      </div>
+
+      <div class="footer-section">
+        <h4>版權資訊</h4>
+        <p>Copyright (C) [2025] [@Andy87877]</p>
+        <p>All rights reserved. Personal or internal use only.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>This software is provided "as is" and is intended for personal or internal use only.</p>
+      <p>Users are not permitted to modify, distribute, or create derivative works based on this software.</p>
+      <p>For inquiries regarding usage rights, please contact <a href="mailto:andy8787main@gmail.com">andy8787main@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+  
+  <!-- Modular System Scripts -->
+  <!-- Core Module (must be loaded first) -->
+  <script src="scripts/modules/CoreModule.js"></script>
+  
+  <!-- Feature Modules -->
+  <script src="scripts/modules/DepartmentModule.js"></script>
+  <script src="scripts/modules/SchoolModule.js"></script>
+  <script src="scripts/modules/MapModule.js"></script>
+  <script src="scripts/modules/ExportManagerModule.js"></script>
+  
+  <!-- UI Modules -->
+  <script src="scripts/modules/TabManagerModule.js"></script>
+  
+  <!-- Application Manager (must be loaded last) -->
+  <script src="scripts/modules/AppManager.js"></script>
+  
+  <!-- Development Tools (only in dev mode) -->
+  <script src="scripts/modules/ModularSystemTest.js"></script>
+  
+  <!-- Legacy Scripts (for compatibility) -->
+  <script src="scripts/ui-controls.js"></script>
+  <script src="scripts/ui-interactions.js"></script>
+  <script src="scripts/floating-nav.js"></script>
+  <script src="scripts/theme-toggle.js"></script>
+  <script src="scripts/github-push-time.js"></script>
+
+</body>
+
+</html>

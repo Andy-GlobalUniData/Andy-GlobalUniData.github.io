@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/floating-nav.css">
   <link rel="stylesheet" href="css/leaflet-google.css" />
+  <link rel="stylesheet" href="css/modules.css">
 
   <!-- External Libraries CSS -->
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -332,19 +333,28 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
 
-  <!-- Custom Scripts -->
-  <script src="scripts/theme-toggle.js"></script>
-  <script src="scripts/floating-nav.js"></script>
+  <!-- Modular System Scripts -->
+  <!-- Core Module -->
+  <script src="scripts/modules/CoreModule.js"></script>
+  
+  <!-- Feature Modules -->
+  <script src="scripts/modules/DepartmentModule.js"></script>
+  <script src="scripts/modules/SchoolModule.js"></script>
+  <script src="scripts/modules/MapModule.js"></script>
+  <script src="scripts/modules/ExportManagerModule.js"></script>
+  
+  <!-- UI Modules -->
+  <script src="scripts/modules/TabManagerModule.js"></script>
+  
+  <!-- Application Manager -->
+  <script src="scripts/modules/AppManager.js"></script>
+  
+  <!-- Development Tools (only in dev mode) -->
+  <script src="scripts/modules/ModularSystemTest.js"></script>
+  
+  <!-- Legacy Scripts (if still needed) -->
   <script src="scripts/ui-controls.js"></script>
-  <script src="scripts/School_data.js"></script>
-  <script src="scripts/degreeFilter_complete.js"></script>
-  <script src="scripts/main_complete.js"></script>
-  <script src="scripts/exportManager.js"></script>
-  <script src="scripts/departmentSearch.js"></script>
-  <script src="scripts/SchoolMap.js"></script>
-  <script src="scripts/loadSchoolData.js"></script>
-  <script src="scripts/github-push-time.js"></script>
-  <script src="scripts/systemTest.js"></script>
+  <script src="scripts/ui-interactions.js"></script>
 
 </body>
 

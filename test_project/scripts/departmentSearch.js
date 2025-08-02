@@ -6,7 +6,7 @@ class DepartmentSearch {
         this.clearBtn = null;
         this.searchInfo = null;
         this.originalSearchFunction = null;
-        
+
         console.log('DepartmentSearch: 建構子被調用');
         this.init();
     }
@@ -28,7 +28,7 @@ class DepartmentSearch {
                 console.log('DepartmentSearch: 找到所有必要元素，綁定事件');
                 this.bindEvents();
                 this.isInitialized = true;
-                
+
                 // 檢查 DataTable 是否已經準備好
                 this.waitForDataTable();
             } else {
@@ -98,7 +98,7 @@ class DepartmentSearch {
         if (window.dataTable && window.dataTable.search) {
             this.originalSearchFunction = window.dataTable.search.bind(window.dataTable);
         }
-        
+
         // 添加自定義搜尋功能到 DataTable
         if (window.dataTable && $.fn.dataTable) {
             $.fn.dataTable.ext.search.push((settings, data, dataIndex) => {
@@ -107,10 +107,10 @@ class DepartmentSearch {
                 if (!searchTerm) {
                     return true;
                 }
-                
+
                 // 獲取科系名稱（第4欄，索引3）
                 const departmentName = data[3] || '';
-                
+
                 // 執行不區分大小寫的搜尋
                 return departmentName.toLowerCase().includes(searchTerm);
             });
@@ -120,7 +120,7 @@ class DepartmentSearch {
     // 執行搜尋
     performSearch(query) {
         console.log('DepartmentSearch: 執行搜尋:', query);
-        
+
         if (!window.dataTable) {
             console.log('DepartmentSearch: DataTable 尚未準備好');
             this.updateSearchInfo(query, 0, 0);
@@ -128,26 +128,26 @@ class DepartmentSearch {
         }
 
         const searchTerm = query.trim();
-        
+
         try {
             // 清除 DataTable 內建搜尋
             window.dataTable.search('').columns().search('');
-            
+
             // 觸發重繪，自定義搜尋函數會自動應用
             window.dataTable.draw();
-            
+
             // 更新搜尋結果資訊
             setTimeout(() => {
                 const filteredCount = window.dataTable.rows({ search: 'applied' }).count();
                 const totalCount = window.dataTable.rows().count();
-                console.log('DepartmentSearch: 搜尋結果', { 
-                    searchTerm, 
-                    filteredCount, 
-                    totalCount 
+                console.log('DepartmentSearch: 搜尋結果', {
+                    searchTerm,
+                    filteredCount,
+                    totalCount
                 });
                 this.updateSearchInfo(searchTerm, filteredCount, totalCount);
             }, 50);
-            
+
         } catch (error) {
             console.error('DepartmentSearch: 搜尋過程中出現錯誤:', error);
             this.updateSearchInfo(searchTerm, 0, 0);
@@ -205,7 +205,7 @@ window.searchDebug = {
             rowCount: window.dataTable ? window.dataTable.rows().count() : 0
         });
     },
-    
+
     testSearch: (term) => {
         if (window.departmentSearch) {
             window.departmentSearch.performSearch(term);
@@ -213,7 +213,7 @@ window.searchDebug = {
             console.log('departmentSearch 實例不存在');
         }
     },
-    
+
     checkElements: () => {
         console.log('頁面元素狀態:', {
             searchInput: !!document.getElementById('department-search'),

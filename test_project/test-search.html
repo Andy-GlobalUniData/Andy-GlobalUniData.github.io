@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科系查詢測試</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .search-info {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e7f3ff;
+            border-radius: 4px;
+        }
+
+        .debug-info {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test-container">
+        <h1>🔍 科系查詢功能測試</h1>
+
+        <div class="department-search-container">
+            <h3>科系查詢</h3>
+            <input type="text" id="department-search" placeholder="輸入科系名稱進行查詢..." class="search-input">
+            <button id="clear-search">清除</button>
+            <div id="search-results-info" class="search-info"></div>
+        </div>
+
+        <div class="debug-info">
+            <h4>除錯資訊</h4>
+            <button onclick="window.searchDebug.checkDataTable()">檢查 DataTable</button>
+            <button onclick="window.searchDebug.checkElements()">檢查頁面元素</button>
+            <button onclick="window.searchDebug.testSearch('computer')">測試搜尋 "computer"</button>
+            <button onclick="window.searchDebug.testSearch('engineering')">測試搜尋 "engineering"</button>
+            <button onclick="window.searchDebug.testSearch('business')">測試搜尋 "business"</button>
+
+            <div id="debug-output"
+                style="margin-top: 10px; padding: 10px; background-color: white; border-radius: 4px;">
+                等待測試結果...
+            </div>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <h4>測試說明</h4>
+            <ol>
+                <li>在上方搜尋框中輸入科系關鍵字（如：computer, engineering, business）</li>
+                <li>觀察搜尋結果資訊的顯示</li>
+                <li>使用除錯按鈕檢查系統狀態</li>
+                <li>檢查瀏覽器控制台的除錯資訊</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 載入必要的腳本 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script>
+        // 模擬 DataTable 和測試數據
+        const testData = [
+            { "School Name": "Test University", "Country": "USA", "Department Name": "Computer Science", "URL": "http://test.com" },
+            { "School Name": "Example College", "Country": "UK", "Department Name": "Software Engineering", "URL": "http://example.com" },
+            { "School Name": "Demo School", "Country": "Canada", "Department Name": "Business Administration", "URL": "http://demo.com" },
+            { "School Name": "Sample Institute", "Country": "Australia", "Department Name": "Information Technology", "URL": "http://sample.com" }
+        ];
+
+        // 創建簡單的 DataTable 模擬
+        window.dataTable = {
+            search: function (term) {
+                console.log('DataTable search called with:', term);
+                return this;
+            },
+            columns: function () {
+                return {
+                    search: function (term) {
+                        console.log('Column search called with:', term);
+                        return this;
+                    }
+                };
+            },
+            column: function (index) {
+                return {
+                    search: function (term) {
+                        console.log(`Column ${index} search called with:`, term);
+                        return this;
+                    }
+                };
+            },
+            draw: function () {
+                console.log('DataTable draw called');
+                // 模擬搜尋結果
+                const searchTerm = window.departmentSearch ? window.departmentSearch.getCurrentSearchTerm().toLowerCase() : '';
+                const filteredData = searchTerm ?
+                    testData.filter(item => item["Department Name"].toLowerCase().includes(searchTerm)) :
+                    testData;
+
+                document.getElementById('debug-output').innerHTML = `
+                    <strong>模擬搜尋結果:</strong><br>
+                    搜尋詞: "${searchTerm}"<br>
+                    找到: ${filteredData.length} 筆結果<br>
+                    總共: ${testData.length} 筆資料<br>
+                    結果: ${filteredData.map(item => item["Department Name"]).join(', ')}
+                `;
+
+                return this;
+            },
+            rows: function (options) {
+                if (options && options.search === 'applied') {
+                    const searchTerm = window.departmentSearch ? window.departmentSearch.getCurrentSearchTerm().toLowerCase() : '';
+                    const filteredData = searchTerm ?
+                        testData.filter(item => item["Department Name"].toLowerCase().includes(searchTerm)) :
+                        testData;
+                    return {
+                        count: function () {
+                            return filteredData.length;
+                        }
+                    };
+                }
+                return {
+                    count: function () {
+                        return testData.length;
+                    }
+                };
+            }
+        };
+
+        // 觸發 DataTable 準備完成事件
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(() => {
+                console.log('觸發 dataTableReady 事件');
+                document.dispatchEvent(new Event('dataTableReady'));
+            }, 100);
+        });
+    </script>
+    <script src="scripts/departmentSearch.js"></script>
+</body>
+
+</html>

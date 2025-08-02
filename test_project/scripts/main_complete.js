@@ -196,6 +196,12 @@ class DataManager {
                     'font-size': '18px',
                     'padding': '10px'
                 });
+
+                // 通知科系查詢功能 DataTable 已準備好
+                console.log('DataTable 初始化完成，通知科系查詢功能');
+
+                // 觸發自定義事件
+                document.dispatchEvent(new Event('dataTableReady'));
             }
         });
 

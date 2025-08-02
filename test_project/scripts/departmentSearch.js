@@ -1,32 +1,80 @@
-// 科系查詢功能 - 獨立於DataTable的查詢系統
+// 科系查詢功能 - 修正版本，配合實際數據結構
 class DepartmentSearch {
     constructor() {
-        this.allData = [];
-        this.filteredData = [];
+        this.isInitialized = false;
         this.searchInput = null;
         this.clearBtn = null;
         this.searchInfo = null;
-        this.dataTable = null;
+        this.originalSearchFunction = null;
 
+        console.log('DepartmentSearch: 建構子被調用');
         this.init();
     }
 
     init() {
-        document.addEventListener('DOMContentLoaded', () => {
+        // 如果已經初始化過，直接返回
+        if (this.isInitialized) {
+            console.log('DepartmentSearch: 已經初始化過，跳過重複初始化');
+            return;
+        }
+
+        const initSearch = () => {
+            console.log('DepartmentSearch: 開始初始化');
             this.searchInput = document.getElementById('department-search');
             this.clearBtn = document.getElementById('clear-search');
             this.searchInfo = document.getElementById('search-results-info');
 
             if (this.searchInput && this.clearBtn && this.searchInfo) {
+                console.log('DepartmentSearch: 找到所有必要元素，綁定事件');
                 this.bindEvents();
+                this.isInitialized = true;
+
+                // 檢查 DataTable 是否已經準備好
+                this.waitForDataTable();
+            } else {
+                console.log('DepartmentSearch: 缺少必要元素', {
+                    searchInput: !!this.searchInput,
+                    clearBtn: !!this.clearBtn,
+                    searchInfo: !!this.searchInfo
+                });
             }
+        };
+
+        // 監聽 DataTable 準備完成事件
+        document.addEventListener('dataTableReady', () => {
+            console.log('DepartmentSearch: 收到 DataTable 準備完成事件');
+            this.waitForDataTable();
         });
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initSearch);
+        } else {
+            initSearch();
+        }
+    }
+
+    waitForDataTable() {
+        // 等待 DataTable 準備好
+        const checkDataTable = () => {
+            if (window.dataTable && window.dataTable.search) {
+                console.log('DepartmentSearch: DataTable 已準備好');
+                this.setupSearch();
+            } else {
+                console.log('DepartmentSearch: 等待 DataTable...');
+                setTimeout(checkDataTable, 100);
+            }
+        };
+        checkDataTable();
     }
 
     bindEvents() {
-        // 即時搜尋
+        // 即時搜尋 - 使用防抖動技術
+        let searchTimeout;
         this.searchInput.addEventListener('input', (e) => {
-            this.performSearch(e.target.value);
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                this.performSearch(e.target.value);
+            }, 300); // 300ms 延遲
         });
 
         // 清除搜尋
@@ -37,217 +85,143 @@ class DepartmentSearch {
         // Enter鍵搜尋
         this.searchInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
+                clearTimeout(searchTimeout);
                 this.performSearch(this.searchInput.value);
             }
         });
+
+        console.log('DepartmentSearch: 事件綁定完成');
     }
 
-    // 設置資料源
-    setData(data) {
-        this.allData = data;
-        this.filteredData = [...data];
-    }
+    setupSearch() {
+        // 保存原始的搜尋功能（如果存在）
+        if (window.dataTable && window.dataTable.search) {
+            this.originalSearchFunction = window.dataTable.search.bind(window.dataTable);
+        }
 
-    // 設置DataTable實例
-    setDataTable(table) {
-        this.dataTable = table;
+        // 添加自定義搜尋功能到 DataTable
+        if (window.dataTable && $.fn.dataTable) {
+            $.fn.dataTable.ext.search.push((settings, data, dataIndex) => {
+                // 如果沒有科系搜尋詞，顯示所有行
+                const searchTerm = this.getCurrentSearchTerm().toLowerCase();
+                if (!searchTerm) {
+                    return true;
+                }
+
+                // 獲取科系名稱（第4欄，索引3）
+                const departmentName = data[3] || '';
+
+                // 執行不區分大小寫的搜尋
+                return departmentName.toLowerCase().includes(searchTerm);
+            });
+        }
     }
 
     // 執行搜尋
     performSearch(query) {
-        if (!query.trim()) {
-            this.showAllResults();
+        console.log('DepartmentSearch: 執行搜尋:', query);
+
+        if (!window.dataTable) {
+            console.log('DepartmentSearch: DataTable 尚未準備好');
+            this.updateSearchInfo(query, 0, 0);
             return;
         }
 
-        const searchTerm = query.toLowerCase().trim();
+        const searchTerm = query.trim();
 
-        // 在所有資料中搜尋科系名稱
-        this.filteredData = this.allData.filter(item => {
-            return item.科系名稱 && item.科系名稱.toLowerCase().includes(searchTerm);
-        });
+        try {
+            // 清除 DataTable 內建搜尋
+            window.dataTable.search('').columns().search('');
 
-        this.updateSearchInfo(query, this.filteredData.length);
-        this.updateTable();
-    }
+            // 觸發重繪，自定義搜尋函數會自動應用
+            window.dataTable.draw();
 
-    // 顯示所有結果
-    showAllResults() {
-        this.filteredData = [...this.allData];
-        this.updateSearchInfo('', this.allData.length);
-        this.updateTable();
+            // 更新搜尋結果資訊
+            setTimeout(() => {
+                const filteredCount = window.dataTable.rows({ search: 'applied' }).count();
+                const totalCount = window.dataTable.rows().count();
+                console.log('DepartmentSearch: 搜尋結果', {
+                    searchTerm,
+                    filteredCount,
+                    totalCount
+                });
+                this.updateSearchInfo(searchTerm, filteredCount, totalCount);
+            }, 50);
+
+        } catch (error) {
+            console.error('DepartmentSearch: 搜尋過程中出現錯誤:', error);
+            this.updateSearchInfo(searchTerm, 0, 0);
+        }
     }
 
     // 清除搜尋
     clearSearch() {
+        console.log('DepartmentSearch: 清除搜尋');
         this.searchInput.value = '';
-        this.showAllResults();
+        this.performSearch('');
+        this.searchInput.focus();
     }
 
     // 更新搜尋資訊顯示
-    updateSearchInfo(query, resultCount) {
+    updateSearchInfo(query, resultCount, totalCount) {
+        if (!this.searchInfo) return;
+
         if (!query.trim()) {
-            this.searchInfo.textContent = `顯示全部 ${this.allData.length} 筆科系資料`;
+            this.searchInfo.innerHTML = `<span style="color: var(--text-secondary, #6b7280);">顯示全部 ${totalCount} 筆科系資料</span>`;
         } else {
-            this.searchInfo.textContent = `搜尋 "${query}" 找到 ${resultCount} 筆結果`;
-        }
-    }
-
-    // 更新表格顯示
-    updateTable() {
-        if (this.dataTable) {
-            // 清除現有資料
-            this.dataTable.clear();
-
-            // 添加篩選後的資料
-            this.filteredData.forEach((item, index) => {
-                const rowData = [
-                    `<input type="checkbox" class="row-checkbox" data-index="${index}">`,
-                    item.國家 || '',
-                    item.學校名稱 || '',
-                    item.科系名稱 || '',
-                    item.網址 ? `<a href="${item.網址}" target="_blank">查看網站</a>` : '',
-                    `<button class="btn-detail" onclick="showDetails(${index})">詳細</button>`
-                ];
-                this.dataTable.row.add(rowData);
-            });
-
-            // 重繪表格
-            this.dataTable.draw();
-        }
-    }
-
-    // 獲取當前篩選的資料
-    getFilteredData() {
-        return this.filteredData;
-    }
-
-    // 根據其他篩選條件進一步篩選
-    applyAdditionalFilters(countryFilter, schoolFilter, degreeFilter) {
-        let filtered = [...this.allData];
-
-        // 應用科系搜尋
-        const searchQuery = this.searchInput ? this.searchInput.value.toLowerCase().trim() : '';
-        if (searchQuery) {
-            filtered = filtered.filter(item =>
-                item.科系名稱 && item.科系名稱.toLowerCase().includes(searchQuery)
-            );
-        }
-
-        // 應用國家篩選
-        if (countryFilter && countryFilter.length > 0) {
-            filtered = filtered.filter(item => countryFilter.includes(item.國家));
-        }
-
-        // 應用學校篩選
-        if (schoolFilter && schoolFilter.length > 0) {
-            filtered = filtered.filter(item => schoolFilter.includes(item.學校名稱));
-        }
-
-        // 應用學位篩選
-        if (degreeFilter && degreeFilter.length > 0) {
-            filtered = filtered.filter(item => {
-                return degreeFilter.some(degree =>
-                    item.科系名稱 && item.科系名稱.toLowerCase().includes(degree.toLowerCase())
-                );
-            });
-        }
-
-        this.filteredData = filtered;
-        this.updateSearchInfo(searchQuery, filtered.length);
-        this.updateTable();
-    }
-}
-
-// 創建全域實例
-window.departmentSearch = new DepartmentSearch();
-
-// 顯示詳細資訊的函數
-function showDetails(index) {
-    const data = window.departmentSearch.getFilteredData()[index];
-    if (data) {
-        const details = `
-      學校: ${data.學校名稱 || '無資料'}
-      國家: ${data.國家 || '無資料'}
-      科系: ${data.科系名稱 || '無資料'}
-      網址: ${data.網址 || '無資料'}
-    `;
-        alert(details);
-    }
-}
-document.addEventListener('DOMContentLoaded', function () {
-    let allData = [];
-    let currentDisplayedData = [];
-
-    // 初始化科系查詢功能
-    function initDepartmentSearch() {
-        const searchInput = document.getElementById('department-search');
-        const clearBtn = document.getElementById('clear-search');
-        const searchInfo = document.getElementById('search-results-info');
-
-        if (!searchInput || !clearBtn || !searchInfo) return;
-
-        // 即時搜尋功能
-        searchInput.addEventListener('input', function () {
-            const searchTerm = this.value.trim().toLowerCase();
-            performDepartmentSearch(searchTerm);
-        });
-
-        // 清除搜尋
-        clearBtn.addEventListener('click', function () {
-            searchInput.value = '';
-            performDepartmentSearch('');
-            searchInput.focus();
-        });
-
-        // Enter鍵搜尋
-        searchInput.addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                const searchTerm = this.value.trim().toLowerCase();
-                performDepartmentSearch(searchTerm);
-            }
-        });
-    }
-
-    // 執行科系搜尋
-    function performDepartmentSearch(searchTerm) {
-        const searchInfo = document.getElementById('search-results-info');
-
-        if (!searchTerm) {
-            // 清除搜尋，顯示所有資料
-            if (window.dataTable) {
-                window.dataTable.search('').draw();
-                searchInfo.textContent = '';
-            }
-            return;
-        }
-
-        if (window.dataTable) {
-            // 使用DataTable的搜尋功能，但只針對科系名稱欄位（第3欄）
-            window.dataTable.column(3).search(searchTerm).draw();
-
-            // 顯示搜尋結果資訊
-            const filteredCount = window.dataTable.rows({ search: 'applied' }).count();
-            const totalCount = window.dataTable.rows().count();
-
-            if (filteredCount === 0) {
-                searchInfo.innerHTML = `<span style="color: var(--error-color, #ef4444);">未找到包含 "${searchTerm}" 的科系</span>`;
+            if (resultCount === 0) {
+                this.searchInfo.innerHTML = `<span style="color: var(--error-color, #ef4444);">❌ 未找到包含 "<strong>${query}</strong>" 的科系</span>`;
             } else {
-                searchInfo.innerHTML = `找到 <strong>${filteredCount}</strong> 個包含 "${searchTerm}" 的科系 (共 ${totalCount} 個科系)`;
+                this.searchInfo.innerHTML = `<span style="color: var(--success-color, #10b981);">✅ 找到 <strong>${resultCount}</strong> 個包含 "<strong>${query}</strong>" 的科系 (共 ${totalCount} 個科系)</span>`;
             }
         }
     }
 
-    // 監聽DataTable初始化完成事件
-    document.addEventListener('dataTableReady', function () {
-        initDepartmentSearch();
-    });
-
-    // 如果DataTable已經存在，直接初始化
-    if (window.dataTable) {
-        initDepartmentSearch();
+    // 獲取當前搜尋詞
+    getCurrentSearchTerm() {
+        return this.searchInput ? this.searchInput.value.trim() : '';
     }
 
-    // 公開搜尋函數供外部使用
-    window.performDepartmentSearch = performDepartmentSearch;
-});
+    // 檢查是否有搜尋條件
+    hasActiveSearch() {
+        return this.getCurrentSearchTerm().length > 0;
+    }
+}
+
+// 確保只創建一個實例
+if (!window.departmentSearch) {
+    console.log('DepartmentSearch: 創建新實例');
+    window.departmentSearch = new DepartmentSearch();
+} else {
+    console.log('DepartmentSearch: 使用現有實例');
+}
+
+// 搜尋除錯工具
+window.searchDebug = {
+    checkDataTable: () => {
+        console.log('DataTable 狀態:', {
+            exists: !!window.dataTable,
+            hasSearch: !!(window.dataTable && window.dataTable.search),
+            rowCount: window.dataTable ? window.dataTable.rows().count() : 0
+        });
+    },
+
+    testSearch: (term) => {
+        if (window.departmentSearch) {
+            window.departmentSearch.performSearch(term);
+        } else {
+            console.log('departmentSearch 實例不存在');
+        }
+    },
+
+    checkElements: () => {
+        console.log('頁面元素狀態:', {
+            searchInput: !!document.getElementById('department-search'),
+            clearBtn: !!document.getElementById('clear-search'),
+            searchInfo: !!document.getElementById('search-results-info')
+        });
+    }
+};
+
+console.log('DepartmentSearch: 腳本載入完成');
+console.log('可用的除錯指令: window.searchDebug.checkDataTable(), window.searchDebug.testSearch("computer"), window.searchDebug.checkElements()');

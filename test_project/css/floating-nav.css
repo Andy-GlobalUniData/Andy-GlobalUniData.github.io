@@ -1,73 +1,30 @@
-/* Floating Navigation Sidebar Styles - 支持主題切換 */
+/* Floating Navigation Sidebar Styles */
 .floating-nav {
     position: fixed;
-    top: 140px;
+    top: 80px;
     left: 18px;
     z-index: 1000;
-    background: var(--bg-card, #212121);
-    border: 1px solid var(--border-color, #3f3f3f);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 24px var(--shadow, rgba(0, 0, 0, 0.4));
-    font-size: 14px;
-    min-width: 200px;
-    transition: all 0.3s ease;
+    background: #f7f7fa;
+    border: 1.5px solid #e0e0e0;
+    padding: 18px 20px 14px 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(180, 180, 180, 0.10);
+    font-size: 16px;
+    min-width: 170px;
+    transition: box-shadow 0.2s, left 0.3s, opacity 0.3s;
     user-select: none;
-    color: var(--text-primary, #ffffff);
+    background-clip: padding-box;
+    color: #333;
     opacity: 1;
-    transform: translateX(0);
-    pointer-events: auto;
-}
-
-/* 明亮模式下的導航面板樣式 */
-:root:not([data-theme="dark"]) .floating-nav {
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1), 0 10px 30px rgba(0, 0, 0, 0.05);
-    color: #1f2937;
-}
-
-/* 深色模式下的導航面板樣式 */
-[data-theme="dark"] .floating-nav {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
-    color: var(--text-primary);
-}
-
-.floating-nav.open {
-    opacity: 1;
-    transform: translateX(0);
-    pointer-events: auto;
-}
-
-.floating-nav.closed {
-    opacity: 0;
-    transform: translateX(-100%);
-    pointer-events: none;
 }
 
 .floating-nav-title {
-    font-weight: 600;
-    color: var(--text-primary, #ffffff);
-    font-size: 16px;
-    margin-bottom: 16px;
-    letter-spacing: 0.5px;
+    font-weight: bold;
+    color: #888;
+    font-size: 17px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
     text-align: left;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--border-color, #3f3f3f);
-}
-
-/* 明亮模式下的導航標題 */
-:root:not([data-theme="dark"]) .floating-nav-title {
-    color: #1f2937;
-    border-bottom-color: #e5e7eb;
-}
-
-/* 深色模式下的導航標題 */
-[data-theme="dark"] .floating-nav-title {
-    color: var(--text-primary);
-    border-bottom-color: var(--border-color);
 }
 
 .floating-nav ul {
@@ -77,9 +34,9 @@
 }
 
 .floating-nav li {
-    margin-bottom: 4px;
-    border-radius: 8px;
-    transition: background 0.2s ease;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    transition: background 0.18s;
 }
 
 .floating-nav li:last-child {
@@ -90,133 +47,58 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--text-primary, #ffffff);
+    color: #3a3a3a;
     font-weight: 500;
-    padding: 12px 16px;
-    border-radius: 8px;
-    transition: all 0.2s ease;
-}
-
-/* 明亮模式下的導航連結 */
-:root:not([data-theme="dark"]) .floating-nav a {
-    color: #374151;
-}
-
-/* 深色模式下的導航連結 */
-[data-theme="dark"] .floating-nav a {
-    color: var(--text-primary);
+    padding: 7px 10px 7px 6px;
+    border-radius: 6px;
+    transition: background 0.18s, color 0.18s;
 }
 
 .floating-nav a:hover {
-    background: var(--bg-hover, #3f3f3f);
-    color: var(--text-primary, #ffffff);
+    background: #e0e0e0;
+    color: #222;
     text-decoration: none;
-    transform: translateX(4px);
-}
-
-/* 明亮模式下的導航連結hover */
-:root:not([data-theme="dark"]) .floating-nav a:hover {
-    background: #f3f4f6;
-    color: #1f2937;
-}
-
-/* 深色模式下的導航連結hover */
-[data-theme="dark"] .floating-nav a:hover {
-    background: var(--bg-hover);
-    color: var(--text-primary);
 }
 
 .floating-nav .nav-icon {
-    margin-right: 12px;
-    font-size: 16px;
-    width: 20px;
+    margin-right: 8px;
+    font-size: 18px;
+    width: 22px;
     text-align: center;
-    opacity: 0.8;
 }
 
-/* Hamburger button styles - 支援主題切換 - 明亮模式優化 */
+/* Hamburger button styles */
 #floating-nav-toggle {
     position: fixed;
-    top: 90px;
+    top: 28px;
     left: 18px;
     z-index: 1100;
-    width: 48px;
-    height: 48px;
-    background: var(--bg-card);
-    border: 2px solid var(--border-color);
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    width: 44px;
+    height: 44px;
+    background: #f7f7fa;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(180, 180, 180, 0.10);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-/* 明亮模式下的特殊樣式 */
-:root:not([data-theme="dark"]) #floating-nav-toggle {
-    background: #ffffff;
-    border-color: #d1d5db;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
-}
-
-/* 深色模式下的樣式 */
-[data-theme="dark"] #floating-nav-toggle {
-    background: var(--bg-card);
-    border-color: var(--border-color);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    transition: background 0.18s, border 0.18s;
 }
 
 #floating-nav-toggle:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* 明亮模式下的hover效果 */
-:root:not([data-theme="dark"]) #floating-nav-toggle:hover {
-    background: #f9fafb;
-    border-color: var(--accent-color);
-    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.2);
-}
-
-/* 深色模式下的hover效果 */
-[data-theme="dark"] #floating-nav-toggle:hover {
-    background: var(--bg-hover);
-    border-color: var(--accent-color);
-}
-
-#floating-nav-toggle.open {
-    background: var(--accent-color) !important;
-    border-color: var(--accent-color) !important;
-    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4) !important;
+    background: #e0e0e0;
+    border-color: #bdbdbd;
 }
 
 .hamburger-bar {
-    width: 20px;
-    height: 2px;
-    background: var(--text-primary);
-    margin: 2px 0;
+    width: 24px;
+    height: 3px;
+    background: #888;
+    margin: 3px 0;
     border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-/* 明亮模式下的hamburger bar */
-:root:not([data-theme="dark"]) .hamburger-bar {
-    background: #374151;
-}
-
-/* 深色模式下的hamburger bar */
-[data-theme="dark"] .hamburger-bar {
-    background: var(--text-primary);
-}
-
-#floating-nav-toggle.open .hamburger-bar {
-    background: #ffffff !important;
-}
-
-#floating-nav-toggle.open .hamburger-bar:nth-child(1) {
-    transform: rotate(45deg) translate(4px, 4px);
+    transition: all 0.3s;
 }
 
 #floating-nav-toggle.open .hamburger-bar:nth-child(1) {
@@ -228,7 +110,7 @@
 }
 
 #floating-nav-toggle.open .hamburger-bar:nth-child(3) {
-    transform: rotate(-45deg) translate(4px, -4px);
+    transform: translateY(-6px) rotate(-45deg);
 }
 
 /* Nav open/close animation */
@@ -252,7 +134,7 @@
 
 @media (max-width: 900px) {
     .floating-nav {
-        top: 90px;
+        top: 60px;
         left: -260px;
         min-width: 180px;
         max-width: 80vw;
@@ -267,20 +149,7 @@
     }
 
     #floating-nav-toggle {
-        top: 45px;
-        left: 10px;
-        width: 44px;
-        height: 44px;
-    }
-}
-
-@media (max-width: 768px) {
-    .floating-nav {
-        top: 100px;
-    }
-
-    #floating-nav-toggle {
-        top: 55px;
+        top: 18px;
         left: 10px;
     }
 }

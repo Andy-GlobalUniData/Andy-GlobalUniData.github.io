@@ -1,156 +1,108 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("DOMContentLoaded - degreeFilter.js started");
+    const degreeSelectDiv = document.getElementById("degree-select");
+    degreeSelectDiv.innerHTML = "loading...";
 
-    // 等待DOM完全載入後再執行
-    setTimeout(function () {
-        console.log("setTimeout triggered - starting degree filter initialization");
-        const degreeContentDiv = document.getElementById("degree-selector-content");
+    // 清除之前可能存在的自定義搜尋函數
+    $.fn.dataTable.ext.search = [];
 
-        console.log("Checking degree selector element:", degreeContentDiv);
+    // 讀取 Degree_data.json 資料
+    fetch("data/Degree_data.json")
+        .then(response => response.json())
+        .then((data) => {
+            console.log("載入學位資料：", data);
 
-        if (!degreeContentDiv) {
-            console.error("Degree selector element not found");
-            return;
-        }
+            const degreeLevels = data;
+            const degreeOptions = Object.keys(degreeLevels).map(degree => `
+                <label><input type="checkbox" class="degree-checkbox" value="${degree}" checked> ${degree}</label><br>
+            `).join("");
 
-        degreeContentDiv.innerHTML = "<div class='loading-placeholder'>載入中...</div>";
+            degreeSelectDiv.innerHTML = `
+                <h3>Select Degree Level</h3>
+                <label><input type="checkbox" class="degree-checkbox" value="No Filter"> 不篩選學位</label><br>
+                ${degreeOptions}
+            `;
 
-        console.log("Starting to fetch Degree_data.json");
-
-        // 先測試文件是否可訪問
-        const testUrl = "data/Degree_data.json";
-        console.log("Attempting to fetch from:", testUrl);
-
-        // 讀取 Degree_data.json 資料
-        fetch(testUrl)
-            .then(response => {
-                console.log("Degree data response status:", response.status);
-                console.log("Response headers:", response.headers);
-                console.log("Response ok:", response.ok);
-                console.log("Response URL:", response.url);
-
-                if (!response.ok) {
-                    throw new Error("HTTP error! status: " + response.status + " - " + response.statusText);
-                }
-                return response.text(); // 先獲取文本來檢查內容
-            })
-            .then(text => {
-                console.log("Raw response text:", text);
-                try {
-                    const data = JSON.parse(text);
-                    console.log("載入學位資料：", data);
-                    return data;
-                } catch (parseError) {
-                    console.error("JSON parsing error:", parseError);
-                    throw new Error("Invalid JSON format: " + parseError.message);
-                }
-            })
-            .then((data) => {
-                console.log("Successfully loaded degree data:", data);
-
-                // 確保數據格式正確
-                if (!data || typeof data !== 'object') {
-                    throw new Error("Invalid data format received");
+            // 定義自定義搜尋函數
+            function customDegreeSearch(settings, data, dataIndex) {
+                if (settings.nTable.id !== 'json-table') {
+                    return true;
                 }
 
-                // 直接使用學位等級的主要分類
-                const degreeLevels = Object.keys(data);
-                console.log("Degree levels found:", degreeLevels);
+                const selectedDegrees = [...document.querySelectorAll(".degree-checkbox:checked")]
+                    .map(checkbox => checkbox.value);
 
-                if (degreeLevels.length === 0) {
-                    throw new Error("No degree levels found in data");
+                // 如果選擇了 "No Filter" 或沒有選擇任何學位，顯示所有
+                if (selectedDegrees.includes("No Filter") || selectedDegrees.length === 0) {
+                    return true;
                 }
 
-                const degreeOptions = degreeLevels.map(degree =>
-                    "<div class='school-item'>" +
-                    "<label><input type='checkbox' class='degree-checkbox' value='" + degree + "'> " + degree + "</label>" +
-                    "</div>"
-                ).join("");
+                const degreeLevel = data[4] || '';  // Degree Level 欄位 (第5欄，索引4)
+                const departmentName = data[3] || '';  // Department Name 欄位 (第4欄，索引3)
 
-                console.log("Generated degree options HTML");
-
-                degreeContentDiv.innerHTML =
-                    "<div class='school-item' style='border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 8px;'>" +
-                    "<label><input type='checkbox' class='degree-checkbox' value='No Filter' checked> <strong>不篩選學位</strong></label>" +
-                    "</div>" +
-                    degreeOptions;
-
-                console.log("Updated degree selector content");
-                console.log("載入學位資料：", data);
-
-                // 直接使用學位等級的主要分類
-                const degreeLevels = Object.keys(data);
-                const degreeOptions = degreeLevels.map(degree =>
-                    "<div class='school-item'>" +
-                    "<label><input type='checkbox' class='degree-checkbox' value='" + degree + "'> " + degree + "</label>" +
-                    "</div>"
-                ).join("");
-
-                degreeContentDiv.innerHTML =
-                    "<div class='school-item' style='border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 8px;'>" +
-                    "<label><input type='checkbox' class='degree-checkbox' value='No Filter' checked> <strong>不篩選學位</strong></label>" +
-                    "</div>" +
-                    degreeOptions;
-
-                degreeContentDiv.addEventListener("change", function (event) {
-                    const selectedDegrees = Array.from(document.querySelectorAll(".degree-checkbox:checked"))
-                        .map(checkbox => checkbox.value);
-
-                    console.log("選擇的學位等級:", selectedDegrees);
-
-                    if (selectedDegrees.includes("No Filter")) {
-                        // 選擇"不篩選學位"時，取消其他所有選項
-                        document.querySelectorAll(".degree-checkbox").forEach(checkbox => {
-                            if (checkbox.value !== "No Filter") {
-                                checkbox.checked = false;
-                                checkbox.disabled = true;
-                            }
-                        });
-
-                        console.log("清除學位篩選");
-                        // 清除DataTable的學位篩選 (學位等級是第5欄，索引為4)
-                        if (window.dataTable && $.fn.dataTable.isDataTable('#json-table')) {
-                            window.dataTable.column(4).search("").draw();
-                        }
-                    } else {
-                        // 取消"不篩選學位"選項
-                        const noFilterCheckbox = document.querySelector('.degree-checkbox[value="No Filter"]');
-                        if (noFilterCheckbox) {
-                            noFilterCheckbox.checked = false;
-                        }
-
-                        // 啟用所有學位選項
-                        document.querySelectorAll(".degree-checkbox").forEach(checkbox => {
-                            checkbox.disabled = false;
-                        });
-
-                        // 建立學位篩選條件 - 直接使用學位等級名稱
-                        const degreeFilter = selectedDegrees.join("|");
-
-                        console.log("應用學位篩選:", degreeFilter);
-                        // 應用篩選到DataTable (學位等級是第5欄，索引為4)
-                        if (window.dataTable && $.fn.dataTable.isDataTable('#json-table') && degreeFilter) {
-                            window.dataTable.column(4).search(degreeFilter, true, false).draw();
-                        }
+                // 建立學位過濾器的正則表達式
+                let degreeFilter = selectedDegrees.reduce((acc, degree) => {
+                    const degreeList = degreeLevels[degree];
+                    if (degreeList) {
+                        acc.push(degreeList.join("|"));
                     }
+                    return acc;
+                }, []).join("|");
 
-                    // 觸發主要篩選邏輯更新
-                    if (typeof updateSelectedFilters === 'function') {
-                        updateSelectedFilters();
-                    }
-                });
-            })
-            .catch(error => {
-                console.error("載入學位資料失敗：", error);
-                console.error("Error stack:", error.stack);
-                if (degreeContentDiv) {
-                    degreeContentDiv.innerHTML = `
-                        <div class='loading-placeholder' style='color: var(--error-color);'>
-                            載入失敗，請重新整理頁面
-                            <br>
-                            <small>錯誤: ${error.message}</small>
-                        </div>`;
+                if (!degreeFilter) {
+                    return true;
+                }
+
+                const degreeRegex = new RegExp(degreeFilter, 'i');
+
+                // 優先檢查 Degree Level 是否匹配
+                if (degreeLevel && degreeLevel !== 'N/A' && degreeRegex.test(degreeLevel)) {
+                    return true;
+                }
+
+                // 如果 Degree Level 沒有值或不匹配，檢查 Department Name
+                if (!degreeLevel || degreeLevel === 'N/A') {
+                    return degreeRegex.test(departmentName);
+                }
+
+                return false;
+            }
+
+            // 添加自定義搜尋函數
+            $.fn.dataTable.ext.search.push(customDegreeSearch);
+
+            degreeSelectDiv.addEventListener("change", function (event) {
+                if ($.fn.dataTable.isDataTable('#json-table')) {
+                    var table = $('#json-table').DataTable();
+                    table.draw(); // 重新繪製表格以應用過濾器
+                } else {
+                    console.error("DataTable is not initialized.");
                 }
             });
-    }, 1000); // 增加延遲時間到1秒
+
+            // 初始觸發一次變更事件
+            degreeSelectDiv.dispatchEvent(new Event("change"));
+        })
+        .catch(error => {
+            console.error("載入學位資料失敗：", error);
+            degreeSelectDiv.innerHTML = "Loading failed, please try again.";
+        });
+});
+
+$(document).ready(function () {
+    // Ensure degreeFilter is correctly set
+    $('#degree-select').on('change', function () {
+        var degreeFilter = $(this).val();
+        console.log("Selected degree filter: ", degreeFilter); // Debugging log
+
+        // Ensure DataTable is initialized
+        if ($.fn.dataTable.isDataTable('#json-table')) {
+            var table = $('#json-table').DataTable();
+            console.log("DataTable instance: ", table); // Debugging log
+
+            // Apply the filter - 現在使用 Degree Level 欄位 (索引 4)
+            table.column(4).search(degreeFilter, true, false).draw();
+        } else {
+            console.error("DataTable is not initialized.");
+        }
+    });
 });

@@ -1,5 +1,25 @@
 [
   {
+    "School_name": "Texas State University",
+    "Country": "United States of America",
+    "City": "San Marcos",
+    "合作集團": "INTO",
+    "URL": "https://mycatalog.txstate.edu/undergraduate/undergraduate-majors/",
+    "latitude": 29.8910941,
+    "longitude": -97.9376839,
+    "Number_of_departments": 381
+  },
+  {
+    "School_name": "University of Liverpool",
+    "Country": "United Kingdom",
+    "City": "Liverpool",
+    "合作集團": "Kaplan",
+    "URL": "https://www.liverpool.ac.uk/courses/undergraduate",
+    "latitude": 53.4072429,
+    "longitude": -2.9658337,
+    "Number_of_departments": 480
+  },
+  {
     "School_name": "Massey University",
     "Country": "New Zealand",
     "City": "Palmerston North",
@@ -10,6 +30,16 @@
     "Number_of_departments": 169
   },
   {
+    "School_name": "University of the West of England Bristol",
+    "Country": "United Kingdom",
+    "City": "Bristol",
+    "合作集團": "Kaplan",
+    "URL": "https://courses.uwe.ac.uk/Search?words=&view=list",
+    "latitude": 51.5007679,
+    "longitude": -2.5503106,
+    "Number_of_departments": 514
+  },
+  {
     "School_name": "California State University San Marcos",
     "Country": "United States of America",
     "City": "San Marcos",
@@ -18,16 +48,6 @@
     "latitude": 33.1295667,
     "longitude": -117.1606492,
     "Number_of_departments": 199
-  },
-  {
-    "School_name": "Texas State University",
-    "Country": "United States of America",
-    "City": "San Marcos",
-    "合作集團": "INTO",
-    "URL": "https://mycatalog.txstate.edu/undergraduate/undergraduate-majors/",
-    "latitude": 29.8910941,
-    "longitude": -97.9376839,
-    "Number_of_departments": 103
   },
   {
     "School_name": "University of Victoria",
@@ -457,7 +477,7 @@
     "URL": "https://www.nottingham.ac.uk/pgstudy/courses/courses.aspx?letter=",
     "latitude": 52.9387428,
     "longitude": -1.2002957,
-    "Number_of_departments": 292
+    "Number_of_departments": 307
   },
   {
     "School_name": "Universiteit van Amsterdam",
@@ -487,7 +507,7 @@
     "URL": "https://www.universiteitleiden.nl/en/education/study-programmes/professionals?pageNumber={}&language=english",
     "latitude": 52.1686355,
     "longitude": 4.4597028,
-    "Number_of_departments": 20
+    "Number_of_departments": 40
   },
   {
     "School_name": "University of Leicester",
@@ -527,7 +547,7 @@
     "URL": "https://www.ncl.ac.uk/postgraduate/degrees/",
     "latitude": 54.980175,
     "longitude": -1.6146802,
-    "Number_of_departments": 317
+    "Number_of_departments": 341
   },
   {
     "School_name": "Aston University",
@@ -617,7 +637,7 @@
     "URL": "https://catalogue.uvm.edu/undergraduate/majors/",
     "latitude": 46.6738972,
     "longitude": -95.2405947,
-    "Number_of_departments": 493
+    "Number_of_departments": 197
   },
   {
     "School_name": "UCLA",
@@ -707,7 +727,7 @@
     "URL": "https://courses.hud.ac.uk/2026-27/sort:title",
     "latitude": 53.6429919,
     "longitude": -1.7780783,
-    "Number_of_departments": 489
+    "Number_of_departments": 490
   },
   {
     "School_name": "James Madison University",

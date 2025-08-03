@@ -579,3 +579,52 @@ tr:hover td {
     }
   }
 }
+
+/* 版權宣告樣式 */
+.copyright-footer {
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  background-color: #f8f9fa;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.copyright-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.copyright-title {
+  margin-bottom: 10px;
+}
+
+.copyright-author {
+  margin-bottom: 10px;
+}
+
+.copyright-author a,
+.copyright-contact a,
+.copyright-links a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.copyright-author a:hover,
+.copyright-contact a:hover,
+.copyright-links a:hover {
+  text-decoration: underline;
+}
+
+.copyright-text {
+  margin-bottom: 15px;
+}
+
+.copyright-contact {
+  margin-bottom: 10px;
+}
+
+.copyright-links {
+  margin-bottom: 0;
+}

@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const degreeSelectDiv = document.getElementById("degree-select");
     degreeSelectDiv.innerHTML = "loading...";
 
+    // 清除之前可能存在的自定義搜尋函數
+    $.fn.dataTable.ext.search = [];
+
     // 讀取 Degree_data.json 資料
     fetch("data/Degree_data.json")
         .then(response => response.json())
@@ -19,44 +22,64 @@ document.addEventListener("DOMContentLoaded", function () {
                 ${degreeOptions}
             `;
 
-            degreeSelectDiv.addEventListener("change", function (event) {
+            // 定義自定義搜尋函數
+            function customDegreeSearch(settings, data, dataIndex) {
+                if (settings.nTable.id !== 'json-table') {
+                    return true;
+                }
+
                 const selectedDegrees = [...document.querySelectorAll(".degree-checkbox:checked")]
                     .map(checkbox => checkbox.value);
 
-                if (selectedDegrees.includes("No Filter")) {
-                    document.querySelectorAll(".degree-checkbox").forEach(checkbox => {
-                        if (checkbox.value !== "No Filter") {
-                            checkbox.checked = false;
-                            checkbox.disabled = true;
-                        }
-                    });
-                    dataTable.column(3).search("").draw();  // 沒有選擇學位時顯示所有資料
-                } else {
-                    document.querySelectorAll(".degree-checkbox").forEach(checkbox => {
-                        checkbox.disabled = false;
-                    });
+                // 如果選擇了 "No Filter" 或沒有選擇任何學位，顯示所有
+                if (selectedDegrees.includes("No Filter") || selectedDegrees.length === 0) {
+                    return true;
+                }
 
-                    let degreeFilter = selectedDegrees.reduce((acc, degree) => {
-                        const degreeList = degreeLevels[degree];
-                        if (degreeList) {
-                            acc.push(degreeList.join("|"));
-                        }
-                        return acc;
-                    }, []).join("|");
+                const degreeLevel = data[4] || '';  // Degree Level 欄位 (第5欄，索引4)
+                const departmentName = data[3] || '';  // Department Name 欄位 (第4欄，索引3)
 
-                    console.log("Selected degree filter: ", degreeFilter); // Debugging log
-
-                    if ($.fn.dataTable.isDataTable('#json-table')) {
-                        var table = $('#json-table').DataTable();
-                        console.log("DataTable instance: ", table); // Debugging log
-
-                        table.column(3).search(degreeFilter, true, false).draw();
-                    } else {
-                        console.error("DataTable is not initialized.");
+                // 建立學位過濾器的正則表達式
+                let degreeFilter = selectedDegrees.reduce((acc, degree) => {
+                    const degreeList = degreeLevels[degree];
+                    if (degreeList) {
+                        acc.push(degreeList.join("|"));
                     }
+                    return acc;
+                }, []).join("|");
+
+                if (!degreeFilter) {
+                    return true;
+                }
+
+                const degreeRegex = new RegExp(degreeFilter, 'i');
+
+                // 優先檢查 Degree Level 是否匹配
+                if (degreeLevel && degreeLevel !== 'N/A' && degreeRegex.test(degreeLevel)) {
+                    return true;
+                }
+
+                // 如果 Degree Level 沒有值或不匹配，檢查 Department Name
+                if (!degreeLevel || degreeLevel === 'N/A') {
+                    return degreeRegex.test(departmentName);
+                }
+
+                return false;
+            }
+
+            // 添加自定義搜尋函數
+            $.fn.dataTable.ext.search.push(customDegreeSearch);
+
+            degreeSelectDiv.addEventListener("change", function (event) {
+                if ($.fn.dataTable.isDataTable('#json-table')) {
+                    var table = $('#json-table').DataTable();
+                    table.draw(); // 重新繪製表格以應用過濾器
+                } else {
+                    console.error("DataTable is not initialized.");
                 }
             });
 
+            // 初始觸發一次變更事件
             degreeSelectDiv.dispatchEvent(new Event("change"));
         })
         .catch(error => {
@@ -65,9 +88,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
     // Ensure degreeFilter is correctly set
-    $('#degree-select').on('change', function() {
+    $('#degree-select').on('change', function () {
         var degreeFilter = $(this).val();
         console.log("Selected degree filter: ", degreeFilter); // Debugging log
 
@@ -76,8 +99,8 @@ $(document).ready(function() {
             var table = $('#json-table').DataTable();
             console.log("DataTable instance: ", table); // Debugging log
 
-            // Apply the filter
-            table.column(3).search(degreeFilter, true, false).draw();
+            // Apply the filter - 現在使用 Degree Level 欄位 (索引 4)
+            table.column(4).search(degreeFilter, true, false).draw();
         } else {
             console.error("DataTable is not initialized.");
         }

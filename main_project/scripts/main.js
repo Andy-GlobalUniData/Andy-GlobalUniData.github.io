@@ -1,495 +1,663 @@
-document.addEventListener("DOMContentLoaded", function () {
-    let dataTable;
-    let totalData = [];
-    let index = 0;
-    const chunkSize = 500;
+/**
+ * Andy Global University Data - 完整重構版本
+ * All-in-One Refactored Version
+ * @version 3.0.0
+ * @author Andy
+ * @date 2025-10-17
+ */
 
-    // 初始 selectedCountries, selectedSchools 和 selectedDepartments 為空陣列
-    let selectedCountries = [];
-    let selectedSchools = [];
-    let selectedDepartments = [];
+(function() {
+    'use strict';
 
-    // 更新選擇的學位
-    function updateSelectedDepartments() {
-        selectedDepartments = [];
-        $(".degree-checkbox:checked").each(function () {
-            selectedDepartments.push($(this).val());
-        });
-    }
+    console.log('🚀 Andy Global Uni Data v3.0 - Refactored Version');
 
-    // 判斷是否選擇了學位 - 優先使用 Degree Level，沒有的話使用 Department Name
-    function isDepartmentSelected(item) {
-        // 如果傳入的是整個項目對象
-        if (typeof item === 'object' && item !== null) {
-            const degreeLevel = item["Degree Level"];
-            const departmentName = item["Department Name"];
+    // ==================== 全域變數 ====================
+    let allData = [];           // 所有合併後的資料
+    let dataTable = null;       // DataTable 實例
+    let selectedCountries = []; // 選中的國家
+    let selectedSchools = [];   // 選中的學校
+    let selectedDegrees = [];   // 選中的學位
+    let selectedRowURLs = [];   // 跨頁勾選的 URL 陣列
 
-            // 優先檢查 Degree Level
-            if (degreeLevel && degreeLevel !== "N/A") {
-                return selectedDepartments.some(selected => degreeLevel.includes(selected));
-            }
-            // 如果沒有 Degree Level 或為 N/A，則檢查 Department Name
-            return selectedDepartments.some(selected => departmentName && departmentName.includes(selected));
-        }
-        // 向後兼容：如果傳入的是字符串（Department Name）
-        return selectedDepartments.some(selected => item && item.includes(selected));
-    }
+    const CHUNK_SIZE = 500;     // 分批載入大小
+    let loadIndex = 0;          // 載入索引
 
-    // 更新 selectedCountries、selectedSchools 和 selectedDepartments 為勾選的選項
-    function updateSelectedFilters() {
-        selectedCountries = [];
-        selectedSchools = [];
-        updateSelectedDepartments(); // 單獨更新學位
-
-        // 更新選擇的國家
-        $(".country-checkbox:checked").each(function () {
-            selectedCountries.push($(this).val());
-        });
-
-        // 更新選擇的學校
-        $(".school-checkbox:checked").each(function () {
-            selectedSchools.push($(this).val());
-        });
-
-        // 當選擇變更後重新載入資料
-        dataTable.clear();
-        index = 0; // 重置索引
-        loadNextChunk(); // 重新加載資料
-    }
-
-    // 頁面加載後，將所有國家、學校和學位的勾選框設為選中狀態
-    $(document).ready(function () {
-        $(".country-checkbox").prop("checked", true); // 使所有選擇框預設為選中狀態
-        $(".school-checkbox").prop("checked", true);  // 使所有學校選擇框預設為選中狀態
-        $(".degree-checkbox").prop("checked", true); // 使所有學位選擇框預設為選中狀態
-        updateSelectedFilters(); // 呼叫更新函數以加載資料
-
-        // Initialize DataTable
-        var table = $('#json-table').DataTable({
-            // ...existing DataTable options...
-        });
-
-        // Ensure the DataTable is initialized
-        console.log("DataTable initialized: ", table); // Debugging log
-    });
-
-    // 監聽勾選框的變更事件
-    $(document).on("change", ".country-checkbox, .school-checkbox, .degree-checkbox", function () {
-        updateSelectedFilters();
-    });
-
-    // 監聽自定義的學校選擇變更事件
-    document.addEventListener("schoolSelectionChanged", function () {
-        updateSelectedFilters();
-    });
-
-    async function fetchJsonData(url) {
+    // ==================== 1. 資料載入與合併 ====================
+    
+    /**
+     * 載入並合併資料
+     */
+    async function loadAndMergeData() {
         try {
-            const response = await fetch(url);
-            totalData = await response.json();
+            console.log('📥 Loading data files...');
 
-            dataTable = $("#json-table").DataTable({
-                data: [],
-                columns: [
-                    {
-                        title: "<input type='checkbox' id='select-all'>",
-                        orderable: false,
-                        render: function () {
-                            return '<input type="checkbox" class="row-checkbox">';
-                        },
-                    },
-                    { title: "Country", data: 1 },
-                    { title: "School Name", data: 2 },
-                    { title: "Department Name", data: 3 },
-                    { title: "Degree Level", data: 4 },
-                    {
-                        title: "URL",
-                        data: 5,
-                        defaultContent: "N/A",
-                        render: function (data) {
-                            if (!data) return "N/A";
-                            return `<a href="${data}" target="_blank">${data.length > 30 ? data.substring(0, 30) + "..." : data}</a>`;
-                        },
-                    },
-                    {
-                        title: "Copy URL",
-                        orderable: false,
-                        render: function (data, type, row) {
-                            const url = row[5] || ""; // Ensure URL exists
-                            return url
-                                ? `<button class="copy-url-btn" data-url="${url}">Copy URL</button>`
-                                : "N/A";
-                        },
-                    },
-                ],
-                pageLength: 100,  // 預設顯示 100 筆
-                lengthMenu: [[10, 100, 500, 1000], [10, 100, 500, 1000]], // 設定下拉選單選項
-                searching: true,
-                destroy: false,
-                language: {
-                    search: "Search Department：",  // 這裡修改搜尋框的名稱
-                },
-                initComplete: function () {
-                    // 調整搜尋框字體大小
-                    $('.dataTables_filter input').css({
-                        'font-size': '18px',  // 設定搜尋框的字體大小
-                        'padding': '10px'      // 也可以調整內邊距，讓框變大
-                    });
+            // 並行載入兩個資料檔
+            const [schoolDataResponse, departmentDataResponse] = await Promise.all([
+                fetch('data/School_data.json'),
+                fetch('data/data.json')
+            ]);
+
+            const schoolData = await schoolDataResponse.json();
+            const departmentData = await departmentDataResponse.json();
+
+            console.log('✅ School data loaded:', schoolData.length, 'schools');
+            console.log('✅ Department data loaded:', departmentData.length, 'departments');
+
+            // 建立 School Name → Country 對照表
+            const schoolToCountry = new Map();
+            schoolData.forEach(school => {
+                const schoolName = school.School_name || school['School Name'];
+                const country = school.Country;
+                if (schoolName && country) {
+                    schoolToCountry.set(schoolName, country);
                 }
             });
 
-            setupSearchFilters(dataTable);
-            loadNextChunk();
+            // 合併資料：為每個 department 加入 Country
+            const mergedData = departmentData.map(item => ({
+                'Country': schoolToCountry.get(item['School Name']) || 'Unknown',
+                'School Name': item['School Name'] || 'N/A',
+                'Department Name': item['Department Name'] || 'N/A',
+                'Degree Level': item['Degree Level'] || 'N/A',
+                'URL': item.URL || 'N/A'
+            }));
+
+            // 過濾掉沒有有效 Country 的資料
+            allData = mergedData.filter(item => {
+                if (item.Country === 'Unknown' || item.Country === 'N/A') {
+                    console.warn('⚠️ Skipping item without country:', item['School Name']);
+                    return false;
+                }
+                return true;
+            });
+
+            console.log('✅ Data merged successfully:', allData.length, 'records');
+            console.log('📊 Filtered out:', mergedData.length - allData.length, 'records without country');
+            return allData;
+
         } catch (error) {
-            console.error("Error loading JSON:", error);
-            alert("Error loading JSON: " + error.message);
+            console.error('❌ Error loading data:', error);
+            alert('Error loading data: ' + error.message);
+            throw error;
         }
     }
 
-    // Add event listener for "Copy URL" buttons
-    $(document).on("click", ".copy-url-btn", function () {
-        const url = $(this).data("url");
-        const row = $(this).closest("tr");
-        const schoolName = row.find("td:nth-child(3)").text(); // Get School Name
-        const departmentName = row.find("td:nth-child(4)").text(); // Get Department Name
-        const degreeLevel = row.find("td:nth-child(5)").text(); // Get Degree Level
+    // ==================== 2. 選擇器初始化 ====================
 
-        navigator.clipboard.writeText(url).then(() => {
-            alert(`URL copied to clipboard!\n\nSchool: ${schoolName}\nDepartment: ${departmentName}\nDegree Level: ${degreeLevel}\nURL: ${url}`);
-        }).catch(err => {
-            console.error("Failed to copy URL: ", err);
+    /**
+     * 初始化 Country 選擇器
+     */
+    function initCountrySelector() {
+        const container = document.getElementById('country-select');
+        if (!container) return;
+
+        // 取得所有國家並排序，過濾掉 N/A
+        const countries = [...new Set(allData.map(item => item.Country))]
+            .filter(country => country && country !== 'N/A')
+            .sort();
+        
+        let html = '<h3>Select Country</h3>';
+        html += '<label><input type="checkbox" id="select-all-countries" checked> 全選國家</label><br>';
+        
+        countries.forEach(country => {
+            html += `<label><input type="checkbox" class="country-checkbox" value="${country}" checked> ${country}</label><br>`;
         });
-    });
 
-    // 新增：複製所有勾選的URL到剪貼簿
-    $(document).on("click", "#copy-all-urls", function () {
-        const selectedData = getSelectedData(); // 取得所有勾選的資料
-        if (selectedData.length === 0) {
-            alert("請先選擇至少一筆資料 (Please select at least one item).\nPlease select at least one item.");
-            return;
-        }
-        const urls = selectedData
-            .map(item => item && item.URL)
-            .filter(url => url !== undefined && url !== null && url !== "N/A")
-            .map(url => String(url));
-        if (urls.length === 0) {
-            alert("勾選的資料沒有有效的URL。\nNo valid URLs in selected items.");
-            return;
-        }
-        const urlText = urls.join("\n");
-        navigator.clipboard.writeText(urlText).then(() => {
-            alert("已複製所有勾選的URL到剪貼簿！\nAll selected URLs copied to clipboard!\n\n" + urlText);
-        }).catch(err => {
-            alert("Failed to copy URLs: " + err);
+        container.innerHTML = html;
+
+        // 初始化選中的國家
+        selectedCountries = [...countries];
+
+        // 綁定事件
+        $('#select-all-countries').on('change', function() {
+            $('.country-checkbox').prop('checked', this.checked);
+            updateFilters();
         });
-    });
 
-    // 全域：跨頁勾選追蹤陣列（以URL為唯一key）
-    let selectedRowURLs = [];
-
-    // 監聽checkbox勾選，維護跨頁勾選陣列
-    $(document).on("change", ".row-checkbox", function () {
-        const row = $(this).closest("tr");
-        const url = row.find("td:nth-child(6) a").attr("href") || row.find("td:nth-child(6)").text();
-        if (!url) return;
-        if (this.checked) {
-            if (!selectedRowURLs.includes(url)) selectedRowURLs.push(url);
-        } else {
-            selectedRowURLs = selectedRowURLs.filter(u => u !== url);
-        }
-    });
-
-    // 切換分頁/搜尋/重繪時，根據陣列自動勾選checkbox
-    $(document).on("draw.dt", function () {
-        $("#json-table tbody tr").each(function () {
-            const url = $(this).find("td:nth-child(6) a").attr("href") || $(this).find("td:nth-child(6)").text();
-            if (selectedRowURLs.includes(url)) {
-                $(this).find(".row-checkbox").prop("checked", true);
-            } else {
-                $(this).find(".row-checkbox").prop("checked", false);
-            }
+        $('.country-checkbox').on('change', function() {
+            const allChecked = $('.country-checkbox:checked').length === $('.country-checkbox').length;
+            $('#select-all-countries').prop('checked', allChecked);
+            updateFilters();
         });
-    });
 
-    // select-all 勾選/取消時，同步更新陣列
-    $(document).on("click", "#select-all", function () {
-        const checked = this.checked;
-        $("#json-table tbody tr").each(function () {
-            const url = $(this).find("td:nth-child(6) a").attr("href") || $(this).find("td:nth-child(6)").text();
-            if (!url) return;
-            if (checked) {
-                if (!selectedRowURLs.includes(url)) selectedRowURLs.push(url);
-            } else {
-                selectedRowURLs = selectedRowURLs.filter(u => u !== url);
-            }
-        });
-    });
-
-    // 取得所有跨頁勾選的資料
-    function getSelectedDataStable() {
-        return totalData.filter(item => selectedRowURLs.includes(item.URL));
+        console.log('✅ Country selector initialized:', countries.length, 'countries');
     }
 
-    // 移除舊的 copy-all-urls 綁定，確保只會有一個穩定版
-    $(document).off("click", "#copy-all-urls");
+    /**
+     * 初始化 School 選擇器
+     */
+    function initSchoolSelector() {
+        const container = document.getElementById('school-select');
+        if (!container) return;
 
-    // Copy All URLs/Export URL 都改用穩定版
-    $(document).on("click", "#copy-all-urls", function () {
-        const selectedData = getSelectedDataStable();
-        if (selectedData.length === 0) {
-            alert("請先選擇至少一筆資料 (Please select at least one item).\nPlease select at least one item.");
-            return;
-        }
-        const urls = selectedData
-            .map(item => item && item.URL)
-            .filter(url => url !== undefined && url !== null && url !== "N/A")
-            .map(url => String(url));
-        if (urls.length === 0) {
-            alert("勾選的資料沒有有效的URL。\nNo valid URLs in selected items.");
-            return;
-        }
-        const urlText = urls.join("\n");
-        navigator.clipboard.writeText(urlText).then(() => {
-            alert("已複製所有勾選的URL到剪貼簿！\nAll selected URLs copied to clipboard!\n\n" + urlText);
-        }).catch(err => {
-            alert("Failed to copy URLs: " + err);
+        // 監聽 Country 變化來更新學校列表
+        $(document).on('change', '.country-checkbox', function() {
+            updateSchoolSelector();
         });
-    });
 
-    // Export URL (TXT) 也改用穩定版
-    $(document).on("click", "#export-txt", function () {
-        const selectedData = getSelectedDataStable();
-        if (selectedData.length === 0) {
-            alert("請先選擇至少一筆資料 (Please select at least one item).\nPlease select at least one item.");
-            return;
-        }
-        exportUrlsToTxt(selectedData, "selected_urls.txt");
-    });
+        updateSchoolSelector();
+    }
 
+    /**
+     * 更新 School 選擇器
+     */
+    function updateSchoolSelector() {
+        const container = document.getElementById('school-select');
+        if (!container) return;
+
+        // 取得選中的國家
+        const selectedCountriesTemp = [];
+        $('.country-checkbox:checked').each(function() {
+            selectedCountriesTemp.push($(this).val());
+        });
+
+        // 篩選符合條件的學校，過濾掉 N/A
+        const schools = [...new Set(
+            allData
+                .filter(item => selectedCountriesTemp.includes(item.Country))
+                .map(item => item['School Name'])
+                .filter(school => school && school !== 'N/A')
+        )].sort();
+
+        let html = '<h3>Select School</h3>';
+        html += '<label><input type="checkbox" id="select-all-schools" checked> 全選學校</label><br>';
+        
+        schools.forEach(school => {
+            html += `<label><input type="checkbox" class="school-checkbox" value="${school}" checked> ${school}</label><br>`;
+        });
+
+        container.innerHTML = html;
+
+        // 初始化選中的學校
+        selectedSchools = [...schools];
+
+        // 綁定事件
+        $('#select-all-schools').on('change', function() {
+            $('.school-checkbox').prop('checked', this.checked);
+            updateFilters();
+        });
+
+        $('.school-checkbox').on('change', function() {
+            const allChecked = $('.school-checkbox:checked').length === $('.school-checkbox').length;
+            $('#select-all-schools').prop('checked', allChecked);
+            updateFilters();
+        });
+
+        console.log('✅ School selector updated:', schools.length, 'schools');
+    }
+
+    /**
+     * 初始化 Degree 選擇器
+     */
+    function initDegreeSelector() {
+        const container = document.getElementById('degree-select');
+        if (!container) return;
+
+        // 定義學位類型
+        const degrees = [
+            { value: 'Bachelor', label: 'Undergraduate / Bachelor' },
+            { value: 'Master', label: 'Graduate / Master Degrees' },
+            { value: 'Doctoral', label: 'Doctoral Degrees / Ph.D.' },
+            { value: 'Short Course', label: 'Short Course' },
+            { value: 'Certificate', label: 'Certificate' },
+            { value: 'Diploma', label: 'Diploma' }
+        ];
+
+        let html = '<h3>Select Degree Level</h3>';
+        html += '<label><input type="checkbox" id="no-degree-filter" checked> 不篩選學位</label><br>';
+        
+        degrees.forEach(degree => {
+            html += `<label><input type="checkbox" class="degree-checkbox" value="${degree.value}"> ${degree.label}</label><br>`;
+        });
+
+        container.innerHTML = html;
+
+        // 綁定「不篩選學位」checkbox
+        $('#no-degree-filter').on('change', function() {
+            if (this.checked) {
+                $('.degree-checkbox').prop('checked', false);
+                selectedDegrees = [];
+            }
+            updateFilters();
+        });
+
+        // 綁定學位 checkbox
+        $('.degree-checkbox').on('change', function() {
+            if ($('.degree-checkbox:checked').length > 0) {
+                $('#no-degree-filter').prop('checked', false);
+            } else {
+                $('#no-degree-filter').prop('checked', true);
+            }
+            updateFilters();
+        });
+
+        console.log('✅ Degree selector initialized');
+    }
+
+    // ==================== 3. 表格初始化 ====================
+
+    /**
+     * 初始化 DataTable
+     */
+    function initDataTable() {
+        dataTable = $('#json-table').DataTable({
+            data: [],
+            columns: [
+                {
+                    title: '<input type="checkbox" id="select-all">',
+                    orderable: false,
+                    render: function() {
+                        return '<input type="checkbox" class="row-checkbox">';
+                    }
+                },
+                { title: 'Country', data: 1 },
+                { title: 'School Name', data: 2 },
+                { title: 'Department Name', data: 3 },
+                { title: 'Degree Level', data: 4 },
+                {
+                    title: 'URL',
+                    data: 5,
+                    render: function(data) {
+                        if (!data || data === 'N/A') return 'N/A';
+                        const displayText = data.length > 40 ? data.substring(0, 40) + '...' : data;
+                        return `<a href="${data}" target="_blank" rel="noopener noreferrer">${displayText}</a>`;
+                    }
+                },
+                {
+                    title: 'Copy URL',
+                    orderable: false,
+                    render: function(data, type, row) {
+                        const url = row[5];
+                        if (!url || url === 'N/A') return 'N/A';
+                        return `<button class="copy-url-btn" data-url="${url}">Copy URL</button>`;
+                    }
+                }
+            ],
+            pageLength: 100,
+            lengthMenu: [[10, 100, 500, 1000], [10, 100, 500, 1000]],
+            searching: true,
+            destroy: false,
+            language: {
+                search: 'Search Department：'
+            },
+            initComplete: function() {
+                $('.dataTables_filter input').css({
+                    'font-size': '18px',
+                    'padding': '10px'
+                });
+                console.log('✅ DataTable initialized');
+            }
+        });
+
+        // 綁定全選checkbox
+        $(document).on('click', '#select-all', function() {
+            const checked = this.checked;
+            $('.row-checkbox').prop('checked', checked);
+            
+            $('#json-table tbody tr').each(function() {
+                const url = $(this).find('td:eq(5) a').attr('href') || $(this).find('td:eq(5)').text();
+                if (url && url !== 'N/A') {
+                    if (checked) {
+                        if (!selectedRowURLs.includes(url)) selectedRowURLs.push(url);
+                    } else {
+                        selectedRowURLs = selectedRowURLs.filter(u => u !== url);
+                    }
+                }
+            });
+        });
+
+        // 綁定單行checkbox
+        $(document).on('change', '.row-checkbox', function() {
+            const row = $(this).closest('tr');
+            const url = row.find('td:eq(5) a').attr('href') || row.find('td:eq(5)').text();
+            
+            if (url && url !== 'N/A') {
+                if (this.checked) {
+                    if (!selectedRowURLs.includes(url)) selectedRowURLs.push(url);
+                } else {
+                    selectedRowURLs = selectedRowURLs.filter(u => u !== url);
+                }
+            }
+        });
+
+        // 表格重繪時恢復勾選狀態
+        $(document).on('draw.dt', function() {
+            $('#json-table tbody tr').each(function() {
+                const url = $(this).find('td:eq(5) a').attr('href') || $(this).find('td:eq(5)').text();
+                if (selectedRowURLs.includes(url)) {
+                    $(this).find('.row-checkbox').prop('checked', true);
+                }
+            });
+        });
+
+        // 綁定複製單個URL按鈕
+        $(document).on('click', '.copy-url-btn', function() {
+            const url = $(this).data('url');
+            const row = $(this).closest('tr');
+            const school = row.find('td:eq(2)').text();
+            const department = row.find('td:eq(3)').text();
+            const degree = row.find('td:eq(4)').text();
+
+            navigator.clipboard.writeText(url).then(() => {
+                alert(`URL copied to clipboard!\n\nSchool: ${school}\nDepartment: ${department}\nDegree: ${degree}\nURL: ${url}`);
+            }).catch(err => {
+                console.error('Copy failed:', err);
+                alert('Failed to copy URL');
+            });
+        });
+    }
+
+    /**
+     * 分批載入資料到表格
+     */
     function loadNextChunk() {
-        if (index >= totalData.length) return;
+        if (loadIndex >= allData.length) {
+            console.log('✅ All data loaded to table');
+            return;
+        }
 
-        const chunk = totalData.slice(index, index + chunkSize);
-        index += chunkSize;
+        const chunk = allData.slice(loadIndex, loadIndex + CHUNK_SIZE);
+        loadIndex += CHUNK_SIZE;
 
-        const formattedData = chunk.map((item) => {
-            const isCountrySelected = selectedCountries.includes(item["Country"]);
-            const isSchoolSelected = selectedSchools.includes(item["School Name"]);
-            const departmentSelected = isDepartmentSelected(item); // 傳入完整項目對象
-
-            return [
-                (isCountrySelected || isSchoolSelected || departmentSelected)
-                    ? '<input type="checkbox" class="row-checkbox" checked>'
-                    : '<input type="checkbox" class="row-checkbox">',
-                item["Country"] || "N/A",
-                item["School Name"] || "N/A",
-                item["Department Name"] || "N/A",
-                item["Degree Level"] || "N/A",
-                item.URL || "N/A",
-            ];
+        // 過濾資料 - 修正：只在有選擇時才過濾
+        const filteredChunk = chunk.filter(item => {
+            // Country 過濾：如果沒選任何國家，或者該項目的國家在選中列表中
+            const countryMatch = selectedCountries.length === 0 || selectedCountries.includes(item.Country);
+            
+            // School 過濾：如果沒選任何學校，或者該項目的學校在選中列表中
+            const schoolMatch = selectedSchools.length === 0 || selectedSchools.includes(item['School Name']);
+            
+            // Degree 過濾：如果沒選任何學位，顯示全部；否則檢查是否匹配
+            let degreeMatch = true; // 預設為 true（顯示全部）
+            if (selectedDegrees.length > 0) {
+                degreeMatch = selectedDegrees.some(deg => {
+                    const degreeLevel = item['Degree Level'] || '';
+                    return degreeLevel.includes(deg);
+                });
+            }
+            
+            return countryMatch && schoolMatch && degreeMatch;
         });
 
-        // 只新增選中的國家、學校和學位的資料
-        const filteredData = formattedData.filter((row, index) => {
-            const originalItem = chunk[index];
-            return selectedSchools.includes(row[2]) || isDepartmentSelected(originalItem)
-        });
-        dataTable.rows.add(filteredData).draw(false);
+        // 格式化資料
+        const formattedData = filteredChunk.map(item => [
+            '<input type="checkbox" class="row-checkbox">',
+            item.Country,
+            item['School Name'],
+            item['Department Name'],
+            item['Degree Level'],
+            item.URL
+        ]);
 
-        if (index < totalData.length) {
+        dataTable.rows.add(formattedData).draw(false);
+
+        // 繼續載入下一批
+        if (loadIndex < allData.length) {
             setTimeout(loadNextChunk, 10);
         }
     }
 
-    function setupSearchFilters(table) {
-        $("#search-country").on("keyup", function () {
-            table.column(1).search(this.value).draw();
-        });
-        $("#search-school").on("keyup", function () {
-            table.column(2).search(this.value).draw();
-        });
-
-        $("#search-department").on("keyup", function () {
-            table.column(3).search(this.value).draw();
+    /**
+     * 更新過濾條件
+     */
+    function updateFilters() {
+        // 更新選中的國家
+        selectedCountries = [];
+        $('.country-checkbox:checked').each(function() {
+            selectedCountries.push($(this).val());
         });
 
-        $("#search-url").on("keyup", function () {
-            table.column(4).search(this.value).draw();
+        // 更新選中的學校
+        selectedSchools = [];
+        $('.school-checkbox:checked').each(function() {
+            selectedSchools.push($(this).val());
         });
+
+        // 更新選中的學位
+        selectedDegrees = [];
+        $('.degree-checkbox:checked').each(function() {
+            selectedDegrees.push($(this).val());
+        });
+
+        // 重新載入表格資料
+        dataTable.clear();
+        loadIndex = 0;
+        selectedRowURLs = []; // 清空勾選記錄
+        loadNextChunk();
+
+        // 觸發地圖更新事件 (for SchoolMap.js)
+        document.dispatchEvent(new Event('schoolSelectionChanged'));
+
+        console.log('🔄 Filters updated - Countries:', selectedCountries.length, 'Schools:', selectedSchools.length, 'Degrees:', selectedDegrees.length);
     }
 
-    $(document).ready(function () {
-        $(document).on("click", "#select-all", function () {
-            $(".row-checkbox").prop("checked", this.checked);
-        });
+    // ==================== 4. 匯出功能 ====================
 
-        // 匯出 JSON
-        $("#export-json").on("click", function () {
-            const selectedData = getSelectedData();
-            if (selectedData.length === 0) {
-                alert("請先選擇至少一筆資料 (Please select at least one item).");
-                return;
-            }
-            const jsonData = JSON.stringify(selectedData, null, 2);
-            downloadFile("data.json", jsonData); // 使用您提供的 downloadFile
-        });
+    /**
+     * 取得選中的資料
+     */
+    function getSelectedData() {
+        return allData.filter(item => selectedRowURLs.includes(item.URL));
+    }
 
-        // 匯出 Excel
-        $("#export-excel").on("click", function () {
-            const selectedData = getSelectedData();
-            if (selectedData.length === 0) {
-                alert("請先選擇至少一筆資料 (Please select at least one item).");
-                return;
-            }
-            // 確保 Excel 欄位名稱與 getSelectedData 中建立的物件鍵名一致
-            const columns = ["Country", "School Name", "Department Name", "Degree Level", "URL"];
-            exportToExcel(selectedData, columns, 'selected_data.xlsx');
-        });
-
-        // 匯出 TXT (僅含 URL)
-        // 假設您有一個按鈕 <button id="export-txt">匯出 TXT</button>
-        $("#export-txt").on("click", function () {
-            const selectedData = getSelectedData(); // selectedData 是一個物件陣列
-            if (selectedData.length === 0) {
-                alert("請先選擇至少一筆資料 (Please select at least one item).");
-                return;
-            }
-            // exportUrlsToTxt 函式期望得到一個物件陣列，
-            // 並且它會從每個物件中尋找 'URL' 這個鍵。
-            exportUrlsToTxt(selectedData, "selected_urls.txt");
-        });
-
-
-        // ---------- Helper Functions (您的既有函式) ----------
-
-        // 從 DataTable 取得選中的資料
-        // 假設 dataTable 是您的 DataTable 實例
-        // 例如：var dataTable = $('#yourTableId').DataTable();
-        function getSelectedData() {
-            const selectedData = [];
-            // 確保 dataTable 變數在此作用域中可用，或者作為參數傳入
-            if (typeof dataTable === 'undefined' || !dataTable) {
-                console.error("DataTable instance is not defined or initialized.");
-                alert("表格尚未初始化，無法取得資料 (DataTable not initialized).");
-                return selectedData; // 返回空陣列
-            }
-
-            dataTable.rows().every(function () {
-                const rowNode = this.node(); // 取得 tr 元素
-                const checkbox = $(rowNode).find(".row-checkbox")[0]; // 尋找該行內的 checkbox
-
-                if (checkbox && checkbox.checked) {
-                    const data = this.data(); // 取得該行的數據 (通常是陣列或物件)
-                    // 根據您 DataTables 的數據結構調整索引
-                    // 假設 data[0] 是 checkbox 本身或不需使用的欄位
-                    // data[1] 是 Country, data[2] 是 School Name, data[3] 是 Department Name, data[4] 是 Degree Level, data[5] 是 URL
-                    selectedData.push({
-                        "Country": data[1],
-                        "School Name": data[2],
-                        "Department Name": data[3],
-                        "Degree Level": data[4],
-                        "URL": data[5], // 確保這個鍵是 'URL'，與 exportUrlsToTxt 期望的一致
-                    });
-                }
-            });
-            return selectedData;
+    /**
+     * 匯出 JSON
+     */
+    function exportJSON() {
+        const selectedData = getSelectedData();
+        
+        if (selectedData.length === 0) {
+            alert('請先選擇至少一筆資料 (Please select at least one item).');
+            return;
         }
 
-        // 您原有的 downloadFile 函式 (用於 JSON)
-        // 注意：此函式中的 Blob type 是 application/json，不適用於 TXT
-        function downloadFile(filename, data) {
-            const blob = new Blob([data], { type: "application/json" });
-            const link = document.createElement("a");
-            link.href = URL.createObjectURL(blob);
-            link.download = filename;
-            document.body.appendChild(link); // 為了更穩定的觸發下載
-            link.click();
-            document.body.removeChild(link); // 清理
-            URL.revokeObjectURL(link.href); // 釋放資源
+        const jsonContent = JSON.stringify(selectedData, null, 2);
+        downloadFile('selected_data.json', jsonContent, 'application/json');
+    }
+
+    /**
+     * 匯出 Excel
+     */
+    function exportExcel() {
+        const selectedData = getSelectedData();
+        
+        if (selectedData.length === 0) {
+            alert('請先選擇至少一筆資料 (Please select at least one item).');
+            return;
         }
 
-        // 您原有的 exportToExcel 函式
-        // 假設 XLSX 函式庫已載入
-        function exportToExcel(data, columns, filename = 'data.xlsx') {
-            // data 應該是物件陣列，例如: [{ "Country": "USA", "URL": "http://..." }, ...]
-            // columns 應該是鍵名陣列，例如: ["Country", "School Name", "Department Name", "URL"]
-            // SheetJS 的 json_to_sheet 第二個參數的 header 選項可以指定欄位順序和名稱
-            const ws = XLSX.utils.json_to_sheet(data, { header: columns });
+        try {
+            const ws = XLSX.utils.json_to_sheet(selectedData);
             const wb = XLSX.utils.book_new();
-            XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
-            XLSX.writeFile(wb, filename);
+            XLSX.utils.book_append_sheet(wb, ws, 'Data');
+            XLSX.writeFile(wb, 'selected_data.xlsx');
+        } catch (error) {
+            console.error('Export Excel error:', error);
+            alert('匯出失敗: ' + error.message);
+        }
+    }
+
+    /**
+     * 匯出 TXT (僅 URLs)
+     */
+    function exportTXT() {
+        const selectedData = getSelectedData();
+        
+        if (selectedData.length === 0) {
+            alert('請先選擇至少一筆資料 (Please select at least one item).');
+            return;
         }
 
+        const urls = selectedData
+            .map(item => item.URL)
+            .filter(url => url && url !== 'N/A');
 
-        // ---------- 新增的 Helper Function (用於 TXT) ----------
-        /**
-         * @description 從 JSON 數據中提取 'URL' 欄位的值，並將它們導出為 TXT 文件，每個 URL 佔一行。
-         * @param {Array<Object>} jsonData - 包含對象的陣列，每個對象期望有一個 'URL' 鍵。
-         * @param {string} [filename='urls.txt'] - 要導出的 TXT 文件的名稱。
-         */
-        function exportUrlsToTxt(jsonData, filename = 'urls.txt') {
-            if (!Array.isArray(jsonData)) {
-                console.error("輸入的數據必須是一個陣列 (Input data must be an array).");
-                return;
-            }
-
-            const urls = jsonData
-                .map(item => item && item.URL) // 取得 URL 值
-                .filter(url => url !== undefined && url !== null) // 過濾掉 undefined 和 null
-                .map(url => String(url)); // 確保是字串
-
-            if (urls.length === 0) {
-                console.warn("在提供的數據中沒有找到有效的 URL (No valid URLs found in the provided data).");
-                // 如果您不希望下載空檔案，可以在這裡加上 alert 並 return
-                // alert("未找到可匯出的 URL。");
-                // return;
-            }
-
-            const textContent = urls.join('\n');
-            const blob = new Blob([textContent], { type: 'text/plain;charset=utf-8;' });
-            const link = document.createElement('a');
-
-            if (link.download !== undefined) {
-                const url = URL.createObjectURL(blob);
-                link.setAttribute('href', url);
-                link.setAttribute('download', filename);
-                link.style.visibility = 'hidden';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                URL.revokeObjectURL(url);
-            } else {
-                alert("您的瀏覽器不支持此下載方法 (Your browser does not support this download method).");
-            }
+        if (urls.length === 0) {
+            alert('勾選的資料沒有有效的URL。\nNo valid URLs in selected items.');
+            return;
         }
 
-    }); // End of $(document).ready
+        const textContent = urls.join('\n');
+        downloadFile('selected_urls.txt', textContent, 'text/plain;charset=utf-8');
+    }
 
-    fetchJsonData("data/data.json").then((data) => {
-        console.log("載入 JSON：", data);
+    /**
+     * 複製所有選中的 URLs
+     */
+    async function copyAllURLs() {
+        const selectedData = getSelectedData();
+        
+        if (selectedData.length === 0) {
+            alert('請先選擇至少一筆資料 (Please select at least one item).');
+            return;
+        }
 
-        data.forEach((item, index) => {
-            if (!item["School Name"] || !item["Department Name"] || !item.URL) {
-                console.warn(`第 ${index + 1} 筆資料有缺失:`, item);
+        const urls = selectedData
+            .map(item => item.URL)
+            .filter(url => url && url !== 'N/A');
+
+        if (urls.length === 0) {
+            alert('勾選的資料沒有有效的URL。\nNo valid URLs in selected items.');
+            return;
+        }
+
+        const urlText = urls.join('\n');
+
+        try {
+            await navigator.clipboard.writeText(urlText);
+            alert(`已複製 ${urls.length} 個URL到剪貼簿！\nCopied ${urls.length} URLs to clipboard!\n\n${urlText.substring(0, 200)}${urlText.length > 200 ? '...' : ''}`);
+        } catch (error) {
+            console.error('Copy failed:', error);
+            alert('複製失敗，請手動複製。');
+        }
+    }
+
+    /**
+     * 下載檔案
+     */
+    function downloadFile(filename, content, mimeType) {
+        const blob = new Blob([content], { type: mimeType });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = filename;
+        link.style.display = 'none';
+        
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        setTimeout(() => URL.revokeObjectURL(link.href), 100);
+    }
+
+    // ==================== 5. UI 功能 ====================
+
+    /**
+     * 初始化浮動導覽
+     */
+    function initFloatingNav() {
+        const nav = document.getElementById('floating-nav');
+        const btn = document.getElementById('floating-nav-toggle');
+        const wrapper = document.getElementById('floating-nav-wrapper');
+
+        if (!nav || !btn || !wrapper) return;
+
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            nav.classList.toggle('open');
+            btn.classList.toggle('open');
+        });
+
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                btn.classList.remove('open');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!wrapper.contains(e.target)) {
+                nav.classList.remove('open');
+                btn.classList.remove('open');
             }
         });
-    });
-    // 更新日誌彈窗顯示/隱藏
-    var showBtn = document.getElementById('show-changelog');
-    var modal = document.getElementById('changelog-modal');
-    var closeBtn = document.querySelector('.changelog-close');
-    if (showBtn && modal && closeBtn) {
-        showBtn.onclick = function () {
-            modal.style.display = 'block';
-        };
-        closeBtn.onclick = function () {
-            modal.style.display = 'none';
-        };
-        // 點擊 modal 外部區域也關閉
-        window.onclick = function (event) {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        };
+
+        console.log('✅ Floating nav initialized');
     }
-});
+
+    /**
+     * 初始化更新日誌
+     */
+    function initChangelog() {
+        const showBtn = document.getElementById('show-changelog');
+        const modal = document.getElementById('changelog-modal');
+        const closeBtn = document.querySelector('.changelog-close');
+
+        if (!showBtn || !modal || !closeBtn) return;
+
+        showBtn.onclick = () => modal.style.display = 'block';
+        closeBtn.onclick = () => modal.style.display = 'none';
+        
+        window.onclick = (e) => {
+            if (e.target === modal) modal.style.display = 'none';
+        };
+
+        console.log('✅ Changelog initialized');
+    }
+
+    // ==================== 6. 主初始化流程 ====================
+
+    /**
+     * 主初始化函數
+     */
+    async function init() {
+        try {
+            console.log('⏳ Initializing application...');
+
+            // 1. 載入並合併資料
+            await loadAndMergeData();
+
+            // 2. 初始化選擇器
+            initCountrySelector();
+            initSchoolSelector();
+            initDegreeSelector();
+
+            // 3. 初始化表格
+            initDataTable();
+
+            // 4. 載入資料到表格
+            updateFilters();
+
+            // 5. 綁定匯出按鈕
+            $('#export-json').on('click', exportJSON);
+            $('#export-excel').on('click', exportExcel);
+            $('#export-txt').on('click', exportTXT);
+            $('#copy-all-urls').on('click', copyAllURLs);
+
+            // 6. 初始化 UI
+            initFloatingNav();
+            initChangelog();
+
+            // 7. 綁定學位過濾器變化事件
+            $(document).on('change', '.degree-checkbox', updateFilters);
+
+            console.log('✅ Application initialized successfully!');
+            console.log('📊 Total records:', allData.length);
+
+        } catch (error) {
+            console.error('❌ Initialization error:', error);
+            alert('系統初始化失敗: ' + error.message);
+        }
+    }
+
+    // ==================== 7. 啟動應用程式 ====================
+
+    // 等待 DOM 和 jQuery 準備好
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+            $(document).ready(init);
+        });
+    } else {
+        $(document).ready(init);
+    }
+
+})();

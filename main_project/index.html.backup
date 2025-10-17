@@ -1,0 +1,411 @@
+<!DOCTYPE html><!DOCTYPE html>
+
+<html lang="zh-TW"><html lang="zh-TW">
+
+<head>
+
+  <meta charset="UTF-8"><head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <meta charset="UTF-8">
+
+  <meta name="description" content="Andy Global University Data - 全球大學科系資料查詢系統">  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Andy">  <title>Andy Global Uni Data</title>
+
+  <title>Andy Global Uni Data</title>  
+
+    <!-- CSS Stylesheets -->
+
+  <!-- External CSS Libraries -->  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">  <link rel="stylesheet" href="css/floating-nav.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">  <link rel="stylesheet" href="css/leaflet-google.css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+
+  <!-- Custom CSS -->  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
+
+  <link rel="stylesheet" href="css/style.css">  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <link rel="stylesheet" href="css/floating-nav.css"></head>
+
+  <link rel="stylesheet" href="css/leaflet-google.css">
+
+</head><body>
+
+
+
+<body>
+
+  <!-- Floating Navigation --><!-- Hamburger Floating Navigation Sidebar -->
+
+  <div id="floating-nav-wrapper"><div id="floating-nav-wrapper">
+
+    <button id="floating-nav-toggle" aria-label="Open navigation" class="floating-nav-hamburger">  <button id="floating-nav-toggle" aria-label="Open navigation" class="floating-nav-hamburger">
+
+      <span class="hamburger-bar"></span>    <span class="hamburger-bar"></span>
+
+      <span class="hamburger-bar"></span>    <span class="hamburger-bar"></span>
+
+      <span class="hamburger-bar"></span>    <span class="hamburger-bar"></span>
+
+    </button>  </button>
+
+    <nav id="floating-nav" class="floating-nav">  <nav id="floating-nav" class="floating-nav">
+
+      <div class="floating-nav-title">快速導覽</div>    <div class="floating-nav-title">快速導覽</div>
+
+      <ul>    <ul>
+
+        <li><a href="#top-anchor"><span class="nav-icon">⬆️</span>Top</a></li>      <li><a href="#top-anchor"><span class="nav-icon">⬆️</span>Top</a></li>
+
+        <li><a href="#country-anchor"><span class="nav-icon">🌏</span>Select Country</a></li>      <li><a href="#country-anchor"><span class="nav-icon">🌏</span>Select Country</a></li>
+
+        <li><a href="#json-table-anchor"><span class="nav-icon">📋</span>Data Table</a></li>      <li><a href="#json-table-anchor"><span class="nav-icon">📋</span>json-table</a></li>
+
+        <li><a href="#school-data-table-anchor"><span class="nav-icon">🏫</span>School Data</a></li>      <li><a href="#school-data-table-anchor"><span class="nav-icon">🏫</span>School Data Table</a></li>
+
+        <li><a href="#school-map-anchor"><span class="nav-icon">🗺️</span>Map</a></li>      <li><a href="#school-map-anchor"><span class="nav-icon">🗺️</span>School Locations on Map</a></li>
+
+      </ul>    </ul>
+
+    </nav>  </nav>
+
+  </div></div>
+
+
+
+  <a id="top-anchor"></a><a id="top-anchor"></a>
+
+
+
+  <!-- Header -->
+
+  <div class="header-container"><div class="header-container">
+
+    <div style="display: flex; align-items: center; gap: 16px;">  <div style="display: flex; align-items: center;">
+
+      <button id="show-changelog">更新日誌</button>    <button id="show-changelog" style="margin-right: 16px;">更新日誌</button>
+
+      <div class="last-updated-container">    <div class="last-updated-container">
+
+        <h3>Last updated time:</h3>      <h3>Last updated time:</h3>
+
+        <div id="github-push-time">Loading...</div>      <div id="github-push-time"></div>
+
+      </div>    </div>
+
+    </div>  </div>
+
+    <div class="export-buttons">  <div class="export-buttons">
+
+      <button id="export-json">Export JSON</button>    <button id="export-json">Export JSON</button>
+
+      <button id="export-excel">Export Excel</button>    <button id="export-excel">Export Excel</button>
+
+      <button id="export-txt">Export URL (TXT)</button>    <button id="export-txt">Export URL (TXT)</button>
+
+      <button id="copy-all-urls">Copy All URLs</button>    <button id="copy-all-urls">Copy All URLs</button>
+
+    </div>  </div>
+
+  </div></div>
+
+
+
+  <!-- Changelog Modal --><!-- 更新日誌彈窗 -->
+
+  <div id="changelog-modal" class="changelog-modal" style="display:none;"><div id="changelog-modal" class="changelog-modal" style="display:none;">
+
+    <div class="changelog-modal-content">  <div class="changelog-modal-content">
+
+      <span class="changelog-close">&times;</span>    <span class="changelog-close">&times;</span>
+
+      <h2>更新日誌</h2>    <h2>更新日誌</h2>
+
+      <div id="changelog-list">    <div id="changelog-list">Loading...</div>
+
+        <h3>v3.0.0 (2025-10-17)</h3>  </div>
+
+        <ul></div>
+
+          <li>✅ 完整重構：整合所有功能到單一檔案</li>
+
+          <li>✅ 修復 Country 欄位顯示 N/A 的問題</li><div class="user-guide"
+
+          <li>✅ 優化資料載入流程，使用 Promise 確保順序</li>  style="background:#fffbe6;border:1px solid #ffe58f;padding:18px 22px;margin-bottom:22px;border-radius:8px;box-shadow:0 2px 8px rgba(255,229,143,0.08);font-size:16px;line-height:1.7;">
+
+          <li>✅ 改善代碼結構，提升可維護性</li>  <strong>使用說明：</strong><br>
+
+          <li>✅ 保留所有原有功能（選擇器、過濾、匯出、地圖）</li>  1. 請先選擇國家、學校、學位，表格會自動篩選顯示對應資料。<br>
+
+        </ul>  2. 可於表格上方搜尋欄快速查找科系或網址。<br>
+
+      </div>  3. 點選每列的 <b>Copy URL</b> 可複製該科系網址。<br>
+
+    </div>  4. <b>Export JSON</b>、<b>Export Excel</b>、<b>Export URL (TXT)</b> 會匯出你勾選的資料。<br>
+
+  </div>  5. <b>Copy All URLs</b> 會複製你勾選的資料的網址。<br>
+
+  6. 若遇資料載入異常，請重新整理頁面。<br>
+
+  <!-- User Guide -->  <span style="color:#faad14;font-size:15px;">本工具僅供查詢使用，請勿未經授權轉載或修改。</span>
+
+  <div class="user-guide" style="background:#fffbe6;border:1px solid #ffe58f;padding:18px 22px;margin-bottom:22px;border-radius:8px;box-shadow:0 2px 8px rgba(255,229,143,0.08);font-size:16px;line-height:1.7;"></div>
+
+    <strong>📖 使用說明：</strong><br>
+
+    1️⃣ 請先選擇國家、學校、學位，表格會自動篩選顯示對應資料。<br><div class="select-area-container">
+
+    2️⃣ 可於表格上方搜尋欄快速查找科系或網址。<br>
+
+    3️⃣ 點選每列的 <b>Copy URL</b> 可複製該科系網址。<br>  <a id="country-anchor"></a>
+
+    4️⃣ <b>Export JSON/Excel/TXT</b> 會匯出你勾選的資料。<br>  <div id="country-select" class="select-container">
+
+    5️⃣ <b>Copy All URLs</b> 會複製所有勾選資料的網址。<br>    <h3>Select Country</h3>
+
+    6️⃣ 若遇資料載入異常，請重新整理頁面。<br>  </div>
+
+    <span style="color:#faad14;font-size:15px;">⚠️ 本工具僅供查詢使用，請勿未經授權轉載或修改。</span>
+
+  </div>  <div id="school-select" class="select-container">
+
+    <h3>Select School</h3>
+
+  <!-- Selectors Area -->  </div>
+
+  <div class="select-area-container">
+
+    <a id="country-anchor"></a>  <div id="degree-select" class="select-container">
+
+    <div id="country-select" class="select-container">    <h3>Select Degree</h3>
+
+      <h3>Select Country</h3>  </div>
+
+      <p>Loading...</p></div>
+
+    </div>
+
+<div class="table-container">
+
+    <div id="school-select" class="select-container">  <a id="json-table-anchor"></a>
+
+      <h3>Select School</h3>  <table id="json-table" class="display">
+
+      <p>Loading...</p>    <thead>
+
+    </div>      <tr>
+
+        <th>Select</th>
+
+    <div id="degree-select" class="select-container">        <th>Country</th>
+
+      <h3>Select Degree</h3>        <th>School Name</th>
+
+      <p>Loading...</p>        <th>Department Name</th>
+
+    </div>        <th>Degree Level</th>
+
+  </div>        <th>URL</th>
+
+        <th>Copy URL</th>
+
+  <!-- Main Data Table -->      </tr>
+
+  <div class="table-container">    </thead>
+
+    <a id="json-table-anchor"></a>    <tbody>
+
+    <h3>Department Data Table</h3>    </tbody>
+
+    <table id="json-table" class="display">  </table>
+
+      <thead></div>
+
+        <tr>
+
+          <th>Select</th><div id="school-data-table-container">
+
+          <th>Country</th>  <a id="school-data-table-anchor"></a>
+
+          <th>School Name</th>  <h3>School Data Table</h3>
+
+          <th>Department Name</th>  <div class="table-container">
+
+          <th>Degree Level</th>    <table id="school-data-table" class="display">
+
+          <th>URL</th>      <thead>
+
+          <th>Copy URL</th>        <tr>
+
+        </tr>          <th>School Name</th>
+
+      </thead>          <th>Country</th>
+
+      <tbody>          <th>City</th>
+
+      </tbody>          <th>科系數量</th>
+
+    </table>          <th>合作集團</th>
+
+  </div>          <th>School URL</th>
+
+        </tr>
+
+  <!-- School Data Table -->      </thead>
+
+  <div id="school-data-table-container">      <tbody>
+
+    <a id="school-data-table-anchor"></a>      </tbody>
+
+    <h3>School Data Table</h3>    </table>
+
+    <div class="table-container">  </div>
+
+      <table id="school-data-table" class="display"></div>
+
+        <thead>
+
+          <tr>
+
+            <th>School Name</th><a id="school-map-anchor"></a>
+
+            <th>Country</th><script src="scripts/SchoolMap.js"></script>
+
+            <th>City</th>
+
+            <th>科系數量</th><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+            <th>合作集團</th><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+            <th>School URL</th><script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+          </tr><script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+        </thead><script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+
+        <tbody><script src="scripts/main.js"></script>
+
+        </tbody><script src="scripts/School_data.js"></script>
+
+      </table><script src="scripts/degreeFilter.js"></script>
+
+    </div><script src="scripts/loadSchoolData.js"></script>
+
+  </div>
+
+<script>
+
+  <!-- Map Section -->  // Hamburger menu toggle logic
+
+  <a id="school-map-anchor"></a>  document.addEventListener('DOMContentLoaded', function () {
+
+  <div id="map-container">    var nav = document.getElementById('floating-nav');
+
+    <h3>School Locations on Map</h3>    var btn = document.getElementById('floating-nav-toggle');
+
+    <!-- Map will be rendered here by SchoolMap.js -->    var wrapper = document.getElementById('floating-nav-wrapper');
+
+  </div>    function closeNav() {
+
+      nav.classList.remove('open');
+
+  <!-- Footer -->      btn.classList.remove('open');
+
+  <footer class="copyright-footer" role="contentinfo">    }
+
+    <div class="copyright-container">    btn.addEventListener('click', function (e) {
+
+      <p class="copyright-title">      e.stopPropagation();
+
+        <strong>版權聲明 / Copyright Notice</strong>      nav.classList.toggle('open');
+
+      </p>      btn.classList.toggle('open');
+
+      <p class="copyright-author">    });
+
+        Copyright &copy; 2025 <a href="https://github.com/Andy87877" target="_blank" rel="noopener noreferrer">@Andy87877</a>    // 點擊導覽連結自動收合
+
+      </p>    nav.querySelectorAll('a').forEach(function (link) {
+
+      <p class="copyright-text">      link.addEventListener('click', function () {
+
+        All rights reserved. This software is provided "as is" and is intended for personal or internal use only.        closeNav();
+
+        Users are <strong>not permitted</strong> to modify, distribute, or create derivative works based on this software.      });
+
+      </p>    });
+
+      <p class="copyright-contact">    // 點擊外部自動收合
+
+        For inquiries: <a href="mailto:andy8787main@gmail.com">andy8787main@gmail.com</a>    document.addEventListener('click', function (e) {
+
+      </p>      if (!wrapper.contains(e.target)) {
+
+      <p class="copyright-links">        closeNav();
+
+        License: <a href="https://github.com/Andy-GlobalUniData/Andy-GlobalUniData.github.io/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">View License</a> |      }
+
+        Source: <a href="https://github.com/Andy-GlobalUniData/Andy-GlobalUniData.github.io" target="_blank" rel="noopener noreferrer">GitHub Repository</a>    });
+
+      </p>  });
+
+    </div></script>
+
+  </footer><script src="scripts/github-push-time.js"></script>
+
+
+
+  <!-- External JavaScript Libraries (Load in Order) --><!-- 版權宣告 -->
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><footer class="copyright-footer">
+
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>  <div class="copyright-container">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>    <p class="copyright-title">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>      <strong>版權聲明 / Copyright Notice</strong>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>    </p>
+
+    <p class="copyright-author">
+
+  <!-- Application Scripts -->      Copyright (C) 2025 <a href="https://github.com/Andy87877" target="_blank" rel="noopener">@Andy87877</a>
+
+  <script src="scripts/loadSchoolData.js"></script>    </p>
+
+  <script src="scripts/SchoolMap.js"></script>    <p class="copyright-text">
+
+  <script src="scripts/degreeFilter.js"></script>      All rights reserved. This software is provided "as is" and is intended for personal or internal use only.
+
+  <script src="scripts/github-push-time.js"></script>      Users are <strong>not permitted</strong> to modify, distribute, or create derivative works based on this software.
+
+        Forking, reverse engineering, or any modifications are strictly prohibited.
+
+  <!-- Main Application Script (Refactored) -->    </p>
+
+  <script src="scripts/main.js"></script>    <p class="copyright-contact">
+
+      For inquiries regarding usage rights, please contact
+
+</body>      <a href="mailto:andy8787main@gmail.com">andy8787main@gmail.com</a>
+
+</html>    </p>
+
+    <p class="copyright-links">
+      License: <a href="https://github.com/Andy-GlobalUniData/Andy-GlobalUniData.github.io/blob/main/LICENSE"
+        target="_blank" rel="noopener">View License</a> |
+      Source: <a href="https://github.com/Andy-GlobalUniData/Andy-GlobalUniData.github.io" target="_blank"
+        rel="noopener">GitHub Repository</a>
+    </p>
+  </div>
+</footer>
+
+
+</body>
+
+</html>

@@ -13,14 +13,18 @@
 
     // ==================== 全域變數 ====================
     let allData = [];           // 所有合併後的資料
+    let schoolData = [];        // 學校資料 (包含集團資訊) ✨
     let dataTable = null;       // DataTable 實例
+    let selectedGroups = [];    // 選中的集團 ✨
     let selectedCountries = []; // 選中的國家
     let selectedSchools = [];   // 選中的學校
     let selectedDegrees = [];   // 選中的學位
     let selectedRowURLs = [];   // 跨頁勾選的 URL 陣列
+    let schoolToGroupMap = {};  // 學校→集團對應表 (記憶體優化:只建立一次) ✨
 
-    const CHUNK_SIZE = 500;     // 分批載入大小
+    const CHUNK_SIZE = 200;     // 分批載入大小 (從300降至200，進一步減少記憶體峰值) ✨
     let loadIndex = 0;          // 載入索引
+    const MAX_DISPLAY_ROWS = 5000; // 最大顯示列數限制，避免記憶體爆炸 ✨
 
     // ==================== 1. 資料載入與合併 ====================
     
@@ -37,7 +41,7 @@
                 fetch('data/data.json')
             ]);
 
-            const schoolData = await schoolDataResponse.json();
+            schoolData = await schoolDataResponse.json(); // 儲存到全域變數 ✨
             const departmentData = await departmentDataResponse.json();
 
             console.log('✅ School data loaded:', schoolData.length, 'schools');
@@ -52,6 +56,22 @@
                     schoolToCountry.set(schoolName, country);
                 }
             });
+
+            // 建立學校→集團對應表 (記憶體優化:只建立一次,包含"無_Group") ✨
+            schoolToGroupMap = {};
+            schoolData.forEach(school => {
+                const schoolName = school.School_name || school['School Name'];
+                const group = school['合作集團'];
+                if (schoolName) {
+                    // 如果沒有集團,對應到"無_Group" ✨
+                    if (!group || group === '.' || group === 'N/A') {
+                        schoolToGroupMap[schoolName] = '無_Group';
+                    } else {
+                        schoolToGroupMap[schoolName] = group;
+                    }
+                }
+            });
+            console.log('✅ School-to-Group map created:', Object.keys(schoolToGroupMap).length, 'entries');
 
             // 合併資料：為每個 department 加入 Country
             const mergedData = departmentData.map(item => ({
@@ -85,13 +105,68 @@
     // ==================== 2. 選擇器初始化 ====================
 
     /**
-     * 初始化 Country 選擇器
+     * 初始化 Group (集團) 選擇器 ✨
+     */
+    function initGroupSelector() {
+        const container = document.getElementById('group-select');
+        if (!container) return;
+
+        // 取得所有集團並排序 ✨
+        const groups = [...new Set(schoolData.map(item => item['合作集團']))]
+            .filter(group => group && group !== '.' && group !== 'N/A')
+            .sort();
+        
+        // 檢查是否有沒有集團的學校 ✨
+        const hasNoGroupSchools = schoolData.some(school => {
+            const group = school['合作集團'];
+            return !group || group === '.' || group === 'N/A';
+        });
+        
+        let html = '<h3>Select Group</h3>';
+        html += '<label><input type="checkbox" id="select-all-groups" checked> 全選集團</label><br>';
+        
+        groups.forEach(group => {
+            html += `<label><input type="checkbox" class="group-checkbox" value="${group}" checked> ${group}</label><br>`;
+        });
+        
+        // 如果有沒有集團的學校,添加"無_Group"選項 ✨
+        if (hasNoGroupSchools) {
+            html += `<label><input type="checkbox" class="group-checkbox" value="無_Group" checked> 無_Group</label><br>`;
+            groups.push('無_Group');
+        }
+
+        container.innerHTML = html;
+
+        // 初始化選中的集團 (包含"無_Group")
+        selectedGroups = [...groups];
+
+        // 綁定事件
+        $('#select-all-groups').on('change', function() {
+            console.log('🔄 全選集團:', this.checked ? '勾選' : '取消');
+            $('.group-checkbox').prop('checked', this.checked);
+            updateSchoolSelector();  // ✨ 更新學校列表
+            updateFilters();
+        });
+
+        $('.group-checkbox').on('change', function() {
+            const allChecked = $('.group-checkbox:checked').length === $('.group-checkbox').length;
+            $('#select-all-groups').prop('checked', allChecked);
+            updateSchoolSelector();  // ✨ 更新學校列表
+            updateFilters();
+        });
+
+        console.log('✅ Group selector initialized:', groups.length, 'groups');
+    }
+
+    /**
+     * 初始化 Country 選擇器 (獨立版本 - 不受集團影響) ✨
      */
     function initCountrySelector() {
         const container = document.getElementById('country-select');
         if (!container) return;
 
-        // 取得所有國家並排序，過濾掉 N/A
+        // 國家選擇器獨立,不監聽集團變化 ✨
+        // 取得所有國家並排序
         const countries = [...new Set(allData.map(item => item.Country))]
             .filter(country => country && country !== 'N/A')
             .sort();
@@ -110,28 +185,31 @@
 
         // 綁定事件
         $('#select-all-countries').on('change', function() {
+            console.log('🔄 全選國家:', this.checked ? '勾選' : '取消');
             $('.country-checkbox').prop('checked', this.checked);
+            updateSchoolSelector();  // ✨ 更新學校列表
             updateFilters();
         });
 
         $('.country-checkbox').on('change', function() {
             const allChecked = $('.country-checkbox:checked').length === $('.country-checkbox').length;
             $('#select-all-countries').prop('checked', allChecked);
+            updateSchoolSelector();  // ✨ 更新學校列表
             updateFilters();
         });
 
-        console.log('✅ Country selector initialized:', countries.length, 'countries');
+        console.log('✅ Country selector initialized (independent):', countries.length, 'countries');
     }
 
     /**
-     * 初始化 School 選擇器
+     * 初始化 School 選擇器 (交集版本 - 集團 AND 國家) ✨
      */
     function initSchoolSelector() {
         const container = document.getElementById('school-select');
         if (!container) return;
 
-        // 監聽 Country 變化來更新學校列表
-        $(document).on('change', '.country-checkbox', function() {
+        // 監聽 Group 和 Country 的變化來更新學校列表 (AND 邏輯) ✨
+        $(document).on('change.schoolUpdate', '.group-checkbox, .country-checkbox', function() {
             updateSchoolSelector();
         });
 
@@ -139,37 +217,68 @@
     }
 
     /**
-     * 更新 School 選擇器
+     * 更新 School 選擇器 (AND 邏輯 - 集團 AND 國家的交集) ✨
+     * 記憶體優化版本: 減少中間陣列,使用 Array.from 代替展開運算符
      */
     function updateSchoolSelector() {
         const container = document.getElementById('school-select');
         if (!container) return;
 
-        // 取得選中的國家
-        const selectedCountriesTemp = [];
-        $('.country-checkbox:checked').each(function() {
-            selectedCountriesTemp.push($(this).val());
-        });
+        // 使用 Array.from 直接建立陣列,避免 jQuery each (記憶體優化) ✨
+        const groupCheckboxes = document.querySelectorAll('.group-checkbox:checked');
+        const countryCheckboxes = document.querySelectorAll('.country-checkbox:checked');
+        
+        const selectedGroupsTemp = Array.from(groupCheckboxes, cb => cb.value);
+        const selectedCountriesTemp = Array.from(countryCheckboxes, cb => cb.value);
 
-        // 篩選符合條件的學校，過濾掉 N/A
-        const schools = [...new Set(
-            allData
-                .filter(item => selectedCountriesTemp.includes(item.Country))
-                .map(item => item['School Name'])
-                .filter(school => school && school !== 'N/A')
-        )].sort();
+        // 學校 = 集團 AND 國家的交集 ✨
+        let filteredSchools = schoolData;
+        
+        // 依集團篩選 (如果有選擇) - 包含"無_Group"處理 ✨
+        if (selectedGroupsTemp.length > 0) {
+            filteredSchools = filteredSchools.filter(school => {
+                const schoolGroup = school['合作集團'];
+                
+                // 如果學校沒有集團,檢查是否選中了"無_Group"
+                if (!schoolGroup || schoolGroup === '.' || schoolGroup === 'N/A') {
+                    return selectedGroupsTemp.includes('無_Group');
+                }
+                
+                // 否則檢查學校的集團是否在選中列表中
+                return selectedGroupsTemp.includes(schoolGroup);
+            });
+        }
+        
+        // 依國家篩選 (如果有選擇) - AND 邏輯
+        if (selectedCountriesTemp.length > 0) {
+            filteredSchools = filteredSchools.filter(school => 
+                selectedCountriesTemp.includes(school.Country)
+            );
+        }
 
-        let html = '<h3>Select School</h3>';
-        html += '<label><input type="checkbox" id="select-all-schools" checked> 全選學校</label><br>';
+        // 使用 Array.from 取代展開運算符,減少記憶體 ✨
+        const schools = Array.from(
+            new Set(
+                filteredSchools
+                    .map(school => school.School_name)
+                    .filter(school => school && school !== 'N/A')
+            )
+        ).sort();
+
+        // 使用陣列 join 代替字串拼接,提升效能 ✨
+        const htmlParts = [
+            '<h3>Select School</h3>',
+            '<label><input type="checkbox" id="select-all-schools" checked> 全選學校</label><br>'
+        ];
         
         schools.forEach(school => {
-            html += `<label><input type="checkbox" class="school-checkbox" value="${school}" checked> ${school}</label><br>`;
+            htmlParts.push(`<label><input type="checkbox" class="school-checkbox" value="${school}" checked> ${school}</label><br>`);
         });
+        
+        container.innerHTML = htmlParts.join('');  // 一次性寫入 DOM ✨
 
-        container.innerHTML = html;
-
-        // 初始化選中的學校
-        selectedSchools = [...schools];
+        // 更新全域變數 (不使用展開運算符,直接賦值) ✨
+        selectedSchools = schools;
 
         // 綁定事件
         $('#select-all-schools').on('change', function() {
@@ -183,7 +292,7 @@
             updateFilters();
         });
 
-        console.log('✅ School selector updated:', schools.length, 'schools');
+        console.log('✅ School selector updated:', schools.length, 'schools (AND logic: groups AND countries)');
     }
 
     /**
@@ -237,7 +346,7 @@
     // ==================== 3. 表格初始化 ====================
 
     /**
-     * 初始化 DataTable
+     * 初始化 DataTable (優化版本 - 減少記憶體使用)
      */
     function initDataTable() {
         dataTable = $('#json-table').DataTable({
@@ -273,12 +382,19 @@
                     }
                 }
             ],
-            pageLength: 100,
-            lengthMenu: [[10, 100, 500, 1000], [10, 100, 500, 1000]],
+            pageLength: 50,  // 預設顯示50筆，從100降低 ✨
+            lengthMenu: [[10, 25, 50, 100], [10, 25, 50, 100]], // 進一步減少最大選項 ✨
             searching: true,
             destroy: false,
+            deferRender: true,      // 延遲渲染，節省記憶體 ✨
+            scroller: false,
+            processing: true,       // 顯示處理中訊息 ✨
+            orderClasses: false,    // 不為排序列添加類別，節省記憶體 ✨
+            autoWidth: false,       // 不自動計算寬度，加快速度 ✨
             language: {
-                search: 'Search Department：'
+                search: 'Search Department：',
+                processing: '⏳ 處理中...',
+                lengthMenu: '顯示 _MENU_ 筆'
             },
             initComplete: function() {
                 $('.dataTables_filter input').css({
@@ -348,22 +464,27 @@
     }
 
     /**
-     * 分批載入資料到表格
+     * 分批載入資料到表格 (優化版本 - 添加集團篩選支援) ✨
      */
     function loadNextChunk() {
+        // 檢查是否達到最大顯示限制 ✨
+        const currentRowCount = dataTable.rows().count();
+        if (currentRowCount >= MAX_DISPLAY_ROWS) {
+            console.warn(`⚠️ 已達到最大顯示數量 (${MAX_DISPLAY_ROWS} 列)，停止載入以節省記憶體`);
+            console.log('💡 提示: 請使用篩選功能縮小範圍');
+            return;
+        }
+
         if (loadIndex >= allData.length) {
-            console.log('✅ All data loaded to table');
+            console.log(`✅ Department Data loaded (${dataTable.rows().count()} rows) - 篩選條件: 學校 & 學位 & 科系`);
             return;
         }
 
         const chunk = allData.slice(loadIndex, loadIndex + CHUNK_SIZE);
         loadIndex += CHUNK_SIZE;
 
-        // 過濾資料 - 修正：只在有選擇時才過濾
+        // 過濾資料 - Department Data Table 只判斷: 學校、學位、科系 ✨
         const filteredChunk = chunk.filter(item => {
-            // Country 過濾：如果沒選任何國家，或者該項目的國家在選中列表中
-            const countryMatch = selectedCountries.length === 0 || selectedCountries.includes(item.Country);
-            
             // School 過濾：如果沒選任何學校，或者該項目的學校在選中列表中
             const schoolMatch = selectedSchools.length === 0 || selectedSchools.includes(item['School Name']);
             
@@ -376,11 +497,21 @@
                 });
             }
             
-            return countryMatch && schoolMatch && degreeMatch;
+            // 科系過濾透過 DataTable 的 Search 功能處理 (Department Name 欄位)
+            
+            return schoolMatch && degreeMatch;
         });
 
+        // 檢查加入後是否會超過限制 ✨
+        const remainingCapacity = MAX_DISPLAY_ROWS - currentRowCount;
+        const dataToAdd = filteredChunk.slice(0, remainingCapacity);
+
+        if (dataToAdd.length < filteredChunk.length) {
+            console.warn(`⚠️ 部分資料未顯示以避免超過限制 (已省略 ${filteredChunk.length - dataToAdd.length} 列)`);
+        }
+
         // 格式化資料
-        const formattedData = filteredChunk.map(item => [
+        const formattedData = dataToAdd.map(item => [
             '<input type="checkbox" class="row-checkbox">',
             item.Country,
             item['School Name'],
@@ -389,18 +520,29 @@
             item.URL
         ]);
 
-        dataTable.rows.add(formattedData).draw(false);
+        // 只在有資料時才添加
+        if (formattedData.length > 0) {
+            dataTable.rows.add(formattedData).draw(false);
+        }
 
-        // 繼續載入下一批
-        if (loadIndex < allData.length) {
-            setTimeout(loadNextChunk, 10);
+        // 繼續載入下一批 (如果未達到限制)
+        if (loadIndex < allData.length && dataTable.rows().count() < MAX_DISPLAY_ROWS) {
+            setTimeout(loadNextChunk, 50); // 增加延遲到50ms，減少記憶體峰值 ✨
+        } else if (dataTable.rows().count() >= MAX_DISPLAY_ROWS) {
+            console.log(`🛑 已達到顯示上限，請使用篩選功能`);
         }
     }
 
     /**
-     * 更新過濾條件
+     * 更新過濾條件 (優化版本 - 添加集團篩選支援) ✨
      */
     function updateFilters() {
+        // 更新選中的集團 ✨
+        selectedGroups = [];
+        $('.group-checkbox:checked').each(function() {
+            selectedGroups.push($(this).val());
+        });
+
         // 更新選中的國家
         selectedCountries = [];
         $('.country-checkbox:checked').each(function() {
@@ -419,16 +561,30 @@
             selectedDegrees.push($(this).val());
         });
 
-        // 重新載入表格資料
-        dataTable.clear();
+        // 清理舊資料，釋放記憶體
+        if (dataTable) {
+            dataTable.clear();
+            dataTable.draw(false); // 不重繪,節省效能
+        }
+        
+        // 清空勾選記錄
+        selectedRowURLs = [];
         loadIndex = 0;
-        selectedRowURLs = []; // 清空勾選記錄
-        loadNextChunk();
+        
+        // 延遲載入，讓瀏覽器有時間釋放記憶體
+        setTimeout(() => {
+            loadNextChunk();
+        }, 50);
+
+        // ✨ 更新 School Data Table
+        if (typeof updateSchoolDataTable === 'function') {
+            updateSchoolDataTable();
+        }
 
         // 觸發地圖更新事件 (for SchoolMap.js)
         document.dispatchEvent(new Event('schoolSelectionChanged'));
 
-        console.log('🔄 Filters updated - Countries:', selectedCountries.length, 'Schools:', selectedSchools.length, 'Degrees:', selectedDegrees.length);
+        console.log('🔄 Filters updated - Groups:', selectedGroups.length, 'Countries:', selectedCountries.length, 'Schools:', selectedSchools.length, 'Degrees:', selectedDegrees.length);
     }
 
     // ==================== 4. 匯出功能 ====================
@@ -616,7 +772,8 @@
             // 1. 載入並合併資料
             await loadAndMergeData();
 
-            // 2. 初始化選擇器
+            // 2. 初始化選擇器 (集團 → 國家 → 學校 → 學位) ✨
+            initGroupSelector();      // 新增：集團篩選器 ✨
             initCountrySelector();
             initSchoolSelector();
             initDegreeSelector();
@@ -642,6 +799,7 @@
 
             console.log('✅ Application initialized successfully!');
             console.log('📊 Total records:', allData.length);
+            console.log('🏢 Total groups:', selectedGroups.length);
 
         } catch (error) {
             console.error('❌ Initialization error:', error);

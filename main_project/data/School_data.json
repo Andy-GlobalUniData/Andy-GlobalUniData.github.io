@@ -7,7 +7,7 @@
     "URL": "https://degrees.apps.asu.edu/bachelors/major-list/letter/all",
     "latitude": 33.4213174,
     "longitude": -111.9331631,
-    "Number_of_departments": 989
+    "Number_of_departments": 991
   },
   {
     "School_name": "Bath Spa University",
@@ -100,6 +100,136 @@
     "Number_of_departments": 131
   },
   {
+    "School_name": "Durham University",
+    "Country": "United Kingdom",
+    "City": "Durham",
+    "合作集團": "StudyGroup",
+    "URL": "https://www.durham.ac.uk/search/?searchStudioQuery=&isGrid=false&facets=&orderBy=&start=0",
+    "latitude": 54.7641281,
+    "longitude": -1.5863066,
+    "Number_of_departments": 297
+  },
+  {
+    "School_name": "Elon University",
+    "Country": "United States of America",
+    "City": "Elon, North Carolina",
+    "合作集團": ".",
+    "URL": "https://www.elon.edu/u/academics/majors-minors-programs/",
+    "latitude": 36.1063398,
+    "longitude": -79.5027368,
+    "Number_of_departments": 247
+  },
+  {
+    "School_name": "Erasmus Universitiet Rotterdam",
+    "Country": "Netherlands",
+    "City": "Rotterdam",
+    "合作集團": ".",
+    "URL": "https://www.eur.nl/en/search?f[0]=education_type%3Abachelor&f[1]=education_type%3Acourse&f[2]=education_type%3Amaster&f[3]=education_type%3Apost_experience_master&f[4]=education_type%3Aresearch_master",
+    "latitude": 51.917251,
+    "longitude": 4.5237278,
+    "Number_of_departments": 309
+  },
+  {
+    "School_name": "Fisher College",
+    "Country": "United States of America",
+    "City": "Boston",
+    "合作集團": "INTO",
+    "URL": "https://www.fisher.edu/academics/undergraduate-programs",
+    "latitude": 42.3553679,
+    "longitude": -71.0737378,
+    "Number_of_departments": 34
+  },
+  {
+    "School_name": "Florida Atlantic University",
+    "Country": "United States of America",
+    "City": "Boca Raton",
+    "合作集團": "StudyGroup",
+    "URL": "https://www.fau.edu/programs/",
+    "latitude": 26.3743445,
+    "longitude": -80.1027236,
+    "Number_of_departments": 466
+  },
+  {
+    "School_name": "George Mason University",
+    "Country": "United States of America",
+    "City": "Fairfax",
+    "合作集團": "INTO",
+    "URL": "https://catalog.gmu.edu/programs/programsa-z/",
+    "latitude": 38.8313333,
+    "longitude": -77.3079884,
+    "Number_of_departments": 560
+  },
+  {
+    "School_name": "Hofstra University",
+    "Country": "United States of America",
+    "City": "Hempstead",
+    "合作集團": "INTO",
+    "URL": "https://www.hofstra.edu/undergraduate/",
+    "latitude": 40.7169083,
+    "longitude": -73.6000225,
+    "Number_of_departments": 20
+  },
+  {
+    "School_name": "Illinois State University",
+    "Country": "United States of America",
+    "City": "Normal",
+    "合作集團": "INTO",
+    "URL": "https://illinoisstate.edu/academics/majors/",
+    "latitude": 40.5179938,
+    "longitude": -89.0084607,
+    "Number_of_departments": 169
+  },
+  {
+    "School_name": "James Madison University",
+    "Country": "United States of America",
+    "City": "Harrisonburg",
+    "合作集團": "StudyGroup",
+    "URL": "https://www.jmu.edu/academics/undergraduate/majors/index.shtml",
+    "latitude": 38.4458605,
+    "longitude": -78.8781075,
+    "Number_of_departments": 70
+  },
+  {
+    "School_name": "Leeds Beckett University",
+    "Country": "United Kingdom",
+    "City": "Leeds",
+    "合作集團": "StudyGroup",
+    "URL": "https://www.leedsbeckett.ac.uk",
+    "latitude": 53.8261442,
+    "longitude": -1.5933537,
+    "Number_of_departments": 443
+  },
+  {
+    "School_name": "Mercer University",
+    "Country": "United States of America",
+    "City": "Macon",
+    "合作集團": "StudyGroup",
+    "URL": "https://www.mercer.edu/academics/program-finder/",
+    "latitude": 32.8289341,
+    "longitude": -83.6506702,
+    "Number_of_departments": 253
+  },
+  {
+    "School_name": "Montclair State University",
+    "Country": "United States of America",
+    "City": "Montclair",
+    "合作集團": "INTO",
+    "URL": "https://www.montclair.edu/academics/all-programs/",
+    "latitude": 40.8646878,
+    "longitude": -74.1969213,
+    "Number_of_departments": 266
+  },
+  {
+    "School_name": "New England College",
+    "Country": "United States of America",
+    "City": "Henniker",
+    "合作集團": "INTO",
+    "URL": "https://www.nec.edu/degree-programs",
+    "latitude": 43.174571,
+    "longitude": -71.8313457,
+    "Number_of_departments": 26
+  },
+  {
     "School_name": "Newcastle University",
     "Country": "United Kingdom",
     "City": "Newcastle upon Tyne",
@@ -108,6 +238,56 @@
     "latitude": 54.980175,
     "longitude": -1.6146802,
     "Number_of_departments": 300
+  },
+  {
+    "School_name": "Oregon State University",
+    "Country": "United States of America",
+    "City": "Corvallis",
+    "合作集團": "INTO",
+    "URL": "https://admissions.oregonstate.edu/find-your-major",
+    "latitude": 44.5630559,
+    "longitude": -123.2839234,
+    "Number_of_departments": 103
+  },
+  {
+    "School_name": "Queen's University Belfast",
+    "Country": "United Kingdom",
+    "City": "Belfast",
+    "合作集團": ".",
+    "URL": "https://www.qub.ac.uk/courses/",
+    "latitude": 54.5842881,
+    "longitude": -5.9336562,
+    "Number_of_departments": 494
+  },
+  {
+    "School_name": "Queen's University Belfast International Study Centre",
+    "Country": "United Kingdom",
+    "City": "Belfast",
+    "合作集團": "INTO",
+    "URL": "https://www.qub.ac.uk/International/International-students/Applying/University-Preparation-Courses/isc-academic-programmes/",
+    "latitude": 54.5842881,
+    "longitude": -5.9336562,
+    "Number_of_departments": 22
+  },
+  {
+    "School_name": "Suffolk University Boston",
+    "Country": "United States of America",
+    "City": "Boston",
+    "合作集團": "INTO",
+    "URL": "https://www.suffolk.edu/academics/undergraduate-programs",
+    "latitude": 42.3567011,
+    "longitude": -71.0610578,
+    "Number_of_departments": 151
+  },
+  {
+    "School_name": "Teesside University",
+    "Country": "United Kingdom",
+    "City": "Middlesbrough",
+    "合作集團": "StudyGroup",
+    "URL": "https://www.tees.ac.uk/undergraduate_courses/az.cfm",
+    "latitude": 54.5695266,
+    "longitude": -1.2355444,
+    "Number_of_departments": 258
   },
   {
     "School_name": "University of Leeds",

@@ -1,15 +1,20 @@
 ﻿<!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andy Global Uni Data</title>
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <!-- Marker Clustering for Memory Optimization -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/floating-nav.css">
   <link rel="stylesheet" href="css/leaflet-google.css">
 </head>
+
 <body>
   <div id="floating-nav-wrapper">
     <button id="floating-nav-toggle" class="floating-nav-hamburger">
@@ -48,10 +53,13 @@
     <div class="changelog-modal-content">
       <span class="changelog-close">&times;</span>
       <h2>更新日誌 </h2>
-      <div id="changelog-list"><p>完整重構版本，修復所有問題</p></div>
+      <div id="changelog-list">
+        <p>完整重構版本，修復所有問題</p>
+      </div>
     </div>
   </div>
-  <div class="user-guide" style="background:#fffbe6;border:1px solid #ffe58f;padding:18px 22px;margin:22px 0;border-radius:8px;">
+  <div class="user-guide"
+    style="background:#fffbe6;border:1px solid #ffe58f;padding:18px 22px;margin:22px 0;border-radius:8px;">
     <strong> 使用說明：</strong><br>
     1. 選擇國家、學校、學位篩選資料<br>
     2. 使用搜尋欄查找科系<br>
@@ -60,15 +68,38 @@
   </div>
   <div class="select-area-container">
     <a id="country-anchor"></a>
-    <div id="country-select" class="select-container"><h3>Select Country</h3><p>Loading...</p></div>
-    <div id="school-select" class="select-container"><h3>Select School</h3><p>Loading...</p></div>
-    <div id="degree-select" class="select-container"><h3>Select Degree</h3><p>Loading...</p></div>
+    <div id="group-select" class="select-container">
+      <h3>Select Group (集團)</h3>
+      <p>Loading...</p>
+    </div>
+    <div id="country-select" class="select-container">
+      <h3>Select Country</h3>
+      <p>Loading...</p>
+    </div>
+    <div id="school-select" class="select-container">
+      <h3>Select School</h3>
+      <p>Loading...</p>
+    </div>
+    <div id="degree-select" class="select-container">
+      <h3>Select Degree</h3>
+      <p>Loading...</p>
+    </div>
   </div>
   <div class="table-container">
     <a id="json-table-anchor"></a>
     <h3>Department Data Table</h3>
     <table id="json-table" class="display">
-      <thead><tr><th>Select</th><th>Country</th><th>School Name</th><th>Department Name</th><th>Degree Level</th><th>URL</th><th>Copy URL</th></tr></thead>
+      <thead>
+        <tr>
+          <th>Select</th>
+          <th>Country</th>
+          <th>School Name</th>
+          <th>Department Name</th>
+          <th>Degree Level</th>
+          <th>URL</th>
+          <th>Copy URL</th>
+        </tr>
+      </thead>
       <tbody></tbody>
     </table>
   </div>
@@ -76,23 +107,34 @@
     <a id="school-data-table-anchor"></a>
     <h3>School Data Table</h3>
     <table id="school-data-table" class="display">
-      <thead><tr><th>School Name</th><th>Country</th><th>City</th><th>科系數量</th><th>合作集團</th><th>School URL</th></tr></thead>
+      <thead>
+        <tr>
+          <th>School Name</th>
+          <th>Country</th>
+          <th>City</th>
+          <th>科系數量</th>
+          <th>合作集團</th>
+          <th>School URL</th>
+        </tr>
+      </thead>
       <tbody></tbody>
     </table>
   </div>
   <a id="school-map-anchor"></a>
-  <div id="map-container"><h3>School Locations on Map</h3></div>
   <footer class="copyright-footer">
-    <p>Copyright © 2025 Andy87877. All rights reserved.</p>
+    <p>Copyright © 2025 [andy8787main@gmail.com]。 All rights reserved.</p>
   </footer>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Marker Clustering for Memory Optimization -->
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script src="scripts/loadSchoolData.js"></script>
   <script src="scripts/SchoolMap.js"></script>
   <script src="scripts/degreeFilter.js"></script>
   <script src="scripts/github-push-time.js"></script>
   <script src="scripts/main.js"></script>
 </body>
+
 </html>

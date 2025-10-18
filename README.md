@@ -16,7 +16,7 @@ Andy Global Uni Data 是一個專為查詢全球大學資料而設計的網頁�
 ## 操作說明
 
 1. **進入網站**  
-   點擊 [主專案](https://andy-globalunidata.github.io/main_project) 或 [測試版本](https://andy-globalunidata.github.io/test_project) 進入查詢頁面。
+   點擊 [主專案](https://andy-globalunidata.github.io/main_project) 進入查詢頁面。
 
 2. **學位層級篩選**  
    頁面上方有「Select Degree Level」區塊，可勾選欲查詢的學位層級（如 Bachelor、Master、PhD 等）。

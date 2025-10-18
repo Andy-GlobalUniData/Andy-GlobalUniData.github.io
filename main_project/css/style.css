@@ -628,3 +628,180 @@ tr:hover td {
 .copyright-links {
   margin-bottom: 0;
 }
+
+/* ========================================
+   Tag Filter 標籤篩選樣式 (簡潔版)
+   ======================================== */
+
+/* 標籤篩選區域容器 - 與其他篩選器一致 */
+#tag-filter-section {
+  margin-top: 15px;
+  max-width: 100%;
+}
+
+/* 標籤輸入區 */
+.tag-input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* 標籤輸入框 */
+#tag-filter-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  outline: none;
+  background: white;
+}
+
+#tag-filter-input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.1);
+}
+
+#tag-filter-input::placeholder {
+  color: #999;
+}
+
+/* 新增標籤按鈕 - 簡潔設計 */
+#add-tag-btn {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+#add-tag-btn:hover {
+  background: #45a049;
+}
+
+#add-tag-btn:active {
+  background: #3d8b40;
+}
+
+/* 標籤容器 */
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 50px;
+  padding: 12px;
+  background: #f9f9f9;
+  border-radius: 4px;
+  border: 1px dashed #ddd;
+  transition: border-color 0.2s;
+}
+
+.tag-container:has(.filter-tag) {
+  border-style: solid;
+  border-color: #ccc;
+  background: #fafafa;
+}
+
+/* 空狀態提示 */
+.empty-state {
+  width: 100%;
+  color: #999;
+  font-style: italic;
+  text-align: center;
+  padding: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 14px;
+}
+
+/* 標籤元素 - 簡潔灰色調 */
+.filter-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: #e0e0e0;
+  color: #333;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  animation: tagSlideIn 0.3s ease-out;
+  transition: all 0.2s;
+  max-width: 300px;
+}
+
+.filter-tag:hover {
+  background: #d5d5d5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+/* 標籤滑入動畫 - 簡化版 */
+@keyframes tagSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 標籤文字 */
+.filter-tag .tag-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 刪除按鈕 - 簡潔設計 */
+.filter-tag .remove-tag {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.2s;
+  line-height: 1;
+  flex-shrink: 0;
+  color: #666;
+}
+
+.filter-tag .remove-tag:hover {
+  background: #f44336;
+  color: white;
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .tag-input-area {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  #add-tag-btn {
+    width: 100%;
+  }
+  
+  .filter-tag {
+    max-width: 100%;
+  }
+}

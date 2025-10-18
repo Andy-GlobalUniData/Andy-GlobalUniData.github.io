@@ -85,6 +85,20 @@
       <p>Loading...</p>
     </div>
   </div>
+  <div id="tag-filter-section" class="select-container">
+    <h3>科系關鍵字篩選 (Department Filter)</h3>
+    <div class="tag-input-area">
+      <input 
+        type="text" 
+        id="tag-filter-input" 
+        placeholder="輸入科系關鍵字 for example:(computer science、electrical engineering、MBA) 並按 Enter"
+      />
+      <button id="add-tag-btn">新增科系 (Add Department)</button>
+    </div>
+    <div id="tag-container" class="tag-container">
+      <div class="empty-state">尚未新增任何篩選科系 (No departments added)</div>
+    </div>
+  </div>
   <div class="table-container">
     <a id="json-table-anchor"></a>
     <h3>Department Data Table</h3>
@@ -133,6 +147,7 @@
   <script src="scripts/loadSchoolData.js"></script>
   <script src="scripts/SchoolMap.js"></script>
   <script src="scripts/degreeFilter.js"></script>
+  <script src="scripts/tagFilter.js"></script>
   <script src="scripts/github-push-time.js"></script>
   <script src="scripts/main.js"></script>
 </body>

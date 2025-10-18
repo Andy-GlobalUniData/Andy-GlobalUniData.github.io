@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andy Global Uni Data</title>
+  <!-- DataTables CSS -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+  <!-- DataTables Scroller CSS for Virtual Scrolling ✨ -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/scroller/2.0.7/css/scroller.dataTables.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <!-- Marker Clustering for Memory Optimization -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
@@ -88,11 +91,8 @@
   <div id="tag-filter-section" class="select-container">
     <h3>科系關鍵字篩選 (Department Filter)</h3>
     <div class="tag-input-area">
-      <input 
-        type="text" 
-        id="tag-filter-input" 
-        placeholder="輸入科系關鍵字 for example:(computer science、electrical engineering、MBA) 並按 Enter"
-      />
+      <input type="text" id="tag-filter-input"
+        placeholder="輸入科系關鍵字 for example:(computer science、electrical engineering、MBA) 並按 Enter" />
       <button id="add-tag-btn">新增科系 (Add Department)</button>
     </div>
     <div id="tag-container" class="tag-container">
@@ -102,6 +102,25 @@
   <div class="table-container">
     <a id="json-table-anchor"></a>
     <h3>Department Data Table</h3>
+    <!-- 🎯 TDD: 資料統計顯示 -->
+    <div id="table-stats"
+      style="margin: 15px 0; padding: 12px; background: #f5f5f5; border-radius: 4px; font-size: 14px; color: #333;">
+      <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+        <div>
+          <strong>📊 載入狀態:</strong>
+          <span id="loaded-count" style="color: #2196f3; font-weight: bold;">載入中...</span>
+        </div>
+        <div>
+          <strong>📈 顯示資料:</strong>
+          <span id="display-count" style="color: #4caf50; font-weight: bold;">0 筆</span>
+        </div>
+      </div>
+    </div>
+    <!-- 🎯 TDD: 自動載入進度提示 (無需用戶操作) -->
+    <!-- <div id="load-status"
+      style="margin: 10px 0; padding: 10px; background: #e3f2fd; border-left: 4px solid #2196f3; border-radius: 4px; display: none; font-weight: bold;">
+      <span id="load-status-text"></span>
+    </div> -->
     <table id="json-table" class="display">
       <thead>
         <tr>
@@ -116,6 +135,7 @@
       </thead>
       <tbody></tbody>
     </table>
+
   </div>
   <div id="school-data-table-container">
     <a id="school-data-table-anchor"></a>
@@ -139,7 +159,10 @@
     <p>Copyright © 2025 [andy8787main@gmail.com]。 All rights reserved.</p>
   </footer>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- DataTables JS -->
   <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <!-- DataTables Scroller JS for Virtual Scrolling ✨ -->
+  <script src="https://cdn.datatables.net/scroller/2.0.7/js/dataTables.scroller.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <!-- Marker Clustering for Memory Optimization -->

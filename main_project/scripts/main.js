@@ -22,9 +22,10 @@
     let selectedRowURLs = [];   // 跨頁勾選的 URL 陣列
     let schoolToGroupMap = {};  // 學校→集團對應表 (記憶體優化:只建立一次) ✨
 
-    const CHUNK_SIZE = 200;     // 分批載入大小 (從300降至200，進一步減少記憶體峰值) ✨
+    const CHUNK_SIZE = 1000;    // 🎯 TDD: 增加批次到1000,減少批次數量
     let loadIndex = 0;          // 載入索引
-    const MAX_DISPLAY_ROWS = 5000; // 最大顯示列數限制，避免記憶體爆炸 ✨
+    let isLoadingComplete = false; // 載入完成標記
+    // ✨ PDCA Plan: 自動載入所有資料,使用虛擬滾動優化渲染
 
     // ==================== 1. 資料載入與合併 ====================
     
@@ -382,26 +383,41 @@
                     }
                 }
             ],
-            pageLength: 50,  // 預設顯示50筆，從100降低 ✨
-            lengthMenu: [[10, 25, 50, 100], [10, 25, 50, 100]], // 進一步減少最大選項 ✨
-            searching: true,
+            // 🎯 TDD + PDCA 優化配置
+            // Plan: 使用 Scroller 虛擬滾動 + 自動載入所有資料
+            scrollY: '600px',       // 固定高度,啟用滾動
+            scrollCollapse: true,   // 高度自適應
+            deferRender: true,      // ✅ 延遲渲染 - 只渲染可見行
+            scroller: {             // ✅ 虛擬滾動配置
+                displayBuffer: 9,   // 預載入前後9行 (約20行在視窗內)
+                loadingIndicator: true, // 顯示載入指示器
+                boundaryScale: 0.5  // 滾動邊界縮放
+            },
+            paging: true,           // Scroller 需要分頁支援
+            pageLength: 100,        // 虛擬頁面大小
+            searching: true,        // ✅ 啟用搜尋
+            ordering: true,         // ✅ 啟用排序
             destroy: false,
-            deferRender: true,      // 延遲渲染，節省記憶體 ✨
-            scroller: false,
-            processing: true,       // 顯示處理中訊息 ✨
-            orderClasses: false,    // 不為排序列添加類別，節省記憶體 ✨
-            autoWidth: false,       // 不自動計算寬度，加快速度 ✨
+            processing: true,       // 顯示處理中
+            orderClasses: false,    // 不添加排序類別,節省記憶體
+            autoWidth: false,       // 不自動計算寬度
             language: {
                 search: 'Search Department：',
-                processing: '⏳ 處理中...',
-                lengthMenu: '顯示 _MENU_ 筆'
+                processing: '⏳ 載入中...',
+                info: '顯示 _START_ 到 _END_ 筆，共 _TOTAL_ 筆',
+                infoEmpty: '沒有資料',
+                infoFiltered: '(從 _MAX_ 筆中篩選)',
+                loadingRecords: '載入中...',
+                zeroRecords: '沒有符合的資料'
             },
             initComplete: function() {
-                $('.dataTables_filter input').css({
-                    'font-size': '18px',
-                    'padding': '10px'
-                });
-                console.log('✅ DataTable initialized');
+                // 隱藏搜尋框但保持 searching:true，避免表格鎖死 ✨
+                $('#departmentTable_wrapper .dataTables_filter').hide();
+                console.log('✅ Department DataTable initialized (search box hidden)');
+            },
+            drawCallback: function() {
+                // 🎯 TDD: 每次重繪時更新統計
+                updateTableStats();
             }
         });
 
@@ -464,32 +480,29 @@
     }
 
     /**
-     * 分批載入資料到表格 (優化版本 - 添加集團篩選支援) ✨
+     * 🎯 TDD: 分批載入資料到表格 (自動完成版本)
+     * PDCA Do: 自動批次載入,顯示進度,用戶無需操作
      */
     function loadNextChunk() {
-        // 檢查是否達到最大顯示限制 ✨
-        const currentRowCount = dataTable.rows().count();
-        if (currentRowCount >= MAX_DISPLAY_ROWS) {
-            console.warn(`⚠️ 已達到最大顯示數量 (${MAX_DISPLAY_ROWS} 列)，停止載入以節省記憶體`);
-            console.log('💡 提示: 請使用篩選功能縮小範圍');
+        if (loadIndex >= allData.length) {
+            isLoadingComplete = true;
+            console.log(`✅ 所有資料載入完成 (${dataTable.rows().count()} 筆)`);
+            updateLoadStatus(`✅ 已載入全部 ${dataTable.rows().count()} 筆資料`, false);
             return;
         }
 
-        if (loadIndex >= allData.length) {
-            console.log(`✅ Department Data loaded (${dataTable.rows().count()} rows) - 篩選條件: 學校 & 學位 & 科系`);
-            return;
-        }
+        // 計算進度
+        const progress = Math.round((loadIndex / allData.length) * 100);
+        updateLoadStatus(`⏳ 正在載入資料... ${progress}% (${loadIndex}/${allData.length})`, false);
 
         const chunk = allData.slice(loadIndex, loadIndex + CHUNK_SIZE);
         loadIndex += CHUNK_SIZE;
 
-        // 過濾資料 - Department Data Table 只判斷: 學校、學位、科系 ✨
+        // 過濾資料
         const filteredChunk = chunk.filter(item => {
-            // School 過濾：如果沒選任何學校，或者該項目的學校在選中列表中
             const schoolMatch = selectedSchools.length === 0 || selectedSchools.includes(item['School Name']);
             
-            // Degree 過濾：如果沒選任何學位，顯示全部；否則檢查是否匹配
-            let degreeMatch = true; // 預設為 true（顯示全部）
+            let degreeMatch = true;
             if (selectedDegrees.length > 0) {
                 degreeMatch = selectedDegrees.some(deg => {
                     const degreeLevel = item['Degree Level'] || '';
@@ -497,21 +510,11 @@
                 });
             }
             
-            // 科系過濾透過 DataTable 的 Search 功能處理 (Department Name 欄位)
-            
             return schoolMatch && degreeMatch;
         });
 
-        // 檢查加入後是否會超過限制 ✨
-        const remainingCapacity = MAX_DISPLAY_ROWS - currentRowCount;
-        const dataToAdd = filteredChunk.slice(0, remainingCapacity);
-
-        if (dataToAdd.length < filteredChunk.length) {
-            console.warn(`⚠️ 部分資料未顯示以避免超過限制 (已省略 ${filteredChunk.length - dataToAdd.length} 列)`);
-        }
-
         // 格式化資料
-        const formattedData = dataToAdd.map(item => [
+        const formattedData = filteredChunk.map(item => [
             '<input type="checkbox" class="row-checkbox">',
             item.Country,
             item['School Name'],
@@ -520,16 +523,64 @@
             item.URL
         ]);
 
-        // 只在有資料時才添加
+        // 批次添加資料
         if (formattedData.length > 0) {
             dataTable.rows.add(formattedData).draw(false);
         }
 
-        // 繼續載入下一批 (如果未達到限制)
-        if (loadIndex < allData.length && dataTable.rows().count() < MAX_DISPLAY_ROWS) {
-            setTimeout(loadNextChunk, 50); // 增加延遲到50ms，減少記憶體峰值 ✨
-        } else if (dataTable.rows().count() >= MAX_DISPLAY_ROWS) {
-            console.log(`🛑 已達到顯示上限，請使用篩選功能`);
+        // 🎯 PDCA Check: 自動繼續載入
+        if (loadIndex < allData.length) {
+            setTimeout(loadNextChunk, 10); // 10ms 間隔,快速載入但不阻塞 UI
+        } else {
+            isLoadingComplete = true;
+            const finalCount = dataTable.rows().count();
+            console.log(`✅ 載入完成: ${finalCount} 筆資料`);
+            updateLoadStatus(`✅ 已載入全部 ${finalCount} 筆資料`, false);
+            updateTableStats(); // 🎯 TDD: 更新統計顯示
+        }
+    }
+
+    /**
+     * 🎯 PDCA Check: 更新載入狀態顯示
+     */
+    function updateLoadStatus(message, showButton) {
+        const statusDiv = document.getElementById('load-status');
+        const statusText = document.getElementById('load-status-text');
+        const loadMoreBtn = document.getElementById('load-more-btn');
+        
+        if (statusDiv && statusText) {
+            statusText.textContent = message;
+            statusDiv.style.display = message ? 'block' : 'none';
+            
+            // 自動載入,不需要按鈕
+            if (loadMoreBtn) {
+                loadMoreBtn.style.display = 'none';
+            }
+        }
+    }
+
+    /**
+     * 🎯 TDD: 更新表格統計資訊
+     */
+    function updateTableStats() {
+        const loadedCountEl = document.getElementById('loaded-count');
+        const displayCountEl = document.getElementById('display-count');
+        
+        if (!dataTable) return;
+        
+        const totalRows = dataTable.rows().count();
+        const displayedRows = dataTable.rows({ search: 'applied' }).count();
+        
+        if (loadedCountEl) {
+            loadedCountEl.textContent = `已載入全部 ${totalRows.toLocaleString()} 筆資料`;
+        }
+        
+        if (displayCountEl) {
+            if (displayedRows === totalRows) {
+                displayCountEl.textContent = `共 ${totalRows.toLocaleString()} 筆資料`;
+            } else {
+                displayCountEl.textContent = `共 ${displayedRows.toLocaleString()} 筆資料 (從 ${totalRows.toLocaleString()} 筆中篩選)`;
+            }
         }
     }
 
@@ -570,6 +621,7 @@
         // 清空勾選記錄
         selectedRowURLs = [];
         loadIndex = 0;
+        isLoadingComplete = false; // 重置載入狀態
         
         // 延遲載入，讓瀏覽器有時間釋放記憶體
         setTimeout(() => {
@@ -580,6 +632,13 @@
         if (typeof updateSchoolDataTable === 'function') {
             updateSchoolDataTable();
         }
+        
+        // 🎯 TDD: 篩選後更新統計
+        setTimeout(() => {
+            if (isLoadingComplete) {
+                updateTableStats();
+            }
+        }, 100);
 
         // 觸發地圖更新事件 (for SchoolMap.js)
         document.dispatchEvent(new Event('schoolSelectionChanged'));

@@ -97,7 +97,7 @@
     "URL": "https://drew.edu/academic/programs-of-study/",
     "latitude": 40.7605379,
     "longitude": -74.4281605,
-    "Number_of_departments": 131
+    "Number_of_departments": 124
   },
   {
     "School_name": "Durham University",
@@ -270,6 +270,46 @@
     "Number_of_departments": 22
   },
   {
+    "School_name": "Royal Holloway University of London",
+    "Country": "United Kingdom",
+    "City": "Egham",
+    "合作集團": "StudyGroup",
+    "URL": "https://www.royalholloway.ac.uk/research-and-education/departments-and-schools/",
+    "latitude": 51.4249395,
+    "longitude": -0.5663896,
+    "Number_of_departments": 30
+  },
+  {
+    "School_name": "San Jose State University",
+    "Country": "United States of America",
+    "City": "San Jose, California",
+    "合作集團": ".",
+    "URL": "https://catalog.sjsu.edu/content.php?catoid=13&navoid=4973",
+    "latitude": 37.3351902,
+    "longitude": -121.8812255,
+    "Number_of_departments": 180
+  },
+  {
+    "School_name": "Simmons University",
+    "Country": "United States of America",
+    "City": "Boston",
+    "合作集團": "Kaplan",
+    "URL": "https://www.simmons.edu/academics/find-program?program_level=34",
+    "latitude": 42.3389354,
+    "longitude": -71.1004318,
+    "Number_of_departments": 79
+  },
+  {
+    "School_name": "Southern Illinois University",
+    "Country": "United States of America",
+    "City": "Carbondale",
+    "合作集團": "INTO",
+    "URL": "https://catalog.siu.edu/programs/",
+    "latitude": 37.7083423,
+    "longitude": -89.2275556,
+    "Number_of_departments": 520
+  },
+  {
     "School_name": "Suffolk University Boston",
     "Country": "United States of America",
     "City": "Boston",
@@ -288,6 +328,26 @@
     "latitude": 54.5695266,
     "longitude": -1.2355444,
     "Number_of_departments": 258
+  },
+  {
+    "School_name": "Texas State University",
+    "Country": "United States of America",
+    "City": "San Marcos",
+    "合作集團": "INTO",
+    "URL": "https://mycatalog.txstate.edu/undergraduate/undergraduate-majors/",
+    "latitude": 29.8910941,
+    "longitude": -97.9376839,
+    "Number_of_departments": 352
+  },
+  {
+    "School_name": "The University of Alabama at Birmingham",
+    "Country": "United States of America",
+    "City": "Birmingham",
+    "合作集團": "INTO",
+    "URL": "https://www.uab.edu/degrees/",
+    "latitude": 33.5013152,
+    "longitude": -86.8074698,
+    "Number_of_departments": 300
   },
   {
     "School_name": "University of Leeds",

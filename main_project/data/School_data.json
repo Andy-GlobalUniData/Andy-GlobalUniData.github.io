@@ -167,7 +167,7 @@
     "URL": "https://www.hofstra.edu/undergraduate/",
     "latitude": 40.7169083,
     "longitude": -73.6000225,
-    "Number_of_departments": 20
+    "Number_of_departments": 269
   },
   {
     "School_name": "Illinois State University",
@@ -388,6 +388,16 @@
     "latitude": 46.6738972,
     "longitude": -95.2405947,
     "Number_of_departments": 172
+  },
+  {
+    "School_name": "Towson University",
+    "Country": "United States of America",
+    "City": "Towson",
+    "合作集團": "StudyGroup",
+    "URL": "https://www.towson.edu/academics/undergraduate/majors/",
+    "latitude": 39.3869768,
+    "longitude": -76.6185804,
+    "Number_of_departments": 214
   },
   {
     "School_name": "UCLA",

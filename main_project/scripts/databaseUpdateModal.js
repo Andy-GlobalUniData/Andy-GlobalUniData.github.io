@@ -319,10 +319,6 @@
       `.trim();
     },
 
-    /**
-     * 記錄更新請求（簡易版）
-     * 只是提醒用戶已記錄，不實際發送
-     */
     async createGitHubIssue(issueData) {
       try {
         console.log('� ===== 資料庫更新請求 =====');
@@ -370,7 +366,6 @@
     }
   };
 
-  // 將模組暴露到全域
   window.DatabaseUpdateModal = DatabaseUpdateModal;
 
   // 在 DOM 載入完成後初始化

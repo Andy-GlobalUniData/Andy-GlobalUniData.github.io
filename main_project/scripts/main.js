@@ -394,7 +394,7 @@
                 boundaryScale: 0.5  // 滾動邊界縮放
             },
             paging: true,           // Scroller 需要分頁支援
-            pageLength: 100,        // 虛擬頁面大小
+            pageLength: 0.01,        // 虛擬頁面大小
             searching: true,        // ✅ 啟用搜尋
             ordering: true,         // ✅ 啟用排序
             destroy: false,
@@ -402,7 +402,7 @@
             orderClasses: false,    // 不添加排序類別,節省記憶體
             autoWidth: false,       // 不自動計算寬度
             language: {
-                search: 'Search Department：',
+                search: '.',
                 processing: '⏳ 載入中...',
                 info: '顯示 _START_ 到 _END_ 筆，共 _TOTAL_ 筆',
                 infoEmpty: '沒有資料',

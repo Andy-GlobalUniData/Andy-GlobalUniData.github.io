@@ -97,7 +97,7 @@
     "URL": "https://drew.edu/academic/programs-of-study/",
     "latitude": 40.7605379,
     "longitude": -74.4281605,
-    "Number_of_departments": 124
+    "Number_of_departments": 130
   },
   {
     "School_name": "Durham University",
@@ -200,6 +200,16 @@
     "Number_of_departments": 443
   },
   {
+    "School_name": "Massey University",
+    "Country": "New Zealand",
+    "City": "Palmerston North",
+    "合作集團": "Kaplan",
+    "URL": "https://www.massey.ac.nz/search/?size=n_100_n&filters%5B0%5D%5Bfield%5D=__search_type&filters%5B0%5D%5Btype%5D=all&filters%5B0%5D%5Bvalues%5D%5B0%5D=course-qual&filters%5B1%5D%5Bfield%5D=sub_type&filters%5B1%5D%5Bvalues%5D%5B0%5D=qual&filters%5B1%5D%5Bvalues%5D%5B1%5D=spec&filters%5B1%5D%5Btype%5D=any",
+    "latitude": -40.3877581,
+    "longitude": 175.6205576,
+    "Number_of_departments": 176
+  },
+  {
     "School_name": "Mercer University",
     "Country": "United States of America",
     "City": "Macon",
@@ -277,7 +287,17 @@
     "URL": "https://www.royalholloway.ac.uk/research-and-education/departments-and-schools/",
     "latitude": 51.4249395,
     "longitude": -0.5663896,
-    "Number_of_departments": 30
+    "Number_of_departments": 387
+  },
+  {
+    "School_name": "Saint Louis University",
+    "Country": "United States of America",
+    "City": "St. Louis",
+    "合作集團": "INTO",
+    "URL": "https://catalog.slu.edu/programs/",
+    "latitude": 38.635359,
+    "longitude": -90.2318433,
+    "Number_of_departments": 482
   },
   {
     "School_name": "San Jose State University",
@@ -348,6 +368,46 @@
     "latitude": 33.5013152,
     "longitude": -86.8074698,
     "Number_of_departments": 300
+  },
+  {
+    "School_name": "The University of Manchester",
+    "Country": "United Kingdom",
+    "City": "Manchester",
+    "合作集團": "INTO",
+    "URL": "https://www.manchester.ac.uk/study/masters/courses/list/",
+    "latitude": 53.4865084,
+    "longitude": -2.263828,
+    "Number_of_departments": 334
+  },
+  {
+    "School_name": "The University of Vermont",
+    "Country": "United States of America",
+    "City": "Burlington, Vermont",
+    "合作集團": ".",
+    "URL": "https://catalogue.uvm.edu/undergraduate/majors/",
+    "latitude": 46.6738972,
+    "longitude": -95.2405947,
+    "Number_of_departments": 172
+  },
+  {
+    "School_name": "UCLA",
+    "Country": "United States of America",
+    "City": "Los Angeles, California",
+    "合作集團": ".",
+    "URL": "https://admission.ucla.edu/apply/majors#The_College",
+    "latitude": 34.0708777,
+    "longitude": -118.4468503,
+    "Number_of_departments": 235
+  },
+  {
+    "School_name": "University of Brighton",
+    "Country": "United Kingdom",
+    "City": "Brighton",
+    "合作集團": "Kaplan",
+    "URL": "https://www.brighton.ac.uk/courses/course-list.aspx",
+    "latitude": 50.8278078,
+    "longitude": -0.1341983,
+    "Number_of_departments": 285
   },
   {
     "School_name": "University of Leeds",

@@ -19,6 +19,49 @@
 </head>
 
 <body>
+  <!-- 資料庫更新彈窗 -->
+  <div id="database-update-modal" class="database-update-modal" style="display: none;">
+    <div class="database-modal-content">
+      <span class="database-modal-close">&times;</span>
+      <h2> Andy Global Uni Data - 資料庫載入系統 status </h2>
+      
+      <div class="database-stats">
+        <div class="stat-item">
+          <div class="stat-info">
+            <div class="stat-label">最後更新時間</div>
+            <div class="stat-value" id="modal-update-time">載入中...</div>
+          </div>
+        </div>
+        
+        <div class="stat-item">
+          <div class="stat-info">
+            <div class="stat-label">學校總數</div>
+            <div class="stat-value" id="modal-school-count">0</div>
+          </div>
+        </div>
+        
+        <div class="stat-item">
+          <div class="stat-info">
+            <div class="stat-label">科系總數</div>
+            <div class="stat-value" id="modal-department-count">0</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-actions">
+        <button id="request-update-btn" class="update-request-btn">
+          📮 請求更新資料庫
+        </button>
+      </div>
+      
+      <div id="update-request-message" class="update-message" style="display: none;"></div>
+      
+      <div class="modal-footer">
+        <small>💡 如需更新資料，請點擊上方按鈕通知管理員</small>
+      </div>
+    </div>
+  </div>
+
   <div id="floating-nav-wrapper">
     <button id="floating-nav-toggle" class="floating-nav-hamburger">
       <span class="hamburger-bar"></span>
@@ -171,6 +214,7 @@
   <script src="scripts/SchoolMap.js"></script>
   <script src="scripts/degreeFilter.js"></script>
   <script src="scripts/tagFilter.js"></script>
+  <script src="scripts/databaseUpdateModal.js"></script>
   <script src="scripts/github-push-time.js"></script>
   <script src="scripts/main.js"></script>
 </body>

@@ -1,9 +1,8 @@
 /**
  * Andy Global University Data - 完整重構版本
- * All-in-One Refactored Version
- * @version 3.0.0
+ * @version 3.0.1
  * @author Andy
- * @date 2025-10-17
+ * @date 2025-10-20
  */
 
 (function() {
@@ -421,45 +420,87 @@
             }
         });
 
-        // 綁定全選checkbox
+        // 🎯 TDD + PDCA Act: 修復全選功能 - 使用 DataTable API 而非 DOM 查詢 ✨
+        // Test Case 1: 全選應該選中所有過濾後的資料 (包含不可見的行)
+        // Test Case 2: 取消全選應該清空所有選取
+        // Test Case 3: 換頁後勾選狀態應該正確恢復
         $(document).on('click', '#select-all', function() {
             const checked = this.checked;
+            
+            // 🎯 TDD: 先更新可見行的 checkbox (即時回饋)
             $('.row-checkbox').prop('checked', checked);
             
-            $('#json-table tbody tr').each(function() {
-                const url = $(this).find('td:eq(5) a').attr('href') || $(this).find('td:eq(5)').text();
-                if (url && url !== 'N/A') {
-                    if (checked) {
-                        if (!selectedRowURLs.includes(url)) selectedRowURLs.push(url);
-                    } else {
-                        selectedRowURLs = selectedRowURLs.filter(u => u !== url);
+            if (checked) {
+                // 🎯 PDCA Do: 使用 DataTable API 取得所有過濾後的行資料
+                // rows({ search: 'applied' }) 會取得所有符合當前搜尋/篩選條件的行
+                const allFilteredRows = dataTable.rows({ search: 'applied' }).data();
+                
+                // 清空並重新建立選取列表
+                selectedRowURLs = [];
+                
+                // 遍歷所有行，提取 URL (index 5 是 URL 欄位)
+                allFilteredRows.each(function(rowData) {
+                    const url = rowData[5]; // URL 在第6欄 (index 5)
+                    if (url && url !== 'N/A' && url !== '<input type="checkbox" class="row-checkbox">') {
+                        // 避免重複添加
+                        if (!selectedRowURLs.includes(url)) {
+                            selectedRowURLs.push(url);
+                        }
                     }
-                }
-            });
+                });
+                
+                console.log(`✅ TDD Check: 全選完成 - 已選取 ${selectedRowURLs.length} 個 URL (包含不可見的行)`);
+            } else {
+                // 🎯 TDD: 取消全選 - 清空所有選取
+                selectedRowURLs = [];
+                console.log('✅ TDD Check: 取消全選 - 已清空所有選取');
+            }
         });
 
-        // 綁定單行checkbox
+        // 🎯 TDD: 綁定單行 checkbox - 同步更新全選狀態 ✨
+        // Test Case: 當所有行都被勾選時，全選 checkbox 應該自動勾選
+        // Test Case: 當任一行被取消勾選時，全選 checkbox 應該自動取消
         $(document).on('change', '.row-checkbox', function() {
             const row = $(this).closest('tr');
             const url = row.find('td:eq(5) a').attr('href') || row.find('td:eq(5)').text();
             
             if (url && url !== 'N/A') {
                 if (this.checked) {
-                    if (!selectedRowURLs.includes(url)) selectedRowURLs.push(url);
+                    // 🎯 TDD: 勾選時添加到選取列表
+                    if (!selectedRowURLs.includes(url)) {
+                        selectedRowURLs.push(url);
+                    }
                 } else {
+                    // 🎯 TDD: 取消勾選時從列表移除
                     selectedRowURLs = selectedRowURLs.filter(u => u !== url);
                 }
+                
+                // 🎯 PDCA Check: 同步更新全選 checkbox 狀態
+                // 如果選取數量等於所有過濾後的資料數量，則勾選全選 checkbox
+                const totalFilteredRows = dataTable.rows({ search: 'applied' }).count();
+                const allSelected = selectedRowURLs.length === totalFilteredRows;
+                $('#select-all').prop('checked', allSelected);
+                
+                console.log(`🔄 TDD Check: 已選取 ${selectedRowURLs.length}/${totalFilteredRows} 個 URL`);
             }
         });
 
-        // 表格重繪時恢復勾選狀態
+        // 🎯 TDD + PDCA Check: 表格重繪時恢復勾選狀態 ✨
+        // Test Case: 換頁或滾動後，已勾選的行應該保持勾選狀態
+        // Test Case: 全選狀態應該在換頁後正確顯示
         $(document).on('draw.dt', function() {
+            // 恢復可見行的勾選狀態
             $('#json-table tbody tr').each(function() {
                 const url = $(this).find('td:eq(5) a').attr('href') || $(this).find('td:eq(5)').text();
                 if (selectedRowURLs.includes(url)) {
                     $(this).find('.row-checkbox').prop('checked', true);
                 }
             });
+            
+            // 🎯 PDCA Check: 同步更新全選 checkbox 狀態
+            const totalFilteredRows = dataTable.rows({ search: 'applied' }).count();
+            const allSelected = selectedRowURLs.length > 0 && selectedRowURLs.length === totalFilteredRows;
+            $('#select-all').prop('checked', allSelected);
         });
 
         // 綁定複製單個URL按鈕

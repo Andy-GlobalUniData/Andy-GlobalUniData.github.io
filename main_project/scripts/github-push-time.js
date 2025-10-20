@@ -36,8 +36,7 @@ $(document).ready(function () {
       data.forEach(function (commit) {
         const date = new Date(commit.commit.committer.date).toLocaleString();
         const msg = commit.commit.message.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-        // const author = commit.commit.committer.name;
-        const author = "Andy 奕宏 (Repository Owner)";
+        const author = commit.commit.committer.name;
         html += `<li style='margin-bottom:12px;'><b>${date}</b><br><span style='color:#555;'>${msg}</span><br><span style='font-size:13px;color:#888;'>by ${author}</span></li>`;
       });
       html += '</ul>';

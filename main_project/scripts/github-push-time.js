@@ -37,7 +37,8 @@ $(document).ready(function () {
         const date = new Date(commit.commit.committer.date).toLocaleString();
         const msg = commit.commit.message.replace(/</g, '&lt;').replace(/>/g, '&gt;');
         const author = commit.commit.committer.name;
-        html += `<li style='margin-bottom:12px;'><b>${date}</b><br><span style='color:#555;'>${msg}</span><br><span style='font-size:13px;color:#888;'>by ${author}</span></li>`;
+        const repositoryOwner = "Andy 奕宏";
+        html += `<li style='margin-bottom:12px;'><b>${msg}</b><br/><small>by ${repositoryOwner} on ${date}</small></li>`;
       });
       html += '</ul>';
       $("#changelog-list").html(html);

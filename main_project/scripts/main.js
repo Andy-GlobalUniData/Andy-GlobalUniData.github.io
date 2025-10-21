@@ -668,11 +668,6 @@
         setTimeout(() => {
             loadNextChunk();
         }, 50);
-
-        // ✨ 更新 School Data Table
-        if (typeof updateSchoolDataTable === 'function') {
-            updateSchoolDataTable();
-        }
         
         // 🎯 TDD: 篩選後更新統計
         setTimeout(() => {
@@ -681,7 +676,8 @@
             }
         }, 100);
 
-        // 觸發地圖更新事件 (for SchoolMap.js)
+        // 🎯 觸發學校選擇變化事件 (for SchoolMap.js + School Data Table)
+        // School Data Table 現在只監聽此事件，與 SchoolMap 完全一致
         document.dispatchEvent(new Event('schoolSelectionChanged'));
 
         console.log('🔄 Filters updated - Groups:', selectedGroups.length, 'Countries:', selectedCountries.length, 'Schools:', selectedSchools.length, 'Degrees:', selectedDegrees.length);

@@ -150,11 +150,11 @@
       style="margin: 15px 0; padding: 12px; background: #f5f5f5; border-radius: 4px; font-size: 14px; color: #333;">
       <div style="display: flex; gap: 30px; flex-wrap: wrap;">
         <div>
-          <strong>📊 載入狀態:</strong>
-          <span id="loaded-count" style="color: #2196f3; font-weight: bold;">載入中...</span>
+          <strong>📊 載入狀態 (Loading-status-data-counts):</strong>
+          <span id="loaded-count" style="color: #2196f3; font-weight: bold;">Loading...</span>
         </div>
         <div>
-          <strong>📈 顯示資料:</strong>
+          <strong>📈 顯示資料 (Display-data-counts):</strong>
           <span id="display-count" style="color: #4caf50; font-weight: bold;">0 筆</span>
         </div>
       </div>
@@ -183,6 +183,23 @@
   <div id="school-data-table-container">
     <a id="school-data-table-anchor"></a>
     <h3>School Data Table</h3>
+    <div id="school-table-stats"
+      style="margin: 15px 0; padding: 12px; background: #f5f5f5; border-radius: 4px; font-size: 14px; color: #333;">
+      <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+        <div>
+          <strong> 總學校數 (Total schools):</strong>
+          <span id="school-total-count" style="color: #2196f3; font-weight: bold;">0 所</span>
+        </div>
+        <div>
+          <strong> 顯示學校 (Display schools) :</strong>
+          <span id="school-display-count" style="color: #4caf50; font-weight: bold;">0 所</span>
+        </div>
+        <div>
+          <strong> 涵蓋國家 (Country) :</strong>
+          <span id="school-country-count" style="color: #ff9800; font-weight: bold;">0 個</span>
+        </div>
+      </div>
+    </div>
     <table id="school-data-table" class="display">
       <thead>
         <tr>

@@ -547,10 +547,20 @@
                 // 清空並重新建立選取列表
                 selectedRowURLs = [];
                 
-                // 遍歷所有行，提取 URL (index 5 是 URL 欄位)
+                // 🎯 TDD PDCA: 遍歷所有行，提取純 URL (index 5 是 URL 欄位)
                 allFilteredRows.each(function(rowData) {
-                    const url = rowData[5]; // URL 在第6欄 (index 5)
-                    if (url && url !== 'N/A' && url !== '<input type="checkbox" class="row-checkbox">') {
+                    let url = rowData[5]; // URL 在第6欄 (index 5)
+                    
+                    // 🎯 TDD: 如果 URL 包含 HTML，提取純 URL
+                    if (url && typeof url === 'string' && url.includes('<a ')) {
+                        const match = url.match(/href="([^"]+)"/);
+                        if (match && match[1]) {
+                            url = match[1];
+                        }
+                    }
+                    
+                    // 過濾有效 URL（排除 N/A 和 checkbox HTML）
+                    if (url && url !== 'N/A' && !url.includes('<input')) {
                         // 避免重複添加
                         if (!selectedRowURLs.includes(url)) {
                             selectedRowURLs.push(url);
@@ -558,7 +568,7 @@
                     }
                 });
                 
-                console.log(`✅ TDD Check: 全選完成 - 已選取 ${selectedRowURLs.length} 個 URL (包含不可見的行)`);
+                console.log(`✅ TDD Check: 全選完成 - 已選取 ${selectedRowURLs.length} 個純文字 URL (包含不可見的行)`);
             } else {
                 // 🎯 TDD: 取消全選 - 清空所有選取
                 selectedRowURLs = [];
@@ -839,7 +849,8 @@
     }
 
     /**
-     * 匯出 TXT (僅 URLs)
+     * 🎯 TDD PDCA: 匯出 TXT (僅 URLs)
+     * Test: 匯出的 URL 應該是純文字格式
      */
     function exportTXT() {
         const selectedData = getSelectedData();
@@ -849,9 +860,22 @@
             return;
         }
 
+        // 🎯 PDCA: 提取並清理 URL（與 copyAllURLs 一致）
         const urls = selectedData
-            .map(item => item.URL)
-            .filter(url => url && url !== 'N/A');
+            .map(item => {
+                let url = item.URL;
+                
+                // 🎯 TDD: 如果 URL 包含 HTML 標籤，提取純 URL
+                if (url && typeof url === 'string' && url.includes('<a ')) {
+                    const match = url.match(/href="([^"]+)"/);
+                    if (match && match[1]) {
+                        url = match[1];
+                    }
+                }
+                
+                return url;
+            })
+            .filter(url => url && url !== 'N/A' && !url.includes('<input'));
 
         if (urls.length === 0) {
             alert('勾選的資料沒有有效的URL。\nNo valid URLs in selected items.');
@@ -860,10 +884,18 @@
 
         const textContent = urls.join('\n');
         downloadFile('selected_urls.txt', textContent, 'text/plain;charset=utf-8');
+        console.log(`✅ TDD Check: 已匯出 ${urls.length} 個純文字 URL 到 TXT 檔案`);
     }
 
     /**
-     * 複製所有選中的 URLs
+     * 🎯 TDD PDCA: 複製所有選中的 URLs
+     * 
+     * Test Cases:
+     * 1. ✅ 應該只複製已勾選的資料項目
+     * 2. ✅ 複製純文字 URL（不含 HTML 標籤）
+     * 3. ✅ 每個 URL 一行，用換行符號分隔
+     * 4. ✅ 過濾掉無效 URL (N/A 或空值)
+     * 5. ✅ 正確解析 DataTable 中可能包含的 HTML 格式 URL
      */
     async function copyAllURLs() {
         const selectedData = getSelectedData();
@@ -873,22 +905,37 @@
             return;
         }
 
+        // 🎯 PDCA Do: 提取並清理 URL
         const urls = selectedData
-            .map(item => item.URL)
-            .filter(url => url && url !== 'N/A');
+            .map(item => {
+                let url = item.URL;
+                
+                // 🎯 TDD: 如果 URL 包含 HTML 標籤，提取純 URL
+                if (url && typeof url === 'string' && url.includes('<a ')) {
+                    const match = url.match(/href="([^"]+)"/);
+                    if (match && match[1]) {
+                        url = match[1];
+                    }
+                }
+                
+                return url;
+            })
+            .filter(url => url && url !== 'N/A' && !url.includes('<input')); // 過濾無效值
 
         if (urls.length === 0) {
             alert('勾選的資料沒有有效的URL。\nNo valid URLs in selected items.');
             return;
         }
 
+        // 🎯 TDD: 組合純文字 URL，每個一行
         const urlText = urls.join('\n');
 
         try {
             await navigator.clipboard.writeText(urlText);
+            console.log(`✅ TDD Check: 已複製 ${urls.length} 個純文字 URL`);
             alert(`已複製 ${urls.length} 個URL到剪貼簿！\nCopied ${urls.length} URLs to clipboard!\n\n${urlText.substring(0, 200)}${urlText.length > 200 ? '...' : ''}`);
         } catch (error) {
-            console.error('Copy failed:', error);
+            console.error('❌ Copy failed:', error);
             alert('複製失敗，請手動複製。');
         }
     }

@@ -26,6 +26,43 @@
     let isLoadingComplete = false; // 載入完成標記
     // ✨ PDCA Plan: 自動載入所有資料,使用虛擬滾動優化渲染
 
+    // ==================== 效能優化工具 ====================
+    
+    /**
+     * 🎯 TDD: Debounce 函式 - 減少頻繁呼叫
+     * @param {Function} func - 要延遲執行的函式
+     * @param {number} wait - 延遲時間(ms)
+     * @returns {Function} - debounced 函式
+     */
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+
+    /**
+     * 🎯 TDD: Throttle 函式 - 限制執行頻率
+     * @param {Function} func - 要節流的函式
+     * @param {number} limit - 最小間隔時間(ms)
+     * @returns {Function} - throttled 函式
+     */
+    function throttle(func, limit) {
+        let inThrottle;
+        return function executedFunction(...args) {
+            if (!inThrottle) {
+                func(...args);
+                inThrottle = true;
+                setTimeout(() => inThrottle = false, limit);
+            }
+        };
+    }
+
     // ==================== 1. 資料載入與合併 ====================
     
     /**
@@ -140,19 +177,21 @@
         // 初始化選中的集團 (包含"無_Group")
         selectedGroups = [...groups];
 
-        // 綁定事件
+        // 綁定事件 - 🎯 使用 debounce 減少頻繁呼叫
+        const debouncedFilterUpdate = debounce(updateFilters, 200);
+        
         $('#select-all-groups').on('change', function() {
             console.log('🔄 全選集團:', this.checked ? '勾選' : '取消');
             $('.group-checkbox').prop('checked', this.checked);
             updateSchoolSelector();  // ✨ 更新學校列表
-            updateFilters();
+            debouncedFilterUpdate();
         });
 
         $('.group-checkbox').on('change', function() {
             const allChecked = $('.group-checkbox:checked').length === $('.group-checkbox').length;
             $('#select-all-groups').prop('checked', allChecked);
             updateSchoolSelector();  // ✨ 更新學校列表
-            updateFilters();
+            debouncedFilterUpdate();
         });
 
         console.log('✅ Group selector initialized:', groups.length, 'groups');
@@ -183,19 +222,21 @@
         // 初始化選中的國家
         selectedCountries = [...countries];
 
-        // 綁定事件
+        // 綁定事件 - 🎯 使用 debounce 減少頻繁呼叫
+        const debouncedCountryFilterUpdate = debounce(updateFilters, 200);
+        
         $('#select-all-countries').on('change', function() {
             console.log('🔄 全選國家:', this.checked ? '勾選' : '取消');
             $('.country-checkbox').prop('checked', this.checked);
             updateSchoolSelector();  // ✨ 更新學校列表
-            updateFilters();
+            debouncedCountryFilterUpdate();
         });
 
         $('.country-checkbox').on('change', function() {
             const allChecked = $('.country-checkbox:checked').length === $('.country-checkbox').length;
             $('#select-all-countries').prop('checked', allChecked);
             updateSchoolSelector();  // ✨ 更新學校列表
-            updateFilters();
+            debouncedCountryFilterUpdate();
         });
 
         console.log('✅ Country selector initialized (independent):', countries.length, 'countries');
@@ -208,9 +249,12 @@
         const container = document.getElementById('school-select');
         if (!container) return;
 
+        // 🎯 TDD: 使用 debounce 減少頻繁更新 (300ms 延遲)
+        const debouncedUpdate = debounce(updateSchoolSelector, 300);
+
         // 監聽 Group 和 Country 的變化來更新學校列表 (AND 邏輯) ✨
         $(document).on('change.schoolUpdate', '.group-checkbox, .country-checkbox', function() {
-            updateSchoolSelector();
+            debouncedUpdate();
         });
 
         updateSchoolSelector();
@@ -280,16 +324,18 @@
         // 更新全域變數 (不使用展開運算符,直接賦值) ✨
         selectedSchools = schools;
 
-        // 綁定事件
+        // 🎯 綁定事件 - 使用 debounce 減少頻繁呼叫
+        const debouncedSchoolFilterUpdate = debounce(updateFilters, 200);
+        
         $('#select-all-schools').on('change', function() {
             $('.school-checkbox').prop('checked', this.checked);
-            updateFilters();
+            debouncedSchoolFilterUpdate();
         });
 
         $('.school-checkbox').on('change', function() {
             const allChecked = $('.school-checkbox:checked').length === $('.school-checkbox').length;
             $('#select-all-schools').prop('checked', allChecked);
-            updateFilters();
+            debouncedSchoolFilterUpdate();
         });
 
         console.log('✅ School selector updated:', schools.length, 'schools (AND logic: groups AND countries)');
@@ -569,9 +615,9 @@
             dataTable.rows.add(formattedData).draw(false);
         }
 
-        // 🎯 PDCA Check: 自動繼續載入
+        // 🎯 TDD: 減少批次載入間隔，提升載入速度 (50ms → 5ms)
         if (loadIndex < allData.length) {
-            setTimeout(loadNextChunk, 10); // 10ms 間隔,快速載入但不阻塞 UI
+            setTimeout(loadNextChunk, 5); // 5ms 間隔，極速載入但不阻塞 UI
         } else {
             isLoadingComplete = true;
             const finalCount = dataTable.rows().count();

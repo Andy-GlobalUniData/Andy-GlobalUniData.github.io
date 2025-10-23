@@ -1,0 +1,361 @@
+/* ========================================
+   Base.css - 基礎變數與重置樣式
+   用途：定義 CSS Variables、Reset、全域樣式
+   ======================================== */
+
+/* ========================================
+   CSS Variables - 全域變數定義
+   ======================================== */
+
+:root {
+  /* === 間距系統 - Google/YouTube 風格（更緊湊）=== */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-2xl: 24px;
+  --spacing-3xl: 28px;
+  --spacing-4xl: 32px;
+
+  /* === 字體系統 === */
+  --font-family-base: Arial, 'Microsoft JhengHei', sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 13px;
+  --font-size-base: 14px;
+  --font-size-md: 15px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 32px;
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* === 圓角系統 - Google 風格（較小圓角）=== */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 8px;
+  --border-radius-xl: 12px;
+  --border-radius-2xl: 16px;
+  --border-radius-full: 9999px;
+
+  /* === 陰影系統 === */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 6px 16px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --shadow-2xl: 0 10px 40px rgba(0, 0, 0, 0.2);
+
+  /* === 過渡動畫 === */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.2s ease;
+  --transition-smooth: 0.3s ease;
+  --transition-slow: 0.4s ease;
+
+  /* === 漸層色 === */
+  --gradient-red-orange: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+  --gradient-purple: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-green: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  --gradient-yellow: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+  --gradient-pink: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-blue-gray: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+
+  /* === Z-index 層級 === */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* ========================================
+   CSS Reset & 基礎樣式
+   ======================================== */
+
+/* Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* HTML & Body */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color var(--transition-smooth), 
+              color var(--transition-smooth);
+}
+
+/* 標題重置 */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  color: var(--text-heading);
+}
+
+h1 { font-size: var(--font-size-4xl); }
+h2 { font-size: var(--font-size-3xl); }
+h3 { font-size: var(--font-size-2xl); }
+h4 { font-size: var(--font-size-xl); }
+h5 { font-size: var(--font-size-lg); }
+h6 { font-size: var(--font-size-md); }
+
+/* 段落 */
+p {
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+/* 連結 */
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+/* 按鈕重置 */
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+/* 輸入框重置 */
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  transition: border-color var(--transition-base),
+              box-shadow var(--transition-base);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-alpha);
+}
+
+/* 列表重置 */
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 圖片 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 表格 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+/* ========================================
+   通用工具類別
+   ======================================== */
+
+/* 隱藏元素 */
+.hidden {
+  display: none !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* 文字對齊 */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* Flex 工具 */
+.flex { display: flex; }
+.flex-column { flex-direction: column; }
+.flex-center { 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+.flex-between { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+/* 間距工具 */
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: var(--spacing-sm); }
+.mt-2 { margin-top: var(--spacing-md); }
+.mt-3 { margin-top: var(--spacing-lg); }
+.mt-4 { margin-top: var(--spacing-xl); }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: var(--spacing-sm); }
+.mb-2 { margin-bottom: var(--spacing-md); }
+.mb-3 { margin-bottom: var(--spacing-lg); }
+.mb-4 { margin-bottom: var(--spacing-xl); }
+
+.p-1 { padding: var(--spacing-sm); }
+.p-2 { padding: var(--spacing-md); }
+.p-3 { padding: var(--spacing-lg); }
+.p-4 { padding: var(--spacing-xl); }
+
+/* ========================================
+   捲動條樣式 (適用於 Webkit 瀏覽器)
+   ======================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-md);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: var(--border-radius-md);
+  transition: background var(--transition-base);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* ========================================
+   選取文字樣式
+   ======================================== */
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--text-on-primary);
+}
+
+::-moz-selection {
+  background-color: var(--color-primary);
+  color: var(--text-on-primary);
+}
+
+/* ========================================
+   載入動畫
+   ======================================== */
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes slideUp {
+  from { 
+    transform: translateY(20px); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
+
+@keyframes slideDown {
+  from { 
+    transform: translateY(-20px); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
+
+/* ========================================
+   Print 樣式
+   ======================================== */
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+}

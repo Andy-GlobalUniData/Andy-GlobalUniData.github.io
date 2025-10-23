@@ -1,0 +1,183 @@
+/* ========================================
+   Theme Light - 淺色模式主題
+   可選主題：明亮清新的配色
+   保留原有的漸層美學設計
+   ======================================== */
+
+[data-theme="light"] {
+  /* === 主色系 - GitHub 風格（低飽和度中性色）=== */
+  --color-primary: #0969da;  /* GitHub 藍 - 更低飽和度 */
+  --color-primary-hover: #0550ae;
+  --color-primary-alpha: rgba(9, 105, 218, 0.1);
+  
+  --color-secondary: #1a7f37;  /* GitHub 綠 - 偏灰綠 */
+  --color-secondary-hover: #116329;
+  
+  --color-accent: #cf222e;  /* GitHub 紅 - 偏灰紅 */
+  --color-accent-hover: #a40e26;
+
+  /* === 背景色系 - GitHub 風格（更簡潔）=== */
+  --bg-primary: #ffffff;      /* 純白 - 主背景 */
+  --bg-secondary: #f6f8fa;    /* 極淺灰 - 次要背景 */
+  --bg-tertiary: #f6f8fa;     /* 極淺灰 - 第三層背景 */
+  --bg-elevated: #ffffff;     /* 卡片/浮起元素背景 */
+  --bg-hover: #f6f8fa;        /* Hover 狀態背景 */
+  --bg-input: #ffffff;        /* 輸入框背景 */
+  --bg-modal: rgba(0, 0, 0, 0.5);  /* 模態框背景 */
+
+  /* === 文字色系 - GitHub 風格（中性灰階）=== */
+  --text-primary: #24292f;    /* 主要文字 - GitHub 深灰 */
+  --text-secondary: #57606a;  /* 次要文字 - GitHub 中灰 */
+  --text-tertiary: #6e7781;   /* 第三級文字 - GitHub 淺灰 */
+  --text-muted: #8c959f;      /* 減弱文字 - GitHub 很淺灰 */
+  --text-heading: #24292f;    /* 標題文字 */
+  --text-on-primary: #ffffff; /* 在主色上的文字 */
+  --text-link: #0969da;       /* 連結文字 - GitHub 藍 */
+
+  /* === 邊框色系 - GitHub 風格（極淡邊框）=== */
+  --border-color: #d0d7de;    /* 主要邊框 - GitHub 淺灰 */
+  --border-color-light: #d8dee4;  /* 淺色邊框 */
+  --border-color-dark: #afb8c1;   /* 深色邊框 */
+
+  /* === 功能色 - GitHub 風格（中性色調）=== */
+  --color-success: #1a7f37;   /* 成功 - GitHub 綠 */
+  --color-success-bg: #dafbe1;
+  --color-success-border: #a2e9b0;
+  
+  --color-warning: #9a6700;   /* 警告 - GitHub 黃褐 */
+  --color-warning-bg: #fff8c5;
+  --color-warning-border: #d8b700;
+  
+  --color-error: #cf222e;     /* 錯誤 - GitHub 紅 */
+  --color-error-bg: #ffebe9;
+  --color-error-border: #ff8182;
+  
+  --color-info: #0969da;      /* 資訊 - GitHub 藍 */
+  --color-info-bg: #ddf4ff;
+  --color-info-border: #54aeff;
+
+  /* === 區域特定顏色 - GitHub 風格（極簡單色）=== */
+  
+  /* 篩選控制面板 - 純白簡潔 */
+  --filter-panel-bg: #ffffff;
+  --filter-panel-shadow: rgba(31, 35, 40, 0.12);
+  --filter-card-bg: #f6f8fa;
+  --filter-card-border: #d0d7de;
+  --filter-card-hover-shadow: rgba(31, 35, 40, 0.18);
+  --filter-label-bg: #0969da;
+  
+  /* 科系關鍵字篩選 - 純白簡潔 */
+  --keyword-section-bg: #ffffff;
+  --keyword-section-shadow: rgba(31, 35, 40, 0.12);
+  --keyword-input-bg: #f6f8fa;
+  --keyword-input-border: #d0d7de;
+  --keyword-input-focus-border: #0969da;
+  --keyword-button-bg: #0969da;
+  --keyword-button-hover: #0550ae;
+  --keyword-tag-bg: #ddf4ff;
+  --keyword-tag-hover: #b6e3ff;
+  
+  /* 輸出按鈕區 - 純白簡潔 */
+  --export-section-bg: #ffffff;
+  --export-section-shadow: rgba(31, 35, 40, 0.12);
+  --export-button-bg: #f6f8fa;
+  --export-button-hover-bg: #eaeef2;
+  --export-button-shadow: rgba(31, 35, 40, 0.06);
+  
+  /* 表格區域 - GitHub 風格（白色背景）*/
+  --table-bg: #ffffff;
+  --table-border: #d0d7de;
+  --table-header-bg: #f6f8fa;
+  --table-row-even: #f6f8fa;
+  --table-row-hover: #eaeef2;
+  --table-title-border: #0969da;
+  
+  /* 統計卡片 - GitHub 風格（簡潔白色）*/
+  --stats-card-bg: #ffffff;
+  --stats-card-border: #0969da;
+  --stats-card-shadow: rgba(31, 35, 40, 0.12);
+  --stats-item-bg: #f6f8fa;
+  --stats-item-hover-shadow: rgba(31, 35, 40, 0.18);
+  
+  /* 使用說明區 - GitHub 風格（淺黃提示）*/
+  --guide-bg: #fff8c5;
+  --guide-border: #9a6700;
+  --guide-shadow: rgba(154, 103, 0, 0.15);
+  --guide-text: #24292f;
+  
+  /* 更新日誌彈窗 - Google 風格 */
+  --changelog-modal-bg: rgba(0, 0, 0, 0.4);
+  --changelog-content-bg: #ffffff;
+  --changelog-close-hover: #ea4335;
+  
+  /* 資料庫更新彈窗 - Google 風格 */
+  --database-modal-bg: rgba(0, 0, 0, 0.5);
+  --database-content-bg: #ffffff;
+  --database-stat-icon-bg: #1a73e8;
+  
+  /* === 捲動條 - GitHub 風格 === */
+  --scrollbar-thumb: #d0d7de;
+  --scrollbar-thumb-hover: #afb8c1;
+  --scrollbar-track: #f6f8fa;
+  
+  /* === DataTables 特定樣式 === */
+  --datatables-header-bg: #f6f8fa;
+  --datatables-header-text: #24292f;
+  --datatables-search-bg: #ffffff;
+  --datatables-search-border: #d0d7de;
+  --datatables-pagination-bg: #f6f8fa;
+  --datatables-pagination-hover: #0969da;
+  
+  /* === 連結顏色 === */
+  --color-link: #0969da;
+  --color-link-hover: #0550ae;
+  
+  /* === Floating Nav - GitHub 風格 === */
+  --floating-nav-bg: rgba(255, 255, 255, 0.98);
+  --floating-nav-border: #d0d7de;
+  --floating-nav-shadow: rgba(31, 35, 40, 0.18);
+  --floating-nav-link-hover: #f6f8fa;
+  
+  /* === 陰影 - GitHub 風格（極柔和陰影）=== */
+  --shadow-xs: 0 1px 2px rgba(31, 35, 40, 0.12);
+  --shadow-sm: 0 1px 3px rgba(31, 35, 40, 0.12);
+  --shadow-md: 0 3px 6px rgba(31, 35, 40, 0.12);
+  --shadow-lg: 0 6px 12px rgba(31, 35, 40, 0.12);
+  --shadow-xl: 0 8px 16px rgba(31, 35, 40, 0.12);
+  --shadow-2xl: 0 12px 24px rgba(31, 35, 40, 0.12);
+}
+
+/* ========================================
+   淺色模式特定調整
+   ======================================== */
+
+[data-theme="light"] body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* 選取文字顏色 (淺色模式) */
+[data-theme="light"] ::selection {
+  background-color: var(--color-primary);
+  color: var(--text-on-primary);
+}
+
+/* 輸入框 Focus 效果 (淺色模式) */
+[data-theme="light"] input:focus,
+[data-theme="light"] select:focus,
+[data-theme="light"] textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-alpha);
+}
+
+/* 淺色模式下的陰影增強 */
+[data-theme="light"] .card,
+[data-theme="light"] .table-container,
+[data-theme="light"] .select-container {
+  box-shadow: var(--shadow-md);
+}
+
+[data-theme="light"] .card:hover,
+[data-theme="light"] .select-container:hover {
+  box-shadow: var(--shadow-lg);
+}

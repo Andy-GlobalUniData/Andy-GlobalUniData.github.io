@@ -13,7 +13,7 @@
 }
 
 .changelog-modal-content {
-  background-color: #fff;
+  background: var(--changelog-content-bg);
   margin: 60px auto;
   padding: 30px 28px 18px 28px;
   border-radius: 12px;
@@ -25,7 +25,7 @@
 }
 
 .changelog-close {
-  color: #888;
+  color: var(--text-secondary);
   position: absolute;
   top: 12px;
   right: 18px;
@@ -36,7 +36,7 @@
 }
 
 .changelog-close:hover {
-  color: #f5222d;
+  color: var(--changelog-close-hover);
 }
 
 #changelog-list {
@@ -47,21 +47,59 @@
   line-height: 1.7;
 }
 
-#show-changelog {
-  background: #fadb14;
-  color: #222;
-  border: none;
-  border-radius: 6px;
-  padding: 7px 18px;
+/* 🎨 主題切換按鈕 */
+.theme-toggle-btn {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px 20px;
   font-size: 15px;
-  margin-left: 10px;
+  font-weight: 600;
+  margin-left: 0;
+  margin-right: 15px;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(250, 219, 20, 0.08);
-  transition: background 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  background: var(--bg-hover);
+  border-color: var(--color-primary);
+}
+
+.theme-toggle-btn:active {
+  transform: translateY(0);
+}
+
+#show-changelog {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 0;
+  margin-right: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
 #show-changelog:hover {
-  background: #ffe58f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  background: var(--bg-hover);
+}
+
+#show-changelog::before {
+  content: '📋 ';
 }
 
 @keyframes changelog-fadein {
@@ -79,7 +117,8 @@
 /* 全局設定 */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   margin: 0;
   /* 移除預設的 body margin */
   padding: 15px;
@@ -92,77 +131,109 @@ body {
   /* 確保 body 至少佔滿整個視窗高度 */
 }
 
-/* 頁首區域 (包含更新時間和匯出按鈕) */
+/* 頁首區域 (包含更新時間和匯出按鈕) - TDD 優化 */
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   flex-wrap: wrap;
-  /* 在小螢幕時允許換行 */
+  padding: 20px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.3);
 }
 
 .last-updated-container {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  /* 在小螢幕換行時增加底部間距 */
+  background: var(--bg-elevated);
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .last-updated-container h3 {
   margin-right: 10px;
   margin-bottom: 0;
-  /* 移除 h3 預設的底部間距 */
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
 #github-push-time {
   font-size: 16px;
-  color: #333;
+  color: var(--color-primary);
+  font-weight: 700;
 }
 
 .export-buttons {
-  /* 這是 export-buttons 的初始佈局樣式 */
   margin-left: auto;
-  /* 保持在右側 */
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-/* 選擇器區域 */
+/* 選擇器區域 - TDD 優化：使用漸層背景和明顯邊框 */
 .select-area-container {
   display: flex;
   justify-content: space-between;
-  /* 平均分配空間 */
   flex-wrap: wrap;
-  /* 在小螢幕時允許換行 */
   gap: 15px;
-  /* 項目之間的間距 */
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  padding: 25px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+  position: relative;
+}
+
+/* 篩選區域標題 */
+.select-area-container::before {
+  content: '🎯 篩選控制面板 (Filter Control Panel)';
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(245, 87, 108, 0.4);
 }
 
 .select-container {
-  border: 1px solid #ddd;
-  /* 稍微柔和的邊框 */
-  padding: 15px;
-  background-color: #fff;
-  /* 背景改為白色，更清晰 */
-  border-radius: 8px;
-  /* 更大的圓角 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  /* 細微陰影 */
+  border: 2px solid var(--filter-card-border);
+  padding: 20px;
+  background: var(--filter-card-bg);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   flex-grow: 1;
-  /* 允許容器擴展以填充可用空間 */
   min-width: 280px;
-  /* 設定最小寬度，避免在 flex 佈局中過度壓縮 */
   margin-bottom: 15px;
-  /* 在換行時提供間距 */
+  transition: all 0.3s ease;
+}
+
+.select-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px var(--filter-card-hover-shadow);
+  border-color: var(--color-primary);
 }
 
 .select-container h3 {
   margin-top: 0;
-  /* 移除 h3 頂部預設間距 */
   margin-bottom: 15px;
-  /* 增加標題和內容之間的間距 */
-  color: #333;
-  font-size: 1.1em;
+  color: var(--color-primary);
+  font-size: 1.2em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 8px;
 }
 
 #school-select {
@@ -192,7 +263,7 @@ body {
 /* 通用標題樣式 */
 h2 {
   /* 如果網頁中有 h2，也統一樣式 */
-  color: #007bff;
+  color: var(--color-link);
   font-weight: bold;
   margin-top: 25px;
   margin-bottom: 15px;
@@ -217,8 +288,8 @@ button {
 button {
   /* 更通用的按鈕樣式 */
   cursor: pointer;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--text-on-primary);
   border: none;
   /* 移除預設邊框 (如果上面 select, input[type="text"], button 的 border 不適用於所有 button) */
   transition: background-color 0.2s ease-in-out;
@@ -227,25 +298,55 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: var(--color-primary-hover);
   /* 滑鼠懸停時加深顏色 */
 }
 
 .export-buttons button {
-  /* 針對匯出按鈕容器內的按鈕 */
-  margin-left: 10px;
-  /* 匯出按鈕之間的間距 */
+  margin-left: 0;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  background: var(--export-button-bg);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.export-buttons button:first-child {
-  /* 如果希望第一個匯出按鈕沒有左邊距 */
-  margin-left: 0;
+.export-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--export-button-shadow);
+  background: var(--export-button-hover-bg);
+}
+
+.export-buttons button:active {
+  transform: translateY(0);
+}
+
+/* 為每個輸出按鈕添加圖示效果 */
+#export-json::before {
+  content: '📄 ';
+}
+
+#export-excel::before {
+  content: '📊 ';
+}
+
+#export-txt::before {
+  content: '📝 ';
+}
+
+#copy-all-urls::before {
+  content: '📋 ';
 }
 
 
 /* 連結樣式 */
 a {
-  color: #007bff;
+  color: var(--color-link);
   text-decoration: none;
 }
 
@@ -255,7 +356,7 @@ a:hover {
 
 /* 搜尋欄樣式 (如果取消註解使用) */
 .search-container {
-  background-color: #f9f9f9;
+  background: var(--bg-secondary);
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -280,17 +381,31 @@ a:hover {
   /* margin-bottom 已在上面 select, input[type="text"], button 處統一定義 */
 }
 
-/* 表格樣式 */
+/* 表格樣式 - TDD 優化：保持簡潔白色背景 */
 .table-container {
-  /* 為表格添加一個容器，方便管理樣式 */
   overflow-x: auto;
-  /* 允許表格水平滾動 */
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background: var(--table-bg);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  border: 1px solid var(--table-border);
+  position: relative;
+}
+
+.table-container h3 {
+  color: var(--text-heading);
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-top: 0;
   margin-bottom: 20px;
-  /* 與下方元素的間距 */
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--table-title-border);
+}
+
+.table-container h3::before {
+  content: '📊 ';
+  margin-right: 8px;
 }
 
 table.display {
@@ -305,14 +420,14 @@ td {
   padding: 12px 15px;
   text-align: left;
   /* 文字靠左，通常更易讀 */
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--table-border);
   /* 更細緻的邊框 */
 }
 
 th {
-  background-color: #f0f2f5;
+  background: var(--table-header-bg);
   /* 更柔和的表頭背景色 */
-  color: #333;
+  color: var(--text-primary);
   /* 深色文字 */
   font-weight: bold;
   /* 加粗表頭文字 */
@@ -321,16 +436,17 @@ th {
 }
 
 td {
-  background-color: #ffffff;
+  background: var(--table-bg);
+  color: var(--text-primary);
   word-wrap: break-word;
 }
 
 tr:nth-child(even) td {
-  background-color: #f9f9f9;
+  background: var(--table-row-even);
 }
 
 tr:hover td {
-  background-color: #e9ecef;
+  background: var(--table-row-hover);
   /* 懸停時的背景色 */
 }
 
@@ -395,24 +511,30 @@ tr:hover td {
   /* 讓瀏覽器自動決定列寬 */
 }
 
-/* School Data Table 容器樣式 */
+/* School Data Table 容器樣式 - TDD 優化 */
 #school-data-table-container {
-  border: 1px solid #ddd;
-  background-color: #fff;
-  padding: 0;
-  /* 內部的 table-container 會處理 padding */
-  border-radius: 8px;
-  margin-top: 20px;
-  /* 與上方表格的間距 */
+  border: 1px solid var(--table-border);
+  background: var(--table-bg);
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 #school-data-table-container h3 {
-  margin: 15px;
-  /* 標題的內邊距 */
-  padding-bottom: 10px;
-  /* 標題下方的間距 */
-  border-bottom: 1px solid #eee;
-  /* 標題下的分隔線 */
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--color-secondary);
+  color: var(--text-heading);
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+#school-data-table-container h3::before {
+  content: '🏫 ';
+  margin-right: 8px;
 }
 
 /* --- 懸浮按鈕樣式 --- */
@@ -425,7 +547,7 @@ tr:hover td {
   /* 距離視窗右側的距離 */
   z-index: 1000;
   /* 確保它在其他元素之上 */
-  background-color: white;
+  background: var(--bg-elevated);
   /* 可選：添加背景色以避免文字重疊 */
   padding: 10px;
   /* 可選：添加一些內邊距 */
@@ -584,11 +706,11 @@ tr:hover td {
 .copyright-footer {
   margin-top: 40px;
   padding: 20px;
-  border-top: 1px solid #ddd;
-  background-color: #f8f9fa;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-secondary);
   text-align: center;
   font-size: 14px;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .copyright-container {
@@ -607,7 +729,7 @@ tr:hover td {
 .copyright-author a,
 .copyright-contact a,
 .copyright-links a {
-  color: #007bff;
+  color: var(--color-link);
   text-decoration: none;
 }
 
@@ -630,13 +752,33 @@ tr:hover td {
 }
 
 /* ========================================
-   Tag Filter 標籤篩選樣式 (簡潔版)
+   Tag Filter 標籤篩選樣式 (TDD 優化版)
    ======================================== */
 
-/* 標籤篩選區域容器 - 與其他篩選器一致 */
+/* 標籤篩選區域容器 - 使用綠色漸層主題 */
 #tag-filter-section {
   margin-top: 15px;
+  margin-bottom: 30px;
   max-width: 100%;
+  padding: 25px;
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(17, 153, 142, 0.3);
+  position: relative;
+}
+
+/* 標籤篩選區域標題 */
+#tag-filter-section h3 {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.3em;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#tag-filter-section h3::before {
+  content: '🔍 ';
 }
 
 /* 標籤輸入區 */
@@ -649,70 +791,81 @@ tr:hover td {
 /* 標籤輸入框 */
 #tag-filter-input {
   flex: 1;
-  padding: 10px 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 14px;
+  padding: 14px 16px;
+  border: 2px solid var(--keyword-input-border);
+  border-radius: 8px;
+  font-size: 15px;
   font-family: inherit;
-  transition: border-color 0.2s;
+  transition: all 0.3s;
   outline: none;
-  background: white;
+  background: var(--keyword-input-bg);
+  color: var(--text-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 #tag-filter-input:focus {
-  border-color: #4CAF50;
-  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.1);
+  border-color: var(--keyword-input-focus-border);
+  box-shadow: 0 4px 16px rgba(56, 239, 125, 0.3);
+  transform: translateY(-2px);
 }
 
 #tag-filter-input::placeholder {
-  color: #999;
+  color: var(--text-muted);
 }
 
-/* 新增標籤按鈕 - 簡潔設計 */
+/* 新增標籤按鈕 - 醒目設計 */
 #add-tag-btn {
-  padding: 10px 20px;
-  background: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 500;
+  padding: 14px 28px;
+  background: var(--keyword-button-bg);
+  color: var(--text-on-primary);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.3s;
   white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 #add-tag-btn:hover {
-  background: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  background: var(--keyword-button-hover);
 }
 
 #add-tag-btn:active {
-  background: #3d8b40;
+  transform: translateY(0);
+}
+
+#add-tag-btn::before {
+  content: '➕ ';
 }
 
 /* 標籤容器 */
 .tag-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  min-height: 50px;
-  padding: 12px;
-  background: #f9f9f9;
-  border-radius: 4px;
-  border: 1px dashed #ddd;
-  transition: border-color 0.2s;
+  gap: 10px;
+  min-height: 60px;
+  padding: 16px;
+  background: var(--keyword-input-bg);
+  border-radius: 8px;
+  border: 2px solid var(--keyword-input-border);
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .tag-container:has(.filter-tag) {
   border-style: solid;
-  border-color: #ccc;
-  background: #fafafa;
+  border-color: var(--keyword-input-focus-border);
+  background: var(--keyword-input-bg);
 }
 
 /* 空狀態提示 */
 .empty-state {
   width: 100%;
-  color: #999;
+  color: var(--text-muted);
   font-style: italic;
   text-align: center;
   padding: 15px;
@@ -729,8 +882,8 @@ tr:hover td {
   align-items: center;
   gap: 8px;
   padding: 6px 12px;
-  background: #e0e0e0;
-  color: #333;
+  background: var(--keyword-tag-bg);
+  color: var(--text-primary);
   border-radius: 16px;
   font-size: 13px;
   font-weight: 500;
@@ -741,7 +894,7 @@ tr:hover td {
 }
 
 .filter-tag:hover {
-  background: #d5d5d5;
+  background: var(--keyword-tag-hover);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   transform: translateY(-1px);
 }
@@ -781,12 +934,12 @@ tr:hover td {
   transition: all 0.2s;
   line-height: 1;
   flex-shrink: 0;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .filter-tag .remove-tag:hover {
-  background: #f44336;
-  color: white;
+  background: var(--color-error);
+  color: var(--text-on-primary);
   transform: rotate(90deg) scale(1.1);
 }
 
@@ -816,7 +969,7 @@ tr:hover td {
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: var(--database-modal-bg);
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   align-items: center;
@@ -825,7 +978,7 @@ tr:hover td {
 }
 
 .database-modal-content {
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  background: var(--database-content-bg);
   border-radius: 16px;
   padding: 32px;
   width: 90%;
@@ -841,21 +994,21 @@ tr:hover td {
   right: 20px;
   font-size: 32px;
   font-weight: bold;
-  color: #888;
+  color: var(--text-secondary);
   cursor: pointer;
   transition: all 0.2s;
   line-height: 1;
 }
 
 .database-modal-close:hover {
-  color: #f5222d;
+  color: var(--changelog-close-hover);
   transform: rotate(90deg);
 }
 
 .database-modal-content h2 {
   margin: 0 0 24px 0;
   font-size: 24px;
-  color: #1a1a1a;
+  color: var(--text-heading);
   text-align: center;
   font-weight: 600;
 }
@@ -873,7 +1026,7 @@ tr:hover td {
   align-items: center;
   gap: 16px;
   padding: 16px;
-  background: white;
+  background: var(--stats-item-bg);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   transition: all 0.3s;
@@ -891,7 +1044,7 @@ tr:hover td {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--database-stat-icon-bg);
   border-radius: 12px;
   flex-shrink: 0;
 }
@@ -902,14 +1055,14 @@ tr:hover td {
 
 .stat-label {
   font-size: 13px;
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 4px;
   font-weight: 500;
 }
 
 .stat-value {
   font-size: 20px;
-  color: #1a1a1a;
+  color: var(--text-heading);
   font-weight: 700;
 }
 
@@ -923,8 +1076,8 @@ tr:hover td {
   padding: 14px 24px;
   font-size: 16px;
   font-weight: 600;
-  color: white;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: var(--text-on-primary);
+  background: var(--database-stat-icon-bg);
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -956,7 +1109,7 @@ tr:hover td {
   width: 16px;
   height: 16px;
   border: 2px solid rgba(255, 255, 255, 0.3);
-  border-top-color: white;
+  border-top-color: var(--text-on-primary);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -977,21 +1130,21 @@ tr:hover td {
 }
 
 .update-message.success {
-  background: #f6ffed;
-  border: 1px solid #b7eb8f;
-  color: #52c41a;
+  background: var(--color-success-bg);
+  border: 1px solid var(--color-success-border);
+  color: var(--color-success);
 }
 
 .update-message.error {
-  background: #fff2f0;
-  border: 1px solid #ffccc7;
-  color: #ff4d4f;
+  background: var(--color-error-bg);
+  border: 1px solid var(--color-error-border);
+  color: var(--color-error);
 }
 
 .update-message.info {
-  background: #e6f7ff;
-  border: 1px solid #91d5ff;
-  color: #1890ff;
+  background: var(--color-info-bg);
+  border: 1px solid var(--color-info-border);
+  color: var(--color-info);
 }
 
 /* 頁腳提示 */
@@ -999,11 +1152,11 @@ tr:hover td {
   text-align: center;
   margin-top: 20px;
   padding-top: 16px;
-  border-top: 1px solid #e8e8e8;
+  border-top: 1px solid var(--border-color);
 }
 
 .modal-footer small {
-  color: #888;
+  color: var(--text-secondary);
   font-size: 13px;
 }
 
@@ -1026,6 +1179,131 @@ tr:hover td {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+/* ========================================
+   TDD 優化：統計資訊卡片樣式
+   ======================================== */
+
+#table-stats,
+#school-table-stats {
+  margin: 20px 0;
+  padding: 20px;
+  background: var(--stats-card-bg);
+  border-radius: 10px;
+  border-left: 5px solid var(--stats-card-border);
+  box-shadow: var(--stats-card-shadow);
+  color: var(--text-primary);
+}
+
+/* 統計數值顏色 */
+.stat-value-primary {
+  color: var(--color-info);
+  font-weight: bold;
+}
+
+.stat-value-success {
+  color: var(--color-success);
+  font-weight: bold;
+}
+
+.stat-value-warning {
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+/* 使用說明樣式 */
+.user-guide {
+  background: var(--guide-bg);
+  border: 1px solid var(--guide-border);
+  padding: 18px 22px;
+  margin: 22px 0;
+  border-radius: 8px;
+  color: var(--guide-text);
+  box-shadow: var(--guide-shadow);
+}
+
+.user-guide strong {
+  color: var(--text-heading);
+}
+
+#table-stats > div,
+#school-table-stats > div {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#table-stats > div > div,
+#school-table-stats > div > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+#table-stats > div > div:hover,
+#school-table-stats > div > div:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+#table-stats strong,
+#school-table-stats strong {
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#table-stats span,
+#school-table-stats span {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#loaded-count,
+#school-total-count {
+  color: #2196f3 !important;
+}
+
+#display-count,
+#school-display-count {
+  color: #4caf50 !important;
+}
+
+#school-country-count {
+  color: #ff9800 !important;
+}
+
+/* ========================================
+   TDD 優化：使用說明區域
+   ======================================== */
+
+.user-guide {
+  background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%) !important;
+  border: 2px solid #fdcb6e !important;
+  padding: 20px 25px !important;
+  margin: 25px 0 30px 0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(253, 203, 110, 0.3) !important;
+  line-height: 1.8 !important;
+  font-size: 15px !important;
+}
+
+.user-guide strong {
+  color: #2d3436;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.user-guide strong::before {
+  content: '📖 ';
 }
 
 @keyframes messageSlideIn {

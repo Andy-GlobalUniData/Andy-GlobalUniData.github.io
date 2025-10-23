@@ -263,6 +263,7 @@
     /**
      * 更新 School 選擇器 (AND 邏輯 - 集團 AND 國家的交集) ✨
      * 記憶體優化版本: 減少中間陣列,使用 Array.from 代替展開運算符
+     * 🎯 TDD: 加入搜尋功能 - 可以即時過濾學校名稱
      */
     function updateSchoolSelector() {
         const container = document.getElementById('school-select');
@@ -309,36 +310,98 @@
             )
         ).sort();
 
+        // 🎯 TDD: 保留搜尋框的值 (如果存在)
+        const existingSearchValue = document.getElementById('school-search-input')?.value || '';
+
         // 使用陣列 join 代替字串拼接,提升效能 ✨
         const htmlParts = [
             '<h3>Select School</h3>',
+            // 🎯 TDD: 新增搜尋輸入框
+            '<div class="search-box">',
+            '<input type="text" id="school-search-input" placeholder="🔍 搜尋學校名稱... (Search school name)" autocomplete="off">',
+            '</div>',
+            '<div class="school-checkbox-container">',
             '<label><input type="checkbox" id="select-all-schools" checked> 全選學校</label><br>'
         ];
         
         schools.forEach(school => {
-            htmlParts.push(`<label><input type="checkbox" class="school-checkbox" value="${school}" checked> ${school}</label><br>`);
+            htmlParts.push(`<label class="school-item"><input type="checkbox" class="school-checkbox" value="${school}" checked> ${school}</label>`);
         });
+        
+        htmlParts.push('</div>');
         
         container.innerHTML = htmlParts.join('');  // 一次性寫入 DOM ✨
 
+        // 🎯 TDD: 恢復搜尋框的值
+        const searchInput = document.getElementById('school-search-input');
+        if (searchInput && existingSearchValue) {
+            searchInput.value = existingSearchValue;
+            filterSchoolsBySearch(existingSearchValue);
+        }
+
         // 更新全域變數 (不使用展開運算符,直接賦值) ✨
         selectedSchools = schools;
+
+        // 🎯 TDD: 綁定搜尋事件 - 使用 debounce 優化效能
+        const debouncedSchoolSearch = debounce(function(searchText) {
+            filterSchoolsBySearch(searchText);
+        }, 150);
+
+        if (searchInput) {
+            searchInput.addEventListener('input', function() {
+                debouncedSchoolSearch(this.value);
+            });
+        }
 
         // 🎯 綁定事件 - 使用 debounce 減少頻繁呼叫
         const debouncedSchoolFilterUpdate = debounce(updateFilters, 200);
         
         $('#select-all-schools').on('change', function() {
-            $('.school-checkbox').prop('checked', this.checked);
+            // 🎯 TDD: 只影響可見的勾選框
+            const visibleCheckboxes = $('.school-checkbox').filter(function() {
+                return $(this).closest('.school-item').is(':visible');
+            });
+            visibleCheckboxes.prop('checked', this.checked);
             debouncedSchoolFilterUpdate();
         });
 
         $('.school-checkbox').on('change', function() {
-            const allChecked = $('.school-checkbox:checked').length === $('.school-checkbox').length;
-            $('#select-all-schools').prop('checked', allChecked);
+            const totalCheckboxes = $('.school-checkbox').length;
+            const checkedCheckboxes = $('.school-checkbox:checked').length;
+            $('#select-all-schools').prop('checked', totalCheckboxes === checkedCheckboxes);
             debouncedSchoolFilterUpdate();
         });
 
         console.log('✅ School selector updated:', schools.length, 'schools (AND logic: groups AND countries)');
+    }
+
+    /**
+     * 🎯 TDD: 根據搜尋文字過濾學校列表
+     * @param {string} searchText - 搜尋關鍵字
+     */
+    function filterSchoolsBySearch(searchText) {
+        const items = document.querySelectorAll('.school-item');
+        const searchLower = searchText.toLowerCase().trim();
+        
+        let visibleCount = 0;
+        
+        items.forEach(item => {
+            const checkbox = item.querySelector('.school-checkbox');
+            if (!checkbox) return;
+            
+            const schoolName = checkbox.value.toLowerCase();
+            
+            // 如果搜尋為空或學校名稱包含搜尋文字，則顯示
+            if (searchLower === '' || schoolName.includes(searchLower)) {
+                item.style.display = '';
+                visibleCount++;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+        
+        console.log(`🔍 School search: "${searchText}" - ${visibleCount} schools visible`);
+        return visibleCount;
     }
 
     /**

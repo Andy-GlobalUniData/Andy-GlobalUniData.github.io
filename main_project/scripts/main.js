@@ -1012,6 +1012,37 @@
         console.log('✅ Changelog initialized');
     }
 
+    /**
+     * 🎯 初始化科系關鍵字自動完成功能
+     */
+    function initDepartmentAutocomplete() {
+        const tagInput = document.getElementById('tag-filter-input');
+        
+        if (!tagInput) {
+            console.warn('⚠️ Tag filter input not found, skipping autocomplete initialization');
+            return;
+        }
+
+        // 檢查 DepartmentAutocomplete 類別是否存在
+        if (typeof DepartmentAutocomplete === 'undefined') {
+            console.warn('⚠️ DepartmentAutocomplete class not found');
+            return;
+        }
+
+        // 建立自動完成實例
+        const autocomplete = new DepartmentAutocomplete(tagInput, {
+            debounceDelay: 150,
+            maxResults: 50,
+            minChars: 1,
+            onSelect: (selectedDepartment) => {
+                console.log('✅ Selected department:', selectedDepartment);
+                // 不需要額外處理，因為 tagFilter.js 會監聽 input 的變化
+            }
+        });
+
+        console.log('✅ Department Autocomplete initialized');
+    }
+
     // ==================== 6. 主初始化流程 ====================
 
     /**
@@ -1045,8 +1076,11 @@
             // 6. 初始化 UI
             initFloatingNav();
             initChangelog();
+            
+            // 7. 初始化科系關鍵字自動完成 🎯
+            initDepartmentAutocomplete();
 
-            // 7. 綁定學位過濾器變化事件
+            // 8. 綁定學位過濾器變化事件
             $(document).on('change', '.degree-checkbox', updateFilters);
 
             console.log('✅ Application initialized successfully!');

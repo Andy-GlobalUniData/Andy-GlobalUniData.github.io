@@ -157,6 +157,17 @@
   color: var(--text-primary);
 }
 
+/* 🎯 自動完成下拉選單 - 深色模式 */
+[data-theme="dark"] .autocomplete-dropdown {
+  --dropdown-bg: #1e293b;
+  --dropdown-border: #475569;
+  --dropdown-item-border: #334155;
+  --dropdown-item-hover: #7c3aed;
+  --scrollbar-track: #1e293b;
+  --scrollbar-thumb: #475569;
+  --scrollbar-thumb-hover: #64748b;
+}
+
 /* 選取文字顏色 (深色模式) */
 [data-theme="dark"] ::selection {
   background-color: var(--color-primary);

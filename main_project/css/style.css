@@ -825,9 +825,15 @@ tr:hover td {
   margin-bottom: 15px;
 }
 
+/* 🎯 自動完成容器 */
+.autocomplete-wrapper {
+  position: relative;
+  flex: 1;
+}
+
 /* 標籤輸入框 */
 #tag-filter-input {
-  flex: 1;
+  width: 100%;
   padding: 14px 16px;
   border: 2px solid var(--keyword-input-border);
   border-radius: 8px;
@@ -848,6 +854,79 @@ tr:hover td {
 
 #tag-filter-input::placeholder {
   color: var(--text-muted);
+}
+
+/* 🎯 自動完成下拉選單 */
+.autocomplete-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: var(--dropdown-bg, #ffffff);
+  border: 2px solid var(--dropdown-border, #e5e7eb);
+  border-radius: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  animation: dropdown-fadein 0.2s ease-out;
+}
+
+@keyframes dropdown-fadein {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🎯 自動完成選項 */
+.autocomplete-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--dropdown-item-border, #f3f4f6);
+}
+
+.autocomplete-item:last-child {
+  border-bottom: none;
+}
+
+.autocomplete-item:hover,
+.autocomplete-item.active {
+  background: var(--dropdown-item-hover, #667eea);
+  color: var(--text-on-primary, #ffffff);
+}
+
+/* 🎯 無結果訊息 */
+.autocomplete-no-results {
+  padding: 16px;
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* 🎯 自動完成滾動條美化 */
+.autocomplete-dropdown::-webkit-scrollbar {
+  width: 8px;
+}
+
+.autocomplete-dropdown::-webkit-scrollbar-track {
+  background: var(--scrollbar-track, #f1f1f1);
+  border-radius: 4px;
+}
+
+.autocomplete-dropdown::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb, #888);
+  border-radius: 4px;
+}
+
+.autocomplete-dropdown::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover, #555);
 }
 
 /* 新增標籤按鈕 - 醒目設計 */

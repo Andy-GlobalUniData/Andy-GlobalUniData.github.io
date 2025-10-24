@@ -1,0 +1,129 @@
+/* ========================================
+   Theme Light V2 - 淺色模式主題
+   ======================================== */
+
+[data-theme="light"] {
+  /* === 主色系 - 單一藍色 === */
+  --color-primary: #2196F3;  /* 藍色 */
+  --color-primary-hover: #1976D2;
+  --color-primary-light: rgba(33, 150, 243, 0.1);
+
+  /* === 背景色系 === */
+  --bg-primary: #FFFFFF;      /* 純白 - 主背景 */
+  --bg-secondary: #F5F5F5;    /* 極淺灰 - 次要背景 */
+  --bg-elevated: #FFFFFF;     /* 卡片/浮起元素背景 */
+  --bg-hover: #F5F5F5;        /* Hover 狀態背景 */
+
+  /* === 文字色系 === */
+  --text-primary: #212121;    /* 主要文字 - 深灰 */
+  --text-secondary: #757575;  /* 次要文字 - 中灰 */
+  --text-muted: #9E9E9E;      /* 減弱文字 - 淺灰 */
+
+  /* === 邊框色系 === */
+  --border-color: #E0E0E0;    /* 主要邊框 */
+  --border-color-light: #EEEEEE;  /* 淺色邊框 */
+
+  /* === 功能色 === */
+  --color-success: #4CAF50;   /* 成功 - 綠 */
+  --color-warning: #FF9800;   /* 警告 - 橙 */
+  --color-danger: #F44336;    /* 錯誤 - 紅 */
+  --color-info: #2196F3;      /* 資訊 - 藍 */
+
+  /* === 灰階系統 === */
+  --gray-50: #FAFAFA;
+  --gray-100: #F5F5F5;
+  --gray-200: #EEEEEE;
+  --gray-300: #E0E0E0;
+  --gray-400: #BDBDBD;
+  --gray-500: #9E9E9E;
+  --gray-600: #757575;
+  --gray-700: #616161;
+  --gray-800: #424242;
+  --gray-900: #212121;
+
+  /* === 陰影系統 === */
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  /* === 更新日誌彈窗 === */
+  --changelog-content-bg: var(--bg-elevated);
+  --changelog-close-hover: var(--text-primary);
+
+  /* === 資料庫更新彈窗 === */
+  --database-modal-bg: var(--bg-elevated);
+  --database-modal-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+
+  /* === Floating Nav === */
+  --floating-nav-bg: var(--bg-elevated);
+  --floating-nav-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --floating-nav-hover: var(--bg-hover);
+
+  /* === DataTables === */
+  --datatable-bg: var(--bg-elevated);
+  --datatable-header-bg: var(--bg-secondary);
+  --datatable-border: var(--border-color);
+  --datatable-hover: var(--bg-hover);
+  
+  /* === 過渡效果 === */
+  color-scheme: light;
+}
+
+/* ========================================
+   淺色模式特定樣式
+   ======================================== */
+
+[data-theme="light"] {
+  /* 滾動條樣式 */
+  scrollbar-color: var(--gray-400) var(--gray-100);
+}
+
+[data-theme="light"] ::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: var(--gray-100);
+  border-radius: 4px;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: var(--gray-400);
+  border-radius: 4px;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-500);
+}
+
+/* 輸入框樣式 */
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="light"] input:focus,
+[data-theme="light"] textarea:focus,
+[data-theme="light"] select:focus {
+  border-color: var(--color-primary);
+  background: var(--bg-primary);
+}
+
+/* 連結樣式 */
+[data-theme="light"] a {
+  color: var(--color-primary);
+}
+
+[data-theme="light"] a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* 程式碼區塊 */
+[data-theme="light"] code,
+[data-theme="light"] pre {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}

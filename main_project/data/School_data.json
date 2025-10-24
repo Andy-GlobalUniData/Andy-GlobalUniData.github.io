@@ -17,7 +17,7 @@
     "URL": "https://www.bathspa.ac.uk//courses/?page=1000",
     "latitude": 51.374858,
     "longitude": -2.4387146,
-    "Number_of_departments": 231
+    "Number_of_departments": 234
   },
   {
     "School_name": "Bournemouth University",
@@ -47,7 +47,7 @@
     "URL": "https://www.cardiff.ac.uk/study/undergraduate/courses/a-to-z",
     "latitude": 51.4887426,
     "longitude": -3.1795999,
-    "Number_of_departments": 211
+    "Number_of_departments": 212
   },
   {
     "School_name": "Carnegie Mellon University",
@@ -97,7 +97,7 @@
     "URL": "https://drew.edu/academic/programs-of-study/",
     "latitude": 40.7605379,
     "longitude": -74.4281605,
-    "Number_of_departments": 130
+    "Number_of_departments": 119
   },
   {
     "School_name": "Durham University",
@@ -247,7 +247,7 @@
     "URL": "https://www.ncl.ac.uk/postgraduate/degrees/",
     "latitude": 54.980175,
     "longitude": -1.6146802,
-    "Number_of_departments": 300
+    "Number_of_departments": 301
   },
   {
     "School_name": "Oregon State University",
@@ -267,7 +267,7 @@
     "URL": "https://www.qub.ac.uk/courses/",
     "latitude": 54.5842881,
     "longitude": -5.9336562,
-    "Number_of_departments": 494
+    "Number_of_departments": 495
   },
   {
     "School_name": "Queen's University Belfast International Study Centre",
@@ -327,7 +327,7 @@
     "URL": "https://catalog.siu.edu/programs/",
     "latitude": 37.7083423,
     "longitude": -89.2275556,
-    "Number_of_departments": 520
+    "Number_of_departments": 507
   },
   {
     "School_name": "Suffolk University Boston",
@@ -410,6 +410,16 @@
     "Number_of_departments": 235
   },
   {
+    "School_name": "University College Dublin",
+    "Country": "Ireland",
+    "City": "Dublin",
+    "合作集團": "StudyGroup",
+    "URL": "https://www.ucd.ie/a-z/",
+    "latitude": 53.3081294,
+    "longitude": -6.2270405,
+    "Number_of_departments": 85
+  },
+  {
     "School_name": "University of Brighton",
     "Country": "United Kingdom",
     "City": "Brighton",
@@ -447,7 +457,7 @@
     "URL": "https://www.southampton.ac.uk/courses/undergraduate?keyword_filter=",
     "latitude": 50.9341804,
     "longitude": -1.3974844,
-    "Number_of_departments": 457
+    "Number_of_departments": 458
   },
   {
     "School_name": "University of Warwick",
@@ -457,6 +467,6 @@
     "URL": "https://warwick.ac.uk/study/postgraduate/courses/",
     "latitude": 52.3813073,
     "longitude": -1.5639569,
-    "Number_of_departments": 429
+    "Number_of_departments": 430
   }
 ]

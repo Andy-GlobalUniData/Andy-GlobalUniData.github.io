@@ -1,0 +1,740 @@
+/* ========================================
+   Style-v2.css - 重新設計版本
+   目標：簡潔、專業、一致
+   ======================================== */
+
+/* ========================================
+   1. 更新日誌彈窗樣式
+   ======================================== */
+.changelog-modal {
+  display: none;
+  position: fixed;
+  z-index: var(--z-modal);
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.changelog-modal-content {
+  background: var(--bg-elevated);
+  margin: 60px auto;
+  padding: var(--spacing-3xl) var(--spacing-2xl);
+  border-radius: var(--border-radius-xl);
+  width: 95%;
+  max-width: 500px;
+  box-shadow: var(--shadow-xl);
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.changelog-close {
+  color: var(--text-secondary);
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-lg);
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color var(--transition-base);
+}
+
+.changelog-close:hover {
+  color: var(--text-primary);
+}
+
+#changelog-list {
+  max-height: 350px;
+  overflow-y: auto;
+  margin-top: var(--spacing-lg);
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+}
+
+/* ========================================
+   2. 按鈕統一樣式
+   ======================================== */
+
+/* 主要按鈕 */
+.btn-primary,
+#show-changelog {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.btn-primary:hover,
+#show-changelog:hover {
+  background: var(--color-primary-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active,
+#show-changelog:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+/* 次要按鈕 */
+.btn-secondary {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-hover);
+  border-color: var(--color-primary);
+}
+
+/* 圖標前綴 */
+#show-changelog::before {
+  content: '📋';
+}
+
+/* 動畫定義 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   3. 全局設定
+   ======================================== */
+body {
+  font-family: var(--font-family-base);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}
+
+/* ========================================
+   4. 頁首區域 - 增加識別性
+   ======================================== */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-4xl);
+  flex-wrap: wrap;
+  padding: var(--spacing-2xl);
+  background: var(--bg-elevated);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  gap: var(--spacing-lg);
+  border-top: 3px solid var(--color-primary);
+}
+
+.last-updated-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.last-updated-container h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+}
+
+.last-updated-container h3::before {
+  content: '🕒 ';
+}
+
+#github-push-time {
+  font-size: var(--font-size-base);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.export-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.export-buttons button {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.export-buttons button:hover {
+  background: var(--bg-hover);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* ========================================
+   5. 選擇器區域 - 增加區隔識別
+   ======================================== */
+.select-area-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-4xl);
+  padding: var(--spacing-2xl);
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-lg);
+  border-left: 4px solid var(--color-primary);
+  position: relative;
+}
+
+/* 區域標題 - 增加識別性 */
+.select-area-container::before {
+  content: '🎯 篩選控制';
+  position: absolute;
+  top: -12px;
+  left: var(--spacing-lg);
+  background: var(--color-primary);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-lg);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  box-shadow: var(--shadow-sm);
+}
+
+.select-container {
+  border: 1px solid var(--border-color);
+  padding: var(--spacing-xl);
+  background: var(--bg-elevated);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  flex-grow: 1;
+  min-width: 280px;
+  transition: all var(--transition-base);
+}
+
+.select-container:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.select-container h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+/* 為不同選擇器添加圖標 */
+#group-select h3::before { content: '👥'; }
+#country-select h3::before { content: '🌍'; }
+#school-select h3::before { content: '🏫'; }
+#degree-select h3::before { content: '🎓'; }
+
+/* ========================================
+   6. 學校搜尋框樣式
+   ======================================== */
+.search-box {
+  margin-bottom: var(--spacing-lg);
+}
+
+#school-search-input {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-base);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: all var(--transition-base);
+  box-sizing: border-box;
+}
+
+#school-search-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+#school-search-input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+/* ========================================
+   7. 學校勾選框容器
+   ======================================== */
+.school-checkbox-container {
+  max-height: 250px;
+  overflow-y: auto;
+  padding: var(--spacing-xs) 0;
+}
+
+.school-item {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  transition: background var(--transition-fast);
+  border-radius: var(--border-radius-sm);
+}
+
+.school-item:hover {
+  background: var(--bg-hover);
+}
+
+.school-item label {
+  font-size: var(--font-size-base);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: var(--spacing-sm);
+}
+
+.school-item input[type="checkbox"] {
+  margin-right: var(--spacing-sm);
+  cursor: pointer;
+}
+
+/* ========================================
+   8. 使用說明 - 增加區隔識別
+   ======================================== */
+.user-guide {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--color-info);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-4xl);
+  border-radius: var(--border-radius-md);
+  line-height: 1.8;
+  font-size: var(--font-size-base);
+  position: relative;
+}
+
+/* 使用說明標題標籤 */
+.user-guide::before {
+  content: '💡 使用說明';
+  position: absolute;
+  top: -12px;
+  left: var(--spacing-lg);
+  background: var(--color-info);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-lg);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ========================================
+   9. 表格容器 - 增加區隔識別
+   ======================================== */
+.table-container,
+#school-data-table-container {
+  background: var(--bg-elevated);
+  padding: var(--spacing-2xl);
+  margin-bottom: var(--spacing-4xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--color-warning);
+  position: relative;
+}
+
+/* 表格區域標題標籤 */
+.table-container::before {
+  content: '📊 資料表格';
+  position: absolute;
+  top: -12px;
+  left: var(--spacing-lg);
+  background: var(--color-warning);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-lg);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  box-shadow: var(--shadow-sm);
+}
+
+#school-data-table-container::before {
+  content: '🏫 學校資料';
+}
+
+.table-container h3,
+#school-data-table-container h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-xl);
+  color: var(--text-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 2px solid var(--color-warning);
+}
+
+/* ========================================
+   10. 資料統計顯示
+   ======================================== */
+#table-stats,
+#school-table-stats {
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+}
+
+#table-stats > div,
+#school-table-stats > div {
+  display: flex;
+  gap: var(--spacing-3xl);
+  flex-wrap: wrap;
+}
+
+.stat-value-primary {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+.stat-value-success {
+  color: var(--color-success);
+  font-weight: var(--font-weight-bold);
+}
+
+.stat-value-warning {
+  color: var(--color-warning);
+  font-weight: var(--font-weight-bold);
+}
+
+/* ========================================
+   11. DataTables 樣式覆蓋
+   ======================================== */
+table.dataTable {
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+  width: 100% !important;
+  background: var(--bg-elevated);
+}
+
+table.dataTable thead th {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 2px solid var(--border-color);
+  text-align: left;
+}
+
+table.dataTable tbody td {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+table.dataTable tbody tr:hover {
+  background: var(--bg-hover);
+}
+
+/* ========================================
+   12. 標籤篩選區域 - 增加區隔識別
+   ======================================== */
+#tag-filter-section {
+  margin-bottom: var(--spacing-4xl);
+  padding: var(--spacing-2xl);
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-lg);
+  border-left: 4px solid var(--color-success);
+  position: relative;
+}
+
+/* 標籤篩選區域標題 */
+#tag-filter-section::before {
+  content: '🔍 科系篩選';
+  position: absolute;
+  top: -12px;
+  left: var(--spacing-lg);
+  background: var(--color-success);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-lg);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  box-shadow: var(--shadow-sm);
+}
+
+#tag-filter-section h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--color-success);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.tag-input-area {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+#tag-filter-input {
+  flex: 1;
+  padding: var(--spacing-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-base);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+#tag-filter-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+#add-tag-btn {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+}
+
+#add-tag-btn:hover {
+  background: var(--color-primary-hover);
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg);
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-md);
+  min-height: 60px;
+  border: 1px solid var(--border-color);
+}
+
+.tag-item {
+  background: var(--color-primary);
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.tag-remove {
+  cursor: pointer;
+  font-weight: bold;
+  opacity: 0.8;
+  transition: opacity var(--transition-fast);
+}
+
+.tag-remove:hover {
+  opacity: 1;
+}
+
+.empty-state {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* ========================================
+   13. 資料庫更新彈窗
+   ======================================== */
+.database-update-modal {
+  display: none;
+  position: fixed;
+  z-index: var(--z-modal);
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.database-modal-content {
+  background: var(--bg-elevated);
+  margin: 80px auto;
+  padding: var(--spacing-3xl);
+  border-radius: var(--border-radius-xl);
+  width: 90%;
+  max-width: 600px;
+  box-shadow: var(--shadow-2xl);
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.database-modal-close {
+  color: var(--text-secondary);
+  position: absolute;
+  top: var(--spacing-lg);
+  right: var(--spacing-xl);
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color var(--transition-base);
+}
+
+.database-modal-close:hover {
+  color: var(--text-primary);
+}
+
+.database-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
+}
+
+.stat-item {
+  background: var(--bg-secondary);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.stat-value {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.modal-actions {
+  margin: var(--spacing-2xl) 0;
+  text-align: center;
+}
+
+.update-request-btn {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg) var(--spacing-3xl);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.update-request-btn:hover {
+  background: var(--color-primary-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.modal-footer {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--border-color);
+}
+
+/* ========================================
+   14. 頁尾版權
+   ======================================== */
+.copyright-footer {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  margin-top: auto;
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* ========================================
+   15. 響應式設計
+   ======================================== */
+@media (max-width: 768px) {
+  body {
+    padding: var(--spacing-md);
+  }
+
+  .header-container {
+    padding: var(--spacing-lg);
+  }
+
+  .select-area-container {
+    gap: var(--spacing-md);
+  }
+
+  .select-container {
+    min-width: 100%;
+  }
+
+  .table-container,
+  #school-data-table-container {
+    padding: var(--spacing-lg);
+  }
+
+  .export-buttons {
+    width: 100%;
+  }
+
+  .export-buttons button {
+    flex: 1;
+  }
+}

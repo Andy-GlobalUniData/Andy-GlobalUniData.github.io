@@ -1,194 +1,202 @@
 /* ========================================
-   Theme Light - 淺色模式主題
-   可選主題：明亮清新的配色
-   保留原有的漸層美學設計
+   Theme Light V2 - 淺色模式主題
+   優化版本：性能優先、向後相容
    ======================================== */
 
 [data-theme="light"] {
-  /* === 主色系 - GitHub 風格（低飽和度中性色）=== */
-  --color-primary: #0969da;  /* GitHub 藍 - 更低飽和度 */
-  --color-primary-hover: #0550ae;
-  --color-primary-alpha: rgba(9, 105, 218, 0.1);
-  
-  --color-secondary: #1a7f37;  /* GitHub 綠 - 偏灰綠 */
-  --color-secondary-hover: #116329;
-  
-  --color-accent: #cf222e;  /* GitHub 紅 - 偏灰紅 */
-  --color-accent-hover: #a40e26;
+  /* === 主色系 - 單一藍色 === */
+  --color-primary: #2196F3;  /* 藍色 */
+  --color-primary-hover: #1976D2;
+  --color-primary-light: rgba(33, 150, 243, 0.1);
+  --color-primary-alpha: rgba(33, 150, 243, 0.1);  /* 向後相容 */
 
-  /* === 背景色系 - GitHub 風格（更簡潔）=== */
-  --bg-primary: #ffffff;      /* 純白 - 主背景 */
-  --bg-secondary: #f6f8fa;    /* 極淺灰 - 次要背景 */
-  --bg-tertiary: #f6f8fa;     /* 極淺灰 - 第三層背景 */
-  --bg-elevated: #ffffff;     /* 卡片/浮起元素背景 */
-  --bg-hover: #f6f8fa;        /* Hover 狀態背景 */
-  --bg-input: #ffffff;        /* 輸入框背景 */
+  /* === 次要色系 === */
+  --color-secondary: #4CAF50;  /* 綠色 */
+  --color-secondary-hover: #45a049;
+  
+  --color-accent: #F44336;  /* 紅色 */
+  --color-accent-hover: #da190b;
+
+  /* === 背景色系 === */
+  --bg-primary: #FFFFFF;      /* 純白 - 主背景 */
+  --bg-secondary: #F5F5F5;    /* 極淺灰 - 次要背景 */
+  --bg-tertiary: #F5F5F5;     /* 極淺灰 - 第三層背景 */
+  --bg-elevated: #FFFFFF;     /* 卡片/浮起元素背景 */
+  --bg-hover: #F5F5F5;        /* Hover 狀態背景 */
+  --bg-input: #FFFFFF;        /* 輸入框背景 */
   --bg-modal: rgba(0, 0, 0, 0.5);  /* 模態框背景 */
 
-  /* === 文字色系 - GitHub 風格（中性灰階）=== */
-  --text-primary: #24292f;    /* 主要文字 - GitHub 深灰 */
-  --text-secondary: #57606a;  /* 次要文字 - GitHub 中灰 */
-  --text-tertiary: #6e7781;   /* 第三級文字 - GitHub 淺灰 */
-  --text-muted: #8c959f;      /* 減弱文字 - GitHub 很淺灰 */
-  --text-heading: #24292f;    /* 標題文字 */
-  --text-on-primary: #ffffff; /* 在主色上的文字 */
-  --text-link: #0969da;       /* 連結文字 - GitHub 藍 */
+  /* === 文字色系 === */
+  --text-primary: #212121;    /* 主要文字 - 深灰 */
+  --text-secondary: #757575;  /* 次要文字 - 中灰 */
+  --text-tertiary: #9E9E9E;   /* 第三級文字 - 淺灰 */
+  --text-muted: #BDBDBD;      /* 減弱文字 - 很淺灰 */
+  --text-heading: #212121;    /* 標題文字 */
+  --text-on-primary: #FFFFFF; /* 在主色上的文字 */
+  --text-link: #2196F3;       /* 連結文字 - 藍色 */
 
-  /* === 邊框色系 - GitHub 風格（極淡邊框）=== */
-  --border-color: #d0d7de;    /* 主要邊框 - GitHub 淺灰 */
-  --border-color-light: #d8dee4;  /* 淺色邊框 */
-  --border-color-dark: #afb8c1;   /* 深色邊框 */
+  /* === 邊框色系 === */
+  --border-color: #E0E0E0;    /* 主要邊框 */
+  --border-color-light: #EEEEEE;  /* 淺色邊框 */
+  --border-color-dark: #BDBDBD;   /* 深色邊框 */
 
-  /* === 功能色 - GitHub 風格（中性色調）=== */
-  --color-success: #1a7f37;   /* 成功 - GitHub 綠 */
-  --color-success-bg: #dafbe1;
-  --color-success-border: #a2e9b0;
+  /* === 功能色 === */
+  --color-success: #4CAF50;   /* 成功 - 綠 */
+  --color-success-bg: #E8F5E9;
+  --color-success-border: #A5D6A7;
   
-  --color-warning: #9a6700;   /* 警告 - GitHub 黃褐 */
-  --color-warning-bg: #fff8c5;
-  --color-warning-border: #d8b700;
+  --color-warning: #FF9800;   /* 警告 - 橙 */
+  --color-warning-bg: #FFF3E0;
+  --color-warning-border: #FFCC80;
   
-  --color-error: #cf222e;     /* 錯誤 - GitHub 紅 */
-  --color-error-bg: #ffebe9;
-  --color-error-border: #ff8182;
+  --color-error: #F44336;     /* 錯誤 - 紅 */
+  --color-error-bg: #FFEBEE;
+  --color-error-border: #EF9A9A;
   
-  --color-info: #0969da;      /* 資訊 - GitHub 藍 */
-  --color-info-bg: #ddf4ff;
-  --color-info-border: #54aeff;
+  --color-info: #2196F3;      /* 資訊 - 藍 */
+  --color-info-bg: #E3F2FD;
+  --color-info-border: #90CAF9;
+  
+  --color-danger: #F44336;    /* 向後相容 */
 
-  /* === 區域特定顏色 - GitHub 風格（極簡單色）=== */
+  /* === 灰階系統 === */
+  --gray-50: #FAFAFA;
+  --gray-100: #F5F5F5;
+  --gray-200: #EEEEEE;
+  --gray-300: #E0E0E0;
+  --gray-400: #BDBDBD;
+  --gray-500: #9E9E9E;
+  --gray-600: #757575;
+  --gray-700: #616161;
+  --gray-800: #424242;
+  --gray-900: #212121;
+
+  /* === 陰影系統（優化：減少複雜度） === */
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  /* === 區域特定顏色（優化：移除漸層，使用純色） === */
   
-  /* 篩選控制面板 - 純白簡潔 */
-  --filter-panel-bg: #ffffff;
-  --filter-panel-shadow: rgba(31, 35, 40, 0.12);
-  --filter-card-bg: #f6f8fa;
-  --filter-card-border: #d0d7de;
-  --filter-card-hover-shadow: rgba(31, 35, 40, 0.18);
-  --filter-label-bg: #0969da;
+  /* 篩選控制面板 - 純白簡潔（性能優化：避免漸層） */
+  --filter-panel-bg: #FFFFFF;
+  --filter-panel-shadow: rgba(0, 0, 0, 0.1);
+  --filter-card-bg: #F5F5F5;
+  --filter-card-border: #E0E0E0;
+  --filter-card-hover-shadow: rgba(0, 0, 0, 0.15);
+  --filter-label-bg: #2196F3;  /* 純色，不用漸層 */
   
-  /* 科系關鍵字篩選 - 純白簡潔 */
-  --keyword-section-bg: #ffffff;
-  --keyword-section-shadow: rgba(31, 35, 40, 0.12);
-  --keyword-input-bg: #f6f8fa;
-  --keyword-input-border: #d0d7de;
-  --keyword-input-focus-border: #0969da;
-  --keyword-button-bg: #0969da;
-  --keyword-button-hover: #0550ae;
-  --keyword-tag-bg: #ddf4ff;
-  --keyword-tag-hover: #b6e3ff;
+  /* 科系關鍵字篩選 - 純白簡潔（性能優化） */
+  --keyword-section-bg: #FFFFFF;
+  --keyword-section-shadow: rgba(0, 0, 0, 0.1);
+  --keyword-input-bg: #F5F5F5;
+  --keyword-input-border: #E0E0E0;
+  --keyword-input-focus-border: #2196F3;
+  --keyword-button-bg: #2196F3;
+  --keyword-button-hover: #1976D2;
+  --keyword-tag-bg: #E3F2FD;
+  --keyword-tag-hover: #BBDEFB;
   
-  /* 輸出按鈕區 - 純白簡潔 */
-  --export-section-bg: #ffffff;
-  --export-section-shadow: rgba(31, 35, 40, 0.12);
-  --export-button-bg: #f6f8fa;
-  --export-button-hover-bg: #eaeef2;
-  --export-button-shadow: rgba(31, 35, 40, 0.06);
+  /* 輸出按鈕區 - 純白簡潔（性能優化） */
+  --export-section-bg: #FFFFFF;
+  --export-section-shadow: rgba(0, 0, 0, 0.1);
+  --export-button-bg: #F5F5F5;
+  --export-button-hover-bg: #EEEEEE;
+  --export-button-shadow: rgba(0, 0, 0, 0.08);
   
-  /* 表格區域 - GitHub 風格（白色背景）*/
-  --table-bg: #ffffff;
-  --table-border: #d0d7de;
-  --table-header-bg: #f6f8fa;
-  --table-row-even: #f6f8fa;
-  --table-row-hover: #eaeef2;
-  --table-title-border: #0969da;
+  /* 表格區域 - 純白背景（性能優化） */
+  --table-bg: #FFFFFF;
+  --table-border: #E0E0E0;
+  --table-header-bg: #F5F5F5;
+  --table-row-even: #FAFAFA;
+  --table-row-hover: #F5F5F5;
+  --table-title-border: #2196F3;
   
-  /* 統計卡片 - GitHub 風格（簡潔白色）*/
-  --stats-card-bg: #ffffff;
-  --stats-card-border: #0969da;
-  --stats-card-shadow: rgba(31, 35, 40, 0.12);
-  --stats-item-bg: #f6f8fa;
-  --stats-item-hover-shadow: rgba(31, 35, 40, 0.18);
+  /* 統計卡片 - 純白簡潔（性能優化：避免漸層） */
+  --stats-card-bg: #FFFFFF;
+  --stats-card-border: #2196F3;
+  --stats-card-shadow: rgba(0, 0, 0, 0.1);
+  --stats-item-bg: #F5F5F5;
+  --stats-item-hover-shadow: rgba(0, 0, 0, 0.15);
+
+  /* === 更新日誌彈窗 === */
+  --changelog-content-bg: var(--bg-elevated);
+  --changelog-close-hover: var(--text-primary);
+
+  /* === 資料庫更新彈窗 === */
+  --database-modal-bg: var(--bg-elevated);
+  --database-modal-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+
+  /* === Floating Nav === */
+  --floating-nav-bg: var(--bg-elevated);
+  --floating-nav-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --floating-nav-hover: var(--bg-hover);
+
+  /* === DataTables === */
+  --datatable-bg: var(--bg-elevated);
+  --datatable-header-bg: var(--bg-secondary);
+  --datatable-border: var(--border-color);
+  --datatable-hover: var(--bg-hover);
   
-  /* 使用說明區 - GitHub 風格（淺黃提示）*/
-  --guide-bg: #fff8c5;
-  --guide-border: #9a6700;
-  --guide-shadow: rgba(154, 103, 0, 0.15);
-  --guide-text: #24292f;
-  
-  /* 更新日誌彈窗 - Google 風格 */
-  --changelog-modal-bg: rgba(0, 0, 0, 0.4);
-  --changelog-content-bg: #ffffff;
-  --changelog-close-hover: #ea4335;
-  
-  /* 資料庫更新彈窗 - Google 風格 */
-  --database-modal-bg: rgba(0, 0, 0, 0.5);
-  --database-content-bg: #ffffff;
-  --database-stat-icon-bg: #1a73e8;
-  
-  /* === 捲動條 - GitHub 風格 === */
-  --scrollbar-thumb: #d0d7de;
-  --scrollbar-thumb-hover: #afb8c1;
-  --scrollbar-track: #f6f8fa;
-  
-  /* === DataTables 特定樣式 === */
-  --datatables-header-bg: #f6f8fa;
-  --datatables-header-text: #24292f;
-  --datatables-search-bg: #ffffff;
-  --datatables-search-border: #d0d7de;
-  --datatables-pagination-bg: #f6f8fa;
-  --datatables-pagination-hover: #0969da;
-  
-  /* === 連結顏色 === */
-  --color-link: #0969da;
-  --color-link-hover: #0550ae;
-  
-  /* === Floating Nav - GitHub 風格 === */
-  --floating-nav-bg: rgba(255, 255, 255, 0.98);
-  --floating-nav-border: #d0d7de;
-  --floating-nav-shadow: rgba(31, 35, 40, 0.18);
-  --floating-nav-link-hover: #f6f8fa;
-  
-  /* === 陰影 - GitHub 風格（極柔和陰影）=== */
-  --shadow-xs: 0 1px 2px rgba(31, 35, 40, 0.12);
-  --shadow-sm: 0 1px 3px rgba(31, 35, 40, 0.12);
-  --shadow-md: 0 3px 6px rgba(31, 35, 40, 0.12);
-  --shadow-lg: 0 6px 12px rgba(31, 35, 40, 0.12);
-  --shadow-xl: 0 8px 16px rgba(31, 35, 40, 0.12);
-  --shadow-2xl: 0 12px 24px rgba(31, 35, 40, 0.12);
+  /* === 過渡效果 === */
+  color-scheme: light;
 }
 
 /* ========================================
-   淺色模式特定調整
+   淺色模式特定樣式
    ======================================== */
 
-[data-theme="light"] body {
-  background-color: var(--bg-primary);
+[data-theme="light"] {
+  /* 滾動條樣式 */
+  scrollbar-color: var(--gray-400) var(--gray-100);
+}
+
+[data-theme="light"] ::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: var(--gray-100);
+  border-radius: 4px;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: var(--gray-400);
+  border-radius: 4px;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-500);
+}
+
+/* 輸入框樣式 */
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+  background: var(--bg-elevated);
   color: var(--text-primary);
+  border-color: var(--border-color);
 }
 
-/* 🎯 自動完成下拉選單 - 淺色模式 */
-[data-theme="light"] .autocomplete-dropdown {
-  --dropdown-bg: #ffffff;
-  --dropdown-border: #d0d7de;
-  --dropdown-item-border: #f6f8fa;
-  --dropdown-item-hover: #0969da;
-  --scrollbar-track: #f6f8fa;
-  --scrollbar-thumb: #d0d7de;
-  --scrollbar-thumb-hover: #afb8c1;
-}
-
-/* 選取文字顏色 (淺色模式) */
-[data-theme="light"] ::selection {
-  background-color: var(--color-primary);
-  color: var(--text-on-primary);
-}
-
-/* 輸入框 Focus 效果 (淺色模式) */
 [data-theme="light"] input:focus,
-[data-theme="light"] select:focus,
-[data-theme="light"] textarea:focus {
+[data-theme="light"] textarea:focus,
+[data-theme="light"] select:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px var(--color-primary-alpha);
+  background: var(--bg-primary);
 }
 
-/* 淺色模式下的陰影增強 */
-[data-theme="light"] .card,
-[data-theme="light"] .table-container,
-[data-theme="light"] .select-container {
-  box-shadow: var(--shadow-md);
+/* 連結樣式 */
+[data-theme="light"] a {
+  color: var(--color-primary);
 }
 
-[data-theme="light"] .card:hover,
-[data-theme="light"] .select-container:hover {
-  box-shadow: var(--shadow-lg);
+[data-theme="light"] a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* 程式碼區塊 */
+[data-theme="light"] code,
+[data-theme="light"] pre {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
 }

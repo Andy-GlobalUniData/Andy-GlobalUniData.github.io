@@ -244,13 +244,14 @@
 
     /**
      * 初始化 School 選擇器 (交集版本 - 集團 AND 國家) ✨
+     * 🎯 TDD PDCA 優化: 減少 debounce 延遲,提升響應速度
      */
     function initSchoolSelector() {
         const container = document.getElementById('school-select');
         if (!container) return;
 
-        // 🎯 TDD: 使用 debounce 減少頻繁更新 (300ms 延遲)
-        const debouncedUpdate = debounce(updateSchoolSelector, 300);
+        // ✅ PDCA 優化: 減少 debounce 延遲 300ms → 100ms
+        const debouncedUpdate = debounce(updateSchoolSelector, 100);
 
         // 監聽 Group 和 Country 的變化來更新學校列表 (AND 邏輯) ✨
         $(document).on('change.schoolUpdate', '.group-checkbox, .country-checkbox', function() {
@@ -342,10 +343,10 @@
         // 更新全域變數 (不使用展開運算符,直接賦值) ✨
         selectedSchools = schools;
 
-        // 🎯 TDD: 綁定搜尋事件 - 使用 debounce 優化效能
+        // ✅ PDCA 優化: 減少搜尋 debounce 延遲 150ms → 50ms
         const debouncedSchoolSearch = debounce(function(searchText) {
             filterSchoolsBySearch(searchText);
-        }, 150);
+        }, 50);
 
         if (searchInput) {
             searchInput.addEventListener('input', function() {
@@ -353,24 +354,47 @@
             });
         }
 
-        // 🎯 綁定事件 - 使用 debounce 減少頻繁呼叫
-        const debouncedSchoolFilterUpdate = debounce(updateFilters, 200);
+        // ✅ PDCA 優化: 使用原生事件委派,提升效能
+        // 移除重複的 debounce,使用事件委派統一處理
+        const selectAllCheckbox = document.getElementById('select-all-schools');
+        const schoolCheckboxContainer = container.querySelector('.school-checkbox-container');
         
-        $('#select-all-schools').on('change', function() {
-            // 🎯 TDD: 只影響可見的勾選框
-            const visibleCheckboxes = $('.school-checkbox').filter(function() {
-                return $(this).closest('.school-item').is(':visible');
+        if (selectAllCheckbox && schoolCheckboxContainer) {
+            // 移除舊的事件監聽器 (如果存在)
+            const newContainer = schoolCheckboxContainer.cloneNode(true);
+            schoolCheckboxContainer.parentNode.replaceChild(newContainer, schoolCheckboxContainer);
+            
+            // 使用原生事件委派 - 只綁定一個監聽器
+            newContainer.addEventListener('change', function(e) {
+                if (e.target.id === 'select-all-schools') {
+                    // 🎯 只影響可見的勾選框
+                    const visibleCheckboxes = Array.from(
+                        newContainer.querySelectorAll('.school-checkbox')
+                    ).filter(cb => {
+                        const item = cb.closest('.school-item');
+                        return item && item.style.display !== 'none';
+                    });
+                    
+                    visibleCheckboxes.forEach(cb => cb.checked = e.target.checked);
+                    updateFilters(); // 直接調用,無需額外 debounce
+                    
+                } else if (e.target.classList.contains('school-checkbox')) {
+                    // 更新全選狀態
+                    const allCheckboxes = newContainer.querySelectorAll('.school-checkbox');
+                    const visibleCheckboxes = Array.from(allCheckboxes).filter(cb => {
+                        const item = cb.closest('.school-item');
+                        return item && item.style.display !== 'none';
+                    });
+                    
+                    const checkedVisible = visibleCheckboxes.filter(cb => cb.checked).length;
+                    const newSelectAll = newContainer.querySelector('#select-all-schools');
+                    if (newSelectAll) {
+                        newSelectAll.checked = visibleCheckboxes.length === checkedVisible;
+                    }
+                    updateFilters(); // 直接調用,無需額外 debounce
+                }
             });
-            visibleCheckboxes.prop('checked', this.checked);
-            debouncedSchoolFilterUpdate();
-        });
-
-        $('.school-checkbox').on('change', function() {
-            const totalCheckboxes = $('.school-checkbox').length;
-            const checkedCheckboxes = $('.school-checkbox:checked').length;
-            $('#select-all-schools').prop('checked', totalCheckboxes === checkedCheckboxes);
-            debouncedSchoolFilterUpdate();
-        });
+        }
 
         console.log('✅ School selector updated:', schools.length, 'schools (AND logic: groups AND countries)');
     }

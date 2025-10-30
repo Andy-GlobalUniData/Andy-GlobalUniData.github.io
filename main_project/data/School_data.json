@@ -7,7 +7,7 @@
     "URL": "https://degrees.apps.asu.edu/bachelors/major-list/letter/all",
     "latitude": 33.4213174,
     "longitude": -111.9331631,
-    "Number_of_departments": 991
+    "Number_of_departments": 993
   },
   {
     "School_name": "Bath Spa University",
@@ -17,7 +17,7 @@
     "URL": "https://www.bathspa.ac.uk//courses/?page=1000",
     "latitude": 51.374858,
     "longitude": -2.4387146,
-    "Number_of_departments": 234
+    "Number_of_departments": 236
   },
   {
     "School_name": "Bournemouth University",
@@ -117,7 +117,7 @@
     "URL": "https://www.elon.edu/u/academics/majors-minors-programs/",
     "latitude": 36.1063398,
     "longitude": -79.5027368,
-    "Number_of_departments": 247
+    "Number_of_departments": 245
   },
   {
     "School_name": "Erasmus Universitiet Rotterdam",
@@ -137,7 +137,7 @@
     "URL": "https://www.fisher.edu/academics/undergraduate-programs",
     "latitude": 42.3553679,
     "longitude": -71.0737378,
-    "Number_of_departments": 34
+    "Number_of_departments": 6
   },
   {
     "School_name": "Florida Atlantic University",
@@ -197,7 +197,7 @@
     "URL": "https://www.leedsbeckett.ac.uk",
     "latitude": 53.8261442,
     "longitude": -1.5933537,
-    "Number_of_departments": 443
+    "Number_of_departments": 445
   },
   {
     "School_name": "Massey University",
@@ -267,7 +267,7 @@
     "URL": "https://www.qub.ac.uk/courses/",
     "latitude": 54.5842881,
     "longitude": -5.9336562,
-    "Number_of_departments": 495
+    "Number_of_departments": 497
   },
   {
     "School_name": "Queen's University Belfast International Study Centre",
@@ -430,6 +430,26 @@
     "Number_of_departments": 285
   },
   {
+    "School_name": "University of Bristol",
+    "Country": "United Kingdom",
+    "City": "Bristol",
+    "合作集團": "Kaplan",
+    "URL": "https://www.bristol.ac.uk/study/undergraduate/search/?filterStudyYear=2026&page=1",
+    "latitude": 51.5007679,
+    "longitude": -2.5503106,
+    "Number_of_departments": 56
+  },
+  {
+    "School_name": "University of Glasgow",
+    "Country": "United Kingdom",
+    "City": "Glasgow",
+    "合作集團": "Kaplan",
+    "URL": "https://www.gla.ac.uk/undergraduate/degrees/",
+    "latitude": 55.871666,
+    "longitude": -4.2778997,
+    "Number_of_departments": 449
+  },
+  {
     "School_name": "University of Leeds",
     "Country": "United Kingdom",
     "City": "Leeds",
@@ -447,7 +467,7 @@
     "URL": "https://www.nottingham.ac.uk/pgstudy/courses/courses.aspx?letter=",
     "latitude": 52.9387428,
     "longitude": -1.2002957,
-    "Number_of_departments": 308
+    "Number_of_departments": 307
   },
   {
     "School_name": "University of Southampton",
@@ -467,6 +487,6 @@
     "URL": "https://warwick.ac.uk/study/postgraduate/courses/",
     "latitude": 52.3813073,
     "longitude": -1.5639569,
-    "Number_of_departments": 430
+    "Number_of_departments": 429
   }
 ]

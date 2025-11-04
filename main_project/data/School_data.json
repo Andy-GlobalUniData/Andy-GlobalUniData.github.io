@@ -7,7 +7,35 @@
     "URL": "https://degrees.apps.asu.edu/bachelors/major-list/letter/all",
     "latitude": 33.4213174,
     "longitude": -111.9331631,
-    "Number_of_departments": 993
+    "Number_of_departments": 993,
+    "degree_statistics": {
+      "Undergraduate": 473,
+      "Graduate": 381,
+      "Doctoral": 139,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
+  },
+  {
+    "School_name": "Aston University",
+    "Country": "United Kingdom",
+    "City": "Birmingham",
+    "合作集團": ".",
+    "URL": "https://www.aston.ac.uk/courses-atoz",
+    "latitude": 52.4861905,
+    "longitude": -1.8884689,
+    "Number_of_departments": 293,
+    "degree_statistics": {
+      "Undergraduate": 111,
+      "Graduate": 138,
+      "Doctoral": 12,
+      "ShortCourse": 0,
+      "Certificate": 32,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Bath Spa University",
@@ -17,7 +45,16 @@
     "URL": "https://www.bathspa.ac.uk//courses/?page=1000",
     "latitude": 51.374858,
     "longitude": -2.4387146,
-    "Number_of_departments": 236
+    "Number_of_departments": 238,
+    "degree_statistics": {
+      "Undergraduate": 114,
+      "Graduate": 51,
+      "Doctoral": 0,
+      "ShortCourse": 48,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 25
+    }
   },
   {
     "School_name": "Bournemouth University",
@@ -27,7 +64,16 @@
     "URL": "https://www.bournemouth.ac.uk/study/undergraduate/courses/undergraduate-course-list",
     "latitude": 50.7253339,
     "longitude": -1.8620533,
-    "Number_of_departments": 172
+    "Number_of_departments": 172,
+    "degree_statistics": {
+      "Undergraduate": 91,
+      "Graduate": 81,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "California State University San Marcos",
@@ -37,7 +83,16 @@
     "URL": "https://catalog.csusm.edu/content.php?catoid=11&navoid=1994",
     "latitude": 33.1295667,
     "longitude": -117.1606492,
-    "Number_of_departments": 104
+    "Number_of_departments": 104,
+    "degree_statistics": {
+      "Undergraduate": 80,
+      "Graduate": 22,
+      "Doctoral": 2,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Cardiff University",
@@ -47,7 +102,16 @@
     "URL": "https://www.cardiff.ac.uk/study/undergraduate/courses/a-to-z",
     "latitude": 51.4887426,
     "longitude": -3.1795999,
-    "Number_of_departments": 212
+    "Number_of_departments": 212,
+    "degree_statistics": {
+      "Undergraduate": 189,
+      "Graduate": 23,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Carnegie Mellon University",
@@ -57,7 +121,16 @@
     "URL": "https://www.cmu.edu/admission/majors-programs/undergraduate-program-finder",
     "latitude": 40.4441897,
     "longitude": -79.9427192,
-    "Number_of_departments": 118
+    "Number_of_departments": 118,
+    "degree_statistics": {
+      "Undergraduate": 35,
+      "Graduate": 83,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Colorado State University",
@@ -67,7 +140,16 @@
     "URL": "https://catalog.colostate.edu/general-catalog/programsaz/",
     "latitude": 40.5706567,
     "longitude": -105.0853995,
-    "Number_of_departments": 784
+    "Number_of_departments": 784,
+    "degree_statistics": {
+      "Undergraduate": 423,
+      "Graduate": 295,
+      "Doctoral": 66,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Cranfield University",
@@ -77,7 +159,16 @@
     "URL": "https://www.cranfield.ac.uk/som/masters-courses",
     "latitude": 52.0701329,
     "longitude": -0.6287023,
-    "Number_of_departments": 62
+    "Number_of_departments": 63,
+    "degree_statistics": {
+      "Undergraduate": 0,
+      "Graduate": 62,
+      "Doctoral": 1,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "DePaul University",
@@ -87,7 +178,16 @@
     "URL": "https://catalog.depaul.edu/programs/",
     "latitude": 41.9245803,
     "longitude": -87.6507223,
-    "Number_of_departments": 397
+    "Number_of_departments": 397,
+    "degree_statistics": {
+      "Undergraduate": 178,
+      "Graduate": 206,
+      "Doctoral": 13,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Drew University",
@@ -97,7 +197,16 @@
     "URL": "https://drew.edu/academic/programs-of-study/",
     "latitude": 40.7605379,
     "longitude": -74.4281605,
-    "Number_of_departments": 119
+    "Number_of_departments": 119,
+    "degree_statistics": {
+      "Undergraduate": 110,
+      "Graduate": 8,
+      "Doctoral": 1,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Durham University",
@@ -107,7 +216,16 @@
     "URL": "https://www.durham.ac.uk/search/?searchStudioQuery=&isGrid=false&facets=&orderBy=&start=0",
     "latitude": 54.7641281,
     "longitude": -1.5863066,
-    "Number_of_departments": 297
+    "Number_of_departments": 297,
+    "degree_statistics": {
+      "Undergraduate": 0,
+      "Graduate": 297,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Elon University",
@@ -117,7 +235,16 @@
     "URL": "https://www.elon.edu/u/academics/majors-minors-programs/",
     "latitude": 36.1063398,
     "longitude": -79.5027368,
-    "Number_of_departments": 245
+    "Number_of_departments": 245,
+    "degree_statistics": {
+      "Undergraduate": 193,
+      "Graduate": 52,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Erasmus Universitiet Rotterdam",
@@ -127,7 +254,16 @@
     "URL": "https://www.eur.nl/en/search?f[0]=education_type%3Abachelor&f[1]=education_type%3Acourse&f[2]=education_type%3Amaster&f[3]=education_type%3Apost_experience_master&f[4]=education_type%3Aresearch_master",
     "latitude": 51.917251,
     "longitude": 4.5237278,
-    "Number_of_departments": 309
+    "Number_of_departments": 309,
+    "degree_statistics": {
+      "Undergraduate": 29,
+      "Graduate": 117,
+      "Doctoral": 0,
+      "ShortCourse": 163,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Fisher College",
@@ -137,7 +273,16 @@
     "URL": "https://www.fisher.edu/academics/undergraduate-programs",
     "latitude": 42.3553679,
     "longitude": -71.0737378,
-    "Number_of_departments": 6
+    "Number_of_departments": 34,
+    "degree_statistics": {
+      "Undergraduate": 28,
+      "Graduate": 6,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Florida Atlantic University",
@@ -147,7 +292,16 @@
     "URL": "https://www.fau.edu/programs/",
     "latitude": 26.3743445,
     "longitude": -80.1027236,
-    "Number_of_departments": 466
+    "Number_of_departments": 466,
+    "degree_statistics": {
+      "Undergraduate": 172,
+      "Graduate": 149,
+      "Doctoral": 38,
+      "ShortCourse": 0,
+      "Certificate": 107,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "George Mason University",
@@ -157,7 +311,16 @@
     "URL": "https://catalog.gmu.edu/programs/programsa-z/",
     "latitude": 38.8313333,
     "longitude": -77.3079884,
-    "Number_of_departments": 560
+    "Number_of_departments": 560,
+    "degree_statistics": {
+      "Undergraduate": 85,
+      "Graduate": 90,
+      "Doctoral": 48,
+      "ShortCourse": 218,
+      "Certificate": 119,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Hofstra University",
@@ -167,7 +330,16 @@
     "URL": "https://www.hofstra.edu/undergraduate/",
     "latitude": 40.7169083,
     "longitude": -73.6000225,
-    "Number_of_departments": 269
+    "Number_of_departments": 269,
+    "degree_statistics": {
+      "Undergraduate": 131,
+      "Graduate": 127,
+      "Doctoral": 11,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Illinois State University",
@@ -177,7 +349,16 @@
     "URL": "https://illinoisstate.edu/academics/majors/",
     "latitude": 40.5179938,
     "longitude": -89.0084607,
-    "Number_of_departments": 169
+    "Number_of_departments": 169,
+    "degree_statistics": {
+      "Undergraduate": 165,
+      "Graduate": 4,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "James Madison University",
@@ -187,7 +368,16 @@
     "URL": "https://www.jmu.edu/academics/undergraduate/majors/index.shtml",
     "latitude": 38.4458605,
     "longitude": -78.8781075,
-    "Number_of_departments": 70
+    "Number_of_departments": 70,
+    "degree_statistics": {
+      "Undergraduate": 61,
+      "Graduate": 9,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Leeds Beckett University",
@@ -197,7 +387,16 @@
     "URL": "https://www.leedsbeckett.ac.uk",
     "latitude": 53.8261442,
     "longitude": -1.5933537,
-    "Number_of_departments": 445
+    "Number_of_departments": 445,
+    "degree_statistics": {
+      "Undergraduate": 218,
+      "Graduate": 103,
+      "Doctoral": 19,
+      "ShortCourse": 105,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Massey University",
@@ -207,7 +406,16 @@
     "URL": "https://www.massey.ac.nz/search/?size=n_100_n&filters%5B0%5D%5Bfield%5D=__search_type&filters%5B0%5D%5Btype%5D=all&filters%5B0%5D%5Bvalues%5D%5B0%5D=course-qual&filters%5B1%5D%5Bfield%5D=sub_type&filters%5B1%5D%5Bvalues%5D%5B0%5D=qual&filters%5B1%5D%5Bvalues%5D%5B1%5D=spec&filters%5B1%5D%5Btype%5D=any",
     "latitude": -40.3877581,
     "longitude": 175.6205576,
-    "Number_of_departments": 176
+    "Number_of_departments": 176,
+    "degree_statistics": {
+      "Undergraduate": 36,
+      "Graduate": 94,
+      "Doctoral": 2,
+      "ShortCourse": 0,
+      "Certificate": 44,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Mercer University",
@@ -217,7 +425,16 @@
     "URL": "https://www.mercer.edu/academics/program-finder/",
     "latitude": 32.8289341,
     "longitude": -83.6506702,
-    "Number_of_departments": 253
+    "Number_of_departments": 253,
+    "degree_statistics": {
+      "Undergraduate": 99,
+      "Graduate": 70,
+      "Doctoral": 24,
+      "ShortCourse": 0,
+      "Certificate": 25,
+      "Diploma": 0,
+      "Other": 35
+    }
   },
   {
     "School_name": "Montclair State University",
@@ -227,7 +444,16 @@
     "URL": "https://www.montclair.edu/academics/all-programs/",
     "latitude": 40.8646878,
     "longitude": -74.1969213,
-    "Number_of_departments": 266
+    "Number_of_departments": 266,
+    "degree_statistics": {
+      "Undergraduate": 123,
+      "Graduate": 139,
+      "Doctoral": 2,
+      "ShortCourse": 0,
+      "Certificate": 2,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "New England College",
@@ -237,7 +463,16 @@
     "URL": "https://www.nec.edu/degree-programs",
     "latitude": 43.174571,
     "longitude": -71.8313457,
-    "Number_of_departments": 26
+    "Number_of_departments": 26,
+    "degree_statistics": {
+      "Undergraduate": 26,
+      "Graduate": 0,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Newcastle University",
@@ -247,7 +482,16 @@
     "URL": "https://www.ncl.ac.uk/postgraduate/degrees/",
     "latitude": 54.980175,
     "longitude": -1.6146802,
-    "Number_of_departments": 301
+    "Number_of_departments": 301,
+    "degree_statistics": {
+      "Undergraduate": 0,
+      "Graduate": 223,
+      "Doctoral": 78,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Oregon State University",
@@ -257,7 +501,35 @@
     "URL": "https://admissions.oregonstate.edu/find-your-major",
     "latitude": 44.5630559,
     "longitude": -123.2839234,
-    "Number_of_departments": 103
+    "Number_of_departments": 103,
+    "degree_statistics": {
+      "Undergraduate": 101,
+      "Graduate": 2,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
+  },
+  {
+    "School_name": "Queens College",
+    "Country": "United States of America",
+    "City": "New York",
+    "合作集團": ".",
+    "URL": "https://www.qc.cuny.edu/ga/graduate-programs/",
+    "latitude": 40.73675,
+    "longitude": -73.8228944,
+    "Number_of_departments": 119,
+    "degree_statistics": {
+      "Undergraduate": 0,
+      "Graduate": 11,
+      "Doctoral": 1,
+      "ShortCourse": 0,
+      "Certificate": 1,
+      "Diploma": 0,
+      "Other": 106
+    }
   },
   {
     "School_name": "Queen's University Belfast",
@@ -267,7 +539,16 @@
     "URL": "https://www.qub.ac.uk/courses/",
     "latitude": 54.5842881,
     "longitude": -5.9336562,
-    "Number_of_departments": 497
+    "Number_of_departments": 498,
+    "degree_statistics": {
+      "Undergraduate": 200,
+      "Graduate": 172,
+      "Doctoral": 73,
+      "ShortCourse": 0,
+      "Certificate": 25,
+      "Diploma": 28,
+      "Other": 0
+    }
   },
   {
     "School_name": "Queen's University Belfast International Study Centre",
@@ -277,7 +558,16 @@
     "URL": "https://www.qub.ac.uk/International/International-students/Applying/University-Preparation-Courses/isc-academic-programmes/",
     "latitude": 54.5842881,
     "longitude": -5.9336562,
-    "Number_of_departments": 22
+    "Number_of_departments": 22,
+    "degree_statistics": {
+      "Undergraduate": 0,
+      "Graduate": 0,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 6,
+      "Diploma": 16,
+      "Other": 0
+    }
   },
   {
     "School_name": "Royal Holloway University of London",
@@ -287,7 +577,16 @@
     "URL": "https://www.royalholloway.ac.uk/research-and-education/departments-and-schools/",
     "latitude": 51.4249395,
     "longitude": -0.5663896,
-    "Number_of_departments": 387
+    "Number_of_departments": 387,
+    "degree_statistics": {
+      "Undergraduate": 261,
+      "Graduate": 98,
+      "Doctoral": 28,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Saint Louis University",
@@ -297,7 +596,16 @@
     "URL": "https://catalog.slu.edu/programs/",
     "latitude": 38.635359,
     "longitude": -90.2318433,
-    "Number_of_departments": 482
+    "Number_of_departments": 482,
+    "degree_statistics": {
+      "Undergraduate": 99,
+      "Graduate": 133,
+      "Doctoral": 76,
+      "ShortCourse": 0,
+      "Certificate": 87,
+      "Diploma": 0,
+      "Other": 87
+    }
   },
   {
     "School_name": "San Jose State University",
@@ -307,7 +615,16 @@
     "URL": "https://catalog.sjsu.edu/content.php?catoid=13&navoid=4973",
     "latitude": 37.3351902,
     "longitude": -121.8812255,
-    "Number_of_departments": 180
+    "Number_of_departments": 180,
+    "degree_statistics": {
+      "Undergraduate": 0,
+      "Graduate": 1,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 41,
+      "Diploma": 0,
+      "Other": 138
+    }
   },
   {
     "School_name": "Simmons University",
@@ -317,7 +634,16 @@
     "URL": "https://www.simmons.edu/academics/find-program?program_level=34",
     "latitude": 42.3389354,
     "longitude": -71.1004318,
-    "Number_of_departments": 79
+    "Number_of_departments": 79,
+    "degree_statistics": {
+      "Undergraduate": 48,
+      "Graduate": 26,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 5,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Southern Illinois University",
@@ -327,7 +653,16 @@
     "URL": "https://catalog.siu.edu/programs/",
     "latitude": 37.7083423,
     "longitude": -89.2275556,
-    "Number_of_departments": 507
+    "Number_of_departments": 507,
+    "degree_statistics": {
+      "Undergraduate": 220,
+      "Graduate": 2,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 17,
+      "Diploma": 0,
+      "Other": 268
+    }
   },
   {
     "School_name": "Suffolk University Boston",
@@ -337,7 +672,16 @@
     "URL": "https://www.suffolk.edu/academics/undergraduate-programs",
     "latitude": 42.3567011,
     "longitude": -71.0610578,
-    "Number_of_departments": 151
+    "Number_of_departments": 151,
+    "degree_statistics": {
+      "Undergraduate": 136,
+      "Graduate": 13,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 2,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Teesside University",
@@ -347,7 +691,16 @@
     "URL": "https://www.tees.ac.uk/undergraduate_courses/az.cfm",
     "latitude": 54.5695266,
     "longitude": -1.2355444,
-    "Number_of_departments": 258
+    "Number_of_departments": 258,
+    "degree_statistics": {
+      "Undergraduate": 232,
+      "Graduate": 1,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 25,
+      "Other": 0
+    }
   },
   {
     "School_name": "Texas State University",
@@ -357,7 +710,16 @@
     "URL": "https://mycatalog.txstate.edu/undergraduate/undergraduate-majors/",
     "latitude": 29.8910941,
     "longitude": -97.9376839,
-    "Number_of_departments": 352
+    "Number_of_departments": 352,
+    "degree_statistics": {
+      "Undergraduate": 81,
+      "Graduate": 243,
+      "Doctoral": 28,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "The University of Alabama at Birmingham",
@@ -367,7 +729,16 @@
     "URL": "https://www.uab.edu/degrees/",
     "latitude": 33.5013152,
     "longitude": -86.8074698,
-    "Number_of_departments": 300
+    "Number_of_departments": 300,
+    "degree_statistics": {
+      "Undergraduate": 54,
+      "Graduate": 82,
+      "Doctoral": 43,
+      "ShortCourse": 0,
+      "Certificate": 87,
+      "Diploma": 0,
+      "Other": 34
+    }
   },
   {
     "School_name": "The University of Manchester",
@@ -377,7 +748,16 @@
     "URL": "https://www.manchester.ac.uk/study/masters/courses/list/",
     "latitude": 53.4865084,
     "longitude": -2.263828,
-    "Number_of_departments": 334
+    "Number_of_departments": 334,
+    "degree_statistics": {
+      "Undergraduate": 0,
+      "Graduate": 334,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "The University of Vermont",
@@ -387,7 +767,16 @@
     "URL": "https://catalogue.uvm.edu/undergraduate/majors/",
     "latitude": 46.6738972,
     "longitude": -95.2405947,
-    "Number_of_departments": 172
+    "Number_of_departments": 172,
+    "degree_statistics": {
+      "Undergraduate": 106,
+      "Graduate": 66,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "Towson University",
@@ -397,7 +786,16 @@
     "URL": "https://www.towson.edu/academics/undergraduate/majors/",
     "latitude": 39.3869768,
     "longitude": -76.6185804,
-    "Number_of_departments": 214
+    "Number_of_departments": 214,
+    "degree_statistics": {
+      "Undergraduate": 157,
+      "Graduate": 50,
+      "Doctoral": 7,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "UCLA",
@@ -407,7 +805,16 @@
     "URL": "https://admission.ucla.edu/apply/majors#The_College",
     "latitude": 34.0708777,
     "longitude": -118.4468503,
-    "Number_of_departments": 235
+    "Number_of_departments": 235,
+    "degree_statistics": {
+      "Undergraduate": 132,
+      "Graduate": 101,
+      "Doctoral": 2,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "University College Dublin",
@@ -417,7 +824,54 @@
     "URL": "https://www.ucd.ie/a-z/",
     "latitude": 53.3081294,
     "longitude": -6.2270405,
-    "Number_of_departments": 85
+    "Number_of_departments": 85,
+    "degree_statistics": {
+      "Undergraduate": 85,
+      "Graduate": 0,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
+  },
+  {
+    "School_name": "University of Alberta",
+    "Country": "Canada",
+    "City": "Edmonton",
+    "合作集團": "Kaplan",
+    "URL": "https://apps.ualberta.ca/catalogue/course",
+    "latitude": 53.52682,
+    "longitude": -113.5244937,
+    "Number_of_departments": 7282,
+    "degree_statistics": {
+      "Undergraduate": 4189,
+      "Graduate": 2348,
+      "Doctoral": 745,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
+  },
+  {
+    "School_name": "University of Birmingham",
+    "Country": "United Kingdom",
+    "City": "Birmingham",
+    "合作集團": "Kaplan",
+    "URL": "https://www.birmingham.ac.uk/study/courses?preventScrollTop=true",
+    "latitude": 52.4522956,
+    "longitude": -1.9312857,
+    "Number_of_departments": 554,
+    "degree_statistics": {
+      "Undergraduate": 257,
+      "Graduate": 232,
+      "Doctoral": 65,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "University of Brighton",
@@ -427,7 +881,16 @@
     "URL": "https://www.brighton.ac.uk/courses/course-list.aspx",
     "latitude": 50.8278078,
     "longitude": -0.1341983,
-    "Number_of_departments": 285
+    "Number_of_departments": 285,
+    "degree_statistics": {
+      "Undergraduate": 163,
+      "Graduate": 0,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 122
+    }
   },
   {
     "School_name": "University of Bristol",
@@ -437,7 +900,35 @@
     "URL": "https://www.bristol.ac.uk/study/undergraduate/search/?filterStudyYear=2026&page=1",
     "latitude": 51.5007679,
     "longitude": -2.5503106,
-    "Number_of_departments": 56
+    "Number_of_departments": 56,
+    "degree_statistics": {
+      "Undergraduate": 0,
+      "Graduate": 56,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
+  },
+  {
+    "School_name": "University of Exeter",
+    "Country": "United Kingdom",
+    "City": "Exeter",
+    "合作集團": ".",
+    "URL": "https://www.exeter.ac.uk/study/undergraduate/courses/",
+    "latitude": 50.7369372,
+    "longitude": -3.5347349,
+    "Number_of_departments": 428,
+    "degree_statistics": {
+      "Undergraduate": 232,
+      "Graduate": 188,
+      "Doctoral": 8,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "University of Glasgow",
@@ -447,7 +938,16 @@
     "URL": "https://www.gla.ac.uk/undergraduate/degrees/",
     "latitude": 55.871666,
     "longitude": -4.2778997,
-    "Number_of_departments": 449
+    "Number_of_departments": 449,
+    "degree_statistics": {
+      "Undergraduate": 140,
+      "Graduate": 275,
+      "Doctoral": 34,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "University of Leeds",
@@ -457,7 +957,54 @@
     "URL": "https://www.leeds.ac.uk/search?complete_url=?num_ranks=10000&query=%21FunDoesNotExist%3APadreNull&f.Filter+your+results%7CFUN6339tqai975jbmvk19nt89li3=Courses&collection=leeds-meta&sort=title",
     "latitude": 53.8057925,
     "longitude": -1.555111,
-    "Number_of_departments": 722
+    "Number_of_departments": 722,
+    "degree_statistics": {
+      "Undergraduate": 205,
+      "Graduate": 259,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 258
+    }
+  },
+  {
+    "School_name": "University of Leicester",
+    "Country": "United Kingdom",
+    "City": "Leicester",
+    "合作集團": ".",
+    "URL": "https://le.ac.uk/courses?Q=&Page=",
+    "latitude": 52.6087005,
+    "longitude": -1.114824,
+    "Number_of_departments": 306,
+    "degree_statistics": {
+      "Undergraduate": 206,
+      "Graduate": 99,
+      "Doctoral": 1,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
+  },
+  {
+    "School_name": "University of Liverpool",
+    "Country": "United Kingdom",
+    "City": "Liverpool",
+    "合作集團": "Kaplan",
+    "URL": "https://www.liverpool.ac.uk/courses/undergraduate",
+    "latitude": 53.4072429,
+    "longitude": -2.9658337,
+    "Number_of_departments": 213,
+    "degree_statistics": {
+      "Undergraduate": 154,
+      "Graduate": 59,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "University of Nottingham",
@@ -467,7 +1014,35 @@
     "URL": "https://www.nottingham.ac.uk/pgstudy/courses/courses.aspx?letter=",
     "latitude": 52.9387428,
     "longitude": -1.2002957,
-    "Number_of_departments": 307
+    "Number_of_departments": 306,
+    "degree_statistics": {
+      "Undergraduate": 0,
+      "Graduate": 170,
+      "Doctoral": 136,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
+  },
+  {
+    "School_name": "University of Oklahoma",
+    "Country": "United States of America",
+    "City": "Norman",
+    "合作集團": "INTO",
+    "URL": "https://www.ou.edu/admissions/academics",
+    "latitude": 35.1959878,
+    "longitude": -97.4457083,
+    "Number_of_departments": 732,
+    "degree_statistics": {
+      "Undergraduate": 215,
+      "Graduate": 365,
+      "Doctoral": 89,
+      "ShortCourse": 0,
+      "Certificate": 62,
+      "Diploma": 0,
+      "Other": 1
+    }
   },
   {
     "School_name": "University of Southampton",
@@ -477,7 +1052,130 @@
     "URL": "https://www.southampton.ac.uk/courses/undergraduate?keyword_filter=",
     "latitude": 50.9341804,
     "longitude": -1.3974844,
-    "Number_of_departments": 458
+    "Number_of_departments": 458,
+    "degree_statistics": {
+      "Undergraduate": 221,
+      "Graduate": 237,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
+  },
+  {
+    "School_name": "University of Stirling",
+    "Country": "United Kingdom",
+    "City": "Stirling",
+    "合作集團": "INTO",
+    "URL": "https://www.stir.ac.uk/",
+    "latitude": 56.1451154,
+    "longitude": -3.9173938,
+    "Number_of_departments": 192,
+    "degree_statistics": {
+      "Undergraduate": 64,
+      "Graduate": 87,
+      "Doctoral": 41,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
+  },
+  {
+    "School_name": "University of Strathclyde",
+    "Country": "United Kingdom",
+    "City": "Glasgow",
+    "合作集團": "StudyGroup",
+    "URL": "https://www.strath.ac.uk/courses/?level=Undergraduate",
+    "latitude": 55.8618812,
+    "longitude": -4.2419566,
+    "Number_of_departments": 551,
+    "degree_statistics": {
+      "Undergraduate": 256,
+      "Graduate": 256,
+      "Doctoral": 39,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
+  },
+  {
+    "School_name": "University of Surrey",
+    "Country": "United Kingdom",
+    "City": "Guildford",
+    "合作集團": "StudyGroup",
+    "URL": "https://www.surrey.ac.uk/undergraduate",
+    "latitude": 51.2430782,
+    "longitude": -0.5900545,
+    "Number_of_departments": 257,
+    "degree_statistics": {
+      "Undergraduate": 89,
+      "Graduate": 122,
+      "Doctoral": 46,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
+  },
+  {
+    "School_name": "University of Sussex",
+    "Country": "United Kingdom",
+    "City": "Brighton",
+    "合作集團": "StudyGroup",
+    "URL": "https://www.sussex.ac.uk/study/undergraduate/",
+    "latitude": 50.8674377,
+    "longitude": -0.0877259,
+    "Number_of_departments": 464,
+    "degree_statistics": {
+      "Undergraduate": 209,
+      "Graduate": 193,
+      "Doctoral": 62,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
+  },
+  {
+    "School_name": "University of the West of England Bristol",
+    "Country": "United Kingdom",
+    "City": "Bristol",
+    "合作集團": "Kaplan",
+    "URL": "https://courses.uwe.ac.uk/Search?words=&view=list",
+    "latitude": 51.5007679,
+    "longitude": -2.5503106,
+    "Number_of_departments": 568,
+    "degree_statistics": {
+      "Undergraduate": 448,
+      "Graduate": 118,
+      "Doctoral": 2,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
+  },
+  {
+    "School_name": "University of Victoria",
+    "Country": "Canada",
+    "City": "Victoria",
+    "合作集團": "Kaplan",
+    "URL": "https://www.uvic.ca/undergraduate/programs/undergraduate-programs/index.php",
+    "latitude": 43.4462344,
+    "longitude": -80.5198211,
+    "Number_of_departments": 3,
+    "degree_statistics": {
+      "Undergraduate": 1,
+      "Graduate": 2,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
   },
   {
     "School_name": "University of Warwick",
@@ -487,6 +1185,72 @@
     "URL": "https://warwick.ac.uk/study/postgraduate/courses/",
     "latitude": 52.3813073,
     "longitude": -1.5639569,
-    "Number_of_departments": 429
+    "Number_of_departments": 429,
+    "degree_statistics": {
+      "Undergraduate": 163,
+      "Graduate": 214,
+      "Doctoral": 52,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
+  },
+  {
+    "School_name": "University of Washington",
+    "Country": "United States of America",
+    "City": "Seattle, Washington",
+    "合作集團": ".",
+    "URL": "https://grad.uw.edu/programs/find-a-program/",
+    "latitude": 47.6554303,
+    "longitude": -122.3001692,
+    "Number_of_departments": 126,
+    "degree_statistics": {
+      "Undergraduate": 119,
+      "Graduate": 7,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
+  },
+  {
+    "School_name": "University of Westminster",
+    "Country": "United Kingdom",
+    "City": "London",
+    "合作集團": "Kaplan",
+    "URL": "https://www.westminster.ac.uk/course-search?f[0]=course_type%3A926",
+    "latitude": 51.5209064,
+    "longitude": -0.140073,
+    "Number_of_departments": 201,
+    "degree_statistics": {
+      "Undergraduate": 201,
+      "Graduate": 0,
+      "Doctoral": 0,
+      "ShortCourse": 0,
+      "Certificate": 0,
+      "Diploma": 0,
+      "Other": 0
+    }
+  },
+  {
+    "School_name": "University of York",
+    "Country": "United Kingdom",
+    "City": "York",
+    "合作集團": "Kaplan",
+    "URL": "https://www.york.ac.uk/study/undergraduate/courses/all",
+    "latitude": 53.9453903,
+    "longitude": -1.0314593,
+    "Number_of_departments": 627,
+    "degree_statistics": {
+      "Undergraduate": 222,
+      "Graduate": 308,
+      "Doctoral": 93,
+      "ShortCourse": 0,
+      "Certificate": 4,
+      "Diploma": 0,
+      "Other": 0
+    }
   }
 ]

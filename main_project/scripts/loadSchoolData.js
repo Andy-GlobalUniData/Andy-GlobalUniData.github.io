@@ -1,6 +1,7 @@
 // ==================== 🎯 TDD + PDCA: School Data Table 重構版本 ====================
-// Plan: 簡化邏輯，只響應學校篩選器（與 SchoolMap 一致）
-// Do: 實作類似 SchoolMap 的監聽機制
+// Plan: 簡化邏輯,只響應學校篩選器(與 SchoolMap 一致)
+//       + 加入 degree_statistics 展開功能
+// Do: 實作類似 SchoolMap 的監聽機制 + 子行展開
 // Check: 驗證功能正確性
 // Act: 持續優化改進
 
@@ -33,22 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /**
- * 🎯 TDD: 初始化 School Data Table (簡化版本)
- * 只負責初始化表格，不處理篩選邏輯
+ * 🎯 TDD: 初始化 School Data Table (深度記憶體優化版本)
+ * ⚡ 優化: 使用物件格式 + columns.render,避免預先格式化
+ * 目標: 記憶體從 532MB 降至 200MB 以內
  */
 function initSchoolDataTable(data) {
     try {
-        console.log('🏫 Initializing School Data Table with', data.length, 'schools');
-        
-        // 格式化資料
-        const formattedData = data.map(school => [
-            school.School_name,
-            school.Country,
-            school.City,
-            school.Number_of_departments,
-            school.合作集團 || 'N/A',
-            school.URL ? `<a href="${school.URL}" target="_blank">${school.URL.length > 30 ? school.URL.substring(0, 30) + "..." : school.URL}</a>` : "N/A"
-        ]);
+        console.log('🏫 Initializing School Data Table with', data.length, 'schools (Memory Optimized)');
         
         // 🎯 PDCA Check: 如果已存在,先銷毀
         if ($.fn.DataTable.isDataTable('#school-data-table')) {
@@ -56,23 +48,65 @@ function initSchoolDataTable(data) {
             console.log('📋 Destroying existing School DataTable...');
         }
     
-        // 🎯 初始化 DataTable with Scroller (虛擬滾動)
+        // ⚡ 記憶體優化: 直接使用原始資料物件,不預先格式化
         schoolDataTable = $("#school-data-table").DataTable({
-            data: formattedData,
-            deferRender: true,      // 延遲渲染,節省記憶體
+            data: data,             // ✅ 直接傳入物件陣列 (不是陣列的陣列)
+            deferRender: true,      // ✅ 延遲渲染,節省記憶體
             scrollY: '400px',       // 虛擬滾動
             scrollCollapse: true,
-            scroller: true,         // Scroller 擴充功能
-            paging: true,           // 🎯 Scroller 需要 paging 支援
-            pageLength: 50,         // 虛擬頁面大小
+            scroller: {
+                displayBuffer: 3,   // ⚡ 只預載 3 頁 (預設 9 頁) - 節省記憶體
+                boundaryScale: 0.3  // ⚡ 減少邊界預載 (預設 0.5)
+            },
+            paging: true,
+            pageLength: 25,         // ⚡ 從 50 降到 25,減少 DOM 元素
             columns: [
-                { title: "School Name" },
-                { title: "Country" },
-                { title: "City" },
-                { title: "科系數量" },
-                { title: "合作集團" },
-                { title: "School URL" }
+                {
+                    data: null,
+                    render: function() { return ''; },  // 展開按鈕不需要資料
+                    className: 'details-control',
+                    orderable: false,
+                    width: '30px',
+                    createdCell: function(td) {
+                        $(td).addClass('details-control');
+                    }
+                },
+                {
+                    data: 'School_name',  // ✅ 直接引用物件屬性
+                    title: "School Name"
+                },
+                {
+                    data: 'Country',
+                    title: "Country"
+                },
+                {
+                    data: 'City',
+                    title: "City"
+                },
+                {
+                    data: 'Number_of_departments',
+                    title: "科系數量"
+                },
+                {
+                    data: '合作集團',
+                    defaultContent: 'N/A',  // ✅ 處理空值
+                    title: "合作集團"
+                },
+                {
+                    data: 'URL',
+                    title: "School URL",
+                    render: function(data, type, row) {
+                        // ⚡ 只在顯示(display)時才生成 HTML,排序/搜尋時用原始值
+                        if (type === 'display' && data) {
+                            const displayUrl = data.length > 30 ? 
+                                data.substring(0, 30) + "..." : data;
+                            return `<a href="${data}" target="_blank">${displayUrl}</a>`;
+                        }
+                        return data || 'N/A';
+                    }
+                }
             ],
+            order: [[1, 'asc']], // 預設按學校名稱排序
             destroy: true,
             searching: true,
             ordering: true,
@@ -86,13 +120,34 @@ function initSchoolDataTable(data) {
                 loadingRecords: '載入中...',
                 processing: '處理中...'
             },
-            dom: 'frti',            // 🎯 隱藏分頁控制項，只保留篩選、表格、資訊
+            dom: 'frti',            // 隱藏分頁控制項
             initComplete: function() {
-                console.log('✅ School Data Table initialized (Scroller mode)');
-                // 綁定搜尋事件來更新統計
+                console.log('✅ School Data Table initialized (Memory Optimized: Object format + Scroller)');
                 $('#school-data-table').on('search.dt', function() {
                     updateSchoolTableStatsFromTable();
                 });
+            }
+        });
+        
+        // 🎯 綁定展開/收合事件 (使用 off 避免重複綁定)
+        $('#school-data-table tbody').off('click', 'td.details-control').on('click', 'td.details-control', function() {
+            const tr = $(this).closest('tr');
+            const row = schoolDataTable.row(tr);
+            const rowData = row.data();  // ⚡ 直接取得物件資料
+            
+            if (row.child.isShown()) {
+                // 收合子行
+                row.child.hide();
+                tr.removeClass('shown');
+                $(this).removeClass('open');
+                console.log('📥 Child row closed for:', rowData.School_name);
+            } else {
+                // 展開子行
+                const detailHtml = formatSchoolDetailRow(rowData);  // ⚡ 直接傳入物件
+                row.child(detailHtml).show();
+                tr.addClass('shown');
+                $(this).addClass('open');
+                console.log('📤 Child row opened for:', rowData.School_name);
             }
         });
         
@@ -113,6 +168,7 @@ function initSchoolDataTable(data) {
 /**
  * 🎯 TDD: 根據勾選的學校更新表格（與 SchoolMap 完全一致的邏輯）
  * 只響應 schoolSelectionChanged 事件
+ * ⚡ 記憶體優化: 使用 DataTables 內建搜尋功能,避免重複創建 DOM
  */
 function updateSchoolDataTableByChecked() {
     if (!schoolDataTable || !allSchoolData) {
@@ -126,35 +182,100 @@ function updateSchoolDataTableByChecked() {
     
     console.log('🔄 Updating School Data Table...', checkedNames.length, 'schools checked');
     
-    // 過濾資料 - 只顯示勾選的學校
-    const filteredData = allSchoolData.filter(school => 
-        checkedNames.includes(school.School_name)
-    );
+    // ⚡ 記憶體優化: 清空舊的搜尋函數
+    if ($.fn.dataTable.ext.search.length > 0) {
+        $.fn.dataTable.ext.search.length = 0;
+    }
     
-    // 格式化資料
-    const formattedData = filteredData.map(school => [
-        school.School_name,
-        school.Country,
-        school.City,
-        school.Number_of_departments,
-        school.合作集團 || 'N/A',
-        school.URL ? `<a href="${school.URL}" target="_blank">${school.URL.length > 30 ? school.URL.substring(0, 30) + "..." : school.URL}</a>` : "N/A"
-    ]);
+    // ⚡ 使用自定義搜尋函數 - 直接使用 rowData 物件
+    $.fn.dataTable.ext.search.push(function(settings, data, dataIndex, rowData) {
+        if (settings.nTable.id !== 'school-data-table') {
+            return true; // 不是目標表格,保持原樣
+        }
+        
+        // ✅ 直接使用 rowData 物件 (不用陣列索引)
+        return checkedNames.includes(rowData.School_name);
+    });
     
-    // 更新 DataTable
-    schoolDataTable.clear();
-    schoolDataTable.rows.add(formattedData);
-    schoolDataTable.draw(false);  // 不重置滾動位置
+    // 重新繪製表格 (不重建 DOM)
+    schoolDataTable.draw();
     
     // 更新統計
     updateSchoolTableStatsFromTable();
     
-    console.log('✅ School Data Table updated:', filteredData.length, 'schools displayed');
+    console.log('✅ School Data Table filtered (memory optimized)');
+}
+
+/**
+ * 🎯 TDD: 格式化學校詳細資訊子行
+ * 顯示 degree_statistics 統計資訊和官網連結
+ * ⚡ 優化: 使用陣列收集 + join,減少字串操作
+ * @param {Object} schoolData - 學校資料物件
+ * @returns {String} HTML 字串
+ */
+function formatSchoolDetailRow(schoolData) {
+    const stats = schoolData.degree_statistics;
+    
+    if (!stats) {
+        return '<div class="degree-stats-detail"><p>此學校無學位統計資料</p></div>';
+    }
+    
+    const total = Object.values(stats).reduce((sum, val) => sum + val, 0);
+    
+    if (total === 0) {
+        return '<div class="degree-stats-detail"><p>此學校所有學位類型數量均為 0</p></div>';
+    }
+    
+    // 學位類型中英對照 - 使用簡短版本
+    const degreeLabels = {
+        'Undergraduate': '大學部', 'Graduate': '研究所', 
+        'Doctoral': '博士', 'ShortCourse': '短期',
+        'Certificate': '證書', 'Diploma': '文憑', 'Other': '其他'
+    };
+    
+    // ⚡ 使用陣列收集,最後 join (比字串累加效能好)
+    const cards = [];
+    for (const [key, value] of Object.entries(stats)) {
+        if (value > 0) {
+            const pct = (value / total * 100).toFixed(1);
+            cards.push(
+                `<div class="stat-card">` +
+                `<div class="stat-label">${degreeLabels[key]}</div>` +
+                `<div class="stat-value">${value}</div>` +
+                `<div class="stat-bar"><div class="stat-bar-fill" style="width:${pct}%"></div></div>` +
+                `<div class="stat-percentage">${pct}%</div>` +
+                `</div>`
+            );
+        }
+    }
+    
+    // 官網按鈕 - 簡化版本
+    const websiteBtn = schoolData.URL ? 
+        `<a href="${schoolData.URL}" target="_blank" class="website-btn">🔗 Visit</a>` : 
+        '<span class="website-btn disabled">無官網</span>';
+    
+    // ⚡ 一次性組合 HTML,減少字串操作
+    return (
+        '<div class="degree-stats-detail">' +
+        '<div class="degree-stats-header">' +
+        '<div class="header-left">' +
+        '<span class="header-icon">📊</span>' +
+        '<div>' +
+        `<div class="header-title">${schoolData.School_name}</div>` +
+        `<div class="header-subtitle">Total: ${total}</div>` +
+        '</div>' +
+        '</div>' +
+        `<div class="header-right">${websiteBtn}</div>` +
+        '</div>' +
+        `<div class="stats-grid">${cards.join('')}</div>` +
+        '</div>'
+    );
 }
 
 /**
  * 🎯 TDD: 從 DataTable 當前狀態更新統計
- * 統計：總學校數、顯示學校數、涵蓋國家數
+ * 統計:總學校數、顯示學校數、涵蓋國家數
+ * ⚡ 優化: 使用物件格式,減少陣列索引操作
  */
 function updateSchoolTableStatsFromTable() {
     if (!schoolDataTable) return;
@@ -164,12 +285,12 @@ function updateSchoolTableStatsFromTable() {
         const displayedData = schoolDataTable.rows({ search: 'applied' }).data();
         const displayCount = displayedData.length;
         
-        // 統計國家數量
+        // 統計國家數量 - 使用 Set 去重
         const countries = new Set();
         for (let i = 0; i < displayedData.length; i++) {
-            const row = displayedData[i];
-            if (row && row[1]) { // Country 欄位在 index 1
-                countries.add(row[1]);
+            const rowData = displayedData[i];
+            if (rowData && rowData.Country) {  // ✅ 直接使用物件屬性
+                countries.add(rowData.Country);
             }
         }
         

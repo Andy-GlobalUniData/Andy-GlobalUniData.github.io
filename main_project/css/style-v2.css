@@ -738,3 +738,246 @@ table.dataTable tbody tr:hover {
     flex: 1;
   }
 }
+
+/* ========================================
+   Degree Statistics Detail Row Styles
+   展開式學位統計資訊樣式
+   ======================================== */
+
+/* 展開/收合按鈕 - 使用 Unicode 字元更可靠 */
+td.details-control {
+  cursor: pointer !important;
+  width: 30px !important;
+  text-align: center !important;
+  font-size: 18px !important;
+  line-height: 1 !important;
+  vertical-align: middle !important;
+  transition: opacity 0.2s ease;
+  position: relative !important;
+  user-select: none !important;
+}
+
+td.details-control::before {
+  content: '⊕';
+  display: inline-block;
+  font-size: 20px;
+  color: #667eea;
+  font-weight: bold;
+}
+
+td.details-control:hover {
+  opacity: 0.7;
+}
+
+td.details-control.open::before {
+  content: '⊖';
+  color: #e74c3c;
+}
+
+/* 深色模式下的按鈕顏色調整 */
+[data-theme="dark"] td.details-control::before {
+  color: #8b9bff;
+}
+
+[data-theme="dark"] td.details-control.open::before {
+  color: #ff6b6b;
+}
+
+/* 詳細資訊容器 */
+.degree-stats-detail {
+  background: linear-gradient(135deg, 
+    var(--bg-secondary) 0%, 
+    var(--bg-elevated) 100%);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  margin: var(--spacing-md) 0;
+  box-shadow: var(--shadow-md);
+}
+
+/* 標題區域 */
+.degree-stats-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--border-color);
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex: 1;
+  min-width: 250px;
+}
+
+.header-icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.header-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.header-subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.header-right {
+  flex-shrink: 0;
+}
+
+/* 官網按鈕 */
+.website-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.website-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.website-btn.disabled {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.website-btn.disabled:hover {
+  transform: none;
+}
+
+/* 統計卡片網格 */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+/* 統計卡片 */
+.stat-card {
+  background: var(--bg-elevated);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.stat-label small {
+  display: block;
+  font-size: 10px;
+  margin-top: 2px;
+  opacity: 0.7;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.stat-bar {
+  height: 8px;
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  transition: width 0.6s ease;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);  /* 預設漸層色 */
+}
+
+/* 為不同的 stat-card 提供不同顏色 (使用 nth-child) */
+.stat-card:nth-child(1) .stat-bar-fill { background: linear-gradient(135deg, #667eea, #764ba2); }
+.stat-card:nth-child(2) .stat-bar-fill { background: linear-gradient(135deg, #f093fb, #f5576c); }
+.stat-card:nth-child(3) .stat-bar-fill { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+.stat-card:nth-child(4) .stat-bar-fill { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+.stat-card:nth-child(5) .stat-bar-fill { background: linear-gradient(135deg, #fa709a, #fee140); }
+.stat-card:nth-child(6) .stat-bar-fill { background: linear-gradient(135deg, #feca57, #ff9a56); }
+.stat-card:nth-child(7) .stat-bar-fill { background: linear-gradient(135deg, #a8edea, #fed6e3); }
+
+.stat-percentage {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .degree-stats-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .header-left {
+    min-width: 100%;
+  }
+  
+  .header-right {
+    width: 100%;
+  }
+  
+  .website-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .degree-stats-detail {
+    padding: var(--spacing-md);
+  }
+  
+  .stat-value {
+    font-size: 24px;
+  }
+  
+  .header-title {
+    font-size: 16px;
+  }
+}
+

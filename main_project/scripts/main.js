@@ -666,6 +666,10 @@
     /**
      * 🎯 TDD: 分批載入資料到表格 (自動完成版本)
      * PDCA Do: 自動批次載入,顯示進度,用戶無需操作
+     * 
+     * 新邏輯 (TDD PDCA): 
+     * 1. 先用 Department Filter 過濾資料
+     * 2. 再用 School 和 Degree 過濾
      */
     function loadNextChunk() {
         if (loadIndex >= allData.length) {
@@ -682,10 +686,27 @@
         const chunk = allData.slice(loadIndex, loadIndex + CHUNK_SIZE);
         loadIndex += CHUNK_SIZE;
 
-        // 過濾資料
+        // 🎯 新過濾邏輯: 先過濾 Department，再過濾 School 和 Degree
         const filteredChunk = chunk.filter(item => {
-            const schoolMatch = selectedSchools.length === 0 || selectedSchools.includes(item['School Name']);
+            // Step 1: Department Filter (優先級最高)
+            if (window.tagFilterManager && window.tagFilterManager.lowerCaseTags && window.tagFilterManager.lowerCaseTags.length > 0) {
+                const deptName = (item['Department Name'] || '').toLowerCase();
+                // 🎯 記憶體優化: 使用快取的小寫標籤，避免重複 toLowerCase()
+                const deptMatches = window.tagFilterManager.lowerCaseTags.some(lowerTag => 
+                    deptName.includes(lowerTag)
+                );
+                if (!deptMatches) {
+                    return false; // 不符合 Department Filter 就直接排除
+                }
+            }
             
+            // Step 2: School Filter
+            const schoolMatch = selectedSchools.length === 0 || selectedSchools.includes(item['School Name']);
+            if (!schoolMatch) {
+                return false;
+            }
+            
+            // Step 3: Degree Filter
             let degreeMatch = true;
             if (selectedDegrees.length > 0) {
                 degreeMatch = selectedDegrees.some(deg => {
@@ -694,7 +715,7 @@
                 });
             }
             
-            return schoolMatch && degreeMatch;
+            return degreeMatch;
         });
 
         // 格式化資料
@@ -811,16 +832,15 @@
         setTimeout(() => {
             loadNextChunk();
         }, 50);
-        
+
         // 🎯 TDD: 篩選後更新統計
         setTimeout(() => {
             if (isLoadingComplete) {
                 updateTableStats();
             }
-        }, 100);
+        }, 500);
 
         // 🎯 觸發學校選擇變化事件 (for SchoolMap.js + School Data Table)
-        // School Data Table 現在只監聽此事件，與 SchoolMap 完全一致
         document.dispatchEvent(new Event('schoolSelectionChanged'));
 
         console.log('🔄 Filters updated - Groups:', selectedGroups.length, 'Countries:', selectedCountries.length, 'Schools:', selectedSchools.length, 'Degrees:', selectedDegrees.length);
@@ -1127,5 +1147,8 @@
     } else {
         $(document).ready(init);
     }
+    
+    // 🎯 暴露到全域，供 tagFilter.js 使用
+    window.updateFilters = updateFilters;
 
 })();

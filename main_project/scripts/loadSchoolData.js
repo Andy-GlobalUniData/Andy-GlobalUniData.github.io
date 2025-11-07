@@ -115,7 +115,7 @@ function initSchoolDataTable(data) {
                 info: '顯示 _START_ 到 _END_ 筆,共 _TOTAL_ 筆',
                 infoEmpty: '沒有資料',
                 infoFiltered: '(從 _MAX_ 筆中篩選)',
-                search: '搜尋學校:',
+                search: ' ',
                 zeroRecords: '沒有符合的學校資料',
                 loadingRecords: '載入中...',
                 processing: '處理中...'

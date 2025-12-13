@@ -78,12 +78,12 @@ class DepartmentAutocomplete {
     }
 
     /**
-     * 從預設科系關鍵字 JSON 載入資料
-     * 🎯 優化：使用預設的科系列表，簡單快速
+     * 從完整科系清單 JSON 載入資料
+     * 🎯 優化：使用預先提取的完整科系列表（26k+ 個科系，100% 覆蓋）
      */
     async loadDepartments() {
         try {
-            // 載入預設科系關鍵字
+            // 載入完整科系清單（已包含所有 data.json 中的科系）
             const response = await fetch('data/department_keywords.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -91,15 +91,16 @@ class DepartmentAutocomplete {
             
             const data = await response.json();
             
-            // 直接使用預設關鍵字列表
+            // 直接使用完整列表（已排序：高頻優先）
             this.departments = data.keywords || [];
             
-            console.log(`✅ 載入 ${this.departments.length} 個預設科系關鍵字`);
-            console.log(`📊 關鍵字版本: ${data.metadata?.version || 'N/A'}`);
+            console.log(`✅ 載入完整科系清單：${this.departments.length} 個科系`);
+            console.log(`📊 資料版本: ${data.metadata?.generatedDate || 'N/A'}`);
+            console.log(`📊 高頻關鍵字: ${data.metadata?.priorityKeywords || 'N/A'} 個`);
             
             return this.departments;
         } catch (error) {
-            console.error('❌ 載入預設科系失敗，嘗試使用備用方案:', error);
+            console.error('❌ 載入科系清單失敗，使用備用方案:', error);
             
             // 備用方案：使用內建的基本科系列表
             this.departments = [

@@ -51,7 +51,11 @@ class TagFilterManager {
     
     render() {
         if (this.tags.length === 0) {
-            this.container.innerHTML = '<div class="empty-state">尚未新增任何篩選科系 (No departments added)</div>';
+            this.container.innerHTML = '<div class="empty-state">' +
+                '<div class="empty-state-icon">🔍</div>' +
+                '<div class="empty-state-text">輸入科系關鍵字開始篩選' +
+                '<br><span class="empty-state-hint">例如：Computer Science、MBA、Engineering</span></div>' +
+                '</div>';
             return;
         }
         

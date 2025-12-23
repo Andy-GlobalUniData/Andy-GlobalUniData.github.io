@@ -943,6 +943,28 @@ table.dataTable tbody tr:hover {
 /* ========================================
    15. 響應式設計
    ======================================== */
+
+/* 平板優化 (768px 到 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .select-area-container {
+    gap: var(--spacing-md);
+  }
+  
+  .select-container {
+    min-width: calc(50% - var(--spacing-sm));
+  }
+  
+  .export-buttons button {
+    flex: 1;
+    min-width: 140px;
+  }
+  
+  table {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* 手機版優化 (768px 以下) */
 @media (max-width: 768px) {
   body {
     padding: var(--spacing-md);
@@ -950,27 +972,157 @@ table.dataTable tbody tr:hover {
 
   .header-container {
     padding: var(--spacing-lg);
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .last-updated-container {
+    width: 100%;
+    flex-direction: column;
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+  
+  .last-updated-container h3 {
+    width: 100%;
   }
 
   .select-area-container {
     gap: var(--spacing-md);
+    flex-direction: column;
+    padding: var(--spacing-lg);
+  }
+  
+  .select-area-container::before {
+    top: -16px;
+    left: var(--spacing-md);
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs) var(--spacing-md);
   }
 
   .select-container {
     min-width: 100%;
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .select-container h3 {
+    font-size: var(--font-size-md);
+    margin-bottom: var(--spacing-md);
   }
 
   .table-container,
   #school-data-table-container {
     padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-2xl);
   }
 
   .export-buttons {
     width: 100%;
+    flex-direction: column;
+    gap: var(--spacing-md);
   }
 
   .export-buttons button {
-    flex: 1;
+    width: 100%;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    font-size: var(--font-size-base);
+    min-height: 44px;
+    text-align: center;
+  }
+  
+  /* 觸控目標最優化 */
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: 16px; /* 防止 iOS 自動縮放 */
+  }
+  
+  /* 表格優化 */
+  table {
+    font-size: var(--font-size-xs);
+  }
+  
+  thead th {
+    padding: var(--spacing-md);
+    white-space: nowrap;
+  }
+  
+  tbody td {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+}
+
+/* 超小螢幕優化 (480px 以下) */
+@media (max-width: 480px) {
+  body {
+    padding: var(--spacing-sm);
+  }
+  
+  h1 { font-size: var(--font-size-2xl); }
+  h2 { font-size: var(--font-size-xl); }
+  h3 { font-size: var(--font-size-lg); }
+  
+  .header-container {
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+  }
+  
+  .select-area-container {
+    padding: var(--spacing-md);
+  }
+  
+  .select-area-container::before {
+    top: -14px;
+    left: var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: 10px;
+  }
+  
+  .select-container {
+    padding: var(--spacing-md);
+  }
+  
+  .select-container h3 {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+  }
+  
+  .table-container,
+  #school-data-table-container {
+    padding: var(--spacing-md);
+  }
+  
+  /* 全寬按鈕 */
+  button,
+  input,
+  select {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .export-buttons button {
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+  
+  table {
+    font-size: 11px;
+  }
+  
+  thead th {
+    padding: 6px 4px;
+  }
+  
+  tbody td {
+    padding: 4px 6px;
   }
 }
 
@@ -1202,28 +1354,55 @@ td.details-control.open::before {
   }
   
   /* 科系篩選響應式 */
+  #tag-filter-section {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    margin-bottom: var(--spacing-3xl);
+  }
+  
+  #tag-filter-section::before {
+    top: -14px;
+    left: var(--spacing-lg);
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+  
+  #tag-filter-section h3 {
+    font-size: var(--font-size-base);
+    padding-left: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+  
   .tag-input-area {
     flex-direction: column;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
   }
   
   #tag-filter-input {
     width: 100%;
     padding: var(--spacing-md) var(--spacing-lg);
+    min-height: 44px;
+    font-size: 16px;
+    border-radius: var(--border-radius-lg);
   }
   
   #add-tag-btn {
     width: 100%;
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    min-height: 44px;
+    font-size: var(--font-size-base);
   }
   
   .tag-container {
     gap: var(--spacing-md);
     padding: var(--spacing-lg);
+    min-height: auto;
   }
   
   .filter-tag {
     max-width: calc(100% - 20px);
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-size-sm);
   }
 }
 
@@ -1239,5 +1418,43 @@ td.details-control.open::before {
   .header-title {
     font-size: 16px;
   }
-}
-
+  
+  /* 超小螢幕上的科系篩選 */
+  #tag-filter-section {
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-2xl);
+  }
+  
+  #tag-filter-section::before {
+    top: -12px;
+    left: var(--spacing-sm);
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  
+  #tag-filter-section h3 {
+    font-size: var(--font-size-xs);
+    padding-left: var(--spacing-md);
+  }
+  
+  #tag-filter-input {
+    width: 100%;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+  }
+  
+  #add-tag-btn {
+    width: 100%;
+    padding: var(--spacing-md);
+  }
+  
+  .tag-container {
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+  }
+  
+  .filter-tag {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 12px;
+    max-width: 100%;

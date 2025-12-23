@@ -212,7 +212,7 @@ class DepartmentAutocomplete {
      * 顯示無結果訊息
      */
     displayNoResults() {
-        this.dropdown.innerHTML = '<div class="autocomplete-no-results">未找到符合的科系</div>';
+        this.dropdown.innerHTML = '<div class="autocomplete-no-results">篩選非常見的科系</div>';
         this.dropdown.style.display = 'block';
         this.isOpen = true;
     }

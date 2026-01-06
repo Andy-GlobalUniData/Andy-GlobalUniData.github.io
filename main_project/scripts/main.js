@@ -5,7 +5,7 @@
  * @date 2025-10-20
  */
 
-(function() {
+(function () {
     'use strict';
 
     console.log('🚀 Andy Global Uni Data v3.0 - Refactored Version');
@@ -27,7 +27,7 @@
     // ✨ PDCA Plan: 自動載入所有資料,使用虛擬滾動優化渲染
 
     // ==================== 效能優化工具 ====================
-    
+
     /**
      * 🎯 TDD: Debounce 函式 - 減少頻繁呼叫
      * @param {Function} func - 要延遲執行的函式
@@ -64,7 +64,7 @@
     }
 
     // ==================== 1. 資料載入與合併 ====================
-    
+
     /**
      * 載入並合併資料
      */
@@ -111,13 +111,21 @@
             console.log('✅ School-to-Group map created:', Object.keys(schoolToGroupMap).length, 'entries');
 
             // 合併資料：為每個 department 加入 Country
-            const mergedData = departmentData.map(item => ({
-                'Country': schoolToCountry.get(item['School Name']) || 'Unknown',
-                'School Name': item['School Name'] || 'N/A',
-                'Department Name': item['Department Name'] || 'N/A',
-                'Degree Level': item['Degree Level'] || 'N/A',
-                'URL': item.URL || 'N/A'
-            }));
+            const mergedData = departmentData.map(item => {
+                // 🎯 Fix: 處理不一致的 JSON 鍵值 (School Name vs University)
+                const schoolName = item['School Name'] || item['University'] || 'N/A';
+                const departmentName = item['Department Name'] || item['Course Name'] || 'N/A';
+                const url = item['URL'] || item['Course URL'] || 'N/A';
+                const degreeLevel = item['Degree Level'] || 'N/A';
+
+                return {
+                    'Country': schoolToCountry.get(schoolName) || 'Unknown',
+                    'School Name': schoolName,
+                    'Department Name': departmentName,
+                    'Degree Level': degreeLevel,
+                    'URL': url
+                };
+            });
 
             // 過濾掉沒有有效 Country 的資料
             allData = mergedData.filter(item => {
@@ -152,20 +160,20 @@
         const groups = [...new Set(schoolData.map(item => item['合作集團']))]
             .filter(group => group && group !== '.' && group !== 'N/A')
             .sort();
-        
+
         // 檢查是否有沒有集團的學校 ✨
         const hasNoGroupSchools = schoolData.some(school => {
             const group = school['合作集團'];
             return !group || group === '.' || group === 'N/A';
         });
-        
+
         let html = '<h3>Select Group</h3>';
         html += '<label><input type="checkbox" id="select-all-groups" checked> 全選集團</label><br>';
-        
+
         groups.forEach(group => {
             html += `<label><input type="checkbox" class="group-checkbox" value="${group}" checked> ${group}</label><br>`;
         });
-        
+
         // 如果有沒有集團的學校,添加"無_Group"選項 ✨
         if (hasNoGroupSchools) {
             html += `<label><input type="checkbox" class="group-checkbox" value="無_Group" checked> 無_Group</label><br>`;
@@ -179,15 +187,15 @@
 
         // 綁定事件 - 🎯 使用 debounce 減少頻繁呼叫
         const debouncedFilterUpdate = debounce(updateFilters, 200);
-        
-        $('#select-all-groups').on('change', function() {
+
+        $('#select-all-groups').on('change', function () {
             console.log('🔄 全選集團:', this.checked ? '勾選' : '取消');
             $('.group-checkbox').prop('checked', this.checked);
             updateSchoolSelector();  // ✨ 更新學校列表
             debouncedFilterUpdate();
         });
 
-        $('.group-checkbox').on('change', function() {
+        $('.group-checkbox').on('change', function () {
             const allChecked = $('.group-checkbox:checked').length === $('.group-checkbox').length;
             $('#select-all-groups').prop('checked', allChecked);
             updateSchoolSelector();  // ✨ 更新學校列表
@@ -209,10 +217,10 @@
         const countries = [...new Set(allData.map(item => item.Country))]
             .filter(country => country && country !== 'N/A')
             .sort();
-        
+
         let html = '<h3>Select Country</h3>';
         html += '<label><input type="checkbox" id="select-all-countries" checked> 全選國家</label><br>';
-        
+
         countries.forEach(country => {
             html += `<label><input type="checkbox" class="country-checkbox" value="${country}" checked> ${country}</label><br>`;
         });
@@ -224,15 +232,15 @@
 
         // 綁定事件 - 🎯 使用 debounce 減少頻繁呼叫
         const debouncedCountryFilterUpdate = debounce(updateFilters, 200);
-        
-        $('#select-all-countries').on('change', function() {
+
+        $('#select-all-countries').on('change', function () {
             console.log('🔄 全選國家:', this.checked ? '勾選' : '取消');
             $('.country-checkbox').prop('checked', this.checked);
             updateSchoolSelector();  // ✨ 更新學校列表
             debouncedCountryFilterUpdate();
         });
 
-        $('.country-checkbox').on('change', function() {
+        $('.country-checkbox').on('change', function () {
             const allChecked = $('.country-checkbox:checked').length === $('.country-checkbox').length;
             $('#select-all-countries').prop('checked', allChecked);
             updateSchoolSelector();  // ✨ 更新學校列表
@@ -254,7 +262,7 @@
         const debouncedUpdate = debounce(updateSchoolSelector, 100);
 
         // 監聽 Group 和 Country 的變化來更新學校列表 (AND 邏輯) ✨
-        $(document).on('change.schoolUpdate', '.group-checkbox, .country-checkbox', function() {
+        $(document).on('change.schoolUpdate', '.group-checkbox, .country-checkbox', function () {
             debouncedUpdate();
         });
 
@@ -273,31 +281,31 @@
         // 使用 Array.from 直接建立陣列,避免 jQuery each (記憶體優化) ✨
         const groupCheckboxes = document.querySelectorAll('.group-checkbox:checked');
         const countryCheckboxes = document.querySelectorAll('.country-checkbox:checked');
-        
+
         const selectedGroupsTemp = Array.from(groupCheckboxes, cb => cb.value);
         const selectedCountriesTemp = Array.from(countryCheckboxes, cb => cb.value);
 
         // 學校 = 集團 AND 國家的交集 ✨
         let filteredSchools = schoolData;
-        
+
         // 依集團篩選 (如果有選擇) - 包含"無_Group"處理 ✨
         if (selectedGroupsTemp.length > 0) {
             filteredSchools = filteredSchools.filter(school => {
                 const schoolGroup = school['合作集團'];
-                
+
                 // 如果學校沒有集團,檢查是否選中了"無_Group"
                 if (!schoolGroup || schoolGroup === '.' || schoolGroup === 'N/A') {
                     return selectedGroupsTemp.includes('無_Group');
                 }
-                
+
                 // 否則檢查學校的集團是否在選中列表中
                 return selectedGroupsTemp.includes(schoolGroup);
             });
         }
-        
+
         // 依國家篩選 (如果有選擇) - AND 邏輯
         if (selectedCountriesTemp.length > 0) {
-            filteredSchools = filteredSchools.filter(school => 
+            filteredSchools = filteredSchools.filter(school =>
                 selectedCountriesTemp.includes(school.Country)
             );
         }
@@ -324,13 +332,13 @@
             '<div class="school-checkbox-container">',
             '<label><input type="checkbox" id="select-all-schools" checked> 全選學校</label><br>'
         ];
-        
+
         schools.forEach(school => {
             htmlParts.push(`<label class="school-item"><input type="checkbox" class="school-checkbox" value="${school}" checked> ${school}</label>`);
         });
-        
+
         htmlParts.push('</div>');
-        
+
         container.innerHTML = htmlParts.join('');  // 一次性寫入 DOM ✨
 
         // 🎯 TDD: 恢復搜尋框的值
@@ -344,12 +352,12 @@
         selectedSchools = schools;
 
         // ✅ PDCA 優化: 減少搜尋 debounce 延遲 150ms → 50ms
-        const debouncedSchoolSearch = debounce(function(searchText) {
+        const debouncedSchoolSearch = debounce(function (searchText) {
             filterSchoolsBySearch(searchText);
         }, 50);
 
         if (searchInput) {
-            searchInput.addEventListener('input', function() {
+            searchInput.addEventListener('input', function () {
                 debouncedSchoolSearch(this.value);
             });
         }
@@ -358,14 +366,14 @@
         // 移除重複的 debounce,使用事件委派統一處理
         const selectAllCheckbox = document.getElementById('select-all-schools');
         const schoolCheckboxContainer = container.querySelector('.school-checkbox-container');
-        
+
         if (selectAllCheckbox && schoolCheckboxContainer) {
             // 移除舊的事件監聽器 (如果存在)
             const newContainer = schoolCheckboxContainer.cloneNode(true);
             schoolCheckboxContainer.parentNode.replaceChild(newContainer, schoolCheckboxContainer);
-            
+
             // 使用原生事件委派 - 只綁定一個監聽器
-            newContainer.addEventListener('change', function(e) {
+            newContainer.addEventListener('change', function (e) {
                 if (e.target.id === 'select-all-schools') {
                     // 🎯 只影響可見的勾選框
                     const visibleCheckboxes = Array.from(
@@ -374,10 +382,10 @@
                         const item = cb.closest('.school-item');
                         return item && item.style.display !== 'none';
                     });
-                    
+
                     visibleCheckboxes.forEach(cb => cb.checked = e.target.checked);
                     updateFilters(); // 直接調用,無需額外 debounce
-                    
+
                 } else if (e.target.classList.contains('school-checkbox')) {
                     // 更新全選狀態
                     const allCheckboxes = newContainer.querySelectorAll('.school-checkbox');
@@ -385,7 +393,7 @@
                         const item = cb.closest('.school-item');
                         return item && item.style.display !== 'none';
                     });
-                    
+
                     const checkedVisible = visibleCheckboxes.filter(cb => cb.checked).length;
                     const newSelectAll = newContainer.querySelector('#select-all-schools');
                     if (newSelectAll) {
@@ -406,15 +414,15 @@
     function filterSchoolsBySearch(searchText) {
         const items = document.querySelectorAll('.school-item');
         const searchLower = searchText.toLowerCase().trim();
-        
+
         let visibleCount = 0;
-        
+
         items.forEach(item => {
             const checkbox = item.querySelector('.school-checkbox');
             if (!checkbox) return;
-            
+
             const schoolName = checkbox.value.toLowerCase();
-            
+
             // 如果搜尋為空或學校名稱包含搜尋文字，則顯示
             if (searchLower === '' || schoolName.includes(searchLower)) {
                 item.style.display = '';
@@ -423,7 +431,7 @@
                 item.style.display = 'none';
             }
         });
-        
+
         console.log(`🔍 School search: "${searchText}" - ${visibleCount} schools visible`);
         return visibleCount;
     }
@@ -447,7 +455,7 @@
 
         let html = '<h3>Select Degree Level</h3>';
         html += '<label><input type="checkbox" id="no-degree-filter" checked> 不篩選學位</label><br>';
-        
+
         degrees.forEach(degree => {
             html += `<label><input type="checkbox" class="degree-checkbox" value="${degree.value}"> ${degree.label}</label><br>`;
         });
@@ -455,7 +463,7 @@
         container.innerHTML = html;
 
         // 綁定「不篩選學位」checkbox
-        $('#no-degree-filter').on('change', function() {
+        $('#no-degree-filter').on('change', function () {
             if (this.checked) {
                 $('.degree-checkbox').prop('checked', false);
                 selectedDegrees = [];
@@ -464,7 +472,7 @@
         });
 
         // 綁定學位 checkbox
-        $('.degree-checkbox').on('change', function() {
+        $('.degree-checkbox').on('change', function () {
             if ($('.degree-checkbox:checked').length > 0) {
                 $('#no-degree-filter').prop('checked', false);
             } else {
@@ -488,7 +496,7 @@
                 {
                     title: '<input type="checkbox" id="select-all">',
                     orderable: false,
-                    render: function() {
+                    render: function () {
                         return '<input type="checkbox" class="row-checkbox">';
                     }
                 },
@@ -499,7 +507,7 @@
                 {
                     title: 'URL',
                     data: 5,
-                    render: function(data) {
+                    render: function (data) {
                         if (!data || data === 'N/A') return 'N/A';
                         const displayText = data.length > 40 ? data.substring(0, 40) + '...' : data;
                         return `<a href="${data}" target="_blank" rel="noopener noreferrer">${displayText}</a>`;
@@ -508,7 +516,7 @@
                 {
                     title: 'Copy URL',
                     orderable: false,
-                    render: function(data, type, row) {
+                    render: function (data, type, row) {
                         const url = row[5];
                         if (!url || url === 'N/A') return 'N/A';
                         return `<button class="copy-url-btn" data-url="${url}">Copy URL</button>`;
@@ -542,12 +550,12 @@
                 loadingRecords: '載入中...',
                 zeroRecords: '沒有符合的資料'
             },
-            initComplete: function() {
+            initComplete: function () {
                 // 隱藏搜尋框但保持 searching:true，避免表格鎖死 ✨
                 $('#departmentTable_wrapper .dataTables_filter').hide();
                 console.log('✅ Department DataTable initialized (search box hidden)');
             },
-            drawCallback: function() {
+            drawCallback: function () {
                 // 🎯 TDD: 每次重繪時更新統計
                 updateTableStats();
             }
@@ -557,24 +565,24 @@
         // Test Case 1: 全選應該選中所有過濾後的資料 (包含不可見的行)
         // Test Case 2: 取消全選應該清空所有選取
         // Test Case 3: 換頁後勾選狀態應該正確恢復
-        $(document).on('click', '#select-all', function() {
+        $(document).on('click', '#select-all', function () {
             const checked = this.checked;
-            
+
             // 🎯 TDD: 先更新可見行的 checkbox (即時回饋)
             $('.row-checkbox').prop('checked', checked);
-            
+
             if (checked) {
                 // 🎯 PDCA Do: 使用 DataTable API 取得所有過濾後的行資料
                 // rows({ search: 'applied' }) 會取得所有符合當前搜尋/篩選條件的行
                 const allFilteredRows = dataTable.rows({ search: 'applied' }).data();
-                
+
                 // 清空並重新建立選取列表
                 selectedRowURLs = [];
-                
+
                 // 🎯 TDD PDCA: 遍歷所有行，提取純 URL (index 5 是 URL 欄位)
-                allFilteredRows.each(function(rowData) {
+                allFilteredRows.each(function (rowData) {
                     let url = rowData[5]; // URL 在第6欄 (index 5)
-                    
+
                     // 🎯 TDD: 如果 URL 包含 HTML，提取純 URL
                     if (url && typeof url === 'string' && url.includes('<a ')) {
                         const match = url.match(/href="([^"]+)"/);
@@ -582,7 +590,7 @@
                             url = match[1];
                         }
                     }
-                    
+
                     // 過濾有效 URL（排除 N/A 和 checkbox HTML）
                     if (url && url !== 'N/A' && !url.includes('<input')) {
                         // 避免重複添加
@@ -591,7 +599,7 @@
                         }
                     }
                 });
-                
+
                 console.log(`✅ TDD Check: 全選完成 - 已選取 ${selectedRowURLs.length} 個純文字 URL (包含不可見的行)`);
             } else {
                 // 🎯 TDD: 取消全選 - 清空所有選取
@@ -603,10 +611,10 @@
         // 🎯 TDD: 綁定單行 checkbox - 同步更新全選狀態 ✨
         // Test Case: 當所有行都被勾選時，全選 checkbox 應該自動勾選
         // Test Case: 當任一行被取消勾選時，全選 checkbox 應該自動取消
-        $(document).on('change', '.row-checkbox', function() {
+        $(document).on('change', '.row-checkbox', function () {
             const row = $(this).closest('tr');
             const url = row.find('td:eq(5) a').attr('href') || row.find('td:eq(5)').text();
-            
+
             if (url && url !== 'N/A') {
                 if (this.checked) {
                     // 🎯 TDD: 勾選時添加到選取列表
@@ -617,13 +625,13 @@
                     // 🎯 TDD: 取消勾選時從列表移除
                     selectedRowURLs = selectedRowURLs.filter(u => u !== url);
                 }
-                
+
                 // 🎯 PDCA Check: 同步更新全選 checkbox 狀態
                 // 如果選取數量等於所有過濾後的資料數量，則勾選全選 checkbox
                 const totalFilteredRows = dataTable.rows({ search: 'applied' }).count();
                 const allSelected = selectedRowURLs.length === totalFilteredRows;
                 $('#select-all').prop('checked', allSelected);
-                
+
                 console.log(`🔄 TDD Check: 已選取 ${selectedRowURLs.length}/${totalFilteredRows} 個 URL`);
             }
         });
@@ -631,15 +639,15 @@
         // 🎯 TDD + PDCA Check: 表格重繪時恢復勾選狀態 ✨
         // Test Case: 換頁或滾動後，已勾選的行應該保持勾選狀態
         // Test Case: 全選狀態應該在換頁後正確顯示
-        $(document).on('draw.dt', function() {
+        $(document).on('draw.dt', function () {
             // 恢復可見行的勾選狀態
-            $('#json-table tbody tr').each(function() {
+            $('#json-table tbody tr').each(function () {
                 const url = $(this).find('td:eq(5) a').attr('href') || $(this).find('td:eq(5)').text();
                 if (selectedRowURLs.includes(url)) {
                     $(this).find('.row-checkbox').prop('checked', true);
                 }
             });
-            
+
             // 🎯 PDCA Check: 同步更新全選 checkbox 狀態
             const totalFilteredRows = dataTable.rows({ search: 'applied' }).count();
             const allSelected = selectedRowURLs.length > 0 && selectedRowURLs.length === totalFilteredRows;
@@ -647,7 +655,7 @@
         });
 
         // 綁定複製單個URL按鈕
-        $(document).on('click', '.copy-url-btn', function() {
+        $(document).on('click', '.copy-url-btn', function () {
             const url = $(this).data('url');
             const row = $(this).closest('tr');
             const school = row.find('td:eq(2)').text();
@@ -692,20 +700,20 @@
             if (window.tagFilterManager && window.tagFilterManager.lowerCaseTags && window.tagFilterManager.lowerCaseTags.length > 0) {
                 const deptName = (item['Department Name'] || '').toLowerCase();
                 // 🎯 記憶體優化: 使用快取的小寫標籤，避免重複 toLowerCase()
-                const deptMatches = window.tagFilterManager.lowerCaseTags.some(lowerTag => 
+                const deptMatches = window.tagFilterManager.lowerCaseTags.some(lowerTag =>
                     deptName.includes(lowerTag)
                 );
                 if (!deptMatches) {
                     return false; // 不符合 Department Filter 就直接排除
                 }
             }
-            
+
             // Step 2: School Filter
             const schoolMatch = selectedSchools.length === 0 || selectedSchools.includes(item['School Name']);
             if (!schoolMatch) {
                 return false;
             }
-            
+
             // Step 3: Degree Filter
             let degreeMatch = true;
             if (selectedDegrees.length > 0) {
@@ -714,7 +722,7 @@
                     return degreeLevel.includes(deg);
                 });
             }
-            
+
             return degreeMatch;
         });
 
@@ -752,11 +760,11 @@
         const statusDiv = document.getElementById('load-status');
         const statusText = document.getElementById('load-status-text');
         const loadMoreBtn = document.getElementById('load-more-btn');
-        
+
         if (statusDiv && statusText) {
             statusText.textContent = message;
             statusDiv.style.display = message ? 'block' : 'none';
-            
+
             // 自動載入,不需要按鈕
             if (loadMoreBtn) {
                 loadMoreBtn.style.display = 'none';
@@ -770,16 +778,16 @@
     function updateTableStats() {
         const loadedCountEl = document.getElementById('loaded-count');
         const displayCountEl = document.getElementById('display-count');
-        
+
         if (!dataTable) return;
-        
+
         const totalRows = dataTable.rows().count();
         const displayedRows = dataTable.rows({ search: 'applied' }).count();
-        
+
         if (loadedCountEl) {
             loadedCountEl.textContent = `已載入全部 ${totalRows.toLocaleString()} 筆資料`;
         }
-        
+
         if (displayCountEl) {
             if (displayedRows === totalRows) {
                 displayCountEl.textContent = `共 ${totalRows.toLocaleString()} 筆資料`;
@@ -795,25 +803,25 @@
     function updateFilters() {
         // 更新選中的集團 ✨
         selectedGroups = [];
-        $('.group-checkbox:checked').each(function() {
+        $('.group-checkbox:checked').each(function () {
             selectedGroups.push($(this).val());
         });
 
         // 更新選中的國家
         selectedCountries = [];
-        $('.country-checkbox:checked').each(function() {
+        $('.country-checkbox:checked').each(function () {
             selectedCountries.push($(this).val());
         });
 
         // 更新選中的學校
         selectedSchools = [];
-        $('.school-checkbox:checked').each(function() {
+        $('.school-checkbox:checked').each(function () {
             selectedSchools.push($(this).val());
         });
 
         // 更新選中的學位
         selectedDegrees = [];
-        $('.degree-checkbox:checked').each(function() {
+        $('.degree-checkbox:checked').each(function () {
             selectedDegrees.push($(this).val());
         });
 
@@ -822,12 +830,12 @@
             dataTable.clear();
             dataTable.draw(false); // 不重繪,節省效能
         }
-        
+
         // 清空勾選記錄
         selectedRowURLs = [];
         loadIndex = 0;
         isLoadingComplete = false; // 重置載入狀態
-        
+
         // 延遲載入，讓瀏覽器有時間釋放記憶體
         setTimeout(() => {
             loadNextChunk();
@@ -860,7 +868,7 @@
      */
     function exportJSON() {
         const selectedData = getSelectedData();
-        
+
         if (selectedData.length === 0) {
             alert('請先選擇至少一筆資料 (Please select at least one item).');
             return;
@@ -875,7 +883,7 @@
      */
     function exportExcel() {
         const selectedData = getSelectedData();
-        
+
         if (selectedData.length === 0) {
             alert('請先選擇至少一筆資料 (Please select at least one item).');
             return;
@@ -898,7 +906,7 @@
      */
     function exportTXT() {
         const selectedData = getSelectedData();
-        
+
         if (selectedData.length === 0) {
             alert('請先選擇至少一筆資料 (Please select at least one item).');
             return;
@@ -908,7 +916,7 @@
         const urls = selectedData
             .map(item => {
                 let url = item.URL;
-                
+
                 // 🎯 TDD: 如果 URL 包含 HTML 標籤，提取純 URL
                 if (url && typeof url === 'string' && url.includes('<a ')) {
                     const match = url.match(/href="([^"]+)"/);
@@ -916,7 +924,7 @@
                         url = match[1];
                     }
                 }
-                
+
                 return url;
             })
             .filter(url => url && url !== 'N/A' && !url.includes('<input'));
@@ -943,7 +951,7 @@
      */
     async function copyAllURLs() {
         const selectedData = getSelectedData();
-        
+
         if (selectedData.length === 0) {
             alert('請先選擇至少一筆資料 (Please select at least one item).');
             return;
@@ -953,7 +961,7 @@
         const urls = selectedData
             .map(item => {
                 let url = item.URL;
-                
+
                 // 🎯 TDD: 如果 URL 包含 HTML 標籤，提取純 URL
                 if (url && typeof url === 'string' && url.includes('<a ')) {
                     const match = url.match(/href="([^"]+)"/);
@@ -961,7 +969,7 @@
                         url = match[1];
                     }
                 }
-                
+
                 return url;
             })
             .filter(url => url && url !== 'N/A' && !url.includes('<input')); // 過濾無效值
@@ -993,11 +1001,11 @@
         link.href = URL.createObjectURL(blob);
         link.download = filename;
         link.style.display = 'none';
-        
+
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        
+
         setTimeout(() => URL.revokeObjectURL(link.href), 100);
     }
 
@@ -1048,7 +1056,7 @@
 
         showBtn.onclick = () => modal.style.display = 'block';
         closeBtn.onclick = () => modal.style.display = 'none';
-        
+
         window.onclick = (e) => {
             if (e.target === modal) modal.style.display = 'none';
         };
@@ -1061,7 +1069,7 @@
      */
     function initDepartmentAutocomplete() {
         const tagInput = document.getElementById('tag-filter-input');
-        
+
         if (!tagInput) {
             console.warn('⚠️ Tag filter input not found, skipping autocomplete initialization');
             return;
@@ -1120,7 +1128,7 @@
             // 6. 初始化 UI
             initFloatingNav();
             initChangelog();
-            
+
             // 7. 初始化科系關鍵字自動完成 🎯
             initDepartmentAutocomplete();
 
@@ -1147,7 +1155,7 @@
     } else {
         $(document).ready(init);
     }
-    
+
     // 🎯 暴露到全域，供 tagFilter.js 使用
     window.updateFilters = updateFilters;
 
